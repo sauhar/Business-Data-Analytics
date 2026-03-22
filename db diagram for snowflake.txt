@@ -1,0 +1,67 @@
+Table dim_province {
+  province_key int [pk]
+  province_name varchar
+  region varchar
+}
+
+Table dim_city {
+  city_key int [pk]
+  city_name varchar
+  province_key int [ref: > dim_province.province_key]
+  population int
+}
+
+Table dim_customer_snowflake {
+  customer_key int [pk]
+  customer_id int
+  customer_name varchar
+  email varchar
+  city_key int [ref: > dim_city.city_key]
+  customer_segment varchar
+}
+
+Table dim_brand {
+  brand_key int [pk]
+  brand_name varchar
+  brand_country varchar
+}
+
+Table dim_category {
+  category_key int [pk]
+  category_name varchar
+  department varchar
+}
+
+Table dim_subcategory {
+  subcategory_key int [pk]
+  subcategory_name varchar
+  category_key int [ref: > dim_category.category_key]
+}
+
+Table dim_product_snowflake {
+  product_key int [pk]
+  product_id int
+  product_name varchar
+  subcategory_key int [ref: > dim_subcategory.subcategory_key]
+  brand_key int [ref: > dim_brand.brand_key]
+  unit_price decimal
+}
+
+Table dim_date {
+  date_key int [pk]
+}
+
+Table dim_store {
+  store_key int [pk]
+}
+
+Table fact_sales_snowflake {
+  sales_key int [pk]
+  date_key int [ref: > dim_date.date_key]
+  customer_key int [ref: > dim_customer_snowflake.customer_key]
+  product_key int [ref: > dim_product_snowflake.product_key]
+  store_key int [ref: > dim_store.store_key]
+  quantity int
+  sales_amount decimal
+  profit_amount decimal
+}
