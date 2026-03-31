@@ -4,18 +4,18 @@
 -- ============================================================
  
 -- Drop existing tables
-DROP TABLE IF EXISTS fact_sales_star_schema;
-DROP TABLE IF EXISTS dim_date_star_schema;
-DROP TABLE IF EXISTS dim_customer_star_schema;
-DROP TABLE IF EXISTS dim_product_star_schema;
-DROP TABLE IF EXISTS dim_store_star_schema;
+DROP TABLE IF EXISTS fact_sales;
+DROP TABLE IF EXISTS dim_date;
+DROP TABLE IF EXISTS dim_customer;
+DROP TABLE IF EXISTS dim_product;
+DROP TABLE IF EXISTS dim_store;
  
 -- ------------------------------------------------------------
 -- DIMENSION TABLES (The "Who, What, Where, When")
 -- ------------------------------------------------------------
  
--- dim_date_star_schema: The special date dimension
-CREATE TABLE dim_date_star_schema (
+-- DIM_DATE: The special date dimension
+CREATE TABLE dim_date (
     date_key INT PRIMARY KEY,
     full_date DATE,
     day_of_week INT,
@@ -33,7 +33,7 @@ CREATE TABLE dim_date_star_schema (
 );
  
 -- Insert sample dates (January 2024)
-INSERT INTO dim_date_star_schema VALUES
+INSERT INTO dim_date VALUES
 (20240101, '2024-01-01', 1, 'Monday', 1, 1, 1, 'January', 1, 2024, FALSE, TRUE, 2024, 3),
 (20240102, '2024-01-02', 2, 'Tuesday', 2, 1, 1, 'January', 1, 2024, FALSE, FALSE, 2024, 3),
 (20240115, '2024-01-15', 1, 'Monday', 15, 3, 1, 'January', 1, 2024, FALSE, FALSE, 2024, 3),
@@ -45,8 +45,8 @@ INSERT INTO dim_date_star_schema VALUES
 (20240126, '2024-01-26', 5, 'Friday', 26, 4, 1, 'January', 1, 2024, FALSE, TRUE, 2024, 3),  -- Republic Day
 (20240215, '2024-02-15', 4, 'Thursday', 15, 7, 2, 'February', 1, 2024, FALSE, FALSE, 2024, 3);
  
--- dim_customer_star_schema: Customer dimension
-CREATE TABLE dim_customer_star_schema (
+-- DIM_CUSTOMER: Customer dimension
+CREATE TABLE dim_customer (
     customer_key INT PRIMARY KEY,      
     customer_id INT,                    
     customer_name VARCHAR(100),
@@ -59,15 +59,15 @@ CREATE TABLE dim_customer_star_schema (
     is_active BOOLEAN
 );
  
-INSERT INTO dim_customer_star_schema VALUES
+INSERT INTO dim_customer VALUES
 (1, 1001, 'Ram Sharma', 'ram@email.com', '9841234567', 'Kathmandu', 'Bagmati', 'Gold', '2023-01-15', TRUE),
 (2, 1002, 'Sita Thapa', 'sita@email.com', '9801234567', 'Pokhara', 'Gandaki', 'Silver', '2023-03-20', TRUE),
 (3, 1003, 'Hari Gurung', 'hari@email.com', '9812345678', 'Lalitpur', 'Bagmati', 'Bronze', '2023-06-10', TRUE),
 (4, 1004, 'Gita Rai', 'gita@email.com', '9867890123', 'Biratnagar', 'Province 1', 'Silver', '2023-08-05', TRUE),
 (5, 1005, 'Krishna Tamang', 'krishna@email.com', '9845678901', 'Bharatpur', 'Bagmati', 'Gold', '2023-02-28', TRUE);
  
--- dim_product_star_schema: Product dimension
-CREATE TABLE dim_product_star_schema (
+-- DIM_PRODUCT: Product dimension
+CREATE TABLE dim_product (
     product_key INT PRIMARY KEY,        -- Surrogate key
     product_id INT,                     -- Natural key
     product_name VARCHAR(100),
@@ -79,7 +79,7 @@ CREATE TABLE dim_product_star_schema (
     is_active BOOLEAN
 );
  
-INSERT INTO dim_product_star_schema VALUES
+INSERT INTO dim_product VALUES
 (1, 101, 'Dell Laptop', 'Electronics', 'Computers', 'Dell', 85000, 70000, TRUE),
 (2, 102, 'Wireless Mouse', 'Electronics', 'Accessories', 'Logitech', 1500, 1000, TRUE),
 (3, 103, 'Mechanical Keyboard', 'Electronics', 'Accessories', 'Redragon', 2500, 1800, TRUE),
@@ -89,8 +89,8 @@ INSERT INTO dim_product_star_schema VALUES
 (7, 107, 'Cotton T-Shirt', 'Clothing', 'Tops', 'North Face', 1200, 600, TRUE),
 (8, 108, 'Winter Jacket', 'Clothing', 'Outerwear', 'North Face', 3500, 2000, TRUE);
  
--- dim_store_star_schema: Store/Location dimension
-CREATE TABLE dim_store_star_schema (
+-- DIM_STORE: Store/Location dimension
+CREATE TABLE dim_store (
     store_key INT PRIMARY KEY,
     store_id INT,
     store_name VARCHAR(100),
@@ -102,7 +102,7 @@ CREATE TABLE dim_store_star_schema (
     is_active BOOLEAN
 );
  
-INSERT INTO dim_store_star_schema VALUES
+INSERT INTO dim_store VALUES
 (1, 1, 'NepalMart Kathmandu Central', 'Kathmandu', 'Bagmati', 'Retail', '2020-01-15', 5000, TRUE),
 (2, 2, 'NepalMart Pokhara Lakeside', 'Pokhara', 'Gandaki', 'Retail', '2021-03-10', 3000, TRUE),
 (3, 3, 'NepalMart Online', 'Kathmandu', 'Bagmati', 'Online', '2022-01-01', 0, TRUE),
@@ -112,7 +112,7 @@ INSERT INTO dim_store_star_schema VALUES
 -- FACT TABLE (The "Measures" - What we want to analyze)
 -- ------------------------------------------------------------
  
-CREATE TABLE fact_sales_star_schema (
+CREATE TABLE fact_sales (
     sales_key INT PRIMARY KEY,
     -- Foreign keys to dimensions
     date_key INT,
@@ -127,14 +127,14 @@ CREATE TABLE fact_sales_star_schema (
     cost_amount DECIMAL(10,2),
     profit_amount DECIMAL(10,2),
     -- Foreign key constraints
-    FOREIGN KEY (date_key) REFERENCES dim_date_star_schema(date_key),
-    FOREIGN KEY (customer_key) REFERENCES dim_customer_star_schema(customer_key),
-    FOREIGN KEY (product_key) REFERENCES dim_product_star_schema(product_key),
-    FOREIGN KEY (store_key) REFERENCES dim_store_star_schema(store_key)
+    FOREIGN KEY (date_key) REFERENCES dim_date(date_key),
+    FOREIGN KEY (customer_key) REFERENCES dim_customer(customer_key),
+    FOREIGN KEY (product_key) REFERENCES dim_product(product_key),
+    FOREIGN KEY (store_key) REFERENCES dim_store(store_key)
 );
  
 -- Insert sample sales data
-INSERT INTO fact_sales_star_schema VALUES
+INSERT INTO fact_sales VALUES
 (1, 20240115, 1, 1, 1, 1, 85000, 0, 85000, 70000, 15000),
 (2, 20240115, 1, 2, 1, 2, 1500, 0, 3000, 2000, 1000),
 (3, 20240115, 1, 3, 1, 1, 2500, 0, 2500, 1800, 700),
@@ -149,20 +149,20 @@ INSERT INTO fact_sales_star_schema VALUES
 (12, 20240215, 3, 6, 3, 2, 25000, 0, 50000, 40000, 10000);
  
 -- View the star schema
-SELECT '=== dim_date_star_schema ===' AS dimension;
-SELECT date_key, full_date, day_name, month_name, quarter, year FROM dim_date_star_schema;
+SELECT '=== DIM_DATE ===' AS dimension;
+SELECT date_key, full_date, day_name, month_name, quarter, year FROM dim_date;
  
-SELECT '=== dim_customer_star_schema ===' AS dimension;
-SELECT customer_key, customer_name, city, customer_segment FROM dim_customer_star_schema;
+SELECT '=== DIM_CUSTOMER ===' AS dimension;
+SELECT customer_key, customer_name, city, customer_segment FROM dim_customer;
  
-SELECT '=== dim_product_star_schema ===' AS dimension;
-SELECT product_key, product_name, category, brand, unit_price FROM dim_product_star_schema;
+SELECT '=== DIM_PRODUCT ===' AS dimension;
+SELECT product_key, product_name, category, brand, unit_price FROM dim_product;
  
-SELECT '=== dim_store_star_schema ===' AS dimension;
-SELECT store_key, store_name, city, store_type FROM dim_store_star_schema;
+SELECT '=== DIM_STORE ===' AS dimension;
+SELECT store_key, store_name, city, store_type FROM dim_store;
  
-SELECT '=== fact_sales_star_schema ===' AS fact_table;
-SELECT * FROM fact_sales_star_schema;
+SELECT '=== FACT_SALES ===' AS fact_table;
+SELECT * FROM fact_sales;
  
  
 -- ------------------------------------------------------------
@@ -175,8 +175,8 @@ SELECT
     d.year,
     SUM(f.sales_amount) AS total_sales,
     SUM(f.profit_amount) AS total_profit
-FROM fact_sales_star_schema f
-JOIN dim_date_star_schema d ON f.date_key = d.date_key
+FROM fact_sales f
+JOIN dim_date d ON f.date_key = d.date_key
 GROUP BY d.month_name, d.year, d.month_number
 ORDER BY d.year, d.month_number;
  
@@ -186,8 +186,8 @@ SELECT
     COUNT(DISTINCT c.customer_key) AS num_customers,
     SUM(f.sales_amount) AS total_sales,
     ROUND(AVG(f.sales_amount), 2) AS avg_order_value
-FROM fact_sales_star_schema f
-JOIN dim_customer_star_schema c ON f.customer_key = c.customer_key
+FROM fact_sales f
+JOIN dim_customer c ON f.customer_key = c.customer_key
 GROUP BY c.customer_segment
 ORDER BY total_sales DESC;
  
@@ -198,8 +198,8 @@ SELECT
     SUM(f.quantity) AS units_sold,
     SUM(f.sales_amount) AS total_sales,
     SUM(f.profit_amount) AS total_profit
-FROM fact_sales_star_schema f
-JOIN dim_product_star_schema p ON f.product_key = p.product_key
+FROM fact_sales f
+JOIN dim_product p ON f.product_key = p.product_key
 GROUP BY p.category, p.product_name
 ORDER BY total_sales DESC;
  
@@ -208,9 +208,9 @@ SELECT
     s.store_name,
     d.day_name,
     SUM(f.sales_amount) AS total_sales
-FROM fact_sales_star_schema f
-JOIN dim_store_star_schema s ON f.store_key = s.store_key
-JOIN dim_date_star_schema d ON f.date_key = d.date_key
+FROM fact_sales f
+JOIN dim_store s ON f.store_key = s.store_key
+JOIN dim_date d ON f.date_key = d.date_key
 GROUP BY s.store_name, d.day_name, d.day_of_week
 ORDER BY s.store_name, d.day_of_week;
  
@@ -228,9 +228,9 @@ SELECT
     f.quantity,
     f.sales_amount,
     f.profit_amount
-FROM fact_sales_star_schema f
-JOIN dim_date_star_schema d ON f.date_key = d.date_key
-JOIN dim_customer_star_schema c ON f.customer_key = c.customer_key
-JOIN dim_product_star_schema p ON f.product_key = p.product_key
-JOIN dim_store_star_schema s ON f.store_key = s.store_key
+FROM fact_sales f
+JOIN dim_date d ON f.date_key = d.date_key
+JOIN dim_customer c ON f.customer_key = c.customer_key
+JOIN dim_product p ON f.product_key = p.product_key
+JOIN dim_store s ON f.store_key = s.store_key
 ORDER BY d.full_date;

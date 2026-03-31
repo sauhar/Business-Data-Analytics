@@ -60,6 +60,12 @@ WHERE customer_id IN (
 );
 
 
+
+
+select *
+from customers order by 2;
+
+
 -- =====================================================
 -- EXERCISE 3: Nested Queries (Correlated Subqueries)
 -- These run for EACH row and reference the outer query
@@ -81,7 +87,7 @@ ORDER BY category;
 -- Q6: Find customers whose total spending is above average
 -- Correlated subquery example
 
-SELECT c.name, c.city
+SELECT c.name, c.city, SUM(oi.quantity * oi.unit_price) AS total_spent
 FROM customers c
 WHERE (
     SELECT SUM(oi.quantity * oi.unit_price)
@@ -96,6 +102,9 @@ WHERE (
         GROUP BY o.customer_id
     ) AS customer_totals
 );
+
+
+
 
 
 -- Q7: Find orders where the order amount is above the customer's average order
@@ -376,6 +385,26 @@ FROM customer_totals
 WHERE total_spent > 50000
 ORDER BY total_spent DESC;
 
+----------------------------------
+
+-- STEP 1: build the temp table ONCE
+CREATE TEMP TABLE cust_summary AS
+SELECT c.customer_id, c.name, c.city,
+  COUNT(DISTINCT o.order_id)     AS total_orders,
+  SUM(oi.quantity*oi.unit_price) AS total_spent
+FROM   customers c
+JOIN   orders o      ON c.customer_id = o.customer_id
+JOIN   order_items oi ON o.order_id   = oi.order_id
+GROUP  BY c.customer_id, c.name, c.city;
+
+-- STEP 2: query it multiple times (no re-computing!)
+SELECT name, city, total_spent
+FROM   cust_summary  WHERE total_spent > 50000
+ORDER  BY total_spent DESC;
+
+
+
+
 
 -- Q25: Analyze sales by category using CTE
 
@@ -437,35 +466,42 @@ FROM customer_metrics
 ORDER BY total_spent DESC;
 
 
--- =====================================================
--- SUMMARY: Subquery vs Nested Query
--- =====================================================
--- 
--- SUBQUERY (Non-Correlated):
---   - Runs ONCE
---   - Independent of outer query  
---   - Returns a fixed value or list
---   - Generally faster
---   - Example: WHERE price > (SELECT AVG(price) FROM products)
---
--- NESTED QUERY (Correlated):
---   - Runs for EACH row in outer query
---   - References columns from outer query
---   - Result changes per row
---   - Can be slower (but sometimes necessary)
---   - Example: WHERE p2.category = p1.category
---
--- =====================================================
--- END OF EXERCISES
--- =====================================================
--- Great job! You've practiced:
--- ✓ Multi-table JOINs
--- ✓ Subqueries (non-correlated)
--- ✓ Nested Queries (correlated)
--- ✓ CASE statements
--- ✓ PIVOT tables using CASE
--- ✓ ROW_NUMBER, RANK, DENSE_RANK
--- ✓ LAG and LEAD
--- ✓ Running totals and moving averages
--- ✓ Common Table Expressions (CTEs)
--- =====================================================
+---------------------index
+
+--- Run Query WITHOUT Index
+
+
+EXPLAIN ANALYZE
+SELECT *
+FROM customers
+WHERE city = 'Kathmandu';
+
+
+
+create index idx_city
+on customers(city)
+
+
+select *
+from dirty_cafe_sales_dataset limit 10
+
+create index idx_transaction_id
+on dirty_cafe_sales_dataset(transaction_id)
+
+drop index idx_transaction_id
+
+explain analyze
+select *
+from dirty_cafe_sales_dataset
+where transaction_id = 'TXN_9899571'
+
+
+
+
+
+
+
+
+
+
+

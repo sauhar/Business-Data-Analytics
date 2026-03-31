@@ -1,22 +1,4 @@
 -- =====================================================
--- Advanced SQL Practice Database
--- Module 4: Advanced SQL & Window Functions
--- SkillShikshya - Business Data Analytics with AI
--- =====================================================
-
--- Run this script in DBeaver to create tables and load sample data
--- Works with: MySQL, PostgreSQL, SQL Server (minor syntax adjustments may be needed)
-
--- =====================================================
--- DROP EXISTING TABLES (if any)
--- =====================================================
-DROP TABLE IF EXISTS order_items;
-DROP TABLE IF EXISTS orders;
-DROP TABLE IF EXISTS products;
-DROP TABLE IF EXISTS customers;
-DROP TABLE IF EXISTS daily_sales;
-
--- =====================================================
 -- TABLE 1: CUSTOMERS
 -- =====================================================
 CREATE TABLE customers (
@@ -43,6 +25,14 @@ INSERT INTO customers (customer_id, name, email, city, join_date) VALUES
 (13, 'Himal Lama', 'himal.l@email.com', 'Lalitpur', '2024-01-10'),
 (14, 'Indira KC', 'indira.kc@email.com', 'Pokhara', '2024-02-14'),
 (15, 'Jeevan Bhandari', 'jeevan.b@email.com', 'Kathmandu', '2024-03-20');
+
+select name, customer_id
+from customers order by 1,2 desc;
+
+
+select *
+from customers order by 1 desc
+limit 1;
 
 -- =====================================================
 -- TABLE 2: PRODUCTS
@@ -180,8 +170,9 @@ INSERT INTO order_items (item_id, order_id, product_id, quantity, unit_price) VA
 CREATE TABLE daily_sales (
     sale_date DATE PRIMARY KEY,
     total_orders INT,
-    total_revenue DECIMAL(12, 2)
+    total_revenue DECIMAL(10, 2)
 );
+
 
 INSERT INTO daily_sales (sale_date, total_orders, total_revenue) VALUES
 ('2024-01-01', 5, 45000.00),
@@ -215,59 +206,3 @@ INSERT INTO daily_sales (sale_date, total_orders, total_revenue) VALUES
 ('2024-01-29', 11, 91000.00),
 ('2024-01-30', 14, 115000.00),
 ('2024-01-31', 10, 83000.00);
-
--- =====================================================
--- VERIFY DATA LOADED
--- =====================================================
-SELECT 'customers' AS table_name, COUNT(*) AS row_count FROM customers
-UNION ALL
-SELECT 'products', COUNT(*) FROM products
-UNION ALL
-SELECT 'orders', COUNT(*) FROM orders
-UNION ALL
-SELECT 'order_items', COUNT(*) FROM order_items
-UNION ALL
-SELECT 'daily_sales', COUNT(*) FROM daily_sales;
-
--- =====================================================
--- YOU'RE READY! Now try these practice queries:
--- =====================================================
-
--- 1. Basic multi-table join
- SELECT c.name, p.product_name, oi.quantity
- FROM customers c
- JOIN orders o ON c.customer_id = o.customer_id
- JOIN order_items oi ON o.order_id = oi.order_id
- JOIN products p ON oi.product_id = p.product_id;
-
--- 2. Window function - ROW_NUMBER
- SELECT name, city, 
-        ROW_NUMBER() OVER (ORDER BY name) AS row_num
- FROM customers;
-
--- 3. Running total
- SELECT sale_date, total_revenue,
-        SUM(total_revenue) OVER (ORDER BY sale_date) AS running_total
- FROM daily_sales;
-
-
-
-------for group by and window function difference
-
---------group by example
-
-SELECT category, COUNT(*) AS total_products
-FROM products
-GROUP BY category;
-
-----window function example
-
-SELECT 
-    product_name,
-    category,
-    COUNT(*) OVER (PARTITION BY category) AS total_products
-FROM products;
-
-
-
-
