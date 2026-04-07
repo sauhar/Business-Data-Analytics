@@ -12,10 +12,10 @@
 --  BONUS               — DDL/DML: ALTER, INSERT, UPDATE, DELETE, TCL
 -- ============================================================
 
-
 -- ════════════════════════════════════════════════════════════
 -- LEVEL 1 — BASIC SELECT, FILTER, SORT, AGGREGATE
 -- ════════════════════════════════════════════════════════════
+
 
 -- Q1. Show all active riders with their city.
 SELECT rider_id, full_name, phone, city
@@ -29,6 +29,7 @@ SELECT status,
 FROM   rides
 GROUP  BY status
 ORDER  BY total_rides DESC;
+
 
 -- Q3. What is the total fare collected from all COMPLETED rides?
 SELECT SUM(fare_nrs) AS total_fare_collected
@@ -52,6 +53,7 @@ FROM   riders
 WHERE  joined_date >= '2023-01-01'
   AND  joined_date <= '2023-12-31';
 
+
 -- Q6. What is the average driver rating per zone?
 --     (zone_id only — we join zones in next level)
 SELECT zone_id,
@@ -72,7 +74,7 @@ FROM   rides
 WHERE  distance_km > 8
 ORDER  BY distance_km DESC;
 
--- Q8. What payment methods are used? Show count for each.
+-- Q8. What payment methods are used? Show count for each and the amount
 SELECT method,
        COUNT(*)           AS total_payments,
        SUM(amount_nrs)    AS total_amount
@@ -87,11 +89,16 @@ WHERE  ride_date >= '2024-01-01'
   AND  ride_date <  '2024-02-01'
 ORDER  BY ride_date;
 
+SELECT ride_id, rider_id, pickup, dropoff, ride_date, fare_nrs
+FROM   rides
+where ride_date between '2024-01-01' and '2024-01-31'
+ORDER  BY ride_date;
+
+
 -- Q10. Find the rider who has the highest single ride fare.
 SELECT rider_id, fare_nrs, pickup, dropoff
 FROM   rides
 WHERE  fare_nrs = (SELECT MAX(fare_nrs) FROM rides);
-
 
 -- ════════════════════════════════════════════════════════════
 -- LEVEL 2 — JOINS (INNER, LEFT, RIGHT, FULL, SELF)
@@ -109,6 +116,15 @@ INNER  JOIN riders ri ON r.rider_id = ri.rider_id
 WHERE  r.status = 'Completed'
 ORDER  BY r.ride_date;
 
+
+
+SELECT r.*, ri.*
+FROM   rides r
+INNER  JOIN riders ri ON r.rider_id = ri.rider_id
+WHERE  r.status = 'Completed'
+ORDER  BY r.ride_date;
+
+
 -- Q12. Show each completed ride with rider name AND driver name.
 SELECT r.ride_id,
        ri.full_name    AS rider_name,
@@ -123,6 +139,7 @@ INNER  JOIN riders  ri ON r.rider_id  = ri.rider_id
 INNER  JOIN drivers d  ON r.driver_id = d.driver_id
 WHERE  r.status = 'Completed'
 ORDER  BY r.ride_date;
+
 
 -- Q13. Show every ride with its zone name, driver name, vehicle type.
 --      (4-table JOIN)
@@ -140,6 +157,7 @@ INNER  JOIN drivers d  ON r.driver_id = d.driver_id
 INNER  JOIN vehicles v ON d.driver_id = v.driver_id
 INNER  JOIN zones    z ON r.zone_id   = z.zone_id
 ORDER  BY r.ride_date;
+
 
 -- Q14. LEFT JOIN — Show ALL drivers including those with NO rides yet.
 SELECT d.full_name   AS driver_name,
@@ -233,22 +251,41 @@ ORDER BY full_name;
 
 -- Q22. UNION ALL — List all cities from riders + drivers
 --      (with duplicates — to count frequency).
-SELECT city AS location, 'Rider'  AS source FROM riders
-UNION ALL
-SELECT city AS location, 'Driver' AS source FROM drivers
-ORDER  BY location;
+SELECT full_name, phone, 'Rider'  AS role FROM riders  WHERE is_active = TRUE
+union ALL
+SELECT full_name, phone, 'Driver' AS role FROM drivers WHERE is_active = TRUE
+ORDER BY full_name;
 
--- Q23. Subquery — Show rides where fare is above the average fare.
+
+
+
+
+-- Q23. Subquery — Find all rides that cost MORE than the average fare.
+
+SELECT ride_id,
+       pickup,
+       dropoff,
+       fare_nrs
+FROM   rides
+WHERE  fare_nrs > (SELECT AVG(fare_nrs) FROM rides)
+ORDER  BY fare_nrs DESC;
+
+
+
+---Show rides taken by riders who live in Pokhara
+
 SELECT ride_id,
        rider_id,
        pickup,
        dropoff,
        fare_nrs,
-       ROUND(fare_nrs - (SELECT AVG(fare_nrs) FROM rides), 2) AS above_avg_by
+       status
 FROM   rides
-WHERE  fare_nrs > (SELECT AVG(fare_nrs) FROM rides)
-  AND  status = 'Completed'
-ORDER  BY fare_nrs DESC;
+WHERE  rider_id IN (SELECT rider_id
+                    FROM   riders
+                    WHERE  city = 'Pokhara')
+ORDER  BY ride_id;
+
 
 -- Q24. Correlated Subquery — For each zone, show the ride with
 --      the HIGHEST fare in that zone.
@@ -304,19 +341,6 @@ FROM   payments p
 INNER  JOIN rides r ON p.ride_id = r.ride_id
 WHERE  r.status = 'Completed';
 
--- Q28. PIVOT — Show total fare per zone split by vehicle type
---      (Bike | Car | E-Scooter) as separate columns.
-SELECT z.zone_name,
-    SUM(CASE WHEN v.vehicle_type = 'Bike'      THEN r.fare_nrs ELSE 0 END) AS bike_fare,
-    SUM(CASE WHEN v.vehicle_type = 'Car'       THEN r.fare_nrs ELSE 0 END) AS car_fare,
-    SUM(CASE WHEN v.vehicle_type = 'E-Scooter' THEN r.fare_nrs ELSE 0 END) AS escooter_fare
-FROM   rides r
-INNER  JOIN zones    z ON r.zone_id   = z.zone_id
-INNER  JOIN drivers  d ON r.driver_id = d.driver_id
-INNER  JOIN vehicles v ON d.driver_id = v.driver_id
-WHERE  r.status = 'Completed'
-GROUP  BY z.zone_name
-ORDER  BY z.zone_name;
 
 
 -- ════════════════════════════════════════════════════════════
@@ -496,3 +520,83 @@ COMMIT;
 
 -- B7. REVOKE — Remove insert permission from that user.
 -- REVOKE INSERT ON rides FROM analyst_user;
+
+
+
+
+
+
+------------------------------------------index vs seq scan
+
+
+-- Drop and recreate cleanly
+DROP TABLE IF EXISTS new_employees;
+
+CREATE TABLE new_employees (
+    emp_id SERIAL PRIMARY KEY,
+    name   VARCHAR(50),
+    salary INT
+);
+
+-- Insert 100,000 rows so PostgreSQL takes index seriously
+INSERT INTO new_employees (name, salary)
+SELECT 
+    'Employee_' || i,
+    (random() * 100000)::INT
+FROM generate_series(1, 100000) as i;
+
+
+SELECT random() --0 ≤ x < 1
+
+
+---() is not a default table
+---It is a built-in PostgreSQL temporary  that returns temporary data
+SELECT * FROM generate_series(1, 25);
+
+
+select count(*)
+from new_employees;
+
+select *
+from new_employees limit 20;
+
+-- Create indexes
+CREATE INDEX idx_salary ON new_employees(salary);
+CREATE INDEX idx_name   ON new_employees(name);
+
+
+-- Query 1: Find 1 row → should use Index Scan
+EXPLAIN ANALYZE
+SELECT * FROM new_employees
+WHERE emp_id = 2;
+
+-- Very few rows → Index Scan
+
+
+-- Query 2: Find ~half rows → Bitmap or Seq Scan  
+EXPLAIN ANALYZE
+SELECT * FROM new_employees 
+WHERE salary > 50000;
+-- Medium rows → Bitmap Scan == group the category
+
+
+-- Query 3: Find almost all rows → Seq Scan
+EXPLAIN ANALYZE
+SELECT * FROM new_employees 
+WHERE salary > 0;
+-- Almost all rows → Seq Scan
+
+SELECT datname FROM pg_database;
+
+--------------Function breaks index
+
+EXPLAIN ANALYZE
+SELECT * FROM new_employees
+WHERE name = 'Employee_500';
+
+
+-- Now wrap in UPPER() — index breaks, Seq Scan works
+
+EXPLAIN ANALYZE
+SELECT * FROM new_employees
+WHERE UPPER(name) = 'EMPLOYEE_500';

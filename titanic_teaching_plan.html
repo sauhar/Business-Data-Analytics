@@ -1,0 +1,434 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.w{padding:1rem 0;font-family:var(--font-sans)}
+.intro{background:var(--color-background-secondary);border-radius:var(--border-radius-lg);padding:.9rem 1.1rem;margin-bottom:1rem;font-size:12.5px;color:var(--color-text-secondary);line-height:1.7}
+.intro strong{color:var(--color-text-primary)}
+.stats{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.stat{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.4rem .8rem;text-align:center}
+.stat strong{font-size:16px;font-weight:500;color:var(--color-text-primary);display:block}
+.stat span{font-size:11px;color:var(--color-text-secondary)}
+.session{border:1px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);margin-bottom:.9rem;overflow:hidden}
+.s-hdr{display:flex;align-items:center;gap:.7rem;padding:.65rem 1rem;cursor:pointer;user-select:none}
+.s-hdr .arrow{margin-left:auto;font-size:10px;color:var(--color-text-secondary);transition:transform .2s}
+.s-hdr.open .arrow{transform:rotate(180deg)}
+.s-body{display:none;padding:.5rem 0 .8rem}
+.s-body.open{display:block}
+.snum{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0;color:#fff}
+.stitle{font-size:13.5px;font-weight:500;color:var(--color-text-primary)}
+.sdesc{font-size:11.5px;color:var(--color-text-secondary)}
+.topic-row{border-top:1px solid var(--color-border-tertiary);padding:.55rem 1rem .55rem 1.2rem}
+.topic-row:first-child{border-top:none}
+.tnum{font-size:11px;font-weight:600;padding:2px 7px;border-radius:10px;margin-right:.4rem}
+.tq{font-size:12.5px;font-weight:500;color:var(--color-text-primary);margin-bottom:.3rem}
+.code{font-family:var(--font-mono);font-size:11.5px;background:var(--color-background-secondary);padding:.3rem .55rem;border-radius:4px;margin-top:.3rem;display:block;line-height:1.8;white-space:pre-wrap;color:var(--color-text-primary)}
+.out{font-family:var(--font-mono);font-size:11px;color:var(--color-text-success);background:var(--color-background-success);padding:.2rem .5rem;border-radius:4px;margin-top:.2rem;display:block}
+.note{font-size:11px;color:var(--color-text-secondary);font-style:italic;margin-top:.2rem}
+.chip{display:inline-block;font-size:10px;padding:1px 7px;border-radius:8px;border:1px solid var(--color-border-secondary);color:var(--color-text-secondary);margin-right:.3rem}
+</style>
+
+<div class="w">
+<div class="intro">
+  <strong>Teaching Plan — Pandas, NumPy &amp; Matplotlib using Titanic Dataset</strong><br>
+  418 passengers · 12 columns · Missing values · Real numbers students can relate to.<br>
+  6 sessions from absolute beginner → intermediate. Each session has scenario questions + code + expected output.
+</div>
+
+<div class="stats">
+  <div class="stat"><strong>418</strong><span>Passengers</span></div>
+  <div class="stat"><strong>12</strong><span>Columns</span></div>
+  <div class="stat"><strong>6</strong><span>Sessions</span></div>
+  <div class="stat"><strong>36%</strong><span>Survived</span></div>
+  <div class="stat"><strong>86</strong><span>Missing Age</span></div>
+  <div class="stat"><strong>3</strong><span>Libraries</span></div>
+</div>
+
+<!-- ══ SESSION 1 ══ -->
+<div class="session">
+<div class="s-hdr open" onclick="tog(this)">
+  <div class="snum" style="background:#1D4ED8">1</div>
+  <div>
+    <div class="stitle">Session 1 — Loading &amp; Exploring Data (Pandas Basics)</div>
+    <div class="sdesc">import, read_csv, head, shape, dtypes, info, describe</div>
+  </div>
+  <span class="arrow">▼</span>
+</div>
+<div class="s-body open">
+
+<div class="topic-row">
+  <span class="tnum" style="background:#DBEAFE;color:#1D4ED8">Q1</span>
+  <div class="tq">How do we load the Titanic CSV file and see the first 5 rows?</div>
+  <code class="code">import pandas as pd
+
+df = pd.read_csv('titanic_dataset.csv')
+df.head()         # first 5 rows
+df.head(10)       # first 10 rows
+df.tail()         # last 5 rows</code>
+  <span class="note">Tell students: head() is like peeking at the top of the register</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#DBEAFE;color:#1D4ED8">Q2</span>
+  <div class="tq">How many passengers are in the dataset? How many columns?</div>
+  <code class="code">df.shape          # (rows, columns)
+# Output: (418, 12)
+# → 418 passengers, 12 columns</code>
+  <span class="out">→ (418, 12)</span>
+  <span class="note">418 passengers, 12 things we know about each one</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#DBEAFE;color:#1D4ED8">Q3</span>
+  <div class="tq">What are the column names and their data types?</div>
+  <code class="code">df.columns        # list of column names
+df.dtypes         # data type of each column
+df.info()         # full summary: nulls + types</code>
+  <span class="note">info() is the fastest way to see the full picture of your data</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#DBEAFE;color:#1D4ED8">Q4</span>
+  <div class="tq">Get basic statistics — average age, min/max fare, etc.</div>
+  <code class="code">df.describe()     # count, mean, std, min, max for numbers
+# Average fare: 35.6   |  Max fare: 512  |  Min age: 0.17</code>
+  <span class="note">Ask students: why is min age 0.17? (babies were on the ship!)</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#DBEAFE;color:#1D4ED8">Q5</span>
+  <div class="tq">How many passengers survived vs did not survive?</div>
+  <code class="code">df['Survived'].value_counts()
+# 0 → 266 did NOT survive
+# 1 → 152 survived</code>
+  <span class="out">0: 266   1: 152</span>
+  <span class="note">Survived=1 means alive, Survived=0 means did not survive</span>
+</div>
+
+</div></div>
+
+<!-- ══ SESSION 2 ══ -->
+<div class="session">
+<div class="s-hdr open" onclick="tog(this)">
+  <div class="snum" style="background:#059669">2</div>
+  <div>
+    <div class="stitle">Session 2 — Selecting, Filtering &amp; Sorting (Pandas)</div>
+    <div class="sdesc">[], loc, iloc, filtering with conditions, sort_values, value_counts</div>
+  </div>
+  <span class="arrow">▼</span>
+</div>
+<div class="s-body open">
+
+<div class="topic-row">
+  <span class="tnum" style="background:#D1FAE5;color:#059669">Q6</span>
+  <div class="tq">Select only the Name, Age, and Sex columns.</div>
+  <code class="code">df[['Name', 'Age', 'Sex']]         # select multiple columns
+df['Age']                          # select one column (Series)</code>
+  <span class="note">Single bracket [ ] = one column.  Double bracket [[ ]] = multiple columns</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#D1FAE5;color:#059669">Q7</span>
+  <div class="tq">Show only female passengers.</div>
+  <code class="code">df[df['Sex'] == 'female']
+# Returns only rows where Sex is female → 152 rows</code>
+  <span class="out">→ 152 female passengers</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#D1FAE5;color:#059669">Q8</span>
+  <div class="tq">Show passengers who survived AND were in 1st class.</div>
+  <code class="code">df[(df['Survived'] == 1) & (df['Pclass'] == 1)]
+# & means AND   |  means OR   ~  means NOT</code>
+  <span class="note">Always use ( ) around each condition when combining with &amp; or |</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#D1FAE5;color:#059669">Q9</span>
+  <div class="tq">Sort passengers by Fare from highest to lowest.</div>
+  <code class="code">df.sort_values('Fare', ascending=False).head(5)
+# Top fare: 512 NRS — 1st class passengers paid the most</code>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#D1FAE5;color:#059669">Q10</span>
+  <div class="tq">Select row 5 to row 10 using position.</div>
+  <code class="code">df.iloc[5:10]        # by position number (like list slicing)
+df.loc[5:10]         # by index label
+df.iloc[0]           # first row only</code>
+  <span class="note">iloc = position number (0,1,2...).  loc = index label</span>
+</div>
+
+</div></div>
+
+<!-- ══ SESSION 3 ══ -->
+<div class="session">
+<div class="s-hdr open" onclick="tog(this)">
+  <div class="snum" style="background:#D97706">3</div>
+  <div>
+    <div class="stitle">Session 3 — Cleaning Missing Data (Pandas)</div>
+    <div class="sdesc">isnull, dropna, fillna, missing value strategy</div>
+  </div>
+  <span class="arrow">▼</span>
+</div>
+<div class="s-body open">
+
+<div class="topic-row">
+  <span class="tnum" style="background:#FEF3C7;color:#D97706">Q11</span>
+  <div class="tq">Find which columns have missing (NaN) values.</div>
+  <code class="code">df.isnull().sum()
+# Age     → 86 missing
+# Cabin   → 327 missing  (most passengers — not useful)
+# Fare    → 1 missing</code>
+  <span class="out">Age:86  Cabin:327  Fare:1</span>
+  <span class="note">Ask: why is Cabin missing for 327 people? (3rd class had shared rooms)</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#FEF3C7;color:#D97706">Q12</span>
+  <div class="tq">Fill missing Age values with the average age.</div>
+  <code class="code">avg_age = df['Age'].mean()           # calculate average
+print(avg_age)                       # ~30.27
+
+df['Age'] = df['Age'].fillna(avg_age)  # fill NaN with average
+df['Age'].isnull().sum()             # → 0 (no more missing!)</code>
+  <span class="note">Strategy: fill numbers with mean or median. Never guess randomly.</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#FEF3C7;color:#D97706">Q13</span>
+  <div class="tq">Drop the Cabin column (too many missing values — not useful).</div>
+  <code class="code">df = df.drop(columns=['Cabin'])
+# OR: drop rows with any missing value
+df_clean = df.dropna()              # removes ALL rows with NaN</code>
+  <span class="note">Rule: if a column has &gt;50% missing → consider dropping it</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#FEF3C7;color:#D97706">Q14</span>
+  <div class="tq">Add a new column — Age Group (Child, Adult, Senior).</div>
+  <code class="code">def age_group(age):
+    if age < 18:  return 'Child'
+    elif age < 60: return 'Adult'
+    else:          return 'Senior'
+
+df['AgeGroup'] = df['Age'].apply(age_group)
+df['AgeGroup'].value_counts()</code>
+  <span class="note">apply() runs a function on every row — very powerful!</span>
+</div>
+
+</div></div>
+
+<!-- ══ SESSION 4 ══ -->
+<div class="session">
+<div class="s-hdr open" onclick="tog(this)">
+  <div class="snum" style="background:#7C3AED">4</div>
+  <div>
+    <div class="stitle">Session 4 — Grouping &amp; Aggregation (Pandas + NumPy)</div>
+    <div class="sdesc">groupby, agg, numpy arrays, mean, sum, std, unique</div>
+  </div>
+  <span class="arrow">▼</span>
+</div>
+<div class="s-body open">
+
+<div class="topic-row">
+  <span class="tnum" style="background:#EDE9FE;color:#7C3AED">Q15</span>
+  <div class="tq">What is the survival rate by passenger class?</div>
+  <code class="code">df.groupby('Pclass')['Survived'].mean()
+# Pclass 1 → 0.63 (63% survived)
+# Pclass 2 → 0.47 (47% survived)
+# Pclass 3 → 0.24 (24% survived)</code>
+  <span class="out">Class 1: 63%  Class 2: 47%  Class 3: 24%</span>
+  <span class="note">Rich passengers (1st class) had much higher survival rate — shocking but true</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#EDE9FE;color:#7C3AED">Q16</span>
+  <div class="tq">What is the average fare paid by men vs women?</div>
+  <code class="code">df.groupby('Sex')['Fare'].mean()
+# female → 44.5    male → 26.5</code>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#EDE9FE;color:#7C3AED">Q17</span>
+  <div class="tq">Show count, average age, and average fare by class.</div>
+  <code class="code">df.groupby('Pclass').agg(
+    total    = ('PassengerId', 'count'),
+    avg_age  = ('Age',  'mean'),
+    avg_fare = ('Fare', 'mean')
+)</code>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#EDE9FE;color:#7C3AED">Q18</span>
+  <div class="tq">NumPy basics — arrays and calculations.</div>
+  <code class="code">import numpy as np
+
+ages  = np.array(df['Age'])        # convert to numpy array
+fares = np.array(df['Fare'])
+
+print(np.mean(ages))               # average age
+print(np.median(fares))            # middle fare value
+print(np.std(fares))               # how spread out fares are
+print(np.max(fares))               # highest fare: 512</code>
+  <span class="note">NumPy is faster than Python lists for math on large data</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#EDE9FE;color:#7C3AED">Q19</span>
+  <div class="tq">How many unique ports did passengers board from?</div>
+  <code class="code">df['Embarked'].unique()            # S, C, Q
+df['Embarked'].nunique()           # 3
+df['Embarked'].value_counts()
+# S (Southampton) → 270
+# C (Cherbourg)   → 102
+# Q (Queenstown)  →  46</code>
+</div>
+
+</div></div>
+
+<!-- ══ SESSION 5 ══ -->
+<div class="session">
+<div class="s-hdr open" onclick="tog(this)">
+  <div class="snum" style="background:#DC2626">5</div>
+  <div>
+    <div class="stitle">Session 5 — Visualisation with Matplotlib</div>
+    <div class="sdesc">bar chart, histogram, pie chart, scatter plot, line chart</div>
+  </div>
+  <span class="arrow">▼</span>
+</div>
+<div class="s-body open">
+
+<div class="topic-row">
+  <span class="tnum" style="background:#FEE2E2;color:#DC2626">Q20</span>
+  <div class="tq">Bar chart — How many survived vs did not survive?</div>
+  <code class="code">import matplotlib.pyplot as plt
+
+counts = df['Survived'].value_counts()
+plt.figure(figsize=(6, 4))
+plt.bar(['Did Not Survive', 'Survived'],
+        [counts[0], counts[1]],
+        color=['red', 'green'])
+plt.title('Titanic — Survival Count')
+plt.xlabel('Status')
+plt.ylabel('Number of Passengers')
+plt.show()</code>
+  <span class="note">Always add title, xlabel, ylabel — never show a chart without labels!</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#FEE2E2;color:#DC2626">Q21</span>
+  <div class="tq">Histogram — How are passenger ages distributed?</div>
+  <code class="code">plt.figure(figsize=(8, 4))
+plt.hist(df['Age'], bins=20, color='steelblue', edgecolor='white')
+plt.title('Age Distribution of Titanic Passengers')
+plt.xlabel('Age')
+plt.ylabel('Number of Passengers')
+plt.show()
+# Most passengers: 20–35 years old</code>
+  <span class="note">Histogram = how many people fall into each age range (bin)</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#FEE2E2;color:#DC2626">Q22</span>
+  <div class="tq">Pie chart — Passenger class breakdown.</div>
+  <code class="code">class_counts = df['Pclass'].value_counts()
+plt.figure(figsize=(5, 5))
+plt.pie(class_counts,
+        labels=['3rd Class', '1st Class', '2nd Class'],
+        autopct='%1.1f%%',
+        colors=['#FF6B6B', '#4ECDC4', '#45B7D1'])
+plt.title('Passengers by Class')
+plt.show()</code>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#FEE2E2;color:#DC2626">Q23</span>
+  <div class="tq">Scatter plot — Does paying more = better survival?</div>
+  <code class="code">survived     = df[df['Survived'] == 1]
+not_survived = df[df['Survived'] == 0]
+
+plt.figure(figsize=(8, 5))
+plt.scatter(not_survived['Age'], not_survived['Fare'],
+            color='red',   alpha=0.5, label='Did Not Survive')
+plt.scatter(survived['Age'], survived['Fare'],
+            color='green', alpha=0.5, label='Survived')
+plt.title('Age vs Fare — Coloured by Survival')
+plt.xlabel('Age')
+plt.ylabel('Fare Paid')
+plt.legend()
+plt.show()</code>
+  <span class="note">alpha=0.5 makes dots semi-transparent so overlapping dots are visible</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#FEE2E2;color:#DC2626">Q24</span>
+  <div class="tq">Bar chart — Survival rate by class (grouped bars).</div>
+  <code class="code">survival_by_class = df.groupby('Pclass')['Survived'].mean() * 100
+
+plt.figure(figsize=(6, 4))
+plt.bar(['1st Class', '2nd Class', '3rd Class'],
+        survival_by_class,
+        color=['gold', 'silver', '#CD7F32'])
+plt.title('Survival Rate by Passenger Class (%)')
+plt.ylabel('Survival Rate (%)')
+plt.ylim(0, 100)
+plt.show()</code>
+  <span class="out">1st: 63%  2nd: 47%  3rd: 24%</span>
+</div>
+
+</div></div>
+
+<!-- ══ SESSION 6 ══ -->
+<div class="session">
+<div class="s-hdr open" onclick="tog(this)">
+  <div class="snum" style="background:#0D9488">6</div>
+  <div>
+    <div class="stitle">Session 6 — Mini Project (Put It All Together)</div>
+    <div class="sdesc">Full analysis: load → clean → explore → visualise → conclusion</div>
+  </div>
+  <span class="arrow">▼</span>
+</div>
+<div class="s-body open">
+
+<div class="topic-row">
+  <span class="tnum" style="background:#CCFBF1;color:#0D9488">TASK</span>
+  <div class="tq">Students answer 5 business questions using all 3 libraries.</div>
+  <code class="code"># Question 1: Who had a better survival rate — men or women?
+df.groupby('Sex')['Survived'].mean()
+
+# Question 2: What was the average age of survivors?
+df[df['Survived']==1]['Age'].mean()
+
+# Question 3: Which class paid the most on average?
+df.groupby('Pclass')['Fare'].mean()
+
+# Question 4: Were there more children or adults on the ship?
+df['AgeGroup'].value_counts()
+
+# Question 5: Plot survival count by gender (bar chart)
+df.groupby('Sex')['Survived'].sum().plot(kind='bar',
+    color=['pink','steelblue'], title='Survivors by Gender')
+plt.show()</code>
+  <span class="note">This mini project uses everything from sessions 1–5. Give 30 minutes in class.</span>
+</div>
+
+<div class="topic-row">
+  <span class="tnum" style="background:#CCFBF1;color:#0D9488">KEY FINDINGS</span>
+  <div class="tq">What the data tells us — discuss with students.</div>
+  <code class="code"># Women survived at 73%  vs  Men at 19%
+# 1st class survived at 63%  vs  3rd class at 24%
+# Average age of survivors: ~30 years
+# Highest fare paid: Rs 512 (1st class)
+# Most passengers boarded from Southampton (270 out of 418)</code>
+  <span class="note">These real findings make data analysis feel meaningful and motivating</span>
+</div>
+
+</div></div>
+
+</div>
+<script>
+function tog(el){
+  el.classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+</script>

@@ -1,0 +1,421 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.w{padding:1rem 0;font-family:var(--font-sans)}
+.intro{background:var(--color-background-secondary);border-radius:var(--border-radius-lg);padding:.8rem 1rem;margin-bottom:1rem;font-size:12.5px;color:var(--color-text-secondary);line-height:1.7}
+.intro strong{color:var(--color-text-primary)}
+.stats{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.stat{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.4rem .8rem;text-align:center}
+.stat strong{font-size:15px;font-weight:500;color:var(--color-text-primary);display:block}
+.stat span{font-size:11px;color:var(--color-text-secondary)}
+/* nav tabs */
+.tabs{display:flex;gap:.3rem;flex-wrap:wrap;margin-bottom:1rem}
+.tab{padding:.35rem .8rem;border-radius:20px;font-size:12px;font-weight:500;cursor:pointer;border:1.5px solid var(--color-border-secondary);color:var(--color-text-secondary);background:var(--color-background-primary);transition:all .15s}
+.tab.active{border-color:transparent;color:#fff}
+/* question card */
+.qcard{border:1px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);margin-bottom:.7rem;overflow:hidden;display:none}
+.qcard.show{display:block}
+.qhead{padding:.7rem 1rem .4rem;display:flex;align-items:center;gap:.6rem}
+.qbadge{font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px}
+.qlevel{font-size:10px;padding:2px 8px;border-radius:10px;border:1px solid var(--color-border-secondary);color:var(--color-text-secondary)}
+.qtxt{font-size:13.5px;font-weight:500;color:var(--color-text-primary);padding:.1rem 1rem .55rem}
+.opts{padding:0 .8rem .7rem;display:grid;grid-template-columns:1fr 1fr;gap:.35rem}
+.opt{padding:.45rem .6rem;border-radius:6px;font-size:12.5px;display:flex;align-items:center;gap:.45rem;border:1px solid var(--color-border-tertiary);color:var(--color-text-secondary);background:var(--color-background-secondary)}
+.opt.cor{border-color:var(--color-border-success)!important;background:var(--color-background-success)!important;color:var(--color-text-success)!important;font-weight:500}
+.ltr{width:22px;height:22px;border-radius:50%;background:var(--color-background-primary);color:var(--color-text-secondary);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--color-border-secondary)}
+.opt.cor .ltr{background:var(--color-text-success);color:#fff;border-color:transparent}
+.ans-row{padding:.1rem 1rem .6rem;font-size:11px;color:var(--color-text-secondary);font-style:italic;border-top:1px solid var(--color-border-tertiary);margin-top:.3rem;padding-top:.4rem}
+/* pagination */
+.pg{display:flex;align-items:center;gap:.4rem;margin-top:.8rem;flex-wrap:wrap}
+.pgbtn{padding:.3rem .7rem;border-radius:6px;font-size:12px;cursor:pointer;border:1px solid var(--color-border-secondary);background:var(--color-background-primary);color:var(--color-text-secondary)}
+.pgbtn:hover{background:var(--color-background-secondary)}
+.pgbtn.act{background:var(--color-text-primary);color:#fff;border-color:transparent}
+.pginfo{font-size:12px;color:var(--color-text-secondary);margin-left:.3rem}
+/* ans toggle */
+.toggle-ans{font-size:11px;padding:2px 9px;border-radius:4px;border:1px solid var(--color-border-secondary);cursor:pointer;background:var(--color-background-primary);color:var(--color-text-secondary);margin-left:auto}
+</style>
+
+<div class="w">
+<div class="intro">
+  <strong>Mentimeter MCQ Quiz — 50 Questions · SQL Basic to Advanced</strong><br>
+  Use the topic tabs to filter. Copy each question + 4 options into Menti → <em>Quiz</em> → <em>Multiple Choice</em>. Correct answer is highlighted green.
+</div>
+
+<div class="stats">
+  <div class="stat"><strong>50</strong><span>Total Qs</span></div>
+  <div class="stat"><strong>6</strong><span>Topics</span></div>
+  <div class="stat"><strong>16</strong><span>Basic</span></div>
+  <div class="stat"><strong>20</strong><span>Intermediate</span></div>
+  <div class="stat"><strong>14</strong><span>Advanced</span></div>
+</div>
+
+<div class="tabs" id="tabs">
+  <div class="tab active" style="background:#1D4ED8" data-t="all" onclick="filter('all',this)">All 50</div>
+  <div class="tab" data-t="joins" onclick="filter('joins',this)">🔗 Joins</div>
+  <div class="tab" data-t="cmd" onclick="filter('cmd',this)">⚙️ Commands</div>
+  <div class="tab" data-t="sub" onclick="filter('sub',this)">📋 Subquery/CASE</div>
+  <div class="tab" data-t="win" onclick="filter('win',this)">🪟 Window</div>
+  <div class="tab" data-t="cte" onclick="filter('cte',this)">🗂 CTE/Temp</div>
+  <div class="tab" data-t="idx" onclick="filter('idx',this)">⚡ Index</div>
+</div>
+
+<div id="qlist"></div>
+<div class="pg" id="pg"></div>
+</div>
+
+<script>
+const QS = [
+// ── JOINS (12) ────────────────────────────────────────────
+{t:"joins",lv:"Basic",
+ q:"What is a Primary Key (PK)?",
+ ops:["A column that can have duplicate values","A column that uniquely identifies every row in a table","A column that links two tables together","A column that stores foreign data"],
+ ans:1,why:"PK uniquely identifies every row — no duplicates, no NULLs allowed."},
+
+{t:"joins",lv:"Basic",
+ q:"Where does the Foreign Key (FK) live in a One-to-Many relationship?",
+ ops:["In the 'one' side table","In a separate lookup table","In the 'many' side table","In both tables"],
+ ans:2,why:"The FK lives on the MANY side — e.g. subjects.teacher_id references teachers.teacher_id."},
+
+{t:"joins",lv:"Basic",
+ q:"INNER JOIN returns which rows?",
+ ops:["All rows from the left table","All rows from both tables","Only rows that have a match in BOTH tables","All rows from the right table"],
+ ans:2,why:"INNER JOIN = only matched rows. Unmatched rows from either side are excluded."},
+
+{t:"joins",lv:"Basic",
+ q:"LEFT JOIN returns which rows?",
+ ops:["Only matching rows","All rows from right table + matching left","All rows from left table + matching right rows (NULL if no match)","All rows from both tables"],
+ ans:2,why:"LEFT JOIN keeps ALL left table rows. Right side shows NULL where no match exists."},
+
+{t:"joins",lv:"Basic",
+ q:"What is the difference between UNION and UNION ALL?",
+ ops:["No difference — they are identical","UNION keeps duplicates; UNION ALL removes them","UNION removes duplicates; UNION ALL keeps all rows including duplicates","UNION works on numbers; UNION ALL works on text"],
+ ans:2,why:"UNION removes duplicates (slower). UNION ALL keeps everything including duplicates (faster)."},
+
+{t:"joins",lv:"Basic",
+ q:"In the Nepal School database, why is 'Physics' missing from an INNER JOIN result of subjects and teachers?",
+ ops:["Physics is spelled wrong","Physics has teacher_id = NULL so it has no match","Physics is in a different database","Physics was deleted"],
+ ans:1,why:"Physics has NULL teacher_id — INNER JOIN only shows rows with a match on both sides."},
+
+{t:"joins",lv:"Basic",
+ q:"What is a Junction Table used for?",
+ ops:["To store backup data","To solve a Many-to-Many relationship by holding two FKs","To speed up queries","To rename column names"],
+ ans:1,why:"Junction Table (e.g. enrollments) holds student_id + subject_id FKs to resolve Many-to-Many."},
+
+{t:"joins",lv:"Basic",
+ q:"What does FULL OUTER JOIN return?",
+ ops:["Only matching rows","All rows from left only","All rows from right only","ALL rows from BOTH tables — matched and unmatched (NULLs where no match)"],
+ ans:3,why:"FULL OUTER JOIN = everything from both sides. Unmatched rows show NULL on the missing side."},
+
+{t:"joins",lv:"Intermediate",
+ q:"What is a SELF JOIN?",
+ ops:["A join between two different databases","A table that joins to itself using two aliases","A join with no ON condition","A join that returns no rows"],
+ ans:1,why:"SELF JOIN uses two aliases of the same table — e.g. to find customers from the same city."},
+
+{t:"joins",lv:"Intermediate",
+ q:"Why do we add  a.customer_id < b.customer_id  in a Self JOIN?",
+ ops:["To sort results by ID","To avoid showing the same pair twice (e.g. Ram+Hari AND Hari+Ram)","To filter active customers only","To limit to 10 results"],
+ ans:1,why:"Without this condition, every pair appears twice in both orders."},
+
+{t:"joins",lv:"Intermediate",
+ q:"How do you join 4 tables in one query?",
+ ops:["Use UNION 4 times","Use 4 separate SELECT statements","Chain multiple JOINs — one JOIN per table added","Use a subquery for each table"],
+ ans:2,why:"Chain JOINs: FROM t1 JOIN t2 ON ... JOIN t3 ON ... JOIN t4 ON ..."},
+
+{t:"joins",lv:"Intermediate",
+ q:"Which table acts as the bridge between orders and products in the 5-table database?",
+ ops:["customers","daily_sales","products","order_items"],
+ ans:3,why:"order_items holds order_id (FK to orders) and product_id (FK to products)."},
+
+// ── COMMANDS DDL/DML/DCL/TCL (12) ──────────────────────
+{t:"cmd",lv:"Basic",
+ q:"Which SQL category does ALTER TABLE belong to?",
+ ops:["DML — Data Manipulation Language","DCL — Data Control Language","TCL — Transaction Control Language","DDL — Data Definition Language"],
+ ans:3,why:"DDL = structure changes: CREATE, ALTER, DROP. ALTER TABLE changes the table structure."},
+
+{t:"cmd",lv:"Basic",
+ q:"What happens to existing rows when you ADD COLUMN to a table?",
+ ops:["Existing rows are deleted","Existing rows get the column with default value 0","Existing rows get NULL in the new column","The operation fails if any row exists"],
+ ans:2,why:"New column is added with NULL for all existing rows. You then UPDATE to fill values."},
+
+{t:"cmd",lv:"Basic",
+ q:"Which command is MOST DANGEROUS and permanently deletes a column AND all its data?",
+ ops:["ALTER TABLE RENAME COLUMN","ALTER TABLE MODIFY COLUMN","ALTER TABLE DROP COLUMN","ALTER TABLE ADD COLUMN"],
+ ans:2,why:"DROP COLUMN permanently removes the column and all data in it — cannot be undone!"},
+
+{t:"cmd",lv:"Basic",
+ q:"What does INSERT INTO do?",
+ ops:["Changes existing row values","Deletes specific rows","Adds new rows to a table","Changes the table structure"],
+ ans:2,why:"INSERT INTO = DML command that adds new rows. INSERT INTO students (...) VALUES (...);"},
+
+{t:"cmd",lv:"Basic",
+ q:"What is the danger of running UPDATE without a WHERE clause?",
+ ops:["It runs slower","It updates NO rows","It updates ALL rows in the table","It deletes the table"],
+ ans:2,why:"UPDATE without WHERE affects every single row. Always add WHERE to target specific rows."},
+
+{t:"cmd",lv:"Basic",
+ q:"What is the difference between DELETE and DROP?",
+ ops:["DELETE removes the table; DROP removes rows","DELETE removes specific rows (table stays); DROP removes the entire table permanently","They are the same command","DELETE is faster than DROP"],
+ ans:1,why:"DELETE = remove rows (DML). DROP = remove entire table structure + data (DDL)."},
+
+{t:"cmd",lv:"Intermediate",
+ q:"What does GRANT do in SQL?",
+ ops:["Removes a permission from a user","Gives a user permission to perform specific actions on a table","Creates a new user account","Locks a table from editing"],
+ ans:1,why:"GRANT SELECT ON students TO sita; — gives Sita read access to the students table."},
+
+{t:"cmd",lv:"Intermediate",
+ q:"What does ROLLBACK do?",
+ ops:["Saves all changes permanently","Creates a checkpoint in a transaction","Undoes ALL changes back to the last COMMIT","Removes a user's permissions"],
+ ans:2,why:"ROLLBACK undoes everything done since BEGIN — as if the changes never happened."},
+
+{t:"cmd",lv:"Intermediate",
+ q:"Can you ROLLBACK after a COMMIT?",
+ ops:["Yes, always","Yes, within 5 minutes","No — once COMMITted, changes are permanent","Only if you used SAVEPOINT first"],
+ ans:2,why:"COMMIT is permanent and irreversible. Always test with ROLLBACK before committing critical changes."},
+
+{t:"cmd",lv:"Intermediate",
+ q:"What is SAVEPOINT used for?",
+ ops:["To save the entire database","To mark a checkpoint inside a transaction so you can ROLLBACK to that point","To permanently save one specific row","To grant temporary permissions"],
+ ans:1,why:"SAVEPOINT step1; ... ROLLBACK TO step1; — undoes only the work after the savepoint."},
+
+{t:"cmd",lv:"Intermediate",
+ q:"What does BEGIN + COMMIT do together?",
+ ops:["Starts and ends a loop","Groups multiple SQL statements so they all succeed or all fail together","Starts a new database connection","Creates a backup"],
+ ans:1,why:"Transaction = BEGIN (start) → statements → COMMIT (save). All succeed or ROLLBACK cancels all."},
+
+{t:"cmd",lv:"Intermediate",
+ q:"Which command removes a permission that was previously given?",
+ ops:["DELETE","DROP","ROLLBACK","REVOKE"],
+ ans:3,why:"REVOKE INSERT ON students FROM sita; — takes back the INSERT permission from Sita."},
+
+// ── SUBQUERIES / CASE / PIVOT (6) ──────────────────────
+{t:"sub",lv:"Basic",
+ q:"A regular (non-correlated) subquery runs how many times?",
+ ops:["Once per row in the outer table","Once per column","Once for the whole query — returns a fixed value","Twice — plan then execute"],
+ ans:2,why:"Subquery runs ONCE, returns one fixed value used by the outer query."},
+
+{t:"sub",lv:"Intermediate",
+ q:"A correlated subquery runs how many times?",
+ ops:["Once for the whole query","Once per table","Once for EACH row in the outer query — slower","Only when the result is NULL"],
+ ans:2,why:"Correlated subquery re-runs for every row because it references the outer query."},
+
+{t:"sub",lv:"Basic",
+ q:"What does a CASE statement do in SQL?",
+ ops:["Joins two tables","Groups and counts rows","Creates new column values based on If-Then-Else conditions","Sorts rows by a column"],
+ ans:2,why:"CASE WHEN price >= 50000 THEN 'Premium' ELSE 'Other' END — just like If-Then-Else."},
+
+{t:"sub",lv:"Intermediate",
+ q:"How do you create a PIVOT table in PostgreSQL?",
+ ops:["Use the PIVOT keyword","Use UNION ALL","Use CASE statements inside GROUP BY — each CASE becomes a new column","Use ORDER BY with multiple columns"],
+ ans:2,why:"PostgreSQL has no PIVOT keyword. COUNT(CASE WHEN status='Delivered' THEN 1 END) creates pivot columns."},
+
+{t:"sub",lv:"Intermediate",
+ q:"What must be TRUE for UNION to work between two SELECT statements?",
+ ops:["Both tables must have the same primary key","Both SELECT statements must have the same number of columns and compatible data types","Both tables must be in the same schema","Both queries must use ORDER BY"],
+ ans:1,why:"Same column count + compatible types in same order. Column names come from the first SELECT."},
+
+{t:"sub",lv:"Intermediate",
+ q:"What happens if no WHEN condition matches in a CASE statement and there is no ELSE?",
+ ops:["An error is thrown","The row is deleted","The result is NULL","The first WHEN is used as default"],
+ ans:2,why:"Without ELSE, unmatched rows return NULL. Always add ELSE to handle unexpected values."},
+
+// ── WINDOW FUNCTIONS (8) ────────────────────────────────
+{t:"win",lv:"Intermediate",
+ q:"What is the key difference between GROUP BY and a Window Function?",
+ ops:["GROUP BY is only for numbers; Window Functions work on text too","Window Functions are slower","GROUP BY collapses many rows into one; Window Function keeps ALL rows and adds a calculated column","Window Functions require a JOIN"],
+ ans:2,why:"Window functions add a column without collapsing rows. GROUP BY reduces rows to summaries."},
+
+{t:"win",lv:"Intermediate",
+ q:"RANK() gives ranks 1, 2, 2, __ for a tie. What comes next?",
+ ops:["2","3","4","5"],
+ ans:2,why:"RANK skips numbers after ties: 1, 2, 2, 4. Use DENSE_RANK for 1, 2, 2, 3 (no gaps)."},
+
+{t:"win",lv:"Intermediate",
+ q:"Which function accesses the PREVIOUS row's value?",
+ ops:["LEAD()","NEXT()","RANK()","LAG()"],
+ ans:3,why:"LAG(column, 1) = previous row. LEAD(column, 1) = next row. Both used for time-series comparisons."},
+
+{t:"win",lv:"Intermediate",
+ q:"What does PARTITION BY do in a Window Function?",
+ ops:["Deletes duplicate rows","Limits the result to 10 rows","Restarts the calculation for each group (like GROUP BY but without collapsing rows)","Sorts the entire result"],
+ ans:2,why:"PARTITION BY category restarts RANK() at 1 for each category — separate windows per group."},
+
+{t:"win",lv:"Advanced",
+ q:"What does ROW_NUMBER() give to tied values?",
+ ops:["The same number to all ties","It skips the tied number","It throws an error","A unique sequential number — no ties ever, even for identical values"],
+ ans:3,why:"ROW_NUMBER() never ties. Two identical prices both get different row numbers."},
+
+{t:"win",lv:"Advanced",
+ q:"How do you write a 3-day moving average in SQL?",
+ ops:["AVG(revenue) OVER (ORDER BY date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW)","AVG(revenue) OVER (PARTITION BY date)","SUM(revenue) OVER (ORDER BY date LIMIT 3)","AVG(revenue) GROUP BY date LIMIT 3"],
+ ans:0,why:"ROWS BETWEEN 2 PRECEDING AND CURRENT ROW = current row + 2 rows before = 3-day window."},
+
+{t:"win",lv:"Advanced",
+ q:"What value does LAG() return for the very FIRST row?",
+ ops:["0","The value of the last row","An error","NULL — there is no previous row before the first row"],
+ ans:3,why:"No row exists before row 1, so LAG() returns NULL for the first row."},
+
+{t:"win",lv:"Advanced",
+ q:"How do you create a Running Total in SQL?",
+ ops:["SUM(revenue) GROUP BY date","SUM(revenue) OVER (PARTITION BY date)","SUM(revenue) OVER (ORDER BY date)","CUMSUM(revenue) ORDER BY date"],
+ ans:2,why:"SUM() OVER (ORDER BY date) = cumulative sum — each row adds to the sum of all previous rows."},
+
+// ── CTE & TEMP TABLES (6) ───────────────────────────────
+{t:"cte",lv:"Intermediate",
+ q:"What keyword starts a CTE?",
+ ops:["FROM","SELECT","CREATE","WITH"],
+ ans:3,why:"WITH cte_name AS (SELECT ...) — WITH is always the first keyword of a CTE."},
+
+{t:"cte",lv:"Intermediate",
+ q:"How long does a CTE exist?",
+ ops:["Until you DROP it","Until the database restarts","Only for ONE query — it disappears once the query finishes","Until you close DBeaver"],
+ ans:2,why:"CTE lifespan = single query. No disk write, no permanent storage."},
+
+{t:"cte",lv:"Intermediate",
+ q:"Which is TRUE about Temp Tables but NOT about CTEs?",
+ ops:["Uses the WITH keyword","Exists for one query only","Stored only in memory","You can CREATE INDEX on it"],
+ ans:3,why:"Temp Tables are real disk tables — you can CREATE INDEX on them. CTEs cannot be indexed."},
+
+{t:"cte",lv:"Advanced",
+ q:"When should you switch from a CTE to a Temporary Table?",
+ ops:["When the query has more than 3 JOINs","When the query uses GROUP BY","When you need to query the same result more than once, or the dataset is large and needs an index","When the CTE has more than 5 columns"],
+ ans:2,why:"CTE is for single use. Temp Table is for reuse, large data, or when indexing is needed."},
+
+{t:"cte",lv:"Advanced",
+ q:"Where does PostgreSQL store Temporary Tables?",
+ ops:["In the main database schema","In memory only, never on disk","In the PostgreSQL temp schema on disk","In a separate file on your computer"],
+ ans:2,why:"CREATE TEMP TABLE writes to PostgreSQL's temp schema on disk — unlike a CTE which stays in memory."},
+
+{t:"cte",lv:"Advanced",
+ q:"What happens to a Temporary Table when your database session ends?",
+ ops:["It stays until you manually DROP it","It is converted to a permanent table","It is automatically dropped (deleted)","It is saved as a backup"],
+ ans:2,why:"Temp Tables auto-drop when the connection closes. You can also manually DROP TABLE name;"},
+
+// ── INDEXES & EXPLAIN ANALYZE (6) ──────────────────────
+{t:"idx",lv:"Basic",
+ q:"What is the best real-world analogy for a database index?",
+ ops:["A table of contents","The index at the back of a textbook — jump directly to the right page instead of reading every page","A bookmark","A search engine"],
+ ans:1,why:"Book index = jump to the right page directly. Database index = jump directly to matching rows."},
+
+{t:"idx",lv:"Basic",
+ q:"Which index type does PostgreSQL use BY DEFAULT?",
+ ops:["Hash","Partial","Composite","B-Tree"],
+ ans:3,why:"B-Tree is the default. Works for =, <, >, BETWEEN, LIKE 'x%', ORDER BY, and JOIN columns."},
+
+{t:"idx",lv:"Intermediate",
+ q:"Hash Index works ONLY for which query type?",
+ ops:["WHERE price > 5000  (range)","ORDER BY price  (sorting)","WHERE email = 'ram@email.com'  (exact match =)","WHERE name LIKE 'Ram%'  (prefix)"],
+ ans:2,why:"Hash = exact match only. Fails for ranges, LIKE, ORDER BY because hash codes are random/unordered."},
+
+{t:"idx",lv:"Intermediate",
+ q:"In EXPLAIN ANALYZE output, which Scan Type means the index IS being used?",
+ ops:["Full Scan","Seq Scan","Table Scan","Index Scan"],
+ ans:3,why:"Index Scan = PostgreSQL used the index to jump to matching rows. Seq Scan = reading every row."},
+
+{t:"idx",lv:"Advanced",
+ q:"What is the downside of adding too many indexes?",
+ ops:["SELECT queries become slower","Indexes take up zero extra space","Every index slows down INSERT and UPDATE because PostgreSQL must update all indexes on every change","Indexes only work with B-Tree type"],
+ ans:2,why:"Each index adds overhead to every INSERT/UPDATE. Only index columns you actually search frequently."},
+
+{t:"idx",lv:"Advanced",
+ q:"What is the correct first step when optimising a slow query?",
+ ops:["Immediately add an index","Rewrite the query with a CTE","Run EXPLAIN ANALYZE first to see WHERE the bottleneck is","Delete duplicate rows"],
+ ans:2,why:"Always diagnose before fixing. EXPLAIN ANALYZE shows Seq Scan vs Index Scan, actual time, and rows."},
+];
+
+// ── render engine ────────────────────────────────────────
+const PER = 10;
+let cur = 0, shown = [], topic = 'all';
+
+const COLORS = {
+  joins:"#1D4ED8", cmd:"#D97706", sub:"#059669",
+  win:"#475569", cte:"#1D4ED8", idx:"#DC2626"
+};
+const BGCOLORS = {
+  Basic:"#EFF6FF", Intermediate:"#FEF9C3", Advanced:"#FEF2F2"
+};
+const TXTCOLORS = {
+  Basic:"#1D4ED8", Intermediate:"#D97706", Advanced:"#DC2626"
+};
+
+function filter(t, el){
+  topic = t;
+  cur = 0;
+  document.querySelectorAll('.tab').forEach(x=>{
+    x.classList.remove('active');
+    x.style.background='';
+    x.style.color='';
+  });
+  el.classList.add('active');
+  el.style.background = t==='all'?'#1D4ED8':(COLORS[t]||'#475569');
+  el.style.color='#fff';
+  render();
+}
+
+function render(){
+  shown = QS.filter(q => topic==='all' || q.t===topic);
+  const pages = Math.ceil(shown.length/PER);
+  // cards
+  const list = document.getElementById('qlist');
+  list.innerHTML = '';
+  const slice = shown.slice(cur*PER, cur*PER+PER);
+  slice.forEach((q,i)=>{
+    const gi = QS.indexOf(q)+1;
+    const div = document.createElement('div');
+    div.className = 'qcard show';
+    div.innerHTML = `
+      <div class="qhead">
+        <span class="qbadge" style="background:${COLORS[q.t]||'#475569'};color:#fff">Q${gi}</span>
+        <span class="qlevel" style="background:${BGCOLORS[q.lv]};color:${TXTCOLORS[q.lv]};border-color:${TXTCOLORS[q.lv]}">${q.lv}</span>
+        <button class="toggle-ans" onclick="toggleAns(this)">Show answer</button>
+      </div>
+      <div class="qtxt">${q.q}</div>
+      <div class="opts">
+        ${q.ops.map((o,oi)=>`
+          <div class="opt${oi===q.ans?' cor':''}" data-ans="${oi===q.ans}">
+            <span class="ltr">${['A','B','C','D'][oi]}</span>
+            <span>${o}</span>
+          </div>`).join('')}
+      </div>
+      <div class="ans-row" style="display:none">💡 ${q.why}</div>
+    `;
+    // hide wrong options' correct styling initially; reveal on toggle
+    div.querySelectorAll('.opt.cor').forEach(x=>x.classList.remove('cor'));
+    div._q = q;
+    list.appendChild(div);
+  });
+  // pagination
+  const pg = document.getElementById('pg');
+  pg.innerHTML = '';
+  for(let p=0;p<pages;p++){
+    const b=document.createElement('button');
+    b.className='pgbtn'+(p===cur?' act':'');
+    b.textContent=p+1;
+    b.onclick=(()=>{const pp=p;return()=>{cur=pp;render()}})();
+    pg.appendChild(b);
+  }
+  const info=document.createElement('span');
+  info.className='pginfo';
+  info.textContent=`Showing ${cur*PER+1}–${Math.min((cur+1)*PER,shown.length)} of ${shown.length}`;
+  pg.appendChild(info);
+}
+
+function toggleAns(btn){
+  const card = btn.closest('.qcard');
+  const q = card._q;
+  const isShowing = btn.textContent==='Hide answer';
+  if(!isShowing){
+    // show answer
+    card.querySelectorAll('.opt').forEach((o,i)=>{
+      if(i===q.ans) o.classList.add('cor');
+    });
+    card.querySelector('.ans-row').style.display='block';
+    btn.textContent='Hide answer';
+  } else {
+    card.querySelectorAll('.opt').forEach(o=>o.classList.remove('cor'));
+    card.querySelector('.ans-row').style.display='none';
+    btn.textContent='Show answer';
+  }
+}
+
+render();
+</script>

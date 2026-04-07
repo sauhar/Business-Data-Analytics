@@ -30,9 +30,21 @@ SELECT
     b.name AS customer2,
     a.city
 FROM customers a
-JOIN customers b ON a.city = b.city AND a.customer_id < b.customer_id
+JOIN customers b ON a.city = b.city
+AND a.customer_id < b.customer_id
 ORDER BY a.city, a.name;
 
+
+-----Products with the same category (pair comparison)
+
+SELECT p1.product_name AS product1,
+       p2.product_name AS product2,
+       p1.category
+FROM products p1
+JOIN products p2
+  ON p1.category = p2.category
+  AND p1.product_id < p2.product_id
+ORDER BY p1.category;
 
 -- =====================================================
 -- EXERCISE 2: Subqueries (Non-Correlated)

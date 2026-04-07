@@ -82,6 +82,9 @@ CREATE TABLE rides (
         CHECK (status IN ('Completed','Cancelled','Ongoing'))
 );
 
+
+SELECT LENGTH(123456.78::text);
+
 -- Payments (one payment per ride)
 CREATE TABLE payments (
     payment_id   SERIAL PRIMARY KEY,
