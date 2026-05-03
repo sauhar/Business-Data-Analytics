@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pandas Quiz — SkillShikshya</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #059669;
+    --green-light: #d1fae5;
+    --green-dark: #065f46;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --red-dark: #7f1d1d;
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #21262d;
+    --border: rgba(255,255,255,0.08);
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #059669;
+    --mono: 'DM Mono', monospace;
+    --display: 'Syne', sans-serif;
+    --body: 'DM Sans', sans-serif;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--body);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1rem 4rem;
+  }
+
+  /* Background grid texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(5,150,105,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(5,150,105,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 720px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--green);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .brand-name {
+    font-family: var(--display);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .quiz-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 4px 10px;
+    border: 1px solid var(--green);
+    color: var(--green);
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Progress */
+  .progress-section {
+    margin-bottom: 2rem;
+  }
+
+  .progress-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+
+  .progress-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  .progress-count {
+    font-family: var(--display);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .progress-track {
+    height: 4px;
+    background: var(--surface2);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--green);
+    border-radius: 2px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 0%;
+  }
+
+  /* Question card */
+  .question-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.25rem;
+    animation: slideUp 0.35s ease;
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .q-number {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--green);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .q-text {
+    font-family: var(--display);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--text);
+    margin-bottom: 1.75rem;
+  }
+
+  code {
+    font-family: var(--mono);
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #79c0ff;
+  }
+
+  /* Options */
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .opt {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s, transform 0.1s;
+    text-align: left;
+    width: 100%;
+    color: var(--text);
+    font-family: var(--body);
+    font-size: 15px;
+  }
+
+  .opt:hover:not(:disabled) {
+    border-color: rgba(5,150,105,0.5);
+    background: rgba(5,150,105,0.06);
+    transform: translateX(3px);
+  }
+
+  .opt:active:not(:disabled) { transform: translateX(1px); }
+
+  .opt-key {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted);
+    flex-shrink: 0;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .opt-text { line-height: 1.4; }
+
+  .opt.correct {
+    border-color: var(--green);
+    background: rgba(5,150,105,0.12);
+  }
+  .opt.correct .opt-key {
+    background: var(--green);
+    color: #fff;
+    border-color: var(--green);
+  }
+
+  .opt.wrong {
+    border-color: var(--red);
+    background: rgba(220,38,38,0.1);
+  }
+  .opt.wrong .opt-key {
+    background: var(--red);
+    color: #fff;
+    border-color: var(--red);
+  }
+
+  .opt:disabled { cursor: default; }
+
+  /* Feedback */
+  .feedback {
+    margin-top: 1.25rem;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.65;
+    display: none;
+    animation: fadeIn 0.25s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+  }
+
+  .feedback.show { display: block; }
+
+  .feedback.correct {
+    background: rgba(5,150,105,0.1);
+    border: 1px solid rgba(5,150,105,0.3);
+    color: #6ee7b7;
+  }
+
+  .feedback.wrong {
+    background: rgba(220,38,38,0.08);
+    border: 1px solid rgba(220,38,38,0.25);
+    color: #fca5a5;
+  }
+
+  .feedback-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  /* Nav */
+  .nav-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+
+  .next-btn {
+    padding: 11px 26px;
+    background: var(--green);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--display);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: background 0.15s, transform 0.1s;
+    display: none;
+  }
+
+  .next-btn.show { display: inline-flex; align-items: center; gap: 8px; animation: fadeIn 0.25s ease; }
+  .next-btn:hover { background: #047857; transform: translateY(-1px); }
+  .next-btn:active { transform: translateY(0); }
+
+  /* Score screen */
+  .score-screen {
+    display: none;
+    animation: slideUp 0.4s ease;
+  }
+
+  .score-screen.show { display: block; }
+
+  .score-hero {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .score-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: conic-gradient(var(--green) var(--pct, 0%), var(--surface2) 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    position: relative;
+  }
+
+  .score-circle::before {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border-radius: 50%;
+    background: var(--surface);
+  }
+
+  .score-pct {
+    font-family: var(--display);
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--green);
+    position: relative;
+    z-index: 1;
+  }
+
+  .score-title {
+    font-family: var(--display);
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  .score-sub {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 2rem;
+  }
+
+  .score-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--surface2);
+    border-radius: 10px;
+  }
+
+  .stat { text-align: center; }
+  .stat-val { font-family: var(--display); font-size: 28px; font-weight: 800; }
+  .stat-val.g { color: var(--green); }
+  .stat-val.r { color: var(--red); }
+  .stat-val.b { color: #79c0ff; }
+  .stat-lbl { font-family: var(--mono); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
+
+  .score-msg {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.7;
+    padding: 0 1rem;
+  }
+
+  .score-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .btn-restart {
+    padding: 12px 28px;
+    background: var(--green);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--display);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    letter-spacing: 0.02em;
+  }
+  .btn-restart:hover { background: #047857; transform: translateY(-1px); }
+
+  .btn-outline {
+    padding: 12px 28px;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: var(--display);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.25); background: var(--surface2); }
+
+  /* Footer */
+  .footer {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* Review section */
+  .review-section { display: none; }
+  .review-section.show { display: block; margin-top: 1.25rem; }
+  .review-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 10px;
+  }
+  .review-q { font-size: 14px; color: var(--muted); margin-bottom: 8px; line-height: 1.5; }
+  .review-ans { font-family: var(--mono); font-size: 13px; padding: 6px 10px; border-radius: 6px; display: inline-block; }
+  .review-ans.correct { background: rgba(5,150,105,0.12); color: #6ee7b7; }
+  .review-ans.wrong { background: rgba(220,38,38,0.1); color: #fca5a5; }
+  .review-correct-ans { font-size: 13px; color: var(--muted); margin-top: 6px; }
+  .review-correct-ans span { color: #6ee7b7; font-family: var(--mono); }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="header">
+    <div class="brand">
+      <div class="brand-icon">🐼</div>
+      <div class="brand-name">SkillShikshya</div>
+    </div>
+    <div class="quiz-tag">Pandas Quiz</div>
+  </header>
+
+  <!-- Quiz view -->
+  <div id="quiz-view">
+    <div class="progress-section">
+      <div class="progress-meta">
+        <span class="progress-label">Progress</span>
+        <span class="progress-count" id="prog-count">1 / 15</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
+    </div>
+
+    <div class="question-card" id="qcard">
+      <div class="q-number" id="q-num">Question 01</div>
+      <div class="q-text" id="q-text"></div>
+      <div class="options" id="options"></div>
+      <div class="feedback" id="feedback">
+        <div class="feedback-label" id="fb-label"></div>
+        <span id="fb-text"></span>
+      </div>
+    </div>
+
+    <div class="nav-row">
+      <button class="next-btn" id="next-btn">
+        Next <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Score view -->
+  <div class="score-screen" id="score-view">
+    <div class="score-hero">
+      <div class="score-circle" id="score-circle">
+        <span class="score-pct" id="score-pct">0%</span>
+      </div>
+      <div class="score-title" id="score-title"></div>
+      <div class="score-sub" id="score-sub"></div>
+      <div class="score-stats">
+        <div class="stat"><div class="stat-val g" id="s-correct">0</div><div class="stat-lbl">Correct</div></div>
+        <div class="stat"><div class="stat-val r" id="s-wrong">0</div><div class="stat-lbl">Wrong</div></div>
+        <div class="stat"><div class="stat-val b">15</div><div class="stat-lbl">Total</div></div>
+      </div>
+      <div class="score-msg" id="score-msg"></div>
+      <div class="score-actions">
+        <button class="btn-restart" onclick="restart()">Retake Quiz</button>
+        <button class="btn-outline" onclick="toggleReview()">Review Answers</button>
+      </div>
+    </div>
+    <div class="review-section" id="review-section"></div>
+  </div>
+
+  <div class="footer">Business Data Analytics with AI &nbsp;·&nbsp; Kathmandu, Nepal &nbsp;·&nbsp; 2025</div>
+</div>
+
+<script>
+const questions = [
+  { q: "What does a Pandas <code>Series</code> represent?", opts: ["A full table with rows and columns", "A single column of values with an index", "A CSV file loaded into memory", "A Python dictionary"], ans: 1, exp: "A Series is like a single column in Excel — a list of values with row numbers (index) on the side." },
+  { q: "Which statement correctly imports Pandas?", opts: ["import pandas", "import pandas as pd", "from pandas import *", "load pandas as pd"], ans: 1, exp: "The standard convention is <code>import pandas as pd</code>. The alias <code>pd</code> is used by everyone in the data world." },
+  { q: "Which command shows the first 5 rows of a DataFrame <code>df</code>?", opts: ["df.first(5)", "df.head()", "df.show(5)", "df.rows(5)"], ans: 1, exp: "<code>df.head()</code> shows the first 5 rows by default. Pass a number like <code>df.head(10)</code> to see more." },
+  { q: "How do you check the number of rows and columns in <code>df</code>?", opts: ["df.size()", "df.count()", "df.shape", "df.info()"], ans: 2, exp: "<code>df.shape</code> returns a tuple like <code>(500, 8)</code> — rows first, then columns." },
+  { q: "How do you select the <code>'Salary'</code> column from DataFrame <code>df</code>?", opts: ["df.Salary()", "df[Salary]", "df['Salary']", "df.get('Salary')"], ans: 2, exp: "Use square brackets with the column name as a string: <code>df['Salary']</code>." },
+  { q: "You want rows where <code>City</code> is <code>'Kathmandu'</code>. Which code is correct?", opts: ["df.filter(City == 'Kathmandu')", "df[df['City'] = 'Kathmandu']", "df[df['City'] == 'Kathmandu']", "df.where('City', 'Kathmandu')"], ans: 2, exp: "Boolean filtering uses double equals <code>==</code> inside square brackets: <code>df[df['City'] == 'Kathmandu']</code>." },
+  { q: "How do you calculate the total of the <code>'Amount'</code> column?", opts: ["df['Amount'].total()", "df['Amount'].sum()", "df.sum('Amount')", "sum(df['Amount'])"], ans: 1, exp: "<code>df['Amount'].sum()</code> is the Pandas method for column totals." },
+  { q: "Which Pandas method is equivalent to a Pivot Table in Excel?", opts: ["df.pivot()", "df.aggregate()", "df.groupby()", "df.merge()"], ans: 2, exp: "<code>df.groupby()</code> groups rows by a category and lets you calculate totals, averages, etc. — just like Excel Pivot Tables." },
+  { q: "How do you count missing values in each column?", opts: ["df.missing()", "df.isnull().sum()", "df.count_nan()", "df.nullcount()"], ans: 1, exp: "<code>df.isnull().sum()</code> checks every cell for nulls and sums them per column." },
+  { q: "Which method replaces all missing values with <code>0</code>?", opts: ["df.replace(NaN, 0)", "df.fill(0)", "df.fillna(0)", "df.dropna(0)"], ans: 2, exp: "<code>df.fillna(0)</code> replaces all <code>NaN</code> values with 0. You can also fill with mean, median, or a string." },
+  { q: "How do you remove all rows that contain a missing value?", opts: ["df.remove_nulls()", "df.dropna()", "df.fillna(None)", "df.clean()"], ans: 1, exp: "<code>df.dropna()</code> removes every row that has at least one missing value." },
+  { q: "Sort <code>df</code> by <code>'Price'</code> from highest to lowest:", opts: ["df.sort('Price', reverse=True)", "df.sort_values('Price', ascending=False)", "df.order_by('Price', desc=True)", "df.arrange('Price', False)"], ans: 1, exp: "<code>df.sort_values('Price', ascending=False)</code> sorts in descending order (highest first)." },
+  { q: "Add a new column <code>'Tax'</code> equal to 13% of <code>'Price'</code>:", opts: ["df.add_column('Tax', df['Price'] * 0.13)", "df['Tax'] = df['Price'] * 0.13", "df.Tax = df.Price * 0.13", "df.insert('Tax', df['Price'] * 0.13)"], ans: 1, exp: "Assign directly to <code>df['Tax'] = df['Price'] * 0.13</code> — Pandas creates the new column automatically." },
+  { q: "How do you load a CSV file called <code>'sales.csv'</code> into a DataFrame?", opts: ["df = pd.open_csv('sales.csv')", "df = pd.load('sales.csv')", "df = pd.read_csv('sales.csv')", "df = pandas.csv('sales.csv')"], ans: 2, exp: "<code>pd.read_csv('sales.csv')</code> is the standard way to load any CSV file into Pandas." },
+  { q: "Which method gives a quick stats summary (mean, min, max, std)?", opts: ["df.summary()", "df.stats()", "df.describe()", "df.info()"], ans: 2, exp: "<code>df.describe()</code> shows count, mean, std, min, quartiles, and max for all numeric columns at once." }
+];
+
+const KEYS = ['A','B','C','D'];
+let current = 0, score = 0, correct = 0, wrong = 0, answered = false;
+let userAnswers = [];
+
+function render() {
+  if (current >= questions.length) { showScore(); return; }
+  answered = false;
+  const q = questions[current];
+
+  document.getElementById('prog-count').textContent = `${current+1} / ${questions.length}`;
+  document.getElementById('prog-fill').style.width = ((current / questions.length) * 100) + '%';
+  document.getElementById('q-num').textContent = `Question ${String(current+1).padStart(2,'0')}`;
+  document.getElementById('q-text').innerHTML = q.q;
+
+  const opts = document.getElementById('options');
+  opts.innerHTML = q.opts.map((o, i) => `
+    <button class="opt" onclick="choose(${i})" id="opt-${i}">
+      <span class="opt-key">${KEYS[i]}</span>
+      <span class="opt-text">${o}</span>
+    </button>
+  `).join('');
+
+  const fb = document.getElementById('feedback');
+  fb.className = 'feedback';
+  document.getElementById('next-btn').className = 'next-btn';
+
+  const card = document.getElementById('qcard');
+  card.style.animation = 'none';
+  void card.offsetWidth;
+  card.style.animation = 'slideUp 0.35s ease';
+}
+
+function choose(i) {
+  if (answered) return;
+  answered = true;
+  const q = questions[current];
+  document.querySelectorAll('.opt').forEach(b => b.disabled = true);
+
+  const isCorrect = i === q.ans;
+  document.getElementById(`opt-${q.ans}`).classList.add('correct');
+  if (!isCorrect) document.getElementById(`opt-${i}`).classList.add('wrong');
+
+  isCorrect ? correct++ : wrong++;
+  userAnswers.push({ q: q.q, chosen: i, ans: q.ans, opts: q.opts, exp: q.exp, correct: isCorrect });
+
+  const fb = document.getElementById('feedback');
+  document.getElementById('fb-label').textContent = isCorrect ? '✓ Correct' : '✗ Incorrect';
+  document.getElementById('fb-text').innerHTML = q.exp;
+  fb.className = `feedback show ${isCorrect ? 'correct' : 'wrong'}`;
+
+  const btn = document.getElementById('next-btn');
+  btn.className = 'next-btn show';
+  btn.textContent = current + 1 < questions.length ? 'Next  →' : 'See Results  →';
+}
+
+document.getElementById('next-btn').addEventListener('click', () => {
+  current++;
+  render();
+});
+
+function showScore() {
+  document.getElementById('quiz-view').style.display = 'none';
+  const sv = document.getElementById('score-view');
+  sv.className = 'score-screen show';
+
+  const pct = Math.round((correct / questions.length) * 100);
+  document.getElementById('score-circle').style.setProperty('--pct', pct + '%');
+  document.getElementById('score-pct').textContent = pct + '%';
+  document.getElementById('s-correct').textContent = correct;
+  document.getElementById('s-wrong').textContent = wrong;
+  document.getElementById('prog-fill').style.width = '100%';
+
+  let title, msg;
+  if (pct >= 90) { title = "Outstanding!"; msg = "You have mastered Pandas fundamentals. You're ready to tackle real-world datasets with confidence."; }
+  else if (pct >= 70) { title = "Well done!"; msg = "Strong grasp of the core concepts. Review the questions you missed and you'll be fully solid."; }
+  else if (pct >= 50) { title = "Good effort!"; msg = "You've got the basics down. Go back over groupby, filtering, and missing data handling — then try again."; }
+  else { title = "Keep going!"; msg = "Pandas takes practice. Revisit the notebook, run the code examples, and retake this quiz — you'll improve quickly."; }
+
+  document.getElementById('score-title').textContent = title;
+  document.getElementById('score-sub').textContent = `${correct} out of ${questions.length} correct`;
+  document.getElementById('score-msg').textContent = msg;
+}
+
+let reviewVisible = false;
+function toggleReview() {
+  const rs = document.getElementById('review-section');
+  reviewVisible = !reviewVisible;
+  if (reviewVisible) {
+    rs.innerHTML = userAnswers.map((ua, idx) => {
+      const cls = ua.correct ? 'correct' : 'wrong';
+      const wrongLine = !ua.correct ? `<div class="review-correct-ans">Correct answer: <span>${ua.opts[ua.ans]}</span></div>` : '';
+      return `<div class="review-card">
+        <div class="review-q"><strong style="font-family:var(--mono);font-size:11px;color:var(--muted)">Q${idx+1}</strong>&nbsp;&nbsp;${ua.q}</div>
+        <div class="review-ans ${cls}">Your answer: ${ua.opts[ua.chosen]}</div>
+        ${wrongLine}
+      </div>`;
+    }).join('');
+    rs.className = 'review-section show';
+    document.querySelector('.btn-outline').textContent = 'Hide Review';
+  } else {
+    rs.className = 'review-section';
+    document.querySelector('.btn-outline').textContent = 'Review Answers';
+  }
+}
+
+function restart() {
+  current = 0; score = 0; correct = 0; wrong = 0; answered = false; userAnswers = [];
+  reviewVisible = false;
+  document.getElementById('score-view').className = 'score-screen';
+  document.getElementById('quiz-view').style.display = 'block';
+  render();
+}
+
+render();
+</script>
+</body>
+</html>
