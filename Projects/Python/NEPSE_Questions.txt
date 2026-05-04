@@ -1,0 +1,177 @@
+================================================================================
+        NEPSE STOCK ANALYSIS
+        Dataset: stockdata.csv | Companies: NABIL, NTC, SCB, SBI, CHCL,
+                                            PLIC, NLIC, ADBL, OHL, SHL
+        Date Range: April 2010 – September 2018
+================================================================================
+
+
+--------------------------------------------------------------------------------
+PART 1 — DATA LOADING & CLEANING (Pandas)
+--------------------------------------------------------------------------------
+
+Q1.  Load stockdata.csv into a Pandas DataFrame. Display the first 10 rows.
+
+Q2.  How many rows and columns does the dataset have?
+
+Q3.  What are all the unique company symbols in the dataset?
+
+Q4.  What is the date range of the data — earliest and latest trading date?
+
+Q5.  Check for missing values in each column. Are there any?
+
+Q6.  The symbol column has a dirty entry '\tNLIC' (hidden tab character).
+     Fix it so all entries show as 'NLIC'.
+
+Q7.  Convert the date column from string to proper datetime format.
+
+Q8.  Drop the id column.
+
+Q9.  Remove all rows where closingprice is 0 (bad/corrupted data).
+     How many rows were removed?
+
+Q10. After cleaning, how many records does each company have?
+     Which company has the most trading days recorded?
+
+
+--------------------------------------------------------------------------------
+PART 2 — EXPLORATORY ANALYSIS (Pandas)
+--------------------------------------------------------------------------------
+
+Q11. Add a new column daily_change = closingprice - openprice.
+     What does a positive value mean? What does a negative value mean?
+
+Q12. Add a new column daily_change_pct = percentage change from open
+     to close price.
+
+Q13. Add a new column price_range = maxprice - minprice.
+     What does a large value mean?
+
+Q14. Add a new column day_result with value 'Up', 'Down', or 'Flat'
+     based on daily_change.
+
+Q15. Extract year and month from the date column and add them as
+     separate columns.
+
+Q16. For each company find the average closing price across all years.
+     Which company has the highest average?
+
+Q17. Find the single highest closing price ever recorded.
+     Which company and on which date did it happen?
+
+Q18. Find the single lowest closing price ever recorded (greater than 0).
+     Which company and on which date?
+
+Q19. Which company had the most number of 'Up' days?
+     Which had the most 'Down' days?
+
+Q20. What percentage of all trading days across all companies were
+     'Up' days?
+
+Q21. Using groupby, find the average closing price for each company
+     for each year. Which company grew the most from 2010 to 2018?
+
+Q22. Which year had the highest average closing price across all
+     companies?
+
+Q23. Which month (1-12) tends to have the highest average closing price
+     across all companies?
+
+Q24. Find the top 5 single best trading days — highest daily_change_pct
+     — across all companies.
+
+Q25. Find the top 5 single worst trading days — lowest daily_change_pct
+     — across all companies.
+
+
+--------------------------------------------------------------------------------
+PART 3 — CALCULATIONS (NumPy)
+--------------------------------------------------------------------------------
+
+Q26. Using NumPy, calculate the mean closing price of the entire dataset.
+
+Q27. Using NumPy, calculate the median closing price of the entire
+     dataset. Is it higher or lower than the mean?
+     What does that tell you?
+
+Q28. Using NumPy, calculate the standard deviation of closing prices
+     for each company. Which company is most volatile?
+
+Q29. Using NumPy, calculate the minimum and maximum closing price of
+     NABIL without using Pandas.
+
+Q30. Filter only NTC closing prices into a NumPy array.
+     How many values are above the overall mean?
+
+Q31. Using NumPy, calculate the correlation between NABIL and NTC
+     closing prices. Do they move together?
+
+Q32. Using NumPy, calculate the 25th, 50th, and 75th percentile of
+     closing prices for SCB.
+
+Q33. Using NumPy, add 10% to every closing price in the dataset
+     (simulate a market-wide 10% growth). What is the new mean?
+
+Q34. Using NumPy, find how many trading days had a daily_change_pct
+     greater than 5% or less than -5% (extreme days).
+
+Q35. Using NumPy, calculate the cumulative sum of daily_change for
+     NABIL over all trading days. Did NABIL end higher or lower overall?
+
+
+--------------------------------------------------------------------------------
+PART 4 — VISUALISATION (Matplotlib)
+--------------------------------------------------------------------------------
+
+Q36. Plot a line chart showing the closing price of NABIL from 2010
+     to 2018. Add proper title, xlabel, ylabel.
+
+Q37. On the same chart as Q36, add a 30-day moving average line in a
+     different colour. Add a legend.
+
+Q38. Plot a bar chart showing the average closing price for each
+     company. Which company stands out?
+
+Q39. Plot a histogram of daily_change_pct for all companies combined.
+     Where do most days cluster?
+
+Q40. Plot a scatter chart of price_range (X-axis) vs closingprice
+     (Y-axis). Does higher price mean more volatility?
+
+Q41. Plot a line chart comparing the closing price trend of NABIL, NTC,
+     and SBI on the same chart with different colours and a legend.
+
+Q42. Plot a bar chart showing the percentage of 'Up' days for each
+     company. Which company is most consistently positive?
+
+Q43. Plot a line chart showing the yearly average closing price (all
+     companies combined) from 2010 to 2018.
+     Was the overall trend going up or down?
+
+Q44. Plot a histogram showing the distribution of closing prices for
+     SCB only. Is it normally distributed or skewed?
+
+Q45. Plot a scatter chart of openprice (X-axis) vs closingprice
+     (Y-axis) for SBI. Do they follow each other closely?
+
+Q46. Build a final dashboard using plt.subplot(2, 3) with 6 charts:
+       Box 1 -> NABIL closing price trend + 30-day moving average (line)
+       Box 2 -> Average closing price per company (bar)
+       Box 3 -> Daily change % distribution for all companies (histogram)
+       Box 4 -> Price range vs closing price (scatter)
+       Box 5 -> Percentage of Up days per company (bar)
+       Box 6 -> Yearly average closing price trend 2010-2018 (line)
+
+Q47. Save the dashboard from Q46 as nepse_dashboard.png with dpi=300
+     and bbox_inches='tight'.
+
+Q48. Add a red dashed vertical line on the NABIL line chart (Q36)
+     marking the year 2015 — when the Nepal earthquake happened.
+     Does the chart show any impact?
+
+Q49. Plot a pie chart showing what share of total trading records each
+     company holds in the dataset.
+
+Q50. Plot a line chart for CHCL closing price. Add horizontal lines
+     marking the average, maximum, and minimum prices using
+     plt.axhline().

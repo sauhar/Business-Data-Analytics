@@ -1,419 +1,419 @@
 PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked,AgeGroup,HasCabin,Deck,RawName,FamilySize,FamilyType,FareCategory,Alone
-892,0,3,"Kelly, Mr. James",male,34.0,0,0,330911,7.83,,Q,Adult,False,Unknown,"Kelly, Mr. James",1,Solo,Budget,Yes
-893,1,3,"Wilkes, Mrs. James (Ellen Needs)",female,47.0,1,0,363272,7.0,,S,Adult,False,Unknown,"Wilkes, Mrs. James (Ellen Needs)",2,Small,Budget,No
-894,0,2,"Myles, Mr. Thomas Francis",male,62.0,0,0,240276,9.69,,Q,Senior,False,Unknown,"Myles, Mr. Thomas Francis",1,Solo,Budget,Yes
-895,0,3,"Wirz, Mr. Albert",male,27.0,0,0,315154,8.66,,S,Adult,False,Unknown,"Wirz, Mr. Albert",1,Solo,Budget,Yes
-896,1,3,"Hirvonen, Mrs. Alexander (Helga E Lindqvist)",female,22.0,1,1,3101298,12.29,,S,Adult,False,Unknown,"Hirvonen, Mrs. Alexander (Helga E Lindqvist)",3,Small,Standard,No
-897,0,3,"Svensson, Mr. Johan Cervin",male,14.0,0,0,7538,9.22,,S,Child,False,Unknown,"Svensson, Mr. Johan Cervin",1,Solo,Budget,Yes
-898,1,3,"Connolly, Miss. Kate",female,30.0,0,0,330972,7.63,,Q,Adult,False,Unknown,"Connolly, Miss. Kate",1,Solo,Budget,Yes
-899,0,2,"Caldwell, Mr. Albert Francis",male,26.0,1,1,248738,29.0,,S,Adult,False,Unknown,"Caldwell, Mr. Albert Francis",3,Small,Standard,No
-900,1,3,"Abrahim, Mrs. Joseph (Sophie Halaut Easu)",female,18.0,0,0,2657,7.23,,C,Adult,False,Unknown,"Abrahim, Mrs. Joseph (Sophie Halaut Easu)",1,Solo,Budget,Yes
-901,0,3,"Davies, Mr. John Samuel",male,21.0,2,0,A/4 48871,24.15,,S,Adult,False,Unknown,"Davies, Mr. John Samuel",3,Small,Standard,No
-902,0,3,"Ilieff, Mr. Ylio",male,27.0,0,0,349220,7.9,,S,Senior,False,Unknown,"Ilieff, Mr. Ylio",1,Solo,Budget,Yes
-903,0,1,"Jones, Mr. Charles Cresson",male,46.0,0,0,694,26.0,,S,Adult,False,Unknown,"Jones, Mr. Charles Cresson",1,Solo,Standard,Yes
-904,1,1,"Snyder, Mrs. John Pillsbury (Nelle Stevenson)",female,23.0,1,0,21228,82.27,B45,S,Adult,True,B,"Snyder, Mrs. John Pillsbury (Nelle Stevenson)",2,Small,Premium,No
-905,0,2,"Howard, Mr. Benjamin",male,63.0,1,0,24065,26.0,,S,Senior,False,Unknown,"Howard, Mr. Benjamin",2,Small,Standard,No
-906,1,1,"Chaffee, Mrs. Herbert Fuller (Carrie Constance Toogood)",female,47.0,1,0,W.E.P. 5734,61.18,E31,S,Adult,True,E,"Chaffee, Mrs. Herbert Fuller (Carrie Constance Toogood)",2,Small,Premium,No
-907,1,2,"del Carlo, Mrs. Sebastiano (Argenia Genovesi)",female,24.0,1,0,SC/PARIS 2167,27.72,,C,Adult,False,Unknown,"del Carlo, Mrs. Sebastiano (Argenia Genovesi)",2,Small,Standard,No
-908,0,2,"Keane, Mr. Daniel",male,35.0,0,0,233734,12.35,,Q,Adult,False,Unknown,"Keane, Mr. Daniel",1,Solo,Standard,Yes
-909,0,3,"Assaf, Mr. Gerios",male,21.0,0,0,2692,7.22,,C,Adult,False,Unknown,"Assaf, Mr. Gerios",1,Solo,Budget,Yes
-910,1,3,"Ilmakangas, Miss. Ida Livija",female,27.0,1,0,STON/O2. 3101270,7.92,,S,Adult,False,Unknown,"Ilmakangas, Miss. Ida Livija",2,Small,Budget,No
-911,1,3,"Assaf Khalil, Mrs. Mariana (Miriam)",female,45.0,0,0,2696,7.22,,C,Adult,False,Unknown,"Assaf Khalil, Mrs. Mariana (Miriam"")""",1,Solo,Budget,Yes
-912,0,1,"Rothschild, Mr. Martin",male,55.0,1,0,PC 17603,59.4,,C,Adult,False,Unknown,"Rothschild, Mr. Martin",2,Small,Premium,No
-913,0,3,"Olsen, Master. Artur Karl",male,9.0,0,1,C 17368,3.17,,S,Child,False,Unknown,"Olsen, Master. Artur Karl",2,Small,Budget,No
-914,1,1,"Flegenheim, Mrs. Alfred (Antoinette)",female,27.0,0,0,PC 17598,31.68,,S,Senior,False,Unknown,"Flegenheim, Mrs. Alfred (Antoinette)",1,Solo,Premium,Yes
-915,0,1,"Williams, Mr. Richard Norris II",male,21.0,0,1,PC 17597,61.38,,C,Adult,False,Unknown,"Williams, Mr. Richard Norris II",2,Small,Premium,No
-916,1,1,"Ryerson, Mrs. Arthur Larned (Emily Maria Borie)",female,48.0,1,3,PC 17608,262.38,B57 B59 B63 B66,C,Adult,True,B,"Ryerson, Mrs. Arthur Larned (Emily Maria Borie)",5,Large,Luxury,No
-917,0,3,"Robins, Mr. Alexander A",male,50.0,1,0,A/5. 3337,14.5,,S,Adult,False,Unknown,"Robins, Mr. Alexander A",2,Small,Standard,No
-918,1,1,"Ostby, Miss. Helene Ragnhild",female,22.0,0,1,113509,61.98,B36,C,Adult,True,B,"Ostby, Miss. Helene Ragnhild",2,Small,Premium,No
-919,0,3,"Daher, Mr. Shedid",male,22.0,0,0,2698,7.22,,C,Adult,False,Unknown,"Daher, Mr. Shedid",1,Solo,Budget,Yes
-920,0,1,"Brady, Mr. John Bertram",male,41.0,0,0,113054,30.5,A21,S,Adult,True,A,"Brady, Mr. John Bertram",1,Solo,Premium,Yes
-921,0,3,"Samaan, Mr. Elias",male,27.0,2,0,2662,21.68,,C,Senior,False,Unknown,"Samaan, Mr. Elias",3,Small,Standard,No
-922,0,2,"Louch, Mr. Charles Alexander",male,50.0,1,0,SC/AH 3085,26.0,,S,Adult,False,Unknown,"Louch, Mr. Charles Alexander",2,Small,Standard,No
-923,0,2,"Jefferys, Mr. Clifford Thomas",male,24.0,2,0,C.A. 31029,31.5,,S,Adult,False,Unknown,"Jefferys, Mr. Clifford Thomas",3,Small,Premium,No
-924,1,3,"Dean, Mrs. Bertram (Eva Georgetta Light)",female,33.0,1,2,C.A. 2315,20.58,,S,Adult,False,Unknown,"Dean, Mrs. Bertram (Eva Georgetta Light)",4,Small,Standard,No
-925,1,3,"Johnston, Mrs. Andrew G (Elizabeth Lily Watson)",female,27.0,1,2,W./C. 6607,23.45,,S,Senior,False,Unknown,"Johnston, Mrs. Andrew G (Elizabeth Lily"" Watson)""",4,Small,Standard,No
-926,0,1,"Mock, Mr. Philipp Edmund",male,30.0,1,0,13236,57.75,C78,C,Adult,True,C,"Mock, Mr. Philipp Edmund",2,Small,Premium,No
-927,0,3,"Katavelas, Mr. Vassilios (Catavelas Vassilios)",male,18.0,0,0,2682,7.23,,C,Adult,False,Unknown,"Katavelas, Mr. Vassilios (Catavelas Vassilios"")""",1,Solo,Budget,Yes
-928,1,3,"Roth, Miss. Sarah A",female,27.0,0,0,342712,8.05,,S,Senior,False,Unknown,"Roth, Miss. Sarah A",1,Solo,Budget,Yes
-929,1,3,"Cacic, Miss. Manda",female,21.0,0,0,315087,8.66,,S,Adult,False,Unknown,"Cacic, Miss. Manda",1,Solo,Budget,Yes
-930,0,3,"Sap, Mr. Julius",male,25.0,0,0,345768,9.5,,S,Adult,False,Unknown,"Sap, Mr. Julius",1,Solo,Budget,Yes
-931,0,3,"Hee, Mr. Ling",male,27.0,0,0,1601,56.5,,S,Senior,False,Unknown,"Hee, Mr. Ling",1,Solo,Premium,Yes
-932,0,3,"Karun, Mr. Franz",male,39.0,0,1,349256,13.42,,C,Adult,False,Unknown,"Karun, Mr. Franz",2,Small,Standard,No
-933,0,1,"Franklin, Mr. Thomas Parham",male,27.0,0,0,113778,26.55,D34,S,Senior,True,D,"Franklin, Mr. Thomas Parham",1,Solo,Standard,Yes
-934,0,3,"Goldsmith, Mr. Nathan",male,41.0,0,0,SOTON/O.Q. 3101263,7.85,,S,Adult,False,Unknown,"Goldsmith, Mr. Nathan",1,Solo,Budget,Yes
-935,1,2,"Corbett, Mrs. Walter H (Irene Colvin)",female,30.0,0,0,237249,13.0,,S,Adult,False,Unknown,"Corbett, Mrs. Walter H (Irene Colvin)",1,Solo,Standard,Yes
-936,1,1,"Kimball, Mrs. Edwin Nelson Jr (Gertrude Parsons)",female,45.0,1,0,11753,52.55,D19,S,Adult,True,D,"Kimball, Mrs. Edwin Nelson Jr (Gertrude Parsons)",2,Small,Premium,No
-937,0,3,"Peltomaki, Mr. Nikolai Johannes",male,25.0,0,0,STON/O 2. 3101291,7.92,,S,Adult,False,Unknown,"Peltomaki, Mr. Nikolai Johannes",1,Solo,Budget,Yes
-938,0,1,"Chevre, Mr. Paul Romaine",male,45.0,0,0,PC 17594,29.7,A9,C,Adult,True,A,"Chevre, Mr. Paul Romaine",1,Solo,Standard,Yes
-939,0,3,"Shaughnessy, Mr. Patrick",male,27.0,0,0,370374,7.75,,Q,Senior,False,Unknown,"Shaughnessy, Mr. Patrick",1,Solo,Budget,Yes
-940,1,1,"Bucknell, Mrs. William Robert (Emma Eliza Ward)",female,60.0,0,0,11813,76.29,D15,C,Senior,True,D,"Bucknell, Mrs. William Robert (Emma Eliza Ward)",1,Solo,Premium,Yes
-941,1,3,"Coutts, Mrs. William (Winnie Minnie Treanor)",female,36.0,0,2,C.A. 37671,15.9,,S,Adult,False,Unknown,"Coutts, Mrs. William (Winnie Minnie"" Treanor)""",3,Small,Standard,No
-942,0,1,"Smith, Mr. Lucien Philip",male,24.0,1,0,13695,60.0,C31,S,Adult,True,C,"Smith, Mr. Lucien Philip",2,Small,Premium,No
-943,0,2,"Pulbaum, Mr. Franz",male,27.0,0,0,SC/PARIS 2168,15.03,,C,Adult,False,Unknown,"Pulbaum, Mr. Franz",1,Solo,Standard,Yes
-944,1,2,"Hocking, Miss. Ellen Nellie",female,20.0,2,1,29105,23.0,,S,Adult,False,Unknown,"Hocking, Miss. Ellen Nellie""""",4,Small,Standard,No
-945,1,1,"Fortune, Miss. Ethel Flora",female,28.0,3,2,19950,263.0,C23 C25 C27,S,Adult,True,C,"Fortune, Miss. Ethel Flora",6,Large,Luxury,No
-946,0,2,"Mangiavacchi, Mr. Serafino Emilio",male,27.0,0,0,SC/A.3 2861,15.58,,C,Senior,False,Unknown,"Mangiavacchi, Mr. Serafino Emilio",1,Solo,Standard,Yes
-947,0,3,"Rice, Master. Albert",male,10.0,4,1,382652,29.12,,Q,Child,False,Unknown,"Rice, Master. Albert",6,Large,Standard,No
-948,0,3,"Cor, Mr. Bartol",male,35.0,0,0,349230,7.9,,S,Adult,False,Unknown,"Cor, Mr. Bartol",1,Solo,Budget,Yes
-949,0,3,"Abelseth, Mr. Olaus Jorgensen",male,25.0,0,0,348122,7.65,F G63,S,Adult,True,F,"Abelseth, Mr. Olaus Jorgensen",1,Solo,Budget,Yes
-950,0,3,"Davison, Mr. Thomas Henry",male,27.0,1,0,386525,16.1,,S,Senior,False,Unknown,"Davison, Mr. Thomas Henry",2,Small,Standard,No
-951,1,1,"Chaudanson, Miss. Victorine",female,36.0,0,0,PC 17608,262.38,B61,C,Adult,True,B,"Chaudanson, Miss. Victorine",1,Solo,Luxury,Yes
-952,0,3,"Dika, Mr. Mirko",male,17.0,0,0,349232,7.9,,S,Child,False,Unknown,"Dika, Mr. Mirko",1,Solo,Budget,Yes
-953,0,2,"McCrae, Mr. Arthur Gordon",male,32.0,0,0,237216,13.5,,S,Adult,False,Unknown,"McCrae, Mr. Arthur Gordon",1,Solo,Standard,Yes
-954,0,3,"Bjorklund, Mr. Ernst Herbert",male,18.0,0,0,347090,7.75,,S,Adult,False,Unknown,"Bjorklund, Mr. Ernst Herbert",1,Solo,Budget,Yes
-955,1,3,"Bradley, Miss. Bridget Delia",female,22.0,0,0,334914,7.72,,Q,Adult,False,Unknown,"Bradley, Miss. Bridget Delia",1,Solo,Budget,Yes
-956,0,1,"Ryerson, Master. John Borie",male,13.0,2,2,PC 17608,262.38,B57 B59 B63 B66,C,Child,True,B,"Ryerson, Master. John Borie",5,Large,Luxury,No
-957,1,2,"Corey, Mrs. Percy C (Mary Phyllis Elizabeth Miller)",female,27.0,0,0,F.C.C. 13534,21.0,,S,Senior,False,Unknown,"Corey, Mrs. Percy C (Mary Phyllis Elizabeth Miller)",1,Solo,Standard,Yes
-958,1,3,"Burns, Miss. Mary Delia",female,18.0,0,0,330963,7.88,,Q,Adult,False,Unknown,"Burns, Miss. Mary Delia",1,Solo,Budget,Yes
-959,0,1,"Moore, Mr. Clarence Bloomfield",male,47.0,0,0,113796,42.4,,S,Adult,False,Unknown,"Moore, Mr. Clarence Bloomfield",1,Solo,Premium,Yes
-960,0,1,"Tucker, Mr. Gilbert Milligan Jr",male,31.0,0,0,2543,28.54,C53,C,Adult,True,C,"Tucker, Mr. Gilbert Milligan Jr",1,Solo,Standard,Yes
-961,1,1,"Fortune, Mrs. Mark (Mary McDougald)",female,60.0,1,4,19950,263.0,C23 C25 C27,S,Senior,True,C,"Fortune, Mrs. Mark (Mary McDougald)",6,Large,Luxury,No
-962,1,3,"Mulvihill, Miss. Bertha E",female,24.0,0,0,382653,7.75,,Q,Adult,False,Unknown,"Mulvihill, Miss. Bertha E",1,Solo,Budget,Yes
-963,0,3,"Minkoff, Mr. Lazar",male,21.0,0,0,349211,7.9,,S,Adult,False,Unknown,"Minkoff, Mr. Lazar",1,Solo,Budget,Yes
-964,1,3,"Nieminen, Miss. Manta Josefina",female,29.0,0,0,3101297,7.92,,S,Adult,False,Unknown,"Nieminen, Miss. Manta Josefina",1,Solo,Budget,Yes
-965,0,1,"Ovies y Rodriguez, Mr. Servando",male,28.0,0,0,PC 17562,27.72,D43,C,Adult,True,D,"Ovies y Rodriguez, Mr. Servando",1,Solo,Standard,Yes
-966,1,1,"Geiger, Miss. Amalie",female,35.0,0,0,113503,211.5,C130,C,Adult,True,C,"Geiger, Miss. Amalie",1,Solo,Luxury,Yes
-967,0,1,"Keeping, Mr. Edwin",male,32.0,0,0,113503,211.5,C132,C,Adult,True,C,"Keeping, Mr. Edwin",1,Solo,Luxury,Yes
-968,0,3,"Miles, Mr. Frank",male,27.0,0,0,359306,8.05,,S,Senior,False,Unknown,"Miles, Mr. Frank",1,Solo,Budget,Yes
-969,1,1,"Cornell, Mrs. Robert Clifford (Malvina Helen Lamson)",female,55.0,2,0,11770,25.7,C101,S,Adult,True,C,"Cornell, Mrs. Robert Clifford (Malvina Helen Lamson)",3,Small,Standard,No
-970,0,2,"Aldworth, Mr. Charles Augustus",male,30.0,0,0,248744,13.0,,S,Adult,False,Unknown,"Aldworth, Mr. Charles Augustus",1,Solo,Standard,Yes
-971,1,3,"Doyle, Miss. Elizabeth",female,24.0,0,0,368702,7.75,,Q,Adult,False,Unknown,"Doyle, Miss. Elizabeth",1,Solo,Budget,Yes
-972,0,3,"Boulos, Master. Akar",male,6.0,1,1,2678,15.25,,C,Child,False,Unknown,"Boulos, Master. Akar",3,Small,Standard,No
-973,0,1,"Straus, Mr. Isidor",male,67.0,1,0,PC 17483,221.78,C55 C57,S,Senior,True,C,"Straus, Mr. Isidor",2,Small,Luxury,No
-974,0,1,"Case, Mr. Howard Brown",male,49.0,0,0,19924,26.0,,S,Adult,False,Unknown,"Case, Mr. Howard Brown",1,Solo,Standard,Yes
-975,0,3,"Demetri, Mr. Marinko",male,27.0,0,0,349238,7.9,,S,Senior,False,Unknown,"Demetri, Mr. Marinko",1,Solo,Budget,Yes
-976,0,2,"Lamb, Mr. John Joseph",male,27.0,0,0,240261,10.71,,Q,Senior,False,Unknown,"Lamb, Mr. John Joseph",1,Solo,Standard,Yes
-977,0,3,"Khalil, Mr. Betros",male,27.0,1,0,2660,14.45,,C,Senior,False,Unknown,"Khalil, Mr. Betros",2,Small,Standard,No
-978,1,3,"Barry, Miss. Julia",female,27.0,0,0,330844,7.88,,Q,Adult,False,Unknown,"Barry, Miss. Julia",1,Solo,Budget,Yes
-979,1,3,"Badman, Miss. Emily Louisa",female,18.0,0,0,A/4 31416,8.05,,S,Adult,False,Unknown,"Badman, Miss. Emily Louisa",1,Solo,Budget,Yes
-980,1,3,"O'Donoghue, Ms. Bridget",female,27.0,0,0,364856,7.75,,Q,Senior,False,Unknown,"O'Donoghue, Ms. Bridget",1,Solo,Budget,Yes
-981,0,2,"Wells, Master. Ralph Lester",male,2.0,1,1,29103,23.0,,S,Child,False,Unknown,"Wells, Master. Ralph Lester",3,Small,Standard,No
-982,1,3,"Dyker, Mrs. Adolf Fredrik (Anna Elisabeth Judith Andersson)",female,22.0,1,0,347072,13.9,,S,Adult,False,Unknown,"Dyker, Mrs. Adolf Fredrik (Anna Elisabeth Judith Andersson)",2,Small,Standard,No
-983,0,3,"Pedersen, Mr. Olaf",male,27.0,0,0,345498,7.78,,S,Senior,False,Unknown,"Pedersen, Mr. Olaf",1,Solo,Budget,Yes
-984,1,1,"Davidson, Mrs. Thornton (Orian Hays)",female,27.0,1,2,F.C. 12750,52.0,B71,S,Adult,True,B,"Davidson, Mrs. Thornton (Orian Hays)",4,Small,Premium,No
-985,0,3,"Guest, Mr. Robert",male,27.0,0,0,376563,8.05,,S,Senior,False,Unknown,"Guest, Mr. Robert",1,Solo,Budget,Yes
-986,0,1,"Birnbaum, Mr. Jakob",male,25.0,0,0,13905,26.0,,C,Adult,False,Unknown,"Birnbaum, Mr. Jakob",1,Solo,Standard,Yes
-987,0,3,"Tenglin, Mr. Gunnar Isidor",male,25.0,0,0,350033,7.8,,S,Adult,False,Unknown,"Tenglin, Mr. Gunnar Isidor",1,Solo,Budget,Yes
-988,1,1,"Cavendish, Mrs. Tyrell William (Julia Florence Siegel)",female,76.0,1,0,19877,78.85,C46,S,Senior,True,C,"Cavendish, Mrs. Tyrell William (Julia Florence Siegel)",2,Small,Premium,No
-989,0,3,"Makinen, Mr. Kalle Edvard",male,29.0,0,0,STON/O 2. 3101268,7.92,,S,Adult,False,Unknown,"Makinen, Mr. Kalle Edvard",1,Solo,Budget,Yes
-990,1,3,"Braf, Miss. Elin Ester Maria",female,20.0,0,0,347471,7.85,,S,Adult,False,Unknown,"Braf, Miss. Elin Ester Maria",1,Solo,Budget,Yes
-991,0,3,"Nancarrow, Mr. William Henry",male,33.0,0,0,A./5. 3338,8.05,,S,Adult,False,Unknown,"Nancarrow, Mr. William Henry",1,Solo,Budget,Yes
-992,1,1,"Stengel, Mrs. Charles Emil Henry (Annie May Morris)",female,43.0,1,0,11778,55.44,C116,C,Adult,True,C,"Stengel, Mrs. Charles Emil Henry (Annie May Morris)",2,Small,Premium,No
-993,0,2,"Weisz, Mr. Leopold",male,27.0,1,0,228414,26.0,,S,Adult,False,Unknown,"Weisz, Mr. Leopold",2,Small,Standard,No
-994,0,3,"Foley, Mr. William",male,27.0,0,0,365235,7.75,,Q,Senior,False,Unknown,"Foley, Mr. William",1,Solo,Budget,Yes
-995,0,3,"Johansson Palmquist, Mr. Oskar Leander",male,26.0,0,0,347070,7.78,,S,Adult,False,Unknown,"Johansson Palmquist, Mr. Oskar Leander",1,Solo,Budget,Yes
-996,1,3,"Thomas, Mrs. Alexander (Thamine Thelma)",female,16.0,1,1,2625,8.52,,C,Child,False,Unknown,"Thomas, Mrs. Alexander (Thamine Thelma"")""",3,Small,Budget,No
-997,0,3,"Holthen, Mr. Johan Martin",male,28.0,0,0,C 4001,22.52,,S,Adult,False,Unknown,"Holthen, Mr. Johan Martin",1,Solo,Standard,Yes
-998,0,3,"Buckley, Mr. Daniel",male,21.0,0,0,330920,7.82,,Q,Adult,False,Unknown,"Buckley, Mr. Daniel",1,Solo,Budget,Yes
-999,0,3,"Ryan, Mr. Edward",male,27.0,0,0,383162,7.75,,Q,Senior,False,Unknown,"Ryan, Mr. Edward",1,Solo,Budget,Yes
-1000,0,3,"Willer, Mr. Aaron (Abi Weller)",male,27.0,0,0,3410,8.71,,S,Senior,False,Unknown,"Willer, Mr. Aaron (Abi Weller"")""",1,Solo,Budget,Yes
-1001,0,2,"Swane, Mr. George",male,18.0,0,0,248734,13.0,F,S,Adult,True,F,"Swane, Mr. George",1,Solo,Standard,Yes
-1002,0,2,"Stanton, Mr. Samuel Ward",male,41.0,0,0,237734,15.05,,C,Adult,False,Unknown,"Stanton, Mr. Samuel Ward",1,Solo,Standard,Yes
-1003,1,3,"Shine, Miss. Ellen Natalia",female,27.0,0,0,330968,7.78,,Q,Senior,False,Unknown,"Shine, Miss. Ellen Natalia",1,Solo,Budget,Yes
-1004,1,1,"Evans, Miss. Edith Corse",female,36.0,0,0,PC 17531,31.68,A29,C,Adult,True,A,"Evans, Miss. Edith Corse",1,Solo,Premium,Yes
-1005,1,3,"Buckley, Miss. Katherine",female,18.0,0,0,329944,7.28,,Q,Adult,False,Unknown,"Buckley, Miss. Katherine",1,Solo,Budget,Yes
-1006,1,1,"Straus, Mrs. Isidor (Rosalie Ida Blun)",female,63.0,1,0,PC 17483,221.78,C55 C57,S,Senior,True,C,"Straus, Mrs. Isidor (Rosalie Ida Blun)",2,Small,Luxury,No
-1007,0,3,"Chronopoulos, Mr. Demetrios",male,18.0,1,0,2680,14.45,,C,Adult,False,Unknown,"Chronopoulos, Mr. Demetrios",2,Small,Standard,No
-1008,0,3,"Thomas, Mr. John",male,27.0,0,0,2681,6.44,,C,Senior,False,Unknown,"Thomas, Mr. John",1,Solo,Budget,Yes
-1009,1,3,"Sandstrom, Miss. Beatrice Irene",female,1.0,1,1,PP 9549,16.7,G6,S,Child,True,G,"Sandstrom, Miss. Beatrice Irene",3,Small,Standard,No
-1010,0,1,"Beattie, Mr. Thomson",male,36.0,0,0,13050,75.24,C6,C,Adult,True,C,"Beattie, Mr. Thomson",1,Solo,Premium,Yes
-1011,1,2,"Chapman, Mrs. John Henry (Sara Elizabeth Lawry)",female,29.0,1,0,SC/AH 29037,26.0,,S,Adult,False,Unknown,"Chapman, Mrs. John Henry (Sara Elizabeth Lawry)",2,Small,Standard,No
-1012,1,2,"Watt, Miss. Bertha J",female,12.0,0,0,C.A. 33595,15.75,,S,Child,False,Unknown,"Watt, Miss. Bertha J",1,Solo,Standard,Yes
-1013,0,3,"Kiernan, Mr. John",male,27.0,1,0,367227,7.75,,Q,Senior,False,Unknown,"Kiernan, Mr. John",2,Small,Budget,No
-1014,1,1,"Schabert, Mrs. Paul (Emma Mock)",female,35.0,1,0,13236,57.75,C28,C,Adult,True,C,"Schabert, Mrs. Paul (Emma Mock)",2,Small,Premium,No
-1015,0,3,"Carver, Mr. Alfred John",male,28.0,0,0,392095,7.25,,S,Adult,False,Unknown,"Carver, Mr. Alfred John",1,Solo,Budget,Yes
-1016,0,3,"Kennedy, Mr. John",male,27.0,0,0,368783,7.75,,Q,Senior,False,Unknown,"Kennedy, Mr. John",1,Solo,Budget,Yes
-1017,1,3,"Cribb, Miss. Laura Alice",female,17.0,0,1,371362,16.1,,S,Child,False,Unknown,"Cribb, Miss. Laura Alice",2,Small,Standard,No
-1018,0,3,"Brobeck, Mr. Karl Rudolf",male,22.0,0,0,350045,7.8,,S,Adult,False,Unknown,"Brobeck, Mr. Karl Rudolf",1,Solo,Budget,Yes
-1019,1,3,"McCoy, Miss. Alicia",female,27.0,2,0,367226,23.25,,Q,Senior,False,Unknown,"McCoy, Miss. Alicia",3,Small,Standard,No
-1020,0,2,"Bowenur, Mr. Solomon",male,42.0,0,0,211535,13.0,,S,Adult,False,Unknown,"Bowenur, Mr. Solomon",1,Solo,Standard,Yes
-1021,0,3,"Petersen, Mr. Marius",male,24.0,0,0,342441,8.05,,S,Adult,False,Unknown,"Petersen, Mr. Marius",1,Solo,Budget,Yes
-1022,0,3,"Spinner, Mr. Henry John",male,32.0,0,0,STON/OQ. 369943,8.05,,S,Adult,False,Unknown,"Spinner, Mr. Henry John",1,Solo,Budget,Yes
-1023,0,1,"Gracie, Col. Archibald IV",male,53.0,0,0,113780,28.5,C51,C,Adult,True,C,"Gracie, Col. Archibald IV",1,Solo,Standard,Yes
-1024,1,3,"Lefebre, Mrs. Frank (Frances)",female,27.0,0,4,4133,25.47,,S,Senior,False,Unknown,"Lefebre, Mrs. Frank (Frances)",5,Large,Standard,No
-1025,0,3,"Thomas, Mr. Charles P",male,27.0,1,0,2621,6.44,,C,Senior,False,Unknown,"Thomas, Mr. Charles P",2,Small,Budget,No
-1026,0,3,"Dintcheff, Mr. Valtcho",male,43.0,0,0,349226,7.9,,S,Adult,False,Unknown,"Dintcheff, Mr. Valtcho",1,Solo,Budget,Yes
-1027,0,3,"Carlsson, Mr. Carl Robert",male,24.0,0,0,350409,7.85,,S,Adult,False,Unknown,"Carlsson, Mr. Carl Robert",1,Solo,Budget,Yes
-1028,0,3,"Zakarian, Mr. Mapriededer",male,26.0,0,0,2656,7.22,,C,Adult,False,Unknown,"Zakarian, Mr. Mapriededer",1,Solo,Budget,Yes
-1029,0,2,"Schmidt, Mr. August",male,26.0,0,0,248659,13.0,,S,Adult,False,Unknown,"Schmidt, Mr. August",1,Solo,Standard,Yes
-1030,1,3,"Drapkin, Miss. Jennie",female,23.0,0,0,SOTON/OQ 392083,8.05,,S,Adult,False,Unknown,"Drapkin, Miss. Jennie",1,Solo,Budget,Yes
-1031,0,3,"Goodwin, Mr. Charles Frederick",male,40.0,1,6,CA 2144,46.9,,S,Adult,False,Unknown,"Goodwin, Mr. Charles Frederick",8,Large,Premium,No
-1032,1,3,"Goodwin, Miss. Jessie Allis",female,10.0,5,2,CA 2144,46.9,,S,Child,False,Unknown,"Goodwin, Miss. Jessie Allis",8,Large,Premium,No
-1033,1,1,"Daniels, Miss. Sarah",female,33.0,0,0,113781,151.55,,S,Adult,False,Unknown,"Daniels, Miss. Sarah",1,Solo,Luxury,Yes
-1034,0,1,"Ryerson, Mr. Arthur Larned",male,61.0,1,3,PC 17608,262.38,B57 B59 B63 B66,C,Senior,True,B,"Ryerson, Mr. Arthur Larned",5,Large,Luxury,No
-1035,0,2,"Beauchamp, Mr. Henry James",male,28.0,0,0,244358,26.0,,S,Adult,False,Unknown,"Beauchamp, Mr. Henry James",1,Solo,Standard,Yes
-1036,0,1,"Lindeberg-Lind, Mr. Erik Gustaf (Mr Edward Lingrey)",male,42.0,0,0,17475,26.55,,S,Adult,False,Unknown,"Lindeberg-Lind, Mr. Erik Gustaf (Mr Edward Lingrey"")""",1,Solo,Standard,Yes
-1037,0,3,"Vander Planke, Mr. Julius",male,31.0,3,0,345763,18.0,,S,Adult,False,Unknown,"Vander Planke, Mr. Julius",4,Small,Standard,No
-1038,0,1,"Hilliard, Mr. Herbert Henry",male,27.0,0,0,17463,51.86,E46,S,Senior,True,E,"Hilliard, Mr. Herbert Henry",1,Solo,Premium,Yes
-1039,0,3,"Davies, Mr. Evan",male,22.0,0,0,SC/A4 23568,8.05,,S,Adult,False,Unknown,"Davies, Mr. Evan",1,Solo,Budget,Yes
-1040,0,1,"Crafton, Mr. John Bertram",male,27.0,0,0,113791,26.55,,S,Senior,False,Unknown,"Crafton, Mr. John Bertram",1,Solo,Standard,Yes
-1041,0,2,"Lahtinen, Rev. William",male,30.0,1,1,250651,26.0,,S,Adult,False,Unknown,"Lahtinen, Rev. William",3,Small,Standard,No
-1042,1,1,"Earnshaw, Mrs. Boulton (Olive Potter)",female,23.0,0,1,11767,83.16,C54,C,Adult,True,C,"Earnshaw, Mrs. Boulton (Olive Potter)",2,Small,Premium,No
-1043,0,3,"Matinoff, Mr. Nicola",male,27.0,0,0,349255,7.9,,C,Senior,False,Unknown,"Matinoff, Mr. Nicola",1,Solo,Budget,Yes
-1044,0,3,"Storey, Mr. Thomas",male,60.0,0,0,3701,14.45,,S,Senior,False,Unknown,"Storey, Mr. Thomas",1,Solo,Standard,Yes
-1045,1,3,"Klasen, Mrs. (Hulda Kristina Eugenia Lofqvist)",female,36.0,0,2,350405,12.18,,S,Adult,False,Unknown,"Klasen, Mrs. (Hulda Kristina Eugenia Lofqvist)",3,Small,Standard,No
-1046,0,3,"Asplund, Master. Filip Oscar",male,13.0,4,2,347077,31.39,,S,Child,False,Unknown,"Asplund, Master. Filip Oscar",7,Large,Premium,No
-1047,0,3,"Duquemin, Mr. Joseph",male,24.0,0,0,S.O./P.P. 752,7.55,,S,Adult,False,Unknown,"Duquemin, Mr. Joseph",1,Solo,Budget,Yes
-1048,1,1,"Bird, Miss. Ellen",female,29.0,0,0,PC 17483,221.78,C97,S,Adult,True,C,"Bird, Miss. Ellen",1,Solo,Luxury,Yes
-1049,1,3,"Lundin, Miss. Olga Elida",female,23.0,0,0,347469,7.85,,S,Adult,False,Unknown,"Lundin, Miss. Olga Elida",1,Solo,Budget,Yes
-1050,0,1,"Borebank, Mr. John James",male,42.0,0,0,110489,26.55,D22,S,Adult,True,D,"Borebank, Mr. John James",1,Solo,Standard,Yes
-1051,1,3,"Peacock, Mrs. Benjamin (Edith Nile)",female,26.0,0,2,SOTON/O.Q. 3101315,13.78,,S,Adult,False,Unknown,"Peacock, Mrs. Benjamin (Edith Nile)",3,Small,Standard,No
-1052,1,3,"Smyth, Miss. Julia",female,27.0,0,0,335432,7.73,,Q,Senior,False,Unknown,"Smyth, Miss. Julia",1,Solo,Budget,Yes
-1053,0,3,"Touma, Master. Georges Youssef",male,7.0,1,1,2650,15.25,,C,Child,False,Unknown,"Touma, Master. Georges Youssef",3,Small,Standard,No
-1054,1,2,"Wright, Miss. Marion",female,26.0,0,0,220844,13.5,,S,Adult,False,Unknown,"Wright, Miss. Marion",1,Solo,Standard,Yes
-1055,0,3,"Pearce, Mr. Ernest",male,27.0,0,0,343271,7.0,,S,Senior,False,Unknown,"Pearce, Mr. Ernest",1,Solo,Budget,Yes
-1056,0,2,"Peruschitz, Rev. Joseph Maria",male,41.0,0,0,237393,13.0,,S,Adult,False,Unknown,"Peruschitz, Rev. Joseph Maria",1,Solo,Standard,Yes
-1057,1,3,"Kink-Heilmann, Mrs. Anton (Luise Heilmann)",female,26.0,1,1,315153,22.02,,S,Adult,False,Unknown,"Kink-Heilmann, Mrs. Anton (Luise Heilmann)",3,Small,Standard,No
-1058,0,1,"Brandeis, Mr. Emil",male,48.0,0,0,PC 17591,50.5,B10,C,Adult,True,B,"Brandeis, Mr. Emil",1,Solo,Premium,Yes
-1059,0,3,"Ford, Mr. Edward Watson",male,18.0,2,2,W./C. 6608,34.38,,S,Adult,False,Unknown,"Ford, Mr. Edward Watson",5,Large,Premium,No
-1060,1,1,"Cassebeer, Mrs. Henry Arthur Jr (Eleanor Genevieve Fosdick)",female,27.0,0,0,17770,27.72,,C,Senior,False,Unknown,"Cassebeer, Mrs. Henry Arthur Jr (Eleanor Genevieve Fosdick)",1,Solo,Standard,Yes
-1061,1,3,"Hellstrom, Miss. Hilda Maria",female,22.0,0,0,7548,8.96,,S,Adult,False,Unknown,"Hellstrom, Miss. Hilda Maria",1,Solo,Budget,Yes
-1062,0,3,"Lithman, Mr. Simon",male,27.0,0,0,S.O./P.P. 251,7.55,,S,Senior,False,Unknown,"Lithman, Mr. Simon",1,Solo,Budget,Yes
-1063,0,3,"Zakarian, Mr. Ortin",male,27.0,0,0,2670,7.22,,C,Adult,False,Unknown,"Zakarian, Mr. Ortin",1,Solo,Budget,Yes
-1064,0,3,"Dyker, Mr. Adolf Fredrik",male,23.0,1,0,347072,13.9,,S,Adult,False,Unknown,"Dyker, Mr. Adolf Fredrik",2,Small,Standard,No
-1065,0,3,"Torfa, Mr. Assad",male,27.0,0,0,2673,7.23,,C,Senior,False,Unknown,"Torfa, Mr. Assad",1,Solo,Budget,Yes
-1066,0,3,"Asplund, Mr. Carl Oscar Vilhelm Gustafsson",male,40.0,1,5,347077,31.39,,S,Adult,False,Unknown,"Asplund, Mr. Carl Oscar Vilhelm Gustafsson",7,Large,Premium,No
-1067,1,2,"Brown, Miss. Edith Eileen",female,15.0,0,2,29750,39.0,,S,Child,False,Unknown,"Brown, Miss. Edith Eileen",3,Small,Premium,No
-1068,1,2,"Sincock, Miss. Maude",female,20.0,0,0,C.A. 33112,36.75,,S,Adult,False,Unknown,"Sincock, Miss. Maude",1,Solo,Premium,Yes
-1069,0,1,"Stengel, Mr. Charles Emil Henry",male,54.0,1,0,11778,55.44,C116,C,Adult,True,C,"Stengel, Mr. Charles Emil Henry",2,Small,Premium,No
-1070,1,2,"Becker, Mrs. Allen Oliver (Nellie E Baumgardner)",female,36.0,0,3,230136,39.0,F4,S,Adult,True,F,"Becker, Mrs. Allen Oliver (Nellie E Baumgardner)",4,Small,Premium,No
-1071,1,1,"Compton, Mrs. Alexander Taylor (Mary Eliza Ingersoll)",female,64.0,0,2,PC 17756,83.16,E45,C,Senior,True,E,"Compton, Mrs. Alexander Taylor (Mary Eliza Ingersoll)",3,Small,Premium,No
-1072,0,2,"McCrie, Mr. James Matthew",male,30.0,0,0,233478,13.0,,S,Adult,False,Unknown,"McCrie, Mr. James Matthew",1,Solo,Standard,Yes
-1073,0,1,"Compton, Mr. Alexander Taylor Jr",male,37.0,1,1,PC 17756,83.16,E52,C,Adult,True,E,"Compton, Mr. Alexander Taylor Jr",3,Small,Premium,No
-1074,1,1,"Marvin, Mrs. Daniel Warner (Mary Graham Carmichael Farquarson)",female,18.0,1,0,113773,53.1,D30,S,Adult,True,D,"Marvin, Mrs. Daniel Warner (Mary Graham Carmichael Farquarson)",2,Small,Premium,No
-1075,0,3,"Lane, Mr. Patrick",male,27.0,0,0,7935,7.75,,Q,Senior,False,Unknown,"Lane, Mr. Patrick",1,Solo,Budget,Yes
-1076,1,1,"Douglas, Mrs. Frederick Charles (Mary Helene Baxter)",female,27.0,1,1,PC 17558,247.52,B58 B60,C,Adult,True,B,"Douglas, Mrs. Frederick Charles (Mary Helene Baxter)",3,Small,Luxury,No
-1077,0,2,"Maybery, Mr. Frank Hubert",male,40.0,0,0,239059,16.0,,S,Adult,False,Unknown,"Maybery, Mr. Frank Hubert",1,Solo,Standard,Yes
-1078,1,2,"Phillips, Miss. Alice Frances Louisa",female,21.0,0,1,S.O./P.P. 2,21.0,,S,Adult,False,Unknown,"Phillips, Miss. Alice Frances Louisa",2,Small,Standard,No
-1079,0,3,"Davies, Mr. Joseph",male,17.0,2,0,A/4 48873,8.05,,S,Child,False,Unknown,"Davies, Mr. Joseph",3,Small,Budget,No
-1080,1,3,"Sage, Miss. Ada",female,27.0,8,2,CA. 2343,69.55,,S,Senior,False,Unknown,"Sage, Miss. Ada",11,Large,Premium,No
-1081,0,2,"Veal, Mr. James",male,40.0,0,0,28221,13.0,,S,Adult,False,Unknown,"Veal, Mr. James",1,Solo,Standard,Yes
-1082,0,2,"Angle, Mr. William A",male,34.0,1,0,226875,26.0,,S,Adult,False,Unknown,"Angle, Mr. William A",2,Small,Standard,No
-1083,0,1,"Salomon, Mr. Abraham L",male,27.0,0,0,111163,26.0,,S,Senior,False,Unknown,"Salomon, Mr. Abraham L",1,Solo,Standard,Yes
-1084,0,3,"van Billiard, Master. Walter John",male,12.0,1,1,A/5. 851,14.5,,S,Child,False,Unknown,"van Billiard, Master. Walter John",3,Small,Standard,No
-1085,0,2,"Lingane, Mr. John",male,61.0,0,0,235509,12.35,,Q,Senior,False,Unknown,"Lingane, Mr. John",1,Solo,Standard,Yes
-1086,0,2,"Drew, Master. Marshall Brines",male,8.0,0,2,28220,32.5,,S,Child,False,Unknown,"Drew, Master. Marshall Brines",3,Small,Premium,No
-1087,0,3,"Karlsson, Mr. Julius Konrad Eugen",male,33.0,0,0,347465,7.85,,S,Adult,False,Unknown,"Karlsson, Mr. Julius Konrad Eugen",1,Solo,Budget,Yes
-1088,0,1,"Spedden, Master. Robert Douglas",male,6.0,0,2,16966,134.5,E34,C,Child,True,E,"Spedden, Master. Robert Douglas",3,Small,Luxury,No
-1089,1,3,"Nilsson, Miss. Berta Olivia",female,18.0,0,0,347066,7.78,,S,Adult,False,Unknown,"Nilsson, Miss. Berta Olivia",1,Solo,Budget,Yes
-1090,0,2,"Baimbrigge, Mr. Charles Robert",male,23.0,0,0,C.A. 31030,10.5,,S,Adult,False,Unknown,"Baimbrigge, Mr. Charles Robert",1,Solo,Standard,Yes
-1091,1,3,"Rasmussen, Mrs. (Lena Jacobsen Solvang)",female,27.0,0,0,65305,8.11,,S,Senior,False,Unknown,"Rasmussen, Mrs. (Lena Jacobsen Solvang)",1,Solo,Budget,Yes
-1092,1,3,"Murphy, Miss. Nora",female,27.0,0,0,36568,15.5,,Q,Senior,False,Unknown,"Murphy, Miss. Nora",1,Solo,Standard,Yes
-1093,0,3,"Danbom, Master. Gilbert Sigvard Emanuel",male,0.0,0,2,347080,14.4,,S,Child,False,Unknown,"Danbom, Master. Gilbert Sigvard Emanuel",3,Small,Standard,No
-1094,0,1,"Astor, Col. John Jacob",male,47.0,1,0,PC 17757,227.52,C62 C64,C,Adult,True,C,"Astor, Col. John Jacob",2,Small,Luxury,No
-1095,1,2,"Quick, Miss. Winifred Vera",female,8.0,1,1,26360,26.0,,S,Child,False,Unknown,"Quick, Miss. Winifred Vera",3,Small,Standard,No
-1096,0,2,"Andrew, Mr. Frank Thomas",male,25.0,0,0,C.A. 34050,10.5,,S,Adult,False,Unknown,"Andrew, Mr. Frank Thomas",1,Solo,Standard,Yes
-1097,0,1,"Omont, Mr. Alfred Fernand",male,27.0,0,0,F.C. 12998,25.74,,C,Senior,False,Unknown,"Omont, Mr. Alfred Fernand",1,Solo,Standard,Yes
-1098,1,3,"McGowan, Miss. Katherine",female,35.0,0,0,9232,7.75,,Q,Adult,False,Unknown,"McGowan, Miss. Katherine",1,Solo,Budget,Yes
-1099,0,2,"Collett, Mr. Sidney C Stuart",male,24.0,0,0,28034,10.5,,S,Adult,False,Unknown,"Collett, Mr. Sidney C Stuart",1,Solo,Standard,Yes
-1100,1,1,"Rosenbaum, Miss. Edith Louise",female,33.0,0,0,PC 17613,27.72,A11,C,Adult,True,A,"Rosenbaum, Miss. Edith Louise",1,Solo,Standard,Yes
-1101,0,3,"Delalic, Mr. Redjo",male,25.0,0,0,349250,7.9,,S,Adult,False,Unknown,"Delalic, Mr. Redjo",1,Solo,Budget,Yes
-1102,0,3,"Andersen, Mr. Albert Karvin",male,32.0,0,0,C 4001,22.52,,S,Adult,False,Unknown,"Andersen, Mr. Albert Karvin",1,Solo,Standard,Yes
-1103,0,3,"Finoli, Mr. Luigi",male,27.0,0,0,SOTON/O.Q. 3101308,7.05,,S,Senior,False,Unknown,"Finoli, Mr. Luigi",1,Solo,Budget,Yes
-1104,0,2,"Deacon, Mr. Percy William",male,17.0,0,0,S.O.C. 14879,73.5,,S,Child,False,Unknown,"Deacon, Mr. Percy William",1,Solo,Premium,Yes
-1105,1,2,"Howard, Mrs. Benjamin (Ellen Truelove Arman)",female,60.0,1,0,24065,26.0,,S,Senior,False,Unknown,"Howard, Mrs. Benjamin (Ellen Truelove Arman)",2,Small,Standard,No
-1106,1,3,"Andersson, Miss. Ida Augusta Margareta",female,38.0,4,2,347091,7.78,,S,Adult,False,Unknown,"Andersson, Miss. Ida Augusta Margareta",7,Large,Budget,No
-1107,0,1,"Head, Mr. Christopher",male,42.0,0,0,113038,42.5,B11,S,Adult,True,B,"Head, Mr. Christopher",1,Solo,Premium,Yes
-1108,1,3,"Mahon, Miss. Bridget Delia",female,27.0,0,0,330924,7.88,,Q,Senior,False,Unknown,"Mahon, Miss. Bridget Delia",1,Solo,Budget,Yes
-1109,0,1,"Wick, Mr. George Dennick",male,57.0,1,1,36928,164.87,,S,Adult,False,Unknown,"Wick, Mr. George Dennick",3,Small,Luxury,No
-1110,1,1,"Widener, Mrs. George Dunton (Eleanor Elkins)",female,50.0,1,1,113503,211.5,C80,C,Adult,True,C,"Widener, Mrs. George Dunton (Eleanor Elkins)",3,Small,Luxury,No
-1111,0,3,"Thomson, Mr. Alexander Morrison",male,27.0,0,0,32302,8.05,,S,Senior,False,Unknown,"Thomson, Mr. Alexander Morrison",1,Solo,Budget,Yes
-1112,1,2,"Duran y More, Miss. Florentina",female,30.0,1,0,SC/PARIS 2148,13.86,,C,Adult,False,Unknown,"Duran y More, Miss. Florentina",2,Small,Standard,No
-1113,0,3,"Reynolds, Mr. Harold J",male,21.0,0,0,342684,8.05,,S,Adult,False,Unknown,"Reynolds, Mr. Harold J",1,Solo,Budget,Yes
-1114,1,2,"Cook, Mrs. (Selena Rogers)",female,22.0,0,0,W./C. 14266,10.5,F33,S,Adult,True,F,"Cook, Mrs. (Selena Rogers)",1,Solo,Standard,Yes
-1115,0,3,"Karlsson, Mr. Einar Gervasius",male,21.0,0,0,350053,7.8,,S,Adult,False,Unknown,"Karlsson, Mr. Einar Gervasius",1,Solo,Budget,Yes
-1116,1,1,"Candee, Mrs. Edward (Helen Churchill Hungerford)",female,53.0,0,0,PC 17606,27.45,,C,Adult,False,Unknown,"Candee, Mrs. Edward (Helen Churchill Hungerford)",1,Solo,Standard,Yes
-1117,1,3,"Moubarek, Mrs. George (Omine Amenia Alexander)",female,27.0,0,2,2661,15.25,,C,Senior,False,Unknown,"Moubarek, Mrs. George (Omine Amenia"" Alexander)""",3,Small,Standard,No
-1118,0,3,"Asplund, Mr. Johan Charles",male,23.0,0,0,350054,7.8,,S,Adult,False,Unknown,"Asplund, Mr. Johan Charles",1,Solo,Budget,Yes
-1119,1,3,"McNeill, Miss. Bridget",female,27.0,0,0,370368,7.75,,Q,Senior,False,Unknown,"McNeill, Miss. Bridget",1,Solo,Budget,Yes
-1120,0,3,"Everett, Mr. Thomas James",male,40.0,0,0,C.A. 6212,15.1,,S,Adult,False,Unknown,"Everett, Mr. Thomas James",1,Solo,Standard,Yes
-1121,0,2,"Hocking, Mr. Samuel James Metcalfe",male,36.0,0,0,242963,13.0,,S,Adult,False,Unknown,"Hocking, Mr. Samuel James Metcalfe",1,Solo,Standard,Yes
-1122,0,2,"Sweet, Mr. George Frederick",male,14.0,0,0,220845,65.0,,S,Child,False,Unknown,"Sweet, Mr. George Frederick",1,Solo,Premium,Yes
-1123,1,1,"Willard, Miss. Constance",female,21.0,0,0,113795,26.55,,S,Adult,False,Unknown,"Willard, Miss. Constance",1,Solo,Standard,Yes
-1124,0,3,"Wiklund, Mr. Karl Johan",male,21.0,1,0,3101266,6.5,,S,Adult,False,Unknown,"Wiklund, Mr. Karl Johan",2,Small,Budget,No
-1125,0,3,"Linehan, Mr. Michael",male,27.0,0,0,330971,7.88,,Q,Senior,False,Unknown,"Linehan, Mr. Michael",1,Solo,Budget,Yes
-1126,0,1,"Cumings, Mr. John Bradley",male,39.0,1,0,PC 17599,71.28,C85,C,Adult,True,C,"Cumings, Mr. John Bradley",2,Small,Premium,No
-1127,0,3,"Vendel, Mr. Olof Edvin",male,20.0,0,0,350416,7.85,,S,Adult,False,Unknown,"Vendel, Mr. Olof Edvin",1,Solo,Budget,Yes
-1128,0,1,"Warren, Mr. Frank Manley",male,64.0,1,0,110813,75.25,D37,C,Senior,True,D,"Warren, Mr. Frank Manley",2,Small,Premium,No
-1129,0,3,"Baccos, Mr. Raffull",male,20.0,0,0,2679,7.22,,C,Adult,False,Unknown,"Baccos, Mr. Raffull",1,Solo,Budget,Yes
-1130,1,2,"Hiltunen, Miss. Marta",female,18.0,1,1,250650,13.0,,S,Adult,False,Unknown,"Hiltunen, Miss. Marta",3,Small,Standard,No
-1131,1,1,"Douglas, Mrs. Walter Donald (Mahala Dutton)",female,48.0,1,0,PC 17761,106.42,C86,C,Adult,True,C,"Douglas, Mrs. Walter Donald (Mahala Dutton)",2,Small,Luxury,No
-1132,1,1,"Lindstrom, Mrs. Carl Johan (Sigrid Posse)",female,55.0,0,0,112377,27.72,,C,Adult,False,Unknown,"Lindstrom, Mrs. Carl Johan (Sigrid Posse)",1,Solo,Standard,Yes
-1133,1,2,"Christy, Mrs. (Alice Frances)",female,45.0,0,2,237789,30.0,,S,Adult,False,Unknown,"Christy, Mrs. (Alice Frances)",3,Small,Standard,No
-1134,0,1,"Spedden, Mr. Frederic Oakley",male,45.0,1,1,16966,134.5,E34,C,Adult,True,E,"Spedden, Mr. Frederic Oakley",3,Small,Luxury,No
-1135,0,3,"Hyman, Mr. Abraham",male,27.0,0,0,3470,7.89,,S,Senior,False,Unknown,"Hyman, Mr. Abraham",1,Solo,Budget,Yes
-1136,0,3,"Johnston, Master. William Arthur Willie",male,27.0,1,2,W./C. 6607,23.45,,S,Senior,False,Unknown,"Johnston, Master. William Arthur Willie""""",4,Small,Standard,No
-1137,0,1,"Kenyon, Mr. Frederick R",male,41.0,1,0,17464,51.86,D21,S,Adult,True,D,"Kenyon, Mr. Frederick R",2,Small,Premium,No
-1138,1,2,"Karnes, Mrs. J Frank (Claire Bennett)",female,22.0,0,0,F.C.C. 13534,21.0,,S,Adult,False,Unknown,"Karnes, Mrs. J Frank (Claire Bennett)",1,Solo,Standard,Yes
-1139,0,2,"Drew, Mr. James Vivian",male,42.0,1,1,28220,32.5,,S,Adult,False,Unknown,"Drew, Mr. James Vivian",3,Small,Premium,No
-1140,1,2,"Hold, Mrs. Stephen (Annie Margaret Hill)",female,29.0,1,0,26707,26.0,,S,Adult,False,Unknown,"Hold, Mrs. Stephen (Annie Margaret Hill)",2,Small,Standard,No
-1141,1,3,"Khalil, Mrs. Betros (Zahie Maria Elias)",female,27.0,1,0,2660,14.45,,C,Senior,False,Unknown,"Khalil, Mrs. Betros (Zahie Maria"" Elias)""",2,Small,Standard,No
-1142,1,2,"West, Miss. Barbara J",female,1.0,1,2,C.A. 34651,27.75,,S,Child,False,Unknown,"West, Miss. Barbara J",4,Small,Standard,No
-1143,0,3,"Abrahamsson, Mr. Abraham August Johannes",male,20.0,0,0,SOTON/O2 3101284,7.92,,S,Adult,False,Unknown,"Abrahamsson, Mr. Abraham August Johannes",1,Solo,Budget,Yes
-1144,0,1,"Clark, Mr. Walter Miller",male,27.0,1,0,13508,136.78,C89,C,Adult,True,C,"Clark, Mr. Walter Miller",2,Small,Luxury,No
-1145,0,3,"Salander, Mr. Karl Johan",male,24.0,0,0,7266,9.32,,S,Adult,False,Unknown,"Salander, Mr. Karl Johan",1,Solo,Budget,Yes
-1146,0,3,"Wenzel, Mr. Linhart",male,32.0,0,0,345775,9.5,,S,Adult,False,Unknown,"Wenzel, Mr. Linhart",1,Solo,Budget,Yes
-1147,0,3,"MacKay, Mr. George William",male,27.0,0,0,C.A. 42795,7.55,,S,Senior,False,Unknown,"MacKay, Mr. George William",1,Solo,Budget,Yes
-1148,0,3,"Mahon, Mr. John",male,27.0,0,0,AQ/4 3130,7.75,,Q,Senior,False,Unknown,"Mahon, Mr. John",1,Solo,Budget,Yes
-1149,0,3,"Niklasson, Mr. Samuel",male,28.0,0,0,363611,8.05,,S,Adult,False,Unknown,"Niklasson, Mr. Samuel",1,Solo,Budget,Yes
-1150,1,2,"Bentham, Miss. Lilian W",female,19.0,0,0,28404,13.0,,S,Adult,False,Unknown,"Bentham, Miss. Lilian W",1,Solo,Standard,Yes
-1151,0,3,"Midtsjo, Mr. Karl Albert",male,21.0,0,0,345501,7.78,,S,Adult,False,Unknown,"Midtsjo, Mr. Karl Albert",1,Solo,Budget,Yes
-1152,0,3,"de Messemaeker, Mr. Guillaume Joseph",male,36.0,1,0,345572,17.4,,S,Adult,False,Unknown,"de Messemaeker, Mr. Guillaume Joseph",2,Small,Standard,No
-1153,0,3,"Nilsson, Mr. August Ferdinand",male,21.0,0,0,350410,7.85,,S,Adult,False,Unknown,"Nilsson, Mr. August Ferdinand",1,Solo,Budget,Yes
-1154,1,2,"Wells, Mrs. Arthur Henry (Addie Dart Trevaskis)",female,29.0,0,2,29103,23.0,,S,Adult,False,Unknown,"Wells, Mrs. Arthur Henry (Addie"" Dart Trevaskis)""",3,Small,Standard,No
-1155,1,3,"Klasen, Miss. Gertrud Emilia",female,1.0,1,1,350405,12.18,,S,Child,False,Unknown,"Klasen, Miss. Gertrud Emilia",3,Small,Standard,No
-1156,0,2,"Portaluppi, Mr. Emilio Ilario Giuseppe",male,30.0,0,0,C.A. 34644,12.74,,C,Adult,False,Unknown,"Portaluppi, Mr. Emilio Ilario Giuseppe",1,Solo,Standard,Yes
-1157,0,3,"Lyntakoff, Mr. Stanko",male,27.0,0,0,349235,7.9,,S,Senior,False,Unknown,"Lyntakoff, Mr. Stanko",1,Solo,Budget,Yes
-1158,0,1,"Chisholm, Mr. Roderick Robert Crispin",male,27.0,0,0,112051,0.0,,S,Senior,False,Unknown,"Chisholm, Mr. Roderick Robert Crispin",1,Solo,Budget,Yes
-1159,0,3,"Warren, Mr. Charles William",male,27.0,0,0,C.A. 49867,7.55,,S,Senior,False,Unknown,"Warren, Mr. Charles William",1,Solo,Budget,Yes
-1160,1,3,"Howard, Miss. May Elizabeth",female,27.0,0,0,A. 2. 39186,8.05,,S,Senior,False,Unknown,"Howard, Miss. May Elizabeth",1,Solo,Budget,Yes
-1161,0,3,"Pokrnic, Mr. Mate",male,17.0,0,0,315095,8.66,,S,Child,False,Unknown,"Pokrnic, Mr. Mate",1,Solo,Budget,Yes
-1162,0,1,"McCaffry, Mr. Thomas Francis",male,46.0,0,0,13050,75.24,C6,C,Adult,True,C,"McCaffry, Mr. Thomas Francis",1,Solo,Premium,Yes
-1163,0,3,"Fox, Mr. Patrick",male,27.0,0,0,368573,7.75,,Q,Senior,False,Unknown,"Fox, Mr. Patrick",1,Solo,Budget,Yes
-1164,1,1,"Clark, Mrs. Walter Miller (Virginia McDowell)",female,26.0,1,0,13508,136.78,C89,C,Adult,True,C,"Clark, Mrs. Walter Miller (Virginia McDowell)",2,Small,Luxury,No
-1165,1,3,"Lennon, Miss. Mary",female,27.0,1,0,370371,15.5,,Q,Senior,False,Unknown,"Lennon, Miss. Mary",2,Small,Standard,No
-1166,0,3,"Saade, Mr. Jean Nassr",male,27.0,0,0,2676,7.22,,C,Senior,False,Unknown,"Saade, Mr. Jean Nassr",1,Solo,Budget,Yes
-1167,1,2,"Bryhl, Miss. Dagmar Jenny Ingeborg",female,20.0,1,0,236853,26.0,,S,Adult,False,Unknown,"Bryhl, Miss. Dagmar Jenny Ingeborg ",2,Small,Standard,No
-1168,0,2,"Parker, Mr. Clifford Richard",male,28.0,0,0,SC 14888,10.5,,S,Adult,False,Unknown,"Parker, Mr. Clifford Richard",1,Solo,Standard,Yes
-1169,0,2,"Faunthorpe, Mr. Harry",male,40.0,1,0,2926,26.0,,S,Adult,False,Unknown,"Faunthorpe, Mr. Harry",2,Small,Standard,No
-1170,0,2,"Ware, Mr. John James",male,30.0,1,0,CA 31352,21.0,,S,Adult,False,Unknown,"Ware, Mr. John James",2,Small,Standard,No
-1171,0,2,"Oxenham, Mr. Percy Thomas",male,22.0,0,0,W./C. 14260,10.5,,S,Adult,False,Unknown,"Oxenham, Mr. Percy Thomas",1,Solo,Standard,Yes
-1172,1,3,"Oreskovic, Miss. Jelka",female,23.0,0,0,315085,8.66,,S,Adult,False,Unknown,"Oreskovic, Miss. Jelka",1,Solo,Budget,Yes
-1173,0,3,"Peacock, Master. Alfred Edward",male,1.0,1,1,SOTON/O.Q. 3101315,13.78,,S,Child,False,Unknown,"Peacock, Master. Alfred Edward",3,Small,Standard,No
-1174,1,3,"Fleming, Miss. Honora",female,27.0,0,0,364859,7.75,,Q,Senior,False,Unknown,"Fleming, Miss. Honora",1,Solo,Budget,Yes
-1175,1,3,"Touma, Miss. Maria Youssef",female,9.0,1,1,2650,15.25,,C,Child,False,Unknown,"Touma, Miss. Maria Youssef",3,Small,Standard,No
-1176,1,3,"Rosblom, Miss. Salli Helena",female,2.0,1,1,370129,20.21,,S,Child,False,Unknown,"Rosblom, Miss. Salli Helena",3,Small,Standard,No
-1177,0,3,"Dennis, Mr. William",male,36.0,0,0,A/5 21175,7.25,,S,Adult,False,Unknown,"Dennis, Mr. William",1,Solo,Budget,Yes
-1178,0,3,"Franklin, Mr. Charles (Charles Fardon)",male,27.0,0,0,SOTON/O.Q. 3101314,7.25,,S,Senior,False,Unknown,"Franklin, Mr. Charles (Charles Fardon)",1,Solo,Budget,Yes
-1179,0,1,"Snyder, Mr. John Pillsbury",male,24.0,1,0,21228,82.27,B45,S,Adult,True,B,"Snyder, Mr. John Pillsbury",2,Small,Premium,No
-1180,0,3,"Mardirosian, Mr. Sarkis",male,27.0,0,0,2655,7.23,F E46,C,Senior,True,F,"Mardirosian, Mr. Sarkis",1,Solo,Budget,Yes
-1181,0,3,"Ford, Mr. Arthur",male,27.0,0,0,A/5 1478,8.05,,S,Senior,False,Unknown,"Ford, Mr. Arthur",1,Solo,Budget,Yes
-1182,0,1,"Rheims, Mr. George Alexander Lucien",male,27.0,0,0,PC 17607,39.6,,S,Senior,False,Unknown,"Rheims, Mr. George Alexander Lucien",1,Solo,Premium,Yes
-1183,1,3,"Daly, Miss. Margaret Marcella Maggie",female,30.0,0,0,382650,6.95,,Q,Adult,False,Unknown,"Daly, Miss. Margaret Marcella Maggie""""",1,Solo,Budget,Yes
-1184,0,3,"Nasr, Mr. Mustafa",male,27.0,0,0,2652,7.23,,C,Senior,False,Unknown,"Nasr, Mr. Mustafa",1,Solo,Budget,Yes
-1185,0,1,"Dodge, Dr. Washington",male,53.0,1,1,33638,81.86,A34,S,Adult,True,A,"Dodge, Dr. Washington",3,Small,Premium,No
-1186,0,3,"Wittevrongel, Mr. Camille",male,36.0,0,0,345771,9.5,,S,Adult,False,Unknown,"Wittevrongel, Mr. Camille",1,Solo,Budget,Yes
-1187,0,3,"Angheloff, Mr. Minko",male,26.0,0,0,349202,7.9,,S,Adult,False,Unknown,"Angheloff, Mr. Minko",1,Solo,Budget,Yes
-1188,1,2,"Laroche, Miss. Louise",female,1.0,1,2,SC/Paris 2123,41.58,,C,Child,False,Unknown,"Laroche, Miss. Louise",4,Small,Premium,No
-1189,0,3,"Samaan, Mr. Hanna",male,27.0,2,0,2662,21.68,,C,Senior,False,Unknown,"Samaan, Mr. Hanna",3,Small,Standard,No
-1190,0,1,"Loring, Mr. Joseph Holland",male,30.0,0,0,113801,45.5,,S,Adult,False,Unknown,"Loring, Mr. Joseph Holland",1,Solo,Premium,Yes
-1191,0,3,"Johansson, Mr. Nils",male,29.0,0,0,347467,7.85,,S,Adult,False,Unknown,"Johansson, Mr. Nils",1,Solo,Budget,Yes
-1192,0,3,"Olsson, Mr. Oscar Wilhelm",male,32.0,0,0,347079,7.78,,S,Adult,False,Unknown,"Olsson, Mr. Oscar Wilhelm",1,Solo,Budget,Yes
-1193,0,2,"Malachard, Mr. Noel",male,27.0,0,0,237735,15.05,D,C,Senior,True,D,"Malachard, Mr. Noel",1,Solo,Standard,Yes
-1194,0,2,"Phillips, Mr. Escott Robert",male,43.0,0,1,S.O./P.P. 2,21.0,,S,Adult,False,Unknown,"Phillips, Mr. Escott Robert",2,Small,Standard,No
-1195,0,3,"Pokrnic, Mr. Tome",male,24.0,0,0,315092,8.66,,S,Adult,False,Unknown,"Pokrnic, Mr. Tome",1,Solo,Budget,Yes
-1196,1,3,"McCarthy, Miss. Catherine Katie",female,27.0,0,0,383123,7.75,,Q,Senior,False,Unknown,"McCarthy, Miss. Catherine Katie""""",1,Solo,Budget,Yes
-1197,1,1,"Crosby, Mrs. Edward Gifford (Catherine Elizabeth Halstead)",female,64.0,1,1,112901,26.55,B26,S,Senior,True,B,"Crosby, Mrs. Edward Gifford (Catherine Elizabeth Halstead)",3,Small,Standard,No
-1198,0,1,"Allison, Mr. Hudson Joshua Creighton",male,30.0,1,2,113781,151.55,C22 C26,S,Adult,True,C,"Allison, Mr. Hudson Joshua Creighton",4,Small,Luxury,No
-1199,0,3,"Aks, Master. Philip Frank",male,1.0,0,1,392091,9.35,,S,Child,False,Unknown,"Aks, Master. Philip Frank",2,Small,Budget,No
-1200,0,1,"Hays, Mr. Charles Melville",male,55.0,1,1,12749,93.5,B69,S,Adult,True,B,"Hays, Mr. Charles Melville",3,Small,Premium,No
-1201,1,3,"Hansen, Mrs. Claus Peter (Jennie L Howard)",female,45.0,1,0,350026,14.11,,S,Adult,False,Unknown,"Hansen, Mrs. Claus Peter (Jennie L Howard)",2,Small,Standard,No
-1202,0,3,"Cacic, Mr. Jego Grga",male,18.0,0,0,315091,8.66,,S,Adult,False,Unknown,"Cacic, Mr. Jego Grga",1,Solo,Budget,Yes
-1203,0,3,"Vartanian, Mr. David",male,22.0,0,0,2658,7.22,,C,Adult,False,Unknown,"Vartanian, Mr. David",1,Solo,Budget,Yes
-1204,0,3,"Sadowitz, Mr. Harry",male,27.0,0,0,LP 1588,7.58,,S,Senior,False,Unknown,"Sadowitz, Mr. Harry",1,Solo,Budget,Yes
-1205,1,3,"Carr, Miss. Jeannie",female,37.0,0,0,368364,7.75,,Q,Adult,False,Unknown,"Carr, Miss. Jeannie",1,Solo,Budget,Yes
-1206,1,1,"White, Mrs. John Stuart (Ella Holmes)",female,55.0,0,0,PC 17760,135.63,C32,C,Adult,True,C,"White, Mrs. John Stuart (Ella Holmes)",1,Solo,Luxury,Yes
-1207,1,3,"Hagardon, Miss. Kate",female,17.0,0,0,AQ/3. 30631,7.73,,Q,Child,False,Unknown,"Hagardon, Miss. Kate",1,Solo,Budget,Yes
-1208,0,1,"Spencer, Mr. William Augustus",male,57.0,1,0,PC 17569,146.52,B78,C,Adult,True,B,"Spencer, Mr. William Augustus",2,Small,Luxury,No
-1209,0,2,"Rogers, Mr. Reginald Harry",male,19.0,0,0,28004,10.5,,S,Adult,False,Unknown,"Rogers, Mr. Reginald Harry",1,Solo,Standard,Yes
-1210,0,3,"Jonsson, Mr. Nils Hilding",male,27.0,0,0,350408,7.85,,S,Adult,False,Unknown,"Jonsson, Mr. Nils Hilding",1,Solo,Budget,Yes
-1211,0,2,"Jefferys, Mr. Ernest Wilfred",male,22.0,2,0,C.A. 31029,31.5,,S,Adult,False,Unknown,"Jefferys, Mr. Ernest Wilfred",3,Small,Premium,No
-1212,0,3,"Andersson, Mr. Johan Samuel",male,26.0,0,0,347075,7.78,,S,Adult,False,Unknown,"Andersson, Mr. Johan Samuel",1,Solo,Budget,Yes
-1213,0,3,"Krekorian, Mr. Neshan",male,25.0,0,0,2654,7.23,F E57,C,Adult,True,F,"Krekorian, Mr. Neshan",1,Solo,Budget,Yes
-1214,0,2,"Nesson, Mr. Israel",male,26.0,0,0,244368,13.0,F2,S,Adult,True,F,"Nesson, Mr. Israel",1,Solo,Standard,Yes
-1215,0,1,"Rowe, Mr. Alfred G",male,33.0,0,0,113790,26.55,,S,Adult,False,Unknown,"Rowe, Mr. Alfred G",1,Solo,Standard,Yes
-1216,1,1,"Kreuchen, Miss. Emilie",female,39.0,0,0,24160,211.34,,S,Adult,False,Unknown,"Kreuchen, Miss. Emilie",1,Solo,Luxury,Yes
-1217,0,3,"Assam, Mr. Ali",male,23.0,0,0,SOTON/O.Q. 3101309,7.05,,S,Adult,False,Unknown,"Assam, Mr. Ali",1,Solo,Budget,Yes
-1218,1,2,"Becker, Miss. Ruth Elizabeth",female,12.0,2,1,230136,39.0,F4,S,Child,True,F,"Becker, Miss. Ruth Elizabeth",4,Small,Premium,No
-1219,0,1,"Rosenshine, Mr. George (Mr George Thorne)",male,46.0,0,0,PC 17585,79.2,,C,Adult,False,Unknown,"Rosenshine, Mr. George (Mr George Thorne"")""",1,Solo,Premium,Yes
-1220,0,2,"Clarke, Mr. Charles Valentine",male,29.0,1,0,2003,26.0,,S,Adult,False,Unknown,"Clarke, Mr. Charles Valentine",2,Small,Standard,No
-1221,0,2,"Enander, Mr. Ingvar",male,21.0,0,0,236854,13.0,,S,Adult,False,Unknown,"Enander, Mr. Ingvar",1,Solo,Standard,Yes
-1222,1,2,"Davies, Mrs. John Morgan (Elizabeth Agnes Mary White)",female,48.0,0,2,C.A. 33112,36.75,,S,Adult,False,Unknown,"Davies, Mrs. John Morgan (Elizabeth Agnes Mary White) ",3,Small,Premium,No
-1223,0,1,"Dulles, Mr. William Crothers",male,39.0,0,0,PC 17580,29.7,A18,C,Adult,True,A,"Dulles, Mr. William Crothers",1,Solo,Standard,Yes
-1224,0,3,"Thomas, Mr. Tannous",male,27.0,0,0,2684,7.22,,C,Senior,False,Unknown,"Thomas, Mr. Tannous",1,Solo,Budget,Yes
-1225,1,3,"Nakid, Mrs. Said (Waika Mary Mowad)",female,19.0,1,1,2653,15.74,,C,Adult,False,Unknown,"Nakid, Mrs. Said (Waika Mary"" Mowad)""",3,Small,Standard,No
-1226,0,3,"Cor, Mr. Ivan",male,27.0,0,0,349229,7.9,,S,Adult,False,Unknown,"Cor, Mr. Ivan",1,Solo,Budget,Yes
-1227,0,1,"Maguire, Mr. John Edward",male,30.0,0,0,110469,26.0,C106,S,Adult,True,C,"Maguire, Mr. John Edward",1,Solo,Standard,Yes
-1228,0,2,"de Brito, Mr. Jose Joaquim",male,32.0,0,0,244360,13.0,,S,Adult,False,Unknown,"de Brito, Mr. Jose Joaquim",1,Solo,Standard,Yes
-1229,0,3,"Elias, Mr. Joseph",male,39.0,0,2,2675,7.23,,C,Adult,False,Unknown,"Elias, Mr. Joseph",3,Small,Budget,No
-1230,0,2,"Denbury, Mr. Herbert",male,25.0,0,0,C.A. 31029,31.5,,S,Adult,False,Unknown,"Denbury, Mr. Herbert",1,Solo,Premium,Yes
-1231,0,3,"Betros, Master. Seman",male,27.0,0,0,2622,7.23,,C,Senior,False,Unknown,"Betros, Master. Seman",1,Solo,Budget,Yes
-1232,0,2,"Fillbrook, Mr. Joseph Charles",male,18.0,0,0,C.A. 15185,10.5,,S,Adult,False,Unknown,"Fillbrook, Mr. Joseph Charles",1,Solo,Standard,Yes
-1233,0,3,"Lundstrom, Mr. Thure Edvin",male,32.0,0,0,350403,7.58,,S,Adult,False,Unknown,"Lundstrom, Mr. Thure Edvin",1,Solo,Budget,Yes
-1234,0,3,"Sage, Mr. John George",male,27.0,1,9,CA. 2343,69.55,,S,Senior,False,Unknown,"Sage, Mr. John George",11,Large,Premium,No
-1235,1,1,"Cardeza, Mrs. James Warburton Martinez (Charlotte Wardle Drake)",female,58.0,0,1,PC 17755,512.33,B51 B53 B55,C,Adult,True,B,"Cardeza, Mrs. James Warburton Martinez (Charlotte Wardle Drake)",2,Small,Luxury,No
-1236,0,3,"van Billiard, Master. James William",male,27.0,1,1,A/5. 851,14.5,,S,Senior,False,Unknown,"van Billiard, Master. James William",3,Small,Standard,No
-1237,1,3,"Abelseth, Miss. Karen Marie",female,16.0,0,0,348125,7.65,,S,Child,False,Unknown,"Abelseth, Miss. Karen Marie",1,Solo,Budget,Yes
-1238,0,2,"Botsford, Mr. William Hull",male,26.0,0,0,237670,13.0,,S,Adult,False,Unknown,"Botsford, Mr. William Hull",1,Solo,Standard,Yes
-1239,1,3,"Whabee, Mrs. George Joseph (Shawneene Abi-Saab)",female,38.0,0,0,2688,7.23,,C,Adult,False,Unknown,"Whabee, Mrs. George Joseph (Shawneene Abi-Saab)",1,Solo,Budget,Yes
-1240,0,2,"Giles, Mr. Ralph",male,24.0,0,0,248726,13.5,,S,Adult,False,Unknown,"Giles, Mr. Ralph",1,Solo,Standard,Yes
-1241,1,2,"Walcroft, Miss. Nellie",female,31.0,0,0,F.C.C. 13528,21.0,,S,Adult,False,Unknown,"Walcroft, Miss. Nellie",1,Solo,Standard,Yes
-1242,1,1,"Greenfield, Mrs. Leo David (Blanche Strouse)",female,45.0,0,1,PC 17759,63.36,D10 D12,C,Adult,True,D,"Greenfield, Mrs. Leo David (Blanche Strouse)",2,Small,Premium,No
-1243,0,2,"Stokes, Mr. Philip Joseph",male,25.0,0,0,F.C.C. 13540,10.5,,S,Adult,False,Unknown,"Stokes, Mr. Philip Joseph",1,Solo,Standard,Yes
-1244,0,2,"Dibden, Mr. William",male,18.0,0,0,S.O.C. 14879,73.5,,S,Adult,False,Unknown,"Dibden, Mr. William",1,Solo,Premium,Yes
-1245,0,2,"Herman, Mr. Samuel",male,49.0,1,2,220845,65.0,,S,Adult,False,Unknown,"Herman, Mr. Samuel",4,Small,Premium,No
-1246,1,3,"Dean, Miss. Elizabeth Gladys Millvina",female,0.0,1,2,C.A. 2315,20.58,,S,Child,False,Unknown,"Dean, Miss. Elizabeth Gladys Millvina""""",4,Small,Standard,No
-1247,0,1,"Julian, Mr. Henry Forbes",male,50.0,0,0,113044,26.0,E60,S,Adult,True,E,"Julian, Mr. Henry Forbes",1,Solo,Standard,Yes
-1248,1,1,"Brown, Mrs. John Murray (Caroline Lane Lamson)",female,59.0,2,0,11769,51.48,C101,S,Adult,True,C,"Brown, Mrs. John Murray (Caroline Lane Lamson)",3,Small,Premium,No
-1249,0,3,"Lockyer, Mr. Edward",male,27.0,0,0,1222,7.88,,S,Senior,False,Unknown,"Lockyer, Mr. Edward",1,Solo,Budget,Yes
-1250,0,3,"O'Keefe, Mr. Patrick",male,27.0,0,0,368402,7.75,,Q,Senior,False,Unknown,"O'Keefe, Mr. Patrick",1,Solo,Budget,Yes
-1251,1,3,"Lindell, Mrs. Edvard Bengtsson (Elin Gerda Persson)",female,30.0,1,0,349910,15.55,,S,Adult,False,Unknown,"Lindell, Mrs. Edvard Bengtsson (Elin Gerda Persson)",2,Small,Standard,No
-1252,0,3,"Sage, Master. William Henry",male,14.0,8,2,CA. 2343,69.55,,S,Child,False,Unknown,"Sage, Master. William Henry",11,Large,Premium,No
-1253,1,2,"Mallet, Mrs. Albert (Antoinette Magnin)",female,24.0,1,1,S.C./PARIS 2079,37.0,,C,Adult,False,Unknown,"Mallet, Mrs. Albert (Antoinette Magnin)",3,Small,Premium,No
-1254,1,2,"Ware, Mrs. John James (Florence Louise Long)",female,31.0,0,0,CA 31352,21.0,,S,Adult,False,Unknown,"Ware, Mrs. John James (Florence Louise Long)",1,Solo,Standard,Yes
-1255,0,3,"Strilic, Mr. Ivan",male,27.0,0,0,315083,8.66,,S,Adult,False,Unknown,"Strilic, Mr. Ivan",1,Solo,Budget,Yes
-1256,1,1,"Harder, Mrs. George Achilles (Dorothy Annan)",female,25.0,1,0,11765,55.44,E50,C,Adult,True,E,"Harder, Mrs. George Achilles (Dorothy Annan)",2,Small,Premium,No
-1257,1,3,"Sage, Mrs. John (Annie Bullen)",female,27.0,1,9,CA. 2343,69.55,,S,Senior,False,Unknown,"Sage, Mrs. John (Annie Bullen)",11,Large,Premium,No
-1258,0,3,"Caram, Mr. Joseph",male,27.0,1,0,2689,14.46,,C,Senior,False,Unknown,"Caram, Mr. Joseph",2,Small,Standard,No
-1259,1,3,"Riihivouri, Miss. Susanna Juhantytar Sanni",female,22.0,0,0,3101295,39.69,,S,Adult,False,Unknown,"Riihivouri, Miss. Susanna Juhantytar Sanni""""",1,Solo,Premium,Yes
-1260,1,1,"Gibson, Mrs. Leonard (Pauline C Boeson)",female,45.0,0,1,112378,59.4,,C,Adult,False,Unknown,"Gibson, Mrs. Leonard (Pauline C Boeson)",2,Small,Premium,No
-1261,0,2,"Pallas y Castello, Mr. Emilio",male,29.0,0,0,SC/PARIS 2147,13.86,,C,Adult,False,Unknown,"Pallas y Castello, Mr. Emilio",1,Solo,Standard,Yes
-1262,0,2,"Giles, Mr. Edgar",male,21.0,1,0,28133,11.5,,S,Adult,False,Unknown,"Giles, Mr. Edgar",2,Small,Standard,No
-1263,1,1,"Wilson, Miss. Helen Alice",female,31.0,0,0,16966,134.5,E39 E41,C,Adult,True,E,"Wilson, Miss. Helen Alice",1,Solo,Luxury,Yes
-1264,0,1,"Ismay, Mr. Joseph Bruce",male,49.0,0,0,112058,0.0,B52 B54 B56,S,Adult,True,B,"Ismay, Mr. Joseph Bruce",1,Solo,Budget,Yes
-1265,0,2,"Harbeck, Mr. William H",male,44.0,0,0,248746,13.0,,S,Adult,False,Unknown,"Harbeck, Mr. William H",1,Solo,Standard,Yes
-1266,1,1,"Dodge, Mrs. Washington (Ruth Vidaver)",female,54.0,1,1,33638,81.86,A34,S,Adult,True,A,"Dodge, Mrs. Washington (Ruth Vidaver)",3,Small,Premium,No
-1267,1,1,"Bowen, Miss. Grace Scott",female,45.0,0,0,PC 17608,262.38,,C,Adult,False,Unknown,"Bowen, Miss. Grace Scott",1,Solo,Luxury,Yes
-1268,1,3,"Kink, Miss. Maria",female,22.0,2,0,315152,8.66,,S,Adult,False,Unknown,"Kink, Miss. Maria",3,Small,Budget,No
-1269,0,2,"Cotterill, Mr. Henry Harry",male,21.0,0,0,29107,11.5,,S,Adult,False,Unknown,"Cotterill, Mr. Henry Harry""""",1,Solo,Standard,Yes
-1270,0,1,"Hipkins, Mr. William Edward",male,55.0,0,0,680,50.0,C39,S,Adult,True,C,"Hipkins, Mr. William Edward",1,Solo,Premium,Yes
-1271,0,3,"Asplund, Master. Carl Edgar",male,5.0,4,2,347077,31.39,,S,Child,False,Unknown,"Asplund, Master. Carl Edgar",7,Large,Premium,No
-1272,0,3,"O'Connor, Mr. Patrick",male,27.0,0,0,366713,7.75,,Q,Senior,False,Unknown,"O'Connor, Mr. Patrick",1,Solo,Budget,Yes
-1273,0,3,"Foley, Mr. Joseph",male,26.0,0,0,330910,7.88,,Q,Adult,False,Unknown,"Foley, Mr. Joseph",1,Solo,Budget,Yes
-1274,1,3,"Risien, Mrs. Samuel (Emma)",female,27.0,0,0,364498,14.5,,S,Senior,False,Unknown,"Risien, Mrs. Samuel (Emma)",1,Solo,Standard,Yes
-1275,1,3,"McNamee, Mrs. Neal (Eileen O'Leary)",female,19.0,1,0,376566,16.1,,S,Adult,False,Unknown,"McNamee, Mrs. Neal (Eileen O'Leary)",2,Small,Standard,No
-1276,0,2,"Wheeler, Mr. Edwin Frederick",male,27.0,0,0,SC/PARIS 2159,12.88,,S,Senior,False,Unknown,"Wheeler, Mr. Edwin Frederick""""",1,Solo,Standard,Yes
-1277,1,2,"Herman, Miss. Kate",female,24.0,1,2,220845,65.0,,S,Adult,False,Unknown,"Herman, Miss. Kate",4,Small,Premium,No
-1278,0,3,"Aronsson, Mr. Ernst Axel Algot",male,24.0,0,0,349911,7.78,,S,Adult,False,Unknown,"Aronsson, Mr. Ernst Axel Algot",1,Solo,Budget,Yes
-1279,0,2,"Ashby, Mr. John",male,57.0,0,0,244346,13.0,,S,Adult,False,Unknown,"Ashby, Mr. John",1,Solo,Standard,Yes
-1280,0,3,"Canavan, Mr. Patrick",male,21.0,0,0,364858,7.75,,Q,Adult,False,Unknown,"Canavan, Mr. Patrick",1,Solo,Budget,Yes
-1281,0,3,"Palsson, Master. Paul Folke",male,6.0,3,1,349909,21.08,,S,Child,False,Unknown,"Palsson, Master. Paul Folke",5,Large,Standard,No
-1282,0,1,"Payne, Mr. Vivian Ponsonby",male,23.0,0,0,12749,93.5,B24,S,Adult,True,B,"Payne, Mr. Vivian Ponsonby",1,Solo,Premium,Yes
-1283,1,1,"Lines, Mrs. Ernest H (Elizabeth Lindsey James)",female,51.0,0,1,PC 17592,39.4,D28,S,Adult,True,D,"Lines, Mrs. Ernest H (Elizabeth Lindsey James)",2,Small,Premium,No
-1284,0,3,"Abbott, Master. Eugene Joseph",male,13.0,0,2,C.A. 2673,20.25,,S,Child,False,Unknown,"Abbott, Master. Eugene Joseph",3,Small,Standard,No
-1285,0,2,"Gilbert, Mr. William",male,47.0,0,0,C.A. 30769,10.5,,S,Adult,False,Unknown,"Gilbert, Mr. William",1,Solo,Standard,Yes
-1286,0,3,"Kink-Heilmann, Mr. Anton",male,29.0,3,1,315153,22.02,,S,Adult,False,Unknown,"Kink-Heilmann, Mr. Anton",5,Large,Standard,No
-1287,1,1,"Smith, Mrs. Lucien Philip (Mary Eloise Hughes)",female,18.0,1,0,13695,60.0,C31,S,Adult,True,C,"Smith, Mrs. Lucien Philip (Mary Eloise Hughes)",2,Small,Premium,No
-1288,0,3,"Colbert, Mr. Patrick",male,24.0,0,0,371109,7.25,,Q,Adult,False,Unknown,"Colbert, Mr. Patrick",1,Solo,Budget,Yes
-1289,1,1,"Frolicher-Stehli, Mrs. Maxmillian (Margaretha Emerentia Stehli)",female,48.0,1,1,13567,79.2,B41,C,Adult,True,B,"Frolicher-Stehli, Mrs. Maxmillian (Margaretha Emerentia Stehli)",3,Small,Premium,No
-1290,0,3,"Larsson-Rondberg, Mr. Edvard A",male,22.0,0,0,347065,7.78,,S,Adult,False,Unknown,"Larsson-Rondberg, Mr. Edvard A",1,Solo,Budget,Yes
-1291,0,3,"Conlon, Mr. Thomas Henry",male,31.0,0,0,21332,7.73,,Q,Adult,False,Unknown,"Conlon, Mr. Thomas Henry",1,Solo,Budget,Yes
-1292,1,1,"Bonnell, Miss. Caroline",female,30.0,0,0,36928,164.87,C7,S,Adult,True,C,"Bonnell, Miss. Caroline",1,Solo,Luxury,Yes
-1293,0,2,"Gale, Mr. Harry",male,38.0,1,0,28664,21.0,,S,Adult,False,Unknown,"Gale, Mr. Harry",2,Small,Standard,No
-1294,1,1,"Gibson, Miss. Dorothy Winifred",female,22.0,0,1,112378,59.4,,C,Adult,False,Unknown,"Gibson, Miss. Dorothy Winifred",2,Small,Premium,No
-1295,0,1,"Carrau, Mr. Jose Pedro",male,17.0,0,0,113059,47.1,,S,Child,False,Unknown,"Carrau, Mr. Jose Pedro",1,Solo,Premium,Yes
-1296,0,1,"Frauenthal, Mr. Isaac Gerald",male,43.0,1,0,17765,27.72,D40,C,Adult,True,D,"Frauenthal, Mr. Isaac Gerald",2,Small,Standard,No
-1297,0,2,"Nourney, Mr. Alfred (Baron von Drachstedt)",male,20.0,0,0,SC/PARIS 2166,13.86,D38,C,Adult,True,D,"Nourney, Mr. Alfred (Baron von Drachstedt"")""",1,Solo,Standard,Yes
-1298,0,2,"Ware, Mr. William Jeffery",male,23.0,1,0,28666,10.5,,S,Adult,False,Unknown,"Ware, Mr. William Jeffery",2,Small,Standard,No
-1299,0,1,"Widener, Mr. George Dunton",male,50.0,1,1,113503,211.5,C80,C,Adult,True,C,"Widener, Mr. George Dunton",3,Small,Luxury,No
-1300,1,3,"Riordan, Miss. Johanna Hannah",female,27.0,0,0,334915,7.72,,Q,Senior,False,Unknown,"Riordan, Miss. Johanna Hannah""""",1,Solo,Budget,Yes
-1301,1,3,"Peacock, Miss. Treasteall",female,3.0,1,1,SOTON/O.Q. 3101315,13.78,,S,Child,False,Unknown,"Peacock, Miss. Treasteall",3,Small,Standard,No
-1302,1,3,"Naughton, Miss. Hannah",female,27.0,0,0,365237,7.75,,Q,Senior,False,Unknown,"Naughton, Miss. Hannah",1,Solo,Budget,Yes
-1303,1,1,"Minahan, Mrs. William Edward (Lillian E Thorpe)",female,37.0,1,0,19928,90.0,C78,Q,Adult,True,C,"Minahan, Mrs. William Edward (Lillian E Thorpe)",2,Small,Premium,No
-1304,1,3,"Henriksson, Miss. Jenny Lovisa",female,28.0,0,0,347086,7.78,,S,Adult,False,Unknown,"Henriksson, Miss. Jenny Lovisa",1,Solo,Budget,Yes
-1305,0,3,"Spector, Mr. Woolf",male,27.0,0,0,A.5. 3236,8.05,,S,Senior,False,Unknown,"Spector, Mr. Woolf",1,Solo,Budget,Yes
-1306,1,1,"Oliva y Ocana, Dona. Fermina",female,39.0,0,0,PC 17758,108.9,C105,C,Adult,True,C,"Oliva y Ocana, Dona. Fermina",1,Solo,Luxury,Yes
-1307,0,3,"Saether, Mr. Simon Sivertsen",male,38.0,0,0,SOTON/O.Q. 3101262,7.25,,S,Adult,False,Unknown,"Saether, Mr. Simon Sivertsen",1,Solo,Budget,Yes
-1308,0,3,"Ware, Mr. Frederick",male,27.0,0,0,359309,8.05,,S,Senior,False,Unknown,"Ware, Mr. Frederick",1,Solo,Budget,Yes
-1309,0,3,"Peter, Master. Michael J",male,27.0,1,1,2668,22.36,,C,Senior,False,Unknown,"Peter, Master. Michael J",3,Small,Standard,No
+892,0,3,"Kelly, Mr. James",male,34,0,0,330911,7.83,,Q,Adult,FALSE,Unknown,"Kelly, Mr. James",1,Solo,Budget,Yes
+893,1,3,"Wilkes, Mrs. James (Ellen Needs)",female,47,1,0,363272,7,,S,Adult,FALSE,Unknown,"Wilkes, Mrs. James (Ellen Needs)",2,Small,Budget,No
+894,0,2,"Myles, Mr. Thomas Francis",male,62,0,0,240276,9.69,,Q,Senior,FALSE,Unknown,"Myles, Mr. Thomas Francis",1,Solo,Budget,Yes
+895,0,3,"Wirz, Mr. Albert",male,27,0,0,315154,8.66,,S,Adult,FALSE,Unknown,"Wirz, Mr. Albert",1,Solo,Budget,Yes
+896,1,3,"Hirvonen, Mrs. Alexander (Helga E Lindqvist)",female,22,1,1,3101298,12.29,,S,Adult,FALSE,Unknown,"Hirvonen, Mrs. Alexander (Helga E Lindqvist)",3,Small,Standard,No
+897,0,3,"Svensson, Mr. Johan Cervin",male,14,0,0,7538,9.22,,S,Child,FALSE,Unknown,"Svensson, Mr. Johan Cervin",1,Solo,Budget,Yes
+898,1,3,"Connolly, Miss. Kate",female,30,0,0,330972,7.63,,Q,Adult,FALSE,Unknown,"Connolly, Miss. Kate",1,Solo,Budget,Yes
+899,0,2,"Caldwell, Mr. Albert Francis",male,26,1,1,248738,29,,S,Adult,FALSE,Unknown,"Caldwell, Mr. Albert Francis",3,Small,Standard,No
+900,1,3,"Abrahim, Mrs. Joseph (Sophie Halaut Easu)",female,18,0,0,2657,7.23,,C,Adult,FALSE,Unknown,"Abrahim, Mrs. Joseph (Sophie Halaut Easu)",1,Solo,Budget,Yes
+901,0,3,"Davies, Mr. John Samuel",male,21,2,0,A/4 48871,24.15,,S,Adult,FALSE,Unknown,"Davies, Mr. John Samuel",3,Small,Standard,No
+902,0,3,"Ilieff, Mr. Ylio",male,27,0,0,349220,7.9,,S,Senior,FALSE,Unknown,"Ilieff, Mr. Ylio",1,Solo,Budget,Yes
+903,0,1,"Jones, Mr. Charles Cresson",male,46,0,0,694,26,,S,Adult,FALSE,Unknown,"Jones, Mr. Charles Cresson",1,Solo,Standard,Yes
+904,1,1,"Snyder, Mrs. John Pillsbury (Nelle Stevenson)",female,23,1,0,21228,82.27,B45,S,Adult,TRUE,B,"Snyder, Mrs. John Pillsbury (Nelle Stevenson)",2,Small,Premium,No
+905,0,2,"Howard, Mr. Benjamin",male,63,1,0,24065,26,,S,Senior,FALSE,Unknown,"Howard, Mr. Benjamin",2,Small,Standard,No
+906,1,1,"Chaffee, Mrs. Herbert Fuller (Carrie Constance Toogood)",female,47,1,0,W.E.P. 5734,61.18,E31,S,Adult,TRUE,E,"Chaffee, Mrs. Herbert Fuller (Carrie Constance Toogood)",2,Small,Premium,No
+907,1,2,"del Carlo, Mrs. Sebastiano (Argenia Genovesi)",female,24,1,0,SC/PARIS 2167,27.72,,C,Adult,FALSE,Unknown,"del Carlo, Mrs. Sebastiano (Argenia Genovesi)",2,Small,Standard,No
+908,0,2,"Keane, Mr. Daniel",male,35,0,0,233734,12.35,,Q,Adult,FALSE,Unknown,"Keane, Mr. Daniel",1,Solo,Standard,Yes
+909,0,3,"Assaf, Mr. Gerios",male,21,0,0,2692,7.22,,C,Adult,FALSE,Unknown,"Assaf, Mr. Gerios",1,Solo,Budget,Yes
+910,1,3,"Ilmakangas, Miss. Ida Livija",female,27,1,0,STON/O2. 3101270,7.92,,S,Adult,FALSE,Unknown,"Ilmakangas, Miss. Ida Livija",2,Small,Budget,No
+911,1,3,"Assaf Khalil, Mrs. Mariana (Miriam)",female,45,0,0,2696,7.22,,C,Adult,FALSE,Unknown,"Assaf Khalil, Mrs. Mariana (Miriam"")""",1,Solo,Budget,Yes
+912,0,1,"Rothschild, Mr. Martin",male,55,1,0,PC 17603,59.4,,C,Adult,FALSE,Unknown,"Rothschild, Mr. Martin",2,Small,Premium,No
+913,0,3,"Olsen, Master. Artur Karl",male,9,0,1,C 17368,3.17,,S,Child,FALSE,Unknown,"Olsen, Master. Artur Karl",2,Small,Budget,No
+914,1,1,"Flegenheim, Mrs. Alfred (Antoinette)",female,27,0,0,PC 17598,31.68,,S,Senior,FALSE,Unknown,"Flegenheim, Mrs. Alfred (Antoinette)",1,Solo,Premium,Yes
+915,0,1,"Williams, Mr. Richard Norris II",male,21,0,1,PC 17597,61.38,,C,Adult,FALSE,Unknown,"Williams, Mr. Richard Norris II",2,Small,Premium,No
+916,1,1,"Ryerson, Mrs. Arthur Larned (Emily Maria Borie)",female,48,1,3,PC 17608,262.38,B57 B59 B63 B66,C,Adult,TRUE,B,"Ryerson, Mrs. Arthur Larned (Emily Maria Borie)",5,Large,Luxury,No
+917,0,3,"Robins, Mr. Alexander A",male,50,1,0,A/5. 3337,14.5,,S,Adult,FALSE,Unknown,"Robins, Mr. Alexander A",2,Small,Standard,No
+918,1,1,"Ostby, Miss. Helene Ragnhild",female,22,0,1,113509,61.98,B36,C,Adult,TRUE,B,"Ostby, Miss. Helene Ragnhild",2,Small,Premium,No
+919,0,3,"Daher, Mr. Shedid",male,22,0,0,2698,7.22,,C,Adult,FALSE,Unknown,"Daher, Mr. Shedid",1,Solo,Budget,Yes
+920,0,1,"Brady, Mr. John Bertram",male,41,0,0,113054,30.5,A21,S,Adult,TRUE,A,"Brady, Mr. John Bertram",1,Solo,Premium,Yes
+921,0,3,"Samaan, Mr. Elias",male,27,2,0,2662,21.68,,C,Senior,FALSE,Unknown,"Samaan, Mr. Elias",3,Small,Standard,No
+922,0,2,"Louch, Mr. Charles Alexander",male,50,1,0,SC/AH 3085,26,,S,Adult,FALSE,Unknown,"Louch, Mr. Charles Alexander",2,Small,Standard,No
+923,0,2,"Jefferys, Mr. Clifford Thomas",male,24,2,0,C.A. 31029,31.5,,S,Adult,FALSE,Unknown,"Jefferys, Mr. Clifford Thomas",3,Small,Premium,No
+924,1,3,"Dean, Mrs. Bertram (Eva Georgetta Light)",female,33,1,2,C.A. 2315,20.58,,S,Adult,FALSE,Unknown,"Dean, Mrs. Bertram (Eva Georgetta Light)",4,Small,Standard,No
+925,1,3,"Johnston, Mrs. Andrew G (Elizabeth Lily Watson)",female,27,1,2,W./C. 6607,23.45,,S,Senior,FALSE,Unknown,"Johnston, Mrs. Andrew G (Elizabeth Lily"" Watson)""",4,Small,Standard,No
+926,0,1,"Mock, Mr. Philipp Edmund",male,30,1,0,13236,57.75,C78,C,Adult,TRUE,C,"Mock, Mr. Philipp Edmund",2,Small,Premium,No
+927,0,3,"Katavelas, Mr. Vassilios (Catavelas Vassilios)",male,18,0,0,2682,7.23,,C,Adult,FALSE,Unknown,"Katavelas, Mr. Vassilios (Catavelas Vassilios"")""",1,Solo,Budget,Yes
+928,1,3,"Roth, Miss. Sarah A",female,27,0,0,342712,8.05,,S,Senior,FALSE,Unknown,"Roth, Miss. Sarah A",1,Solo,Budget,Yes
+929,1,3,"Cacic, Miss. Manda",female,21,0,0,315087,8.66,,S,Adult,FALSE,Unknown,"Cacic, Miss. Manda",1,Solo,Budget,Yes
+930,0,3,"Sap, Mr. Julius",male,25,0,0,345768,9.5,,S,Adult,FALSE,Unknown,"Sap, Mr. Julius",1,Solo,Budget,Yes
+931,0,3,"Hee, Mr. Ling",male,27,0,0,1601,56.5,,S,Senior,FALSE,Unknown,"Hee, Mr. Ling",1,Solo,Premium,Yes
+932,0,3,"Karun, Mr. Franz",male,39,0,1,349256,13.42,,C,Adult,FALSE,Unknown,"Karun, Mr. Franz",2,Small,Standard,No
+933,0,1,"Franklin, Mr. Thomas Parham",male,27,0,0,113778,26.55,D34,S,Senior,TRUE,D,"Franklin, Mr. Thomas Parham",1,Solo,Standard,Yes
+934,0,3,"Goldsmith, Mr. Nathan",male,41,0,0,SOTON/O.Q. 3101263,7.85,,S,Adult,FALSE,Unknown,"Goldsmith, Mr. Nathan",1,Solo,Budget,Yes
+935,1,2,"Corbett, Mrs. Walter H (Irene Colvin)",female,30,0,0,237249,13,,S,Adult,FALSE,Unknown,"Corbett, Mrs. Walter H (Irene Colvin)",1,Solo,Standard,Yes
+936,1,1,"Kimball, Mrs. Edwin Nelson Jr (Gertrude Parsons)",female,45,1,0,11753,52.55,D19,S,Adult,TRUE,D,"Kimball, Mrs. Edwin Nelson Jr (Gertrude Parsons)",2,Small,Premium,No
+937,0,3,"Peltomaki, Mr. Nikolai Johannes",male,25,0,0,STON/O 2. 3101291,7.92,,S,Adult,FALSE,Unknown,"Peltomaki, Mr. Nikolai Johannes",1,Solo,Budget,Yes
+938,0,1,"Chevre, Mr. Paul Romaine",male,45,0,0,PC 17594,29.7,A9,C,Adult,TRUE,A,"Chevre, Mr. Paul Romaine",1,Solo,Standard,Yes
+939,0,3,"Shaughnessy, Mr. Patrick",male,27,0,0,370374,7.75,,Q,Senior,FALSE,Unknown,"Shaughnessy, Mr. Patrick",1,Solo,Budget,Yes
+940,1,1,"Bucknell, Mrs. William Robert (Emma Eliza Ward)",female,60,0,0,11813,76.29,D15,C,Senior,TRUE,D,"Bucknell, Mrs. William Robert (Emma Eliza Ward)",1,Solo,Premium,Yes
+941,1,3,"Coutts, Mrs. William (Winnie Minnie Treanor)",female,36,0,2,C.A. 37671,15.9,,S,Adult,FALSE,Unknown,"Coutts, Mrs. William (Winnie Minnie"" Treanor)""",3,Small,Standard,No
+942,0,1,"Smith, Mr. Lucien Philip",male,24,1,0,13695,60,C31,S,Adult,TRUE,C,"Smith, Mr. Lucien Philip",2,Small,Premium,No
+943,0,2,"Pulbaum, Mr. Franz",male,27,0,0,SC/PARIS 2168,15.03,,C,Adult,FALSE,Unknown,"Pulbaum, Mr. Franz",1,Solo,Standard,Yes
+944,1,2,"Hocking, Miss. Ellen Nellie",female,20,2,1,29105,23,,S,Adult,FALSE,Unknown,"Hocking, Miss. Ellen Nellie""""",4,Small,Standard,No
+945,1,1,"Fortune, Miss. Ethel Flora",female,28,3,2,19950,263,C23 C25 C27,S,Adult,TRUE,C,"Fortune, Miss. Ethel Flora",6,Large,Luxury,No
+946,0,2,"Mangiavacchi, Mr. Serafino Emilio",male,27,0,0,SC/A.3 2861,15.58,,C,Senior,FALSE,Unknown,"Mangiavacchi, Mr. Serafino Emilio",1,Solo,Standard,Yes
+947,0,3,"Rice, Master. Albert",male,10,4,1,382652,29.12,,Q,Child,FALSE,Unknown,"Rice, Master. Albert",6,Large,Standard,No
+948,0,3,"Cor, Mr. Bartol",male,35,0,0,349230,7.9,,S,Adult,FALSE,Unknown,"Cor, Mr. Bartol",1,Solo,Budget,Yes
+949,0,3,"Abelseth, Mr. Olaus Jorgensen",male,25,0,0,348122,7.65,F G63,S,Adult,TRUE,F,"Abelseth, Mr. Olaus Jorgensen",1,Solo,Budget,Yes
+950,0,3,"Davison, Mr. Thomas Henry",male,27,1,0,386525,16.1,,S,Senior,FALSE,Unknown,"Davison, Mr. Thomas Henry",2,Small,Standard,No
+951,1,1,"Chaudanson, Miss. Victorine",female,36,0,0,PC 17608,262.38,B61,C,Adult,TRUE,B,"Chaudanson, Miss. Victorine",1,Solo,Luxury,Yes
+952,0,3,"Dika, Mr. Mirko",male,17,0,0,349232,7.9,,S,Child,FALSE,Unknown,"Dika, Mr. Mirko",1,Solo,Budget,Yes
+953,0,2,"McCrae, Mr. Arthur Gordon",male,32,0,0,237216,13.5,,S,Adult,FALSE,Unknown,"McCrae, Mr. Arthur Gordon",1,Solo,Standard,Yes
+954,0,3,"Bjorklund, Mr. Ernst Herbert",male,18,0,0,347090,7.75,,S,Adult,FALSE,Unknown,"Bjorklund, Mr. Ernst Herbert",1,Solo,Budget,Yes
+955,1,3,"Bradley, Miss. Bridget Delia",female,22,0,0,334914,7.72,,Q,Adult,FALSE,Unknown,"Bradley, Miss. Bridget Delia",1,Solo,Budget,Yes
+956,0,1,"Ryerson, Master. John Borie",male,13,2,2,PC 17608,262.38,B57 B59 B63 B66,C,Child,TRUE,B,"Ryerson, Master. John Borie",5,Large,Luxury,No
+957,1,2,"Corey, Mrs. Percy C (Mary Phyllis Elizabeth Miller)",female,27,0,0,F.C.C. 13534,21,,S,Senior,FALSE,Unknown,"Corey, Mrs. Percy C (Mary Phyllis Elizabeth Miller)",1,Solo,Standard,Yes
+958,1,3,"Burns, Miss. Mary Delia",female,18,0,0,330963,7.88,,Q,Adult,FALSE,Unknown,"Burns, Miss. Mary Delia",1,Solo,Budget,Yes
+959,0,1,"Moore, Mr. Clarence Bloomfield",male,47,0,0,113796,42.4,,S,Adult,FALSE,Unknown,"Moore, Mr. Clarence Bloomfield",1,Solo,Premium,Yes
+960,0,1,"Tucker, Mr. Gilbert Milligan Jr",male,31,0,0,2543,28.54,C53,C,Adult,TRUE,C,"Tucker, Mr. Gilbert Milligan Jr",1,Solo,Standard,Yes
+961,1,1,"Fortune, Mrs. Mark (Mary McDougald)",female,60,1,4,19950,263,C23 C25 C27,S,Senior,TRUE,C,"Fortune, Mrs. Mark (Mary McDougald)",6,Large,Luxury,No
+962,1,3,"Mulvihill, Miss. Bertha E",female,24,0,0,382653,7.75,,Q,Adult,FALSE,Unknown,"Mulvihill, Miss. Bertha E",1,Solo,Budget,Yes
+963,0,3,"Minkoff, Mr. Lazar",male,21,0,0,349211,7.9,,S,Adult,FALSE,Unknown,"Minkoff, Mr. Lazar",1,Solo,Budget,Yes
+964,1,3,"Nieminen, Miss. Manta Josefina",female,29,0,0,3101297,7.92,,S,Adult,FALSE,Unknown,"Nieminen, Miss. Manta Josefina",1,Solo,Budget,Yes
+965,0,1,"Ovies y Rodriguez, Mr. Servando",male,28,0,0,PC 17562,27.72,D43,C,Adult,TRUE,D,"Ovies y Rodriguez, Mr. Servando",1,Solo,Standard,Yes
+966,1,1,"Geiger, Miss. Amalie",female,35,0,0,113503,211.5,C130,C,Adult,TRUE,C,"Geiger, Miss. Amalie",1,Solo,Luxury,Yes
+967,0,1,"Keeping, Mr. Edwin",male,32,0,0,113503,211.5,C132,C,Adult,TRUE,C,"Keeping, Mr. Edwin",1,Solo,Luxury,Yes
+968,0,3,"Miles, Mr. Frank",male,27,0,0,359306,8.05,,S,Senior,FALSE,Unknown,"Miles, Mr. Frank",1,Solo,Budget,Yes
+969,1,1,"Cornell, Mrs. Robert Clifford (Malvina Helen Lamson)",female,55,2,0,11770,25.7,C101,S,Adult,TRUE,C,"Cornell, Mrs. Robert Clifford (Malvina Helen Lamson)",3,Small,Standard,No
+970,0,2,"Aldworth, Mr. Charles Augustus",male,30,0,0,248744,13,,S,Adult,FALSE,Unknown,"Aldworth, Mr. Charles Augustus",1,Solo,Standard,Yes
+971,1,3,"Doyle, Miss. Elizabeth",female,24,0,0,368702,7.75,,Q,Adult,FALSE,Unknown,"Doyle, Miss. Elizabeth",1,Solo,Budget,Yes
+972,0,3,"Boulos, Master. Akar",male,6,1,1,2678,15.25,,C,Child,FALSE,Unknown,"Boulos, Master. Akar",3,Small,Standard,No
+973,0,1,"Straus, Mr. Isidor",male,67,1,0,PC 17483,221.78,C55 C57,S,Senior,TRUE,C,"Straus, Mr. Isidor",2,Small,Luxury,No
+974,0,1,"Case, Mr. Howard Brown",male,49,0,0,19924,26,,S,Adult,FALSE,Unknown,"Case, Mr. Howard Brown",1,Solo,Standard,Yes
+975,0,3,"Demetri, Mr. Marinko",male,27,0,0,349238,7.9,,S,Senior,FALSE,Unknown,"Demetri, Mr. Marinko",1,Solo,Budget,Yes
+976,0,2,"Lamb, Mr. John Joseph",male,27,0,0,240261,10.71,,Q,Senior,FALSE,Unknown,"Lamb, Mr. John Joseph",1,Solo,Standard,Yes
+977,0,3,"Khalil, Mr. Betros",male,27,1,0,2660,14.45,,C,Senior,FALSE,Unknown,"Khalil, Mr. Betros",2,Small,Standard,No
+978,1,3,"Barry, Miss. Julia",female,27,0,0,330844,7.88,,Q,Adult,FALSE,Unknown,"Barry, Miss. Julia",1,Solo,Budget,Yes
+979,1,3,"Badman, Miss. Emily Louisa",female,18,0,0,A/4 31416,8.05,,S,Adult,FALSE,Unknown,"Badman, Miss. Emily Louisa",1,Solo,Budget,Yes
+980,1,3,"O'Donoghue, Ms. Bridget",female,27,0,0,364856,7.75,,Q,Senior,FALSE,Unknown,"O'Donoghue, Ms. Bridget",1,Solo,Budget,Yes
+981,0,2,"Wells, Master. Ralph Lester",male,2,1,1,29103,23,,S,Child,FALSE,Unknown,"Wells, Master. Ralph Lester",3,Small,Standard,No
+982,1,3,"Dyker, Mrs. Adolf Fredrik (Anna Elisabeth Judith Andersson)",female,22,1,0,347072,13.9,,S,Adult,FALSE,Unknown,"Dyker, Mrs. Adolf Fredrik (Anna Elisabeth Judith Andersson)",2,Small,Standard,No
+983,0,3,"Pedersen, Mr. Olaf",male,27,0,0,345498,7.78,,S,Senior,FALSE,Unknown,"Pedersen, Mr. Olaf",1,Solo,Budget,Yes
+984,1,1,"Davidson, Mrs. Thornton (Orian Hays)",female,27,1,2,F.C. 12750,52,B71,S,Adult,TRUE,B,"Davidson, Mrs. Thornton (Orian Hays)",4,Small,Premium,No
+985,0,3,"Guest, Mr. Robert",male,27,0,0,376563,8.05,,S,Senior,FALSE,Unknown,"Guest, Mr. Robert",1,Solo,Budget,Yes
+986,0,1,"Birnbaum, Mr. Jakob",male,25,0,0,13905,26,,C,Adult,FALSE,Unknown,"Birnbaum, Mr. Jakob",1,Solo,Standard,Yes
+987,0,3,"Tenglin, Mr. Gunnar Isidor",male,25,0,0,350033,7.8,,S,Adult,FALSE,Unknown,"Tenglin, Mr. Gunnar Isidor",1,Solo,Budget,Yes
+988,1,1,"Cavendish, Mrs. Tyrell William (Julia Florence Siegel)",female,76,1,0,19877,78.85,C46,S,Senior,TRUE,C,"Cavendish, Mrs. Tyrell William (Julia Florence Siegel)",2,Small,Premium,No
+989,0,3,"Makinen, Mr. Kalle Edvard",male,29,0,0,STON/O 2. 3101268,7.92,,S,Adult,FALSE,Unknown,"Makinen, Mr. Kalle Edvard",1,Solo,Budget,Yes
+990,1,3,"Braf, Miss. Elin Ester Maria",female,20,0,0,347471,7.85,,S,Adult,FALSE,Unknown,"Braf, Miss. Elin Ester Maria",1,Solo,Budget,Yes
+991,0,3,"Nancarrow, Mr. William Henry",male,33,0,0,A./5. 3338,8.05,,S,Adult,FALSE,Unknown,"Nancarrow, Mr. William Henry",1,Solo,Budget,Yes
+992,1,1,"Stengel, Mrs. Charles Emil Henry (Annie May Morris)",female,43,1,0,11778,55.44,C116,C,Adult,TRUE,C,"Stengel, Mrs. Charles Emil Henry (Annie May Morris)",2,Small,Premium,No
+993,0,2,"Weisz, Mr. Leopold",male,27,1,0,228414,26,,S,Adult,FALSE,Unknown,"Weisz, Mr. Leopold",2,Small,Standard,No
+994,0,3,"Foley, Mr. William",male,27,0,0,365235,7.75,,Q,Senior,FALSE,Unknown,"Foley, Mr. William",1,Solo,Budget,Yes
+995,0,3,"Johansson Palmquist, Mr. Oskar Leander",male,26,0,0,347070,7.78,,S,Adult,FALSE,Unknown,"Johansson Palmquist, Mr. Oskar Leander",1,Solo,Budget,Yes
+996,1,3,"Thomas, Mrs. Alexander (Thamine Thelma)",female,16,1,1,2625,8.52,,C,Child,FALSE,Unknown,"Thomas, Mrs. Alexander (Thamine Thelma"")""",3,Small,Budget,No
+997,0,3,"Holthen, Mr. Johan Martin",male,28,0,0,C 4001,22.52,,S,Adult,FALSE,Unknown,"Holthen, Mr. Johan Martin",1,Solo,Standard,Yes
+998,0,3,"Buckley, Mr. Daniel",male,21,0,0,330920,7.82,,Q,Adult,FALSE,Unknown,"Buckley, Mr. Daniel",1,Solo,Budget,Yes
+999,0,3,"Ryan, Mr. Edward",male,27,0,0,383162,7.75,,Q,Senior,FALSE,Unknown,"Ryan, Mr. Edward",1,Solo,Budget,Yes
+1000,0,3,"Willer, Mr. Aaron (Abi Weller)",male,27,0,0,3410,8.71,,S,Senior,FALSE,Unknown,"Willer, Mr. Aaron (Abi Weller"")""",1,Solo,Budget,Yes
+1001,0,2,"Swane, Mr. George",male,18,0,0,248734,13,F,S,Adult,TRUE,F,"Swane, Mr. George",1,Solo,Standard,Yes
+1002,0,2,"Stanton, Mr. Samuel Ward",male,41,0,0,237734,15.05,,C,Adult,FALSE,Unknown,"Stanton, Mr. Samuel Ward",1,Solo,Standard,Yes
+1003,1,3,"Shine, Miss. Ellen Natalia",female,27,0,0,330968,7.78,,Q,Senior,FALSE,Unknown,"Shine, Miss. Ellen Natalia",1,Solo,Budget,Yes
+1004,1,1,"Evans, Miss. Edith Corse",female,36,0,0,PC 17531,31.68,A29,C,Adult,TRUE,A,"Evans, Miss. Edith Corse",1,Solo,Premium,Yes
+1005,1,3,"Buckley, Miss. Katherine",female,18,0,0,329944,7.28,,Q,Adult,FALSE,Unknown,"Buckley, Miss. Katherine",1,Solo,Budget,Yes
+1006,1,1,"Straus, Mrs. Isidor (Rosalie Ida Blun)",female,63,1,0,PC 17483,221.78,C55 C57,S,Senior,TRUE,C,"Straus, Mrs. Isidor (Rosalie Ida Blun)",2,Small,Luxury,No
+1007,0,3,"Chronopoulos, Mr. Demetrios",male,18,1,0,2680,14.45,,C,Adult,FALSE,Unknown,"Chronopoulos, Mr. Demetrios",2,Small,Standard,No
+1008,0,3,"Thomas, Mr. John",male,27,0,0,2681,6.44,,C,Senior,FALSE,Unknown,"Thomas, Mr. John",1,Solo,Budget,Yes
+1009,1,3,"Sandstrom, Miss. Beatrice Irene",female,1,1,1,PP 9549,16.7,G6,S,Child,TRUE,G,"Sandstrom, Miss. Beatrice Irene",3,Small,Standard,No
+1010,0,1,"Beattie, Mr. Thomson",male,36,0,0,13050,75.24,C6,C,Adult,TRUE,C,"Beattie, Mr. Thomson",1,Solo,Premium,Yes
+1011,1,2,"Chapman, Mrs. John Henry (Sara Elizabeth Lawry)",female,29,1,0,SC/AH 29037,26,,S,Adult,FALSE,Unknown,"Chapman, Mrs. John Henry (Sara Elizabeth Lawry)",2,Small,Standard,No
+1012,1,2,"Watt, Miss. Bertha J",female,12,0,0,C.A. 33595,15.75,,S,Child,FALSE,Unknown,"Watt, Miss. Bertha J",1,Solo,Standard,Yes
+1013,0,3,"Kiernan, Mr. John",male,27,1,0,367227,7.75,,Q,Senior,FALSE,Unknown,"Kiernan, Mr. John",2,Small,Budget,No
+1014,1,1,"Schabert, Mrs. Paul (Emma Mock)",female,35,1,0,13236,57.75,C28,C,Adult,TRUE,C,"Schabert, Mrs. Paul (Emma Mock)",2,Small,Premium,No
+1015,0,3,"Carver, Mr. Alfred John",male,28,0,0,392095,7.25,,S,Adult,FALSE,Unknown,"Carver, Mr. Alfred John",1,Solo,Budget,Yes
+1016,0,3,"Kennedy, Mr. John",male,27,0,0,368783,7.75,,Q,Senior,FALSE,Unknown,"Kennedy, Mr. John",1,Solo,Budget,Yes
+1017,1,3,"Cribb, Miss. Laura Alice",female,17,0,1,371362,16.1,,S,Child,FALSE,Unknown,"Cribb, Miss. Laura Alice",2,Small,Standard,No
+1018,0,3,"Brobeck, Mr. Karl Rudolf",male,22,0,0,350045,7.8,,S,Adult,FALSE,Unknown,"Brobeck, Mr. Karl Rudolf",1,Solo,Budget,Yes
+1019,1,3,"McCoy, Miss. Alicia",female,27,2,0,367226,23.25,,Q,Senior,FALSE,Unknown,"McCoy, Miss. Alicia",3,Small,Standard,No
+1020,0,2,"Bowenur, Mr. Solomon",male,42,0,0,211535,13,,S,Adult,FALSE,Unknown,"Bowenur, Mr. Solomon",1,Solo,Standard,Yes
+1021,0,3,"Petersen, Mr. Marius",male,24,0,0,342441,8.05,,S,Adult,FALSE,Unknown,"Petersen, Mr. Marius",1,Solo,Budget,Yes
+1022,0,3,"Spinner, Mr. Henry John",male,32,0,0,STON/OQ. 369943,8.05,,S,Adult,FALSE,Unknown,"Spinner, Mr. Henry John",1,Solo,Budget,Yes
+1023,0,1,"Gracie, Col. Archibald IV",male,53,0,0,113780,28.5,C51,C,Adult,TRUE,C,"Gracie, Col. Archibald IV",1,Solo,Standard,Yes
+1024,1,3,"Lefebre, Mrs. Frank (Frances)",female,27,0,4,4133,25.47,,S,Senior,FALSE,Unknown,"Lefebre, Mrs. Frank (Frances)",5,Large,Standard,No
+1025,0,3,"Thomas, Mr. Charles P",male,27,1,0,2621,6.44,,C,Senior,FALSE,Unknown,"Thomas, Mr. Charles P",2,Small,Budget,No
+1026,0,3,"Dintcheff, Mr. Valtcho",male,43,0,0,349226,7.9,,S,Adult,FALSE,Unknown,"Dintcheff, Mr. Valtcho",1,Solo,Budget,Yes
+1027,0,3,"Carlsson, Mr. Carl Robert",male,24,0,0,350409,7.85,,S,Adult,FALSE,Unknown,"Carlsson, Mr. Carl Robert",1,Solo,Budget,Yes
+1028,0,3,"Zakarian, Mr. Mapriededer",male,26,0,0,2656,7.22,,C,Adult,FALSE,Unknown,"Zakarian, Mr. Mapriededer",1,Solo,Budget,Yes
+1029,0,2,"Schmidt, Mr. August",male,26,0,0,248659,13,,S,Adult,FALSE,Unknown,"Schmidt, Mr. August",1,Solo,Standard,Yes
+1030,1,3,"Drapkin, Miss. Jennie",female,23,0,0,SOTON/OQ 392083,8.05,,S,Adult,FALSE,Unknown,"Drapkin, Miss. Jennie",1,Solo,Budget,Yes
+1031,0,3,"Goodwin, Mr. Charles Frederick",male,40,1,6,CA 2144,46.9,,S,Adult,FALSE,Unknown,"Goodwin, Mr. Charles Frederick",8,Large,Premium,No
+1032,1,3,"Goodwin, Miss. Jessie Allis",female,10,5,2,CA 2144,46.9,,S,Child,FALSE,Unknown,"Goodwin, Miss. Jessie Allis",8,Large,Premium,No
+1033,1,1,"Daniels, Miss. Sarah",female,33,0,0,113781,151.55,,S,Adult,FALSE,Unknown,"Daniels, Miss. Sarah",1,Solo,Luxury,Yes
+1034,0,1,"Ryerson, Mr. Arthur Larned",male,61,1,3,PC 17608,262.38,B57 B59 B63 B66,C,Senior,TRUE,B,"Ryerson, Mr. Arthur Larned",5,Large,Luxury,No
+1035,0,2,"Beauchamp, Mr. Henry James",male,28,0,0,244358,26,,S,Adult,FALSE,Unknown,"Beauchamp, Mr. Henry James",1,Solo,Standard,Yes
+1036,0,1,"Lindeberg-Lind, Mr. Erik Gustaf (Mr Edward Lingrey)",male,42,0,0,17475,26.55,,S,Adult,FALSE,Unknown,"Lindeberg-Lind, Mr. Erik Gustaf (Mr Edward Lingrey"")""",1,Solo,Standard,Yes
+1037,0,3,"Vander Planke, Mr. Julius",male,31,3,0,345763,18,,S,Adult,FALSE,Unknown,"Vander Planke, Mr. Julius",4,Small,Standard,No
+1038,0,1,"Hilliard, Mr. Herbert Henry",male,27,0,0,17463,51.86,E46,S,Senior,TRUE,E,"Hilliard, Mr. Herbert Henry",1,Solo,Premium,Yes
+1039,0,3,"Davies, Mr. Evan",male,22,0,0,SC/A4 23568,8.05,,S,Adult,FALSE,Unknown,"Davies, Mr. Evan",1,Solo,Budget,Yes
+1040,0,1,"Crafton, Mr. John Bertram",male,27,0,0,113791,26.55,,S,Senior,FALSE,Unknown,"Crafton, Mr. John Bertram",1,Solo,Standard,Yes
+1041,0,2,"Lahtinen, Rev. William",male,30,1,1,250651,26,,S,Adult,FALSE,Unknown,"Lahtinen, Rev. William",3,Small,Standard,No
+1042,1,1,"Earnshaw, Mrs. Boulton (Olive Potter)",female,23,0,1,11767,83.16,C54,C,Adult,TRUE,C,"Earnshaw, Mrs. Boulton (Olive Potter)",2,Small,Premium,No
+1043,0,3,"Matinoff, Mr. Nicola",male,27,0,0,349255,7.9,,C,Senior,FALSE,Unknown,"Matinoff, Mr. Nicola",1,Solo,Budget,Yes
+1044,0,3,"Storey, Mr. Thomas",male,60,0,0,3701,14.45,,S,Senior,FALSE,Unknown,"Storey, Mr. Thomas",1,Solo,Standard,Yes
+1045,1,3,"Klasen, Mrs. (Hulda Kristina Eugenia Lofqvist)",female,36,0,2,350405,12.18,,S,Adult,FALSE,Unknown,"Klasen, Mrs. (Hulda Kristina Eugenia Lofqvist)",3,Small,Standard,No
+1046,0,3,"Asplund, Master. Filip Oscar",male,13,4,2,347077,31.39,,S,Child,FALSE,Unknown,"Asplund, Master. Filip Oscar",7,Large,Premium,No
+1047,0,3,"Duquemin, Mr. Joseph",male,24,0,0,S.O./P.P. 752,7.55,,S,Adult,FALSE,Unknown,"Duquemin, Mr. Joseph",1,Solo,Budget,Yes
+1048,1,1,"Bird, Miss. Ellen",female,29,0,0,PC 17483,221.78,C97,S,Adult,TRUE,C,"Bird, Miss. Ellen",1,Solo,Luxury,Yes
+1049,1,3,"Lundin, Miss. Olga Elida",female,23,0,0,347469,7.85,,S,Adult,FALSE,Unknown,"Lundin, Miss. Olga Elida",1,Solo,Budget,Yes
+1050,0,1,"Borebank, Mr. John James",male,42,0,0,110489,26.55,D22,S,Adult,TRUE,D,"Borebank, Mr. John James",1,Solo,Standard,Yes
+1051,1,3,"Peacock, Mrs. Benjamin (Edith Nile)",female,26,0,2,SOTON/O.Q. 3101315,13.78,,S,Adult,FALSE,Unknown,"Peacock, Mrs. Benjamin (Edith Nile)",3,Small,Standard,No
+1052,1,3,"Smyth, Miss. Julia",female,27,0,0,335432,7.73,,Q,Senior,FALSE,Unknown,"Smyth, Miss. Julia",1,Solo,Budget,Yes
+1053,0,3,"Touma, Master. Georges Youssef",male,7,1,1,2650,15.25,,C,Child,FALSE,Unknown,"Touma, Master. Georges Youssef",3,Small,Standard,No
+1054,1,2,"Wright, Miss. Marion",female,26,0,0,220844,13.5,,S,Adult,FALSE,Unknown,"Wright, Miss. Marion",1,Solo,Standard,Yes
+1055,0,3,"Pearce, Mr. Ernest",male,27,0,0,343271,7,,S,Senior,FALSE,Unknown,"Pearce, Mr. Ernest",1,Solo,Budget,Yes
+1056,0,2,"Peruschitz, Rev. Joseph Maria",male,41,0,0,237393,13,,S,Adult,FALSE,Unknown,"Peruschitz, Rev. Joseph Maria",1,Solo,Standard,Yes
+1057,1,3,"Kink-Heilmann, Mrs. Anton (Luise Heilmann)",female,26,1,1,315153,22.02,,S,Adult,FALSE,Unknown,"Kink-Heilmann, Mrs. Anton (Luise Heilmann)",3,Small,Standard,No
+1058,0,1,"Brandeis, Mr. Emil",male,48,0,0,PC 17591,50.5,B10,C,Adult,TRUE,B,"Brandeis, Mr. Emil",1,Solo,Premium,Yes
+1059,0,3,"Ford, Mr. Edward Watson",male,18,2,2,W./C. 6608,34.38,,S,Adult,FALSE,Unknown,"Ford, Mr. Edward Watson",5,Large,Premium,No
+1060,1,1,"Cassebeer, Mrs. Henry Arthur Jr (Eleanor Genevieve Fosdick)",female,27,0,0,17770,27.72,,C,Senior,FALSE,Unknown,"Cassebeer, Mrs. Henry Arthur Jr (Eleanor Genevieve Fosdick)",1,Solo,Standard,Yes
+1061,1,3,"Hellstrom, Miss. Hilda Maria",female,22,0,0,7548,8.96,,S,Adult,FALSE,Unknown,"Hellstrom, Miss. Hilda Maria",1,Solo,Budget,Yes
+1062,0,3,"Lithman, Mr. Simon",male,27,0,0,S.O./P.P. 251,7.55,,S,Senior,FALSE,Unknown,"Lithman, Mr. Simon",1,Solo,Budget,Yes
+1063,0,3,"Zakarian, Mr. Ortin",male,27,0,0,2670,7.22,,C,Adult,FALSE,Unknown,"Zakarian, Mr. Ortin",1,Solo,Budget,Yes
+1064,0,3,"Dyker, Mr. Adolf Fredrik",male,23,1,0,347072,13.9,,S,Adult,FALSE,Unknown,"Dyker, Mr. Adolf Fredrik",2,Small,Standard,No
+1065,0,3,"Torfa, Mr. Assad",male,27,0,0,2673,7.23,,C,Senior,FALSE,Unknown,"Torfa, Mr. Assad",1,Solo,Budget,Yes
+1066,0,3,"Asplund, Mr. Carl Oscar Vilhelm Gustafsson",male,40,1,5,347077,31.39,,S,Adult,FALSE,Unknown,"Asplund, Mr. Carl Oscar Vilhelm Gustafsson",7,Large,Premium,No
+1067,1,2,"Brown, Miss. Edith Eileen",female,15,0,2,29750,39,,S,Child,FALSE,Unknown,"Brown, Miss. Edith Eileen",3,Small,Premium,No
+1068,1,2,"Sincock, Miss. Maude",female,20,0,0,C.A. 33112,36.75,,S,Adult,FALSE,Unknown,"Sincock, Miss. Maude",1,Solo,Premium,Yes
+1069,0,1,"Stengel, Mr. Charles Emil Henry",male,54,1,0,11778,55.44,C116,C,Adult,TRUE,C,"Stengel, Mr. Charles Emil Henry",2,Small,Premium,No
+1070,1,2,"Becker, Mrs. Allen Oliver (Nellie E Baumgardner)",female,36,0,3,230136,39,F4,S,Adult,TRUE,F,"Becker, Mrs. Allen Oliver (Nellie E Baumgardner)",4,Small,Premium,No
+1071,1,1,"Compton, Mrs. Alexander Taylor (Mary Eliza Ingersoll)",female,64,0,2,PC 17756,83.16,E45,C,Senior,TRUE,E,"Compton, Mrs. Alexander Taylor (Mary Eliza Ingersoll)",3,Small,Premium,No
+1072,0,2,"McCrie, Mr. James Matthew",male,30,0,0,233478,13,,S,Adult,FALSE,Unknown,"McCrie, Mr. James Matthew",1,Solo,Standard,Yes
+1073,0,1,"Compton, Mr. Alexander Taylor Jr",male,37,1,1,PC 17756,83.16,E52,C,Adult,TRUE,E,"Compton, Mr. Alexander Taylor Jr",3,Small,Premium,No
+1074,1,1,"Marvin, Mrs. Daniel Warner (Mary Graham Carmichael Farquarson)",female,18,1,0,113773,53.1,D30,S,Adult,TRUE,D,"Marvin, Mrs. Daniel Warner (Mary Graham Carmichael Farquarson)",2,Small,Premium,No
+1075,0,3,"Lane, Mr. Patrick",male,27,0,0,7935,7.75,,Q,Senior,FALSE,Unknown,"Lane, Mr. Patrick",1,Solo,Budget,Yes
+1076,1,1,"Douglas, Mrs. Frederick Charles (Mary Helene Baxter)",female,27,1,1,PC 17558,247.52,B58 B60,C,Adult,TRUE,B,"Douglas, Mrs. Frederick Charles (Mary Helene Baxter)",3,Small,Luxury,No
+1077,0,2,"Maybery, Mr. Frank Hubert",male,40,0,0,239059,16,,S,Adult,FALSE,Unknown,"Maybery, Mr. Frank Hubert",1,Solo,Standard,Yes
+1078,1,2,"Phillips, Miss. Alice Frances Louisa",female,21,0,1,S.O./P.P. 2,21,,S,Adult,FALSE,Unknown,"Phillips, Miss. Alice Frances Louisa",2,Small,Standard,No
+1079,0,3,"Davies, Mr. Joseph",male,17,2,0,A/4 48873,8.05,,S,Child,FALSE,Unknown,"Davies, Mr. Joseph",3,Small,Budget,No
+1080,1,3,"Sage, Miss. Ada",female,27,8,2,CA. 2343,69.55,,S,Senior,FALSE,Unknown,"Sage, Miss. Ada",11,Large,Premium,No
+1081,0,2,"Veal, Mr. James",male,40,0,0,28221,13,,S,Adult,FALSE,Unknown,"Veal, Mr. James",1,Solo,Standard,Yes
+1082,0,2,"Angle, Mr. William A",male,34,1,0,226875,26,,S,Adult,FALSE,Unknown,"Angle, Mr. William A",2,Small,Standard,No
+1083,0,1,"Salomon, Mr. Abraham L",male,27,0,0,111163,26,,S,Senior,FALSE,Unknown,"Salomon, Mr. Abraham L",1,Solo,Standard,Yes
+1084,0,3,"van Billiard, Master. Walter John",male,12,1,1,A/5. 851,14.5,,S,Child,FALSE,Unknown,"van Billiard, Master. Walter John",3,Small,Standard,No
+1085,0,2,"Lingane, Mr. John",male,61,0,0,235509,12.35,,Q,Senior,FALSE,Unknown,"Lingane, Mr. John",1,Solo,Standard,Yes
+1086,0,2,"Drew, Master. Marshall Brines",male,8,0,2,28220,32.5,,S,Child,FALSE,Unknown,"Drew, Master. Marshall Brines",3,Small,Premium,No
+1087,0,3,"Karlsson, Mr. Julius Konrad Eugen",male,33,0,0,347465,7.85,,S,Adult,FALSE,Unknown,"Karlsson, Mr. Julius Konrad Eugen",1,Solo,Budget,Yes
+1088,0,1,"Spedden, Master. Robert Douglas",male,6,0,2,16966,134.5,E34,C,Child,TRUE,E,"Spedden, Master. Robert Douglas",3,Small,Luxury,No
+1089,1,3,"Nilsson, Miss. Berta Olivia",female,18,0,0,347066,7.78,,S,Adult,FALSE,Unknown,"Nilsson, Miss. Berta Olivia",1,Solo,Budget,Yes
+1090,0,2,"Baimbrigge, Mr. Charles Robert",male,23,0,0,C.A. 31030,10.5,,S,Adult,FALSE,Unknown,"Baimbrigge, Mr. Charles Robert",1,Solo,Standard,Yes
+1091,1,3,"Rasmussen, Mrs. (Lena Jacobsen Solvang)",female,27,0,0,65305,8.11,,S,Senior,FALSE,Unknown,"Rasmussen, Mrs. (Lena Jacobsen Solvang)",1,Solo,Budget,Yes
+1092,1,3,"Murphy, Miss. Nora",female,27,0,0,36568,15.5,,Q,Senior,FALSE,Unknown,"Murphy, Miss. Nora",1,Solo,Standard,Yes
+1093,0,3,"Danbom, Master. Gilbert Sigvard Emanuel",male,0,0,2,347080,14.4,,S,Child,FALSE,Unknown,"Danbom, Master. Gilbert Sigvard Emanuel",3,Small,Standard,No
+1094,0,1,"Astor, Col. John Jacob",male,47,1,0,PC 17757,227.52,C62 C64,C,Adult,TRUE,C,"Astor, Col. John Jacob",2,Small,Luxury,No
+1095,1,2,"Quick, Miss. Winifred Vera",female,8,1,1,26360,26,,S,Child,FALSE,Unknown,"Quick, Miss. Winifred Vera",3,Small,Standard,No
+1096,0,2,"Andrew, Mr. Frank Thomas",male,25,0,0,C.A. 34050,10.5,,S,Adult,FALSE,Unknown,"Andrew, Mr. Frank Thomas",1,Solo,Standard,Yes
+1097,0,1,"Omont, Mr. Alfred Fernand",male,27,0,0,F.C. 12998,25.74,,C,Senior,FALSE,Unknown,"Omont, Mr. Alfred Fernand",1,Solo,Standard,Yes
+1098,1,3,"McGowan, Miss. Katherine",female,35,0,0,9232,7.75,,Q,Adult,FALSE,Unknown,"McGowan, Miss. Katherine",1,Solo,Budget,Yes
+1099,0,2,"Collett, Mr. Sidney C Stuart",male,24,0,0,28034,10.5,,S,Adult,FALSE,Unknown,"Collett, Mr. Sidney C Stuart",1,Solo,Standard,Yes
+1100,1,1,"Rosenbaum, Miss. Edith Louise",female,33,0,0,PC 17613,27.72,A11,C,Adult,TRUE,A,"Rosenbaum, Miss. Edith Louise",1,Solo,Standard,Yes
+1101,0,3,"Delalic, Mr. Redjo",male,25,0,0,349250,7.9,,S,Adult,FALSE,Unknown,"Delalic, Mr. Redjo",1,Solo,Budget,Yes
+1102,0,3,"Andersen, Mr. Albert Karvin",male,32,0,0,C 4001,22.52,,S,Adult,FALSE,Unknown,"Andersen, Mr. Albert Karvin",1,Solo,Standard,Yes
+1103,0,3,"Finoli, Mr. Luigi",male,27,0,0,SOTON/O.Q. 3101308,7.05,,S,Senior,FALSE,Unknown,"Finoli, Mr. Luigi",1,Solo,Budget,Yes
+1104,0,2,"Deacon, Mr. Percy William",male,17,0,0,S.O.C. 14879,73.5,,S,Child,FALSE,Unknown,"Deacon, Mr. Percy William",1,Solo,Premium,Yes
+1105,1,2,"Howard, Mrs. Benjamin (Ellen Truelove Arman)",female,60,1,0,24065,26,,S,Senior,FALSE,Unknown,"Howard, Mrs. Benjamin (Ellen Truelove Arman)",2,Small,Standard,No
+1106,1,3,"Andersson, Miss. Ida Augusta Margareta",female,38,4,2,347091,7.78,,S,Adult,FALSE,Unknown,"Andersson, Miss. Ida Augusta Margareta",7,Large,Budget,No
+1107,0,1,"Head, Mr. Christopher",male,42,0,0,113038,42.5,B11,S,Adult,TRUE,B,"Head, Mr. Christopher",1,Solo,Premium,Yes
+1108,1,3,"Mahon, Miss. Bridget Delia",female,27,0,0,330924,7.88,,Q,Senior,FALSE,Unknown,"Mahon, Miss. Bridget Delia",1,Solo,Budget,Yes
+1109,0,1,"Wick, Mr. George Dennick",male,57,1,1,36928,164.87,,S,Adult,FALSE,Unknown,"Wick, Mr. George Dennick",3,Small,Luxury,No
+1110,1,1,"Widener, Mrs. George Dunton (Eleanor Elkins)",female,50,1,1,113503,211.5,C80,C,Adult,TRUE,C,"Widener, Mrs. George Dunton (Eleanor Elkins)",3,Small,Luxury,No
+1111,0,3,"Thomson, Mr. Alexander Morrison",male,27,0,0,32302,8.05,,S,Senior,FALSE,Unknown,"Thomson, Mr. Alexander Morrison",1,Solo,Budget,Yes
+1112,1,2,"Duran y More, Miss. Florentina",female,30,1,0,SC/PARIS 2148,13.86,,C,Adult,FALSE,Unknown,"Duran y More, Miss. Florentina",2,Small,Standard,No
+1113,0,3,"Reynolds, Mr. Harold J",male,21,0,0,342684,8.05,,S,Adult,FALSE,Unknown,"Reynolds, Mr. Harold J",1,Solo,Budget,Yes
+1114,1,2,"Cook, Mrs. (Selena Rogers)",female,22,0,0,W./C. 14266,10.5,F33,S,Adult,TRUE,F,"Cook, Mrs. (Selena Rogers)",1,Solo,Standard,Yes
+1115,0,3,"Karlsson, Mr. Einar Gervasius",male,21,0,0,350053,7.8,,S,Adult,FALSE,Unknown,"Karlsson, Mr. Einar Gervasius",1,Solo,Budget,Yes
+1116,1,1,"Candee, Mrs. Edward (Helen Churchill Hungerford)",female,53,0,0,PC 17606,27.45,,C,Adult,FALSE,Unknown,"Candee, Mrs. Edward (Helen Churchill Hungerford)",1,Solo,Standard,Yes
+1117,1,3,"Moubarek, Mrs. George (Omine Amenia Alexander)",female,27,0,2,2661,15.25,,C,Senior,FALSE,Unknown,"Moubarek, Mrs. George (Omine Amenia"" Alexander)""",3,Small,Standard,No
+1118,0,3,"Asplund, Mr. Johan Charles",male,23,0,0,350054,7.8,,S,Adult,FALSE,Unknown,"Asplund, Mr. Johan Charles",1,Solo,Budget,Yes
+1119,1,3,"McNeill, Miss. Bridget",female,27,0,0,370368,7.75,,Q,Senior,FALSE,Unknown,"McNeill, Miss. Bridget",1,Solo,Budget,Yes
+1120,0,3,"Everett, Mr. Thomas James",male,40,0,0,C.A. 6212,15.1,,S,Adult,FALSE,Unknown,"Everett, Mr. Thomas James",1,Solo,Standard,Yes
+1121,0,2,"Hocking, Mr. Samuel James Metcalfe",male,36,0,0,242963,13,,S,Adult,FALSE,Unknown,"Hocking, Mr. Samuel James Metcalfe",1,Solo,Standard,Yes
+1122,0,2,"Sweet, Mr. George Frederick",male,14,0,0,220845,65,,S,Child,FALSE,Unknown,"Sweet, Mr. George Frederick",1,Solo,Premium,Yes
+1123,1,1,"Willard, Miss. Constance",female,21,0,0,113795,26.55,,S,Adult,FALSE,Unknown,"Willard, Miss. Constance",1,Solo,Standard,Yes
+1124,0,3,"Wiklund, Mr. Karl Johan",male,21,1,0,3101266,6.5,,S,Adult,FALSE,Unknown,"Wiklund, Mr. Karl Johan",2,Small,Budget,No
+1125,0,3,"Linehan, Mr. Michael",male,27,0,0,330971,7.88,,Q,Senior,FALSE,Unknown,"Linehan, Mr. Michael",1,Solo,Budget,Yes
+1126,0,1,"Cumings, Mr. John Bradley",male,39,1,0,PC 17599,71.28,C85,C,Adult,TRUE,C,"Cumings, Mr. John Bradley",2,Small,Premium,No
+1127,0,3,"Vendel, Mr. Olof Edvin",male,20,0,0,350416,7.85,,S,Adult,FALSE,Unknown,"Vendel, Mr. Olof Edvin",1,Solo,Budget,Yes
+1128,0,1,"Warren, Mr. Frank Manley",male,64,1,0,110813,75.25,D37,C,Senior,TRUE,D,"Warren, Mr. Frank Manley",2,Small,Premium,No
+1129,0,3,"Baccos, Mr. Raffull",male,20,0,0,2679,7.22,,C,Adult,FALSE,Unknown,"Baccos, Mr. Raffull",1,Solo,Budget,Yes
+1130,1,2,"Hiltunen, Miss. Marta",female,18,1,1,250650,13,,S,Adult,FALSE,Unknown,"Hiltunen, Miss. Marta",3,Small,Standard,No
+1131,1,1,"Douglas, Mrs. Walter Donald (Mahala Dutton)",female,48,1,0,PC 17761,106.42,C86,C,Adult,TRUE,C,"Douglas, Mrs. Walter Donald (Mahala Dutton)",2,Small,Luxury,No
+1132,1,1,"Lindstrom, Mrs. Carl Johan (Sigrid Posse)",female,55,0,0,112377,27.72,,C,Adult,FALSE,Unknown,"Lindstrom, Mrs. Carl Johan (Sigrid Posse)",1,Solo,Standard,Yes
+1133,1,2,"Christy, Mrs. (Alice Frances)",female,45,0,2,237789,30,,S,Adult,FALSE,Unknown,"Christy, Mrs. (Alice Frances)",3,Small,Standard,No
+1134,0,1,"Spedden, Mr. Frederic Oakley",male,45,1,1,16966,134.5,E34,C,Adult,TRUE,E,"Spedden, Mr. Frederic Oakley",3,Small,Luxury,No
+1135,0,3,"Hyman, Mr. Abraham",male,27,0,0,3470,7.89,,S,Senior,FALSE,Unknown,"Hyman, Mr. Abraham",1,Solo,Budget,Yes
+1136,0,3,"Johnston, Master. William Arthur Willie",male,27,1,2,W./C. 6607,23.45,,S,Senior,FALSE,Unknown,"Johnston, Master. William Arthur Willie""""",4,Small,Standard,No
+1137,0,1,"Kenyon, Mr. Frederick R",male,41,1,0,17464,51.86,D21,S,Adult,TRUE,D,"Kenyon, Mr. Frederick R",2,Small,Premium,No
+1138,1,2,"Karnes, Mrs. J Frank (Claire Bennett)",female,22,0,0,F.C.C. 13534,21,,S,Adult,FALSE,Unknown,"Karnes, Mrs. J Frank (Claire Bennett)",1,Solo,Standard,Yes
+1139,0,2,"Drew, Mr. James Vivian",male,42,1,1,28220,32.5,,S,Adult,FALSE,Unknown,"Drew, Mr. James Vivian",3,Small,Premium,No
+1140,1,2,"Hold, Mrs. Stephen (Annie Margaret Hill)",female,29,1,0,26707,26,,S,Adult,FALSE,Unknown,"Hold, Mrs. Stephen (Annie Margaret Hill)",2,Small,Standard,No
+1141,1,3,"Khalil, Mrs. Betros (Zahie Maria Elias)",female,27,1,0,2660,14.45,,C,Senior,FALSE,Unknown,"Khalil, Mrs. Betros (Zahie Maria"" Elias)""",2,Small,Standard,No
+1142,1,2,"West, Miss. Barbara J",female,1,1,2,C.A. 34651,27.75,,S,Child,FALSE,Unknown,"West, Miss. Barbara J",4,Small,Standard,No
+1143,0,3,"Abrahamsson, Mr. Abraham August Johannes",male,20,0,0,SOTON/O2 3101284,7.92,,S,Adult,FALSE,Unknown,"Abrahamsson, Mr. Abraham August Johannes",1,Solo,Budget,Yes
+1144,0,1,"Clark, Mr. Walter Miller",male,27,1,0,13508,136.78,C89,C,Adult,TRUE,C,"Clark, Mr. Walter Miller",2,Small,Luxury,No
+1145,0,3,"Salander, Mr. Karl Johan",male,24,0,0,7266,9.32,,S,Adult,FALSE,Unknown,"Salander, Mr. Karl Johan",1,Solo,Budget,Yes
+1146,0,3,"Wenzel, Mr. Linhart",male,32,0,0,345775,9.5,,S,Adult,FALSE,Unknown,"Wenzel, Mr. Linhart",1,Solo,Budget,Yes
+1147,0,3,"MacKay, Mr. George William",male,27,0,0,C.A. 42795,7.55,,S,Senior,FALSE,Unknown,"MacKay, Mr. George William",1,Solo,Budget,Yes
+1148,0,3,"Mahon, Mr. John",male,27,0,0,AQ/4 3130,7.75,,Q,Senior,FALSE,Unknown,"Mahon, Mr. John",1,Solo,Budget,Yes
+1149,0,3,"Niklasson, Mr. Samuel",male,28,0,0,363611,8.05,,S,Adult,FALSE,Unknown,"Niklasson, Mr. Samuel",1,Solo,Budget,Yes
+1150,1,2,"Bentham, Miss. Lilian W",female,19,0,0,28404,13,,S,Adult,FALSE,Unknown,"Bentham, Miss. Lilian W",1,Solo,Standard,Yes
+1151,0,3,"Midtsjo, Mr. Karl Albert",male,21,0,0,345501,7.78,,S,Adult,FALSE,Unknown,"Midtsjo, Mr. Karl Albert",1,Solo,Budget,Yes
+1152,0,3,"de Messemaeker, Mr. Guillaume Joseph",male,36,1,0,345572,17.4,,S,Adult,FALSE,Unknown,"de Messemaeker, Mr. Guillaume Joseph",2,Small,Standard,No
+1153,0,3,"Nilsson, Mr. August Ferdinand",male,21,0,0,350410,7.85,,S,Adult,FALSE,Unknown,"Nilsson, Mr. August Ferdinand",1,Solo,Budget,Yes
+1154,1,2,"Wells, Mrs. Arthur Henry (Addie Dart Trevaskis)",female,29,0,2,29103,23,,S,Adult,FALSE,Unknown,"Wells, Mrs. Arthur Henry (Addie"" Dart Trevaskis)""",3,Small,Standard,No
+1155,1,3,"Klasen, Miss. Gertrud Emilia",female,1,1,1,350405,12.18,,S,Child,FALSE,Unknown,"Klasen, Miss. Gertrud Emilia",3,Small,Standard,No
+1156,0,2,"Portaluppi, Mr. Emilio Ilario Giuseppe",male,30,0,0,C.A. 34644,12.74,,C,Adult,FALSE,Unknown,"Portaluppi, Mr. Emilio Ilario Giuseppe",1,Solo,Standard,Yes
+1157,0,3,"Lyntakoff, Mr. Stanko",male,27,0,0,349235,7.9,,S,Senior,FALSE,Unknown,"Lyntakoff, Mr. Stanko",1,Solo,Budget,Yes
+1158,0,1,"Chisholm, Mr. Roderick Robert Crispin",male,27,0,0,112051,0,,S,Senior,FALSE,Unknown,"Chisholm, Mr. Roderick Robert Crispin",1,Solo,Budget,Yes
+1159,0,3,"Warren, Mr. Charles William",male,27,0,0,C.A. 49867,7.55,,S,Senior,FALSE,Unknown,"Warren, Mr. Charles William",1,Solo,Budget,Yes
+1160,1,3,"Howard, Miss. May Elizabeth",female,27,0,0,A. 2. 39186,8.05,,S,Senior,FALSE,Unknown,"Howard, Miss. May Elizabeth",1,Solo,Budget,Yes
+1161,0,3,"Pokrnic, Mr. Mate",male,17,0,0,315095,8.66,,S,Child,FALSE,Unknown,"Pokrnic, Mr. Mate",1,Solo,Budget,Yes
+1162,0,1,"McCaffry, Mr. Thomas Francis",male,46,0,0,13050,75.24,C6,C,Adult,TRUE,C,"McCaffry, Mr. Thomas Francis",1,Solo,Premium,Yes
+1163,0,3,"Fox, Mr. Patrick",male,27,0,0,368573,7.75,,Q,Senior,FALSE,Unknown,"Fox, Mr. Patrick",1,Solo,Budget,Yes
+1164,1,1,"Clark, Mrs. Walter Miller (Virginia McDowell)",female,26,1,0,13508,136.78,C89,C,Adult,TRUE,C,"Clark, Mrs. Walter Miller (Virginia McDowell)",2,Small,Luxury,No
+1165,1,3,"Lennon, Miss. Mary",female,27,1,0,370371,15.5,,Q,Senior,FALSE,Unknown,"Lennon, Miss. Mary",2,Small,Standard,No
+1166,0,3,"Saade, Mr. Jean Nassr",male,27,0,0,2676,7.22,,C,Senior,FALSE,Unknown,"Saade, Mr. Jean Nassr",1,Solo,Budget,Yes
+1167,1,2,"Bryhl, Miss. Dagmar Jenny Ingeborg",female,20,1,0,236853,26,,S,Adult,FALSE,Unknown,"Bryhl, Miss. Dagmar Jenny Ingeborg ",2,Small,Standard,No
+1168,0,2,"Parker, Mr. Clifford Richard",male,28,0,0,SC 14888,10.5,,S,Adult,FALSE,Unknown,"Parker, Mr. Clifford Richard",1,Solo,Standard,Yes
+1169,0,2,"Faunthorpe, Mr. Harry",male,40,1,0,2926,26,,S,Adult,FALSE,Unknown,"Faunthorpe, Mr. Harry",2,Small,Standard,No
+1170,0,2,"Ware, Mr. John James",male,30,1,0,CA 31352,21,,S,Adult,FALSE,Unknown,"Ware, Mr. John James",2,Small,Standard,No
+1171,0,2,"Oxenham, Mr. Percy Thomas",male,22,0,0,W./C. 14260,10.5,,S,Adult,FALSE,Unknown,"Oxenham, Mr. Percy Thomas",1,Solo,Standard,Yes
+1172,1,3,"Oreskovic, Miss. Jelka",female,23,0,0,315085,8.66,,S,Adult,FALSE,Unknown,"Oreskovic, Miss. Jelka",1,Solo,Budget,Yes
+1173,0,3,"Peacock, Master. Alfred Edward",male,1,1,1,SOTON/O.Q. 3101315,13.78,,S,Child,FALSE,Unknown,"Peacock, Master. Alfred Edward",3,Small,Standard,No
+1174,1,3,"Fleming, Miss. Honora",female,27,0,0,364859,7.75,,Q,Senior,FALSE,Unknown,"Fleming, Miss. Honora",1,Solo,Budget,Yes
+1175,1,3,"Touma, Miss. Maria Youssef",female,9,1,1,2650,15.25,,C,Child,FALSE,Unknown,"Touma, Miss. Maria Youssef",3,Small,Standard,No
+1176,1,3,"Rosblom, Miss. Salli Helena",female,2,1,1,370129,20.21,,S,Child,FALSE,Unknown,"Rosblom, Miss. Salli Helena",3,Small,Standard,No
+1177,0,3,"Dennis, Mr. William",male,36,0,0,A/5 21175,7.25,,S,Adult,FALSE,Unknown,"Dennis, Mr. William",1,Solo,Budget,Yes
+1178,0,3,"Franklin, Mr. Charles (Charles Fardon)",male,27,0,0,SOTON/O.Q. 3101314,7.25,,S,Senior,FALSE,Unknown,"Franklin, Mr. Charles (Charles Fardon)",1,Solo,Budget,Yes
+1179,0,1,"Snyder, Mr. John Pillsbury",male,24,1,0,21228,82.27,B45,S,Adult,TRUE,B,"Snyder, Mr. John Pillsbury",2,Small,Premium,No
+1180,0,3,"Mardirosian, Mr. Sarkis",male,27,0,0,2655,7.23,F E46,C,Senior,TRUE,F,"Mardirosian, Mr. Sarkis",1,Solo,Budget,Yes
+1181,0,3,"Ford, Mr. Arthur",male,27,0,0,A/5 1478,8.05,,S,Senior,FALSE,Unknown,"Ford, Mr. Arthur",1,Solo,Budget,Yes
+1182,0,1,"Rheims, Mr. George Alexander Lucien",male,27,0,0,PC 17607,39.6,,S,Senior,FALSE,Unknown,"Rheims, Mr. George Alexander Lucien",1,Solo,Premium,Yes
+1183,1,3,"Daly, Miss. Margaret Marcella Maggie",female,30,0,0,382650,6.95,,Q,Adult,FALSE,Unknown,"Daly, Miss. Margaret Marcella Maggie""""",1,Solo,Budget,Yes
+1184,0,3,"Nasr, Mr. Mustafa",male,27,0,0,2652,7.23,,C,Senior,FALSE,Unknown,"Nasr, Mr. Mustafa",1,Solo,Budget,Yes
+1185,0,1,"Dodge, Dr. Washington",male,53,1,1,33638,81.86,A34,S,Adult,TRUE,A,"Dodge, Dr. Washington",3,Small,Premium,No
+1186,0,3,"Wittevrongel, Mr. Camille",male,36,0,0,345771,9.5,,S,Adult,FALSE,Unknown,"Wittevrongel, Mr. Camille",1,Solo,Budget,Yes
+1187,0,3,"Angheloff, Mr. Minko",male,26,0,0,349202,7.9,,S,Adult,FALSE,Unknown,"Angheloff, Mr. Minko",1,Solo,Budget,Yes
+1188,1,2,"Laroche, Miss. Louise",female,1,1,2,SC/Paris 2123,41.58,,C,Child,FALSE,Unknown,"Laroche, Miss. Louise",4,Small,Premium,No
+1189,0,3,"Samaan, Mr. Hanna",male,27,2,0,2662,21.68,,C,Senior,FALSE,Unknown,"Samaan, Mr. Hanna",3,Small,Standard,No
+1190,0,1,"Loring, Mr. Joseph Holland",male,30,0,0,113801,45.5,,S,Adult,FALSE,Unknown,"Loring, Mr. Joseph Holland",1,Solo,Premium,Yes
+1191,0,3,"Johansson, Mr. Nils",male,29,0,0,347467,7.85,,S,Adult,FALSE,Unknown,"Johansson, Mr. Nils",1,Solo,Budget,Yes
+1192,0,3,"Olsson, Mr. Oscar Wilhelm",male,32,0,0,347079,7.78,,S,Adult,FALSE,Unknown,"Olsson, Mr. Oscar Wilhelm",1,Solo,Budget,Yes
+1193,0,2,"Malachard, Mr. Noel",male,27,0,0,237735,15.05,D,C,Senior,TRUE,D,"Malachard, Mr. Noel",1,Solo,Standard,Yes
+1194,0,2,"Phillips, Mr. Escott Robert",male,43,0,1,S.O./P.P. 2,21,,S,Adult,FALSE,Unknown,"Phillips, Mr. Escott Robert",2,Small,Standard,No
+1195,0,3,"Pokrnic, Mr. Tome",male,24,0,0,315092,8.66,,S,Adult,FALSE,Unknown,"Pokrnic, Mr. Tome",1,Solo,Budget,Yes
+1196,1,3,"McCarthy, Miss. Catherine Katie",female,27,0,0,383123,7.75,,Q,Senior,FALSE,Unknown,"McCarthy, Miss. Catherine Katie""""",1,Solo,Budget,Yes
+1197,1,1,"Crosby, Mrs. Edward Gifford (Catherine Elizabeth Halstead)",female,64,1,1,112901,26.55,B26,S,Senior,TRUE,B,"Crosby, Mrs. Edward Gifford (Catherine Elizabeth Halstead)",3,Small,Standard,No
+1198,0,1,"Allison, Mr. Hudson Joshua Creighton",male,30,1,2,113781,151.55,C22 C26,S,Adult,TRUE,C,"Allison, Mr. Hudson Joshua Creighton",4,Small,Luxury,No
+1199,0,3,"Aks, Master. Philip Frank",male,1,0,1,392091,9.35,,S,Child,FALSE,Unknown,"Aks, Master. Philip Frank",2,Small,Budget,No
+1200,0,1,"Hays, Mr. Charles Melville",male,55,1,1,12749,93.5,B69,S,Adult,TRUE,B,"Hays, Mr. Charles Melville",3,Small,Premium,No
+1201,1,3,"Hansen, Mrs. Claus Peter (Jennie L Howard)",female,45,1,0,350026,14.11,,S,Adult,FALSE,Unknown,"Hansen, Mrs. Claus Peter (Jennie L Howard)",2,Small,Standard,No
+1202,0,3,"Cacic, Mr. Jego Grga",male,18,0,0,315091,8.66,,S,Adult,FALSE,Unknown,"Cacic, Mr. Jego Grga",1,Solo,Budget,Yes
+1203,0,3,"Vartanian, Mr. David",male,22,0,0,2658,7.22,,C,Adult,FALSE,Unknown,"Vartanian, Mr. David",1,Solo,Budget,Yes
+1204,0,3,"Sadowitz, Mr. Harry",male,27,0,0,LP 1588,7.58,,S,Senior,FALSE,Unknown,"Sadowitz, Mr. Harry",1,Solo,Budget,Yes
+1205,1,3,"Carr, Miss. Jeannie",female,37,0,0,368364,7.75,,Q,Adult,FALSE,Unknown,"Carr, Miss. Jeannie",1,Solo,Budget,Yes
+1206,1,1,"White, Mrs. John Stuart (Ella Holmes)",female,55,0,0,PC 17760,135.63,C32,C,Adult,TRUE,C,"White, Mrs. John Stuart (Ella Holmes)",1,Solo,Luxury,Yes
+1207,1,3,"Hagardon, Miss. Kate",female,17,0,0,AQ/3. 30631,7.73,,Q,Child,FALSE,Unknown,"Hagardon, Miss. Kate",1,Solo,Budget,Yes
+1208,0,1,"Spencer, Mr. William Augustus",male,57,1,0,PC 17569,146.52,B78,C,Adult,TRUE,B,"Spencer, Mr. William Augustus",2,Small,Luxury,No
+1209,0,2,"Rogers, Mr. Reginald Harry",male,19,0,0,28004,10.5,,S,Adult,FALSE,Unknown,"Rogers, Mr. Reginald Harry",1,Solo,Standard,Yes
+1210,0,3,"Jonsson, Mr. Nils Hilding",male,27,0,0,350408,7.85,,S,Adult,FALSE,Unknown,"Jonsson, Mr. Nils Hilding",1,Solo,Budget,Yes
+1211,0,2,"Jefferys, Mr. Ernest Wilfred",male,22,2,0,C.A. 31029,31.5,,S,Adult,FALSE,Unknown,"Jefferys, Mr. Ernest Wilfred",3,Small,Premium,No
+1212,0,3,"Andersson, Mr. Johan Samuel",male,26,0,0,347075,7.78,,S,Adult,FALSE,Unknown,"Andersson, Mr. Johan Samuel",1,Solo,Budget,Yes
+1213,0,3,"Krekorian, Mr. Neshan",male,25,0,0,2654,7.23,F E57,C,Adult,TRUE,F,"Krekorian, Mr. Neshan",1,Solo,Budget,Yes
+1214,0,2,"Nesson, Mr. Israel",male,26,0,0,244368,13,F2,S,Adult,TRUE,F,"Nesson, Mr. Israel",1,Solo,Standard,Yes
+1215,0,1,"Rowe, Mr. Alfred G",male,33,0,0,113790,26.55,,S,Adult,FALSE,Unknown,"Rowe, Mr. Alfred G",1,Solo,Standard,Yes
+1216,1,1,"Kreuchen, Miss. Emilie",female,39,0,0,24160,211.34,,S,Adult,FALSE,Unknown,"Kreuchen, Miss. Emilie",1,Solo,Luxury,Yes
+1217,0,3,"Assam, Mr. Ali",male,23,0,0,SOTON/O.Q. 3101309,7.05,,S,Adult,FALSE,Unknown,"Assam, Mr. Ali",1,Solo,Budget,Yes
+1218,1,2,"Becker, Miss. Ruth Elizabeth",female,12,2,1,230136,39,F4,S,Child,TRUE,F,"Becker, Miss. Ruth Elizabeth",4,Small,Premium,No
+1219,0,1,"Rosenshine, Mr. George (Mr George Thorne)",male,46,0,0,PC 17585,79.2,,C,Adult,FALSE,Unknown,"Rosenshine, Mr. George (Mr George Thorne"")""",1,Solo,Premium,Yes
+1220,0,2,"Clarke, Mr. Charles Valentine",male,29,1,0,2003,26,,S,Adult,FALSE,Unknown,"Clarke, Mr. Charles Valentine",2,Small,Standard,No
+1221,0,2,"Enander, Mr. Ingvar",male,21,0,0,236854,13,,S,Adult,FALSE,Unknown,"Enander, Mr. Ingvar",1,Solo,Standard,Yes
+1222,1,2,"Davies, Mrs. John Morgan (Elizabeth Agnes Mary White)",female,48,0,2,C.A. 33112,36.75,,S,Adult,FALSE,Unknown,"Davies, Mrs. John Morgan (Elizabeth Agnes Mary White) ",3,Small,Premium,No
+1223,0,1,"Dulles, Mr. William Crothers",male,39,0,0,PC 17580,29.7,A18,C,Adult,TRUE,A,"Dulles, Mr. William Crothers",1,Solo,Standard,Yes
+1224,0,3,"Thomas, Mr. Tannous",male,27,0,0,2684,7.22,,C,Senior,FALSE,Unknown,"Thomas, Mr. Tannous",1,Solo,Budget,Yes
+1225,1,3,"Nakid, Mrs. Said (Waika Mary Mowad)",female,19,1,1,2653,15.74,,C,Adult,FALSE,Unknown,"Nakid, Mrs. Said (Waika Mary"" Mowad)""",3,Small,Standard,No
+1226,0,3,"Cor, Mr. Ivan",male,27,0,0,349229,7.9,,S,Adult,FALSE,Unknown,"Cor, Mr. Ivan",1,Solo,Budget,Yes
+1227,0,1,"Maguire, Mr. John Edward",male,30,0,0,110469,26,C106,S,Adult,TRUE,C,"Maguire, Mr. John Edward",1,Solo,Standard,Yes
+1228,0,2,"de Brito, Mr. Jose Joaquim",male,32,0,0,244360,13,,S,Adult,FALSE,Unknown,"de Brito, Mr. Jose Joaquim",1,Solo,Standard,Yes
+1229,0,3,"Elias, Mr. Joseph",male,39,0,2,2675,7.23,,C,Adult,FALSE,Unknown,"Elias, Mr. Joseph",3,Small,Budget,No
+1230,0,2,"Denbury, Mr. Herbert",male,25,0,0,C.A. 31029,31.5,,S,Adult,FALSE,Unknown,"Denbury, Mr. Herbert",1,Solo,Premium,Yes
+1231,0,3,"Betros, Master. Seman",male,27,0,0,2622,7.23,,C,Senior,FALSE,Unknown,"Betros, Master. Seman",1,Solo,Budget,Yes
+1232,0,2,"Fillbrook, Mr. Joseph Charles",male,18,0,0,C.A. 15185,10.5,,S,Adult,FALSE,Unknown,"Fillbrook, Mr. Joseph Charles",1,Solo,Standard,Yes
+1233,0,3,"Lundstrom, Mr. Thure Edvin",male,32,0,0,350403,7.58,,S,Adult,FALSE,Unknown,"Lundstrom, Mr. Thure Edvin",1,Solo,Budget,Yes
+1234,0,3,"Sage, Mr. John George",male,27,1,9,CA. 2343,69.55,,S,Senior,FALSE,Unknown,"Sage, Mr. John George",11,Large,Premium,No
+1235,1,1,"Cardeza, Mrs. James Warburton Martinez (Charlotte Wardle Drake)",female,58,0,1,PC 17755,512.33,B51 B53 B55,C,Adult,TRUE,B,"Cardeza, Mrs. James Warburton Martinez (Charlotte Wardle Drake)",2,Small,Luxury,No
+1236,0,3,"van Billiard, Master. James William",male,27,1,1,A/5. 851,14.5,,S,Senior,FALSE,Unknown,"van Billiard, Master. James William",3,Small,Standard,No
+1237,1,3,"Abelseth, Miss. Karen Marie",female,16,0,0,348125,7.65,,S,Child,FALSE,Unknown,"Abelseth, Miss. Karen Marie",1,Solo,Budget,Yes
+1238,0,2,"Botsford, Mr. William Hull",male,26,0,0,237670,13,,S,Adult,FALSE,Unknown,"Botsford, Mr. William Hull",1,Solo,Standard,Yes
+1239,1,3,"Whabee, Mrs. George Joseph (Shawneene Abi-Saab)",female,38,0,0,2688,7.23,,C,Adult,FALSE,Unknown,"Whabee, Mrs. George Joseph (Shawneene Abi-Saab)",1,Solo,Budget,Yes
+1240,0,2,"Giles, Mr. Ralph",male,24,0,0,248726,13.5,,S,Adult,FALSE,Unknown,"Giles, Mr. Ralph",1,Solo,Standard,Yes
+1241,1,2,"Walcroft, Miss. Nellie",female,31,0,0,F.C.C. 13528,21,,S,Adult,FALSE,Unknown,"Walcroft, Miss. Nellie",1,Solo,Standard,Yes
+1242,1,1,"Greenfield, Mrs. Leo David (Blanche Strouse)",female,45,0,1,PC 17759,63.36,D10 D12,C,Adult,TRUE,D,"Greenfield, Mrs. Leo David (Blanche Strouse)",2,Small,Premium,No
+1243,0,2,"Stokes, Mr. Philip Joseph",male,25,0,0,F.C.C. 13540,10.5,,S,Adult,FALSE,Unknown,"Stokes, Mr. Philip Joseph",1,Solo,Standard,Yes
+1244,0,2,"Dibden, Mr. William",male,18,0,0,S.O.C. 14879,73.5,,S,Adult,FALSE,Unknown,"Dibden, Mr. William",1,Solo,Premium,Yes
+1245,0,2,"Herman, Mr. Samuel",male,49,1,2,220845,65,,S,Adult,FALSE,Unknown,"Herman, Mr. Samuel",4,Small,Premium,No
+1246,1,3,"Dean, Miss. Elizabeth Gladys Millvina",female,0,1,2,C.A. 2315,20.58,,S,Child,FALSE,Unknown,"Dean, Miss. Elizabeth Gladys Millvina""""",4,Small,Standard,No
+1247,0,1,"Julian, Mr. Henry Forbes",male,50,0,0,113044,26,E60,S,Adult,TRUE,E,"Julian, Mr. Henry Forbes",1,Solo,Standard,Yes
+1248,1,1,"Brown, Mrs. John Murray (Caroline Lane Lamson)",female,59,2,0,11769,51.48,C101,S,Adult,TRUE,C,"Brown, Mrs. John Murray (Caroline Lane Lamson)",3,Small,Premium,No
+1249,0,3,"Lockyer, Mr. Edward",male,27,0,0,1222,7.88,,S,Senior,FALSE,Unknown,"Lockyer, Mr. Edward",1,Solo,Budget,Yes
+1250,0,3,"O'Keefe, Mr. Patrick",male,27,0,0,368402,7.75,,Q,Senior,FALSE,Unknown,"O'Keefe, Mr. Patrick",1,Solo,Budget,Yes
+1251,1,3,"Lindell, Mrs. Edvard Bengtsson (Elin Gerda Persson)",female,30,1,0,349910,15.55,,S,Adult,FALSE,Unknown,"Lindell, Mrs. Edvard Bengtsson (Elin Gerda Persson)",2,Small,Standard,No
+1252,0,3,"Sage, Master. William Henry",male,14,8,2,CA. 2343,69.55,,S,Child,FALSE,Unknown,"Sage, Master. William Henry",11,Large,Premium,No
+1253,1,2,"Mallet, Mrs. Albert (Antoinette Magnin)",female,24,1,1,S.C./PARIS 2079,37,,C,Adult,FALSE,Unknown,"Mallet, Mrs. Albert (Antoinette Magnin)",3,Small,Premium,No
+1254,1,2,"Ware, Mrs. John James (Florence Louise Long)",female,31,0,0,CA 31352,21,,S,Adult,FALSE,Unknown,"Ware, Mrs. John James (Florence Louise Long)",1,Solo,Standard,Yes
+1255,0,3,"Strilic, Mr. Ivan",male,27,0,0,315083,8.66,,S,Adult,FALSE,Unknown,"Strilic, Mr. Ivan",1,Solo,Budget,Yes
+1256,1,1,"Harder, Mrs. George Achilles (Dorothy Annan)",female,25,1,0,11765,55.44,E50,C,Adult,TRUE,E,"Harder, Mrs. George Achilles (Dorothy Annan)",2,Small,Premium,No
+1257,1,3,"Sage, Mrs. John (Annie Bullen)",female,27,1,9,CA. 2343,69.55,,S,Senior,FALSE,Unknown,"Sage, Mrs. John (Annie Bullen)",11,Large,Premium,No
+1258,0,3,"Caram, Mr. Joseph",male,27,1,0,2689,14.46,,C,Senior,FALSE,Unknown,"Caram, Mr. Joseph",2,Small,Standard,No
+1259,1,3,"Riihivouri, Miss. Susanna Juhantytar Sanni",female,22,0,0,3101295,39.69,,S,Adult,FALSE,Unknown,"Riihivouri, Miss. Susanna Juhantytar Sanni""""",1,Solo,Premium,Yes
+1260,1,1,"Gibson, Mrs. Leonard (Pauline C Boeson)",female,45,0,1,112378,59.4,,C,Adult,FALSE,Unknown,"Gibson, Mrs. Leonard (Pauline C Boeson)",2,Small,Premium,No
+1261,0,2,"Pallas y Castello, Mr. Emilio",male,29,0,0,SC/PARIS 2147,13.86,,C,Adult,FALSE,Unknown,"Pallas y Castello, Mr. Emilio",1,Solo,Standard,Yes
+1262,0,2,"Giles, Mr. Edgar",male,21,1,0,28133,11.5,,S,Adult,FALSE,Unknown,"Giles, Mr. Edgar",2,Small,Standard,No
+1263,1,1,"Wilson, Miss. Helen Alice",female,31,0,0,16966,134.5,E39 E41,C,Adult,TRUE,E,"Wilson, Miss. Helen Alice",1,Solo,Luxury,Yes
+1264,0,1,"Ismay, Mr. Joseph Bruce",male,49,0,0,112058,0,B52 B54 B56,S,Adult,TRUE,B,"Ismay, Mr. Joseph Bruce",1,Solo,Budget,Yes
+1265,0,2,"Harbeck, Mr. William H",male,44,0,0,248746,13,,S,Adult,FALSE,Unknown,"Harbeck, Mr. William H",1,Solo,Standard,Yes
+1266,1,1,"Dodge, Mrs. Washington (Ruth Vidaver)",female,54,1,1,33638,81.86,A34,S,Adult,TRUE,A,"Dodge, Mrs. Washington (Ruth Vidaver)",3,Small,Premium,No
+1267,1,1,"Bowen, Miss. Grace Scott",female,45,0,0,PC 17608,262.38,,C,Adult,FALSE,Unknown,"Bowen, Miss. Grace Scott",1,Solo,Luxury,Yes
+1268,1,3,"Kink, Miss. Maria",female,22,2,0,315152,8.66,,S,Adult,FALSE,Unknown,"Kink, Miss. Maria",3,Small,Budget,No
+1269,0,2,"Cotterill, Mr. Henry Harry",male,21,0,0,29107,11.5,,S,Adult,FALSE,Unknown,"Cotterill, Mr. Henry Harry""""",1,Solo,Standard,Yes
+1270,0,1,"Hipkins, Mr. William Edward",male,55,0,0,680,50,C39,S,Adult,TRUE,C,"Hipkins, Mr. William Edward",1,Solo,Premium,Yes
+1271,0,3,"Asplund, Master. Carl Edgar",male,5,4,2,347077,31.39,,S,Child,FALSE,Unknown,"Asplund, Master. Carl Edgar",7,Large,Premium,No
+1272,0,3,"O'Connor, Mr. Patrick",male,27,0,0,366713,7.75,,Q,Senior,FALSE,Unknown,"O'Connor, Mr. Patrick",1,Solo,Budget,Yes
+1273,0,3,"Foley, Mr. Joseph",male,26,0,0,330910,7.88,,Q,Adult,FALSE,Unknown,"Foley, Mr. Joseph",1,Solo,Budget,Yes
+1274,1,3,"Risien, Mrs. Samuel (Emma)",female,27,0,0,364498,14.5,,S,Senior,FALSE,Unknown,"Risien, Mrs. Samuel (Emma)",1,Solo,Standard,Yes
+1275,1,3,"McNamee, Mrs. Neal (Eileen O'Leary)",female,19,1,0,376566,16.1,,S,Adult,FALSE,Unknown,"McNamee, Mrs. Neal (Eileen O'Leary)",2,Small,Standard,No
+1276,0,2,"Wheeler, Mr. Edwin Frederick",male,27,0,0,SC/PARIS 2159,12.88,,S,Senior,FALSE,Unknown,"Wheeler, Mr. Edwin Frederick""""",1,Solo,Standard,Yes
+1277,1,2,"Herman, Miss. Kate",female,24,1,2,220845,65,,S,Adult,FALSE,Unknown,"Herman, Miss. Kate",4,Small,Premium,No
+1278,0,3,"Aronsson, Mr. Ernst Axel Algot",male,24,0,0,349911,7.78,,S,Adult,FALSE,Unknown,"Aronsson, Mr. Ernst Axel Algot",1,Solo,Budget,Yes
+1279,0,2,"Ashby, Mr. John",male,57,0,0,244346,13,,S,Adult,FALSE,Unknown,"Ashby, Mr. John",1,Solo,Standard,Yes
+1280,0,3,"Canavan, Mr. Patrick",male,21,0,0,364858,7.75,,Q,Adult,FALSE,Unknown,"Canavan, Mr. Patrick",1,Solo,Budget,Yes
+1281,0,3,"Palsson, Master. Paul Folke",male,6,3,1,349909,21.08,,S,Child,FALSE,Unknown,"Palsson, Master. Paul Folke",5,Large,Standard,No
+1282,0,1,"Payne, Mr. Vivian Ponsonby",male,23,0,0,12749,93.5,B24,S,Adult,TRUE,B,"Payne, Mr. Vivian Ponsonby",1,Solo,Premium,Yes
+1283,1,1,"Lines, Mrs. Ernest H (Elizabeth Lindsey James)",female,51,0,1,PC 17592,39.4,D28,S,Adult,TRUE,D,"Lines, Mrs. Ernest H (Elizabeth Lindsey James)",2,Small,Premium,No
+1284,0,3,"Abbott, Master. Eugene Joseph",male,13,0,2,C.A. 2673,20.25,,S,Child,FALSE,Unknown,"Abbott, Master. Eugene Joseph",3,Small,Standard,No
+1285,0,2,"Gilbert, Mr. William",male,47,0,0,C.A. 30769,10.5,,S,Adult,FALSE,Unknown,"Gilbert, Mr. William",1,Solo,Standard,Yes
+1286,0,3,"Kink-Heilmann, Mr. Anton",male,29,3,1,315153,22.02,,S,Adult,FALSE,Unknown,"Kink-Heilmann, Mr. Anton",5,Large,Standard,No
+1287,1,1,"Smith, Mrs. Lucien Philip (Mary Eloise Hughes)",female,18,1,0,13695,60,C31,S,Adult,TRUE,C,"Smith, Mrs. Lucien Philip (Mary Eloise Hughes)",2,Small,Premium,No
+1288,0,3,"Colbert, Mr. Patrick",male,24,0,0,371109,7.25,,Q,Adult,FALSE,Unknown,"Colbert, Mr. Patrick",1,Solo,Budget,Yes
+1289,1,1,"Frolicher-Stehli, Mrs. Maxmillian (Margaretha Emerentia Stehli)",female,48,1,1,13567,79.2,B41,C,Adult,TRUE,B,"Frolicher-Stehli, Mrs. Maxmillian (Margaretha Emerentia Stehli)",3,Small,Premium,No
+1290,0,3,"Larsson-Rondberg, Mr. Edvard A",male,22,0,0,347065,7.78,,S,Adult,FALSE,Unknown,"Larsson-Rondberg, Mr. Edvard A",1,Solo,Budget,Yes
+1291,0,3,"Conlon, Mr. Thomas Henry",male,31,0,0,21332,7.73,,Q,Adult,FALSE,Unknown,"Conlon, Mr. Thomas Henry",1,Solo,Budget,Yes
+1292,1,1,"Bonnell, Miss. Caroline",female,30,0,0,36928,164.87,C7,S,Adult,TRUE,C,"Bonnell, Miss. Caroline",1,Solo,Luxury,Yes
+1293,0,2,"Gale, Mr. Harry",male,38,1,0,28664,21,,S,Adult,FALSE,Unknown,"Gale, Mr. Harry",2,Small,Standard,No
+1294,1,1,"Gibson, Miss. Dorothy Winifred",female,22,0,1,112378,59.4,,C,Adult,FALSE,Unknown,"Gibson, Miss. Dorothy Winifred",2,Small,Premium,No
+1295,0,1,"Carrau, Mr. Jose Pedro",male,17,0,0,113059,47.1,,S,Child,FALSE,Unknown,"Carrau, Mr. Jose Pedro",1,Solo,Premium,Yes
+1296,0,1,"Frauenthal, Mr. Isaac Gerald",male,43,1,0,17765,27.72,D40,C,Adult,TRUE,D,"Frauenthal, Mr. Isaac Gerald",2,Small,Standard,No
+1297,0,2,"Nourney, Mr. Alfred (Baron von Drachstedt)",male,20,0,0,SC/PARIS 2166,13.86,D38,C,Adult,TRUE,D,"Nourney, Mr. Alfred (Baron von Drachstedt"")""",1,Solo,Standard,Yes
+1298,0,2,"Ware, Mr. William Jeffery",male,23,1,0,28666,10.5,,S,Adult,FALSE,Unknown,"Ware, Mr. William Jeffery",2,Small,Standard,No
+1299,0,1,"Widener, Mr. George Dunton",male,50,1,1,113503,211.5,C80,C,Adult,TRUE,C,"Widener, Mr. George Dunton",3,Small,Luxury,No
+1300,1,3,"Riordan, Miss. Johanna Hannah",female,27,0,0,334915,7.72,,Q,Senior,FALSE,Unknown,"Riordan, Miss. Johanna Hannah""""",1,Solo,Budget,Yes
+1301,1,3,"Peacock, Miss. Treasteall",female,3,1,1,SOTON/O.Q. 3101315,13.78,,S,Child,FALSE,Unknown,"Peacock, Miss. Treasteall",3,Small,Standard,No
+1302,1,3,"Naughton, Miss. Hannah",female,27,0,0,365237,7.75,,Q,Senior,FALSE,Unknown,"Naughton, Miss. Hannah",1,Solo,Budget,Yes
+1303,1,1,"Minahan, Mrs. William Edward (Lillian E Thorpe)",female,37,1,0,19928,90,C78,Q,Adult,TRUE,C,"Minahan, Mrs. William Edward (Lillian E Thorpe)",2,Small,Premium,No
+1304,1,3,"Henriksson, Miss. Jenny Lovisa",female,28,0,0,347086,7.78,,S,Adult,FALSE,Unknown,"Henriksson, Miss. Jenny Lovisa",1,Solo,Budget,Yes
+1305,0,3,"Spector, Mr. Woolf",male,27,0,0,A.5. 3236,8.05,,S,Senior,FALSE,Unknown,"Spector, Mr. Woolf",1,Solo,Budget,Yes
+1306,1,1,"Oliva y Ocana, Dona. Fermina",female,39,0,0,PC 17758,108.9,C105,C,Adult,TRUE,C,"Oliva y Ocana, Dona. Fermina",1,Solo,Luxury,Yes
+1307,0,3,"Saether, Mr. Simon Sivertsen",male,38,0,0,SOTON/O.Q. 3101262,7.25,,S,Adult,FALSE,Unknown,"Saether, Mr. Simon Sivertsen",1,Solo,Budget,Yes
+1308,0,3,"Ware, Mr. Frederick",male,27,0,0,359309,8.05,,S,Senior,FALSE,Unknown,"Ware, Mr. Frederick",1,Solo,Budget,Yes
+1309,0,3,"Peter, Master. Michael J",male,27,1,1,2668,22.36,,C,Senior,FALSE,Unknown,"Peter, Master. Michael J",3,Small,Standard,No

@@ -1,0 +1,3 @@
+SQL & Data Modeling
+Group Size: 2 members
+Submission: Slides(PowerPoint) + ER Diagram + SQL files with insights
