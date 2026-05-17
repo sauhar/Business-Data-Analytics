@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matplotlib Quiz</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d1117; color: #e6edf3; min-height: 100vh; padding: 2rem 1rem; }
+  .container { max-width: 820px; margin: 0 auto; }
+  .header { text-align: center; margin-bottom: 2rem; }
+  .badge { display: inline-block; background: #1a2f4a; color: #58a6ff; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; border: 1px solid #388bfd; margin-bottom: 1rem; }
+  h1 { font-size: 2rem; font-weight: 700; color: #e6edf3; margin-bottom: 0.5rem; }
+  h1 span { color: #58a6ff; }
+  .subtitle { color: #8b949e; font-size: 0.95rem; }
+
+  .quiz-layout { display: grid; grid-template-columns: 170px 1fr; gap: 1.25rem; align-items: start; }
+
+  /* Navigator */
+  .q-nav { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1rem; position: sticky; top: 1rem; }
+  .q-nav-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #8b949e; margin-bottom: 0.75rem; }
+  .q-nav-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-bottom: 1rem; }
+  .q-dot { width: 100%; aspect-ratio: 1; border-radius: 6px; border: 1.5px solid #30363d; background: #1c2128; color: #8b949e; font-size: 11px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+  .q-dot:hover { border-color: #58a6ff; color: #58a6ff; }
+  .q-dot.active { border-color: #58a6ff; background: #1a2f4a; color: #58a6ff; box-shadow: 0 0 0 2px #58a6ff30; }
+  .q-dot.s-correct { border-color: #388bfd; background: #162132; color: #58a6ff; }
+  .q-dot.s-wrong { border-color: #da3633; background: #3d1a1a; color: #ff7b72; }
+
+  .divider { border: none; border-top: 1px solid #30363d; margin: 0.75rem 0; }
+  .progress-bar-bg { background: #21262d; border-radius: 8px; height: 5px; overflow: hidden; }
+  .progress-bar-fill { height: 100%; background: linear-gradient(90deg, #1f6feb, #58a6ff); border-radius: 8px; transition: width 0.4s; }
+  .progress-txt { font-size: 11px; color: #8b949e; text-align: center; margin-top: 4px; }
+
+  .legend { margin-top: 0.75rem; }
+  .legend-row { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; font-size: 10px; color: #8b949e; }
+  .legend-swatch { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+  .sw-current { background: #1a2f4a; border: 1px solid #58a6ff; }
+  .sw-correct { background: #162132; border: 1px solid #388bfd; }
+  .sw-wrong { background: #3d1a1a; border: 1px solid #da3633; }
+  .sw-open { background: #1c2128; border: 1px solid #30363d; }
+
+  /* Card */
+  .quiz-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 2rem; }
+  .q-number { font-size: 11px; font-weight: 600; color: #58a6ff; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; }
+  .q-text { font-size: 1.05rem; font-weight: 500; color: #e6edf3; line-height: 1.6; margin-bottom: 1.5rem; }
+  .code-block { font-family: 'Courier New', monospace; background: #1f2937; color: #c9d1d9; padding: 1rem; border-radius: 8px; font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.5rem; border-left: 3px solid #58a6ff; white-space: pre; overflow-x: auto; }
+  .options { display: grid; gap: 10px; }
+  .option-btn { display: flex; align-items: center; gap: 12px; background: #1c2128; border: 1px solid #30363d; border-radius: 8px; padding: 0.9rem 1.1rem; cursor: pointer; text-align: left; color: #e6edf3; font-size: 0.93rem; transition: border-color 0.15s, background 0.15s; width: 100%; }
+  .option-btn:hover:not(:disabled) { border-color: #58a6ff; background: #1a2f4a; }
+  .option-btn:disabled { cursor: default; }
+  .option-btn.correct { border-color: #388bfd; background: #1a2f4a; color: #58a6ff; }
+  .option-btn.wrong { border-color: #da3633; background: #3d1a1a; color: #ff7b72; }
+  .opt-label { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid #30363d; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0; color: #8b949e; transition: all 0.15s; }
+  .option-btn.correct .opt-label { border-color: #58a6ff; color: #58a6ff; background: #162132; }
+  .option-btn.wrong .opt-label { border-color: #da3633; color: #ff7b72; background: #3d1a1a; }
+
+  .feedback { margin-top: 1rem; padding: 0.85rem 1rem; border-radius: 8px; font-size: 0.9rem; line-height: 1.5; display: none; }
+  .feedback.correct { background: #1a2f4a; border: 1px solid #388bfd; color: #79c0ff; }
+  .feedback.wrong { background: #3d1a1a; border: 1px solid #da3633; color: #ffa198; }
+  .feedback.show { display: block; }
+
+  .nav-row { display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; gap: 8px; flex-wrap: wrap; }
+  .score-mini { font-size: 13px; color: #8b949e; }
+  .score-mini span { color: #58a6ff; font-weight: 600; }
+  .btn-row { display: flex; gap: 8px; }
+  .btn-nav { border-radius: 8px; padding: 0.55rem 1rem; font-size: 0.88rem; font-weight: 600; cursor: pointer; transition: all 0.15s; border: 1px solid #30363d; background: #1c2128; color: #8b949e; }
+  .btn-nav:hover:not(:disabled) { border-color: #58a6ff; color: #58a6ff; }
+  .btn-nav:disabled { opacity: 0.3; cursor: default; }
+  .btn-next-q { background: #1f6feb; color: #fff; border-color: #1f6feb; display: none; }
+  .btn-next-q:hover:not(:disabled) { background: #388bfd; border-color: #388bfd; color: #fff; }
+  .btn-next-q.show { display: inline-block; }
+  .btn-finish { background: #2ea043; color: #fff; border-color: #2ea043; display: none; }
+  .btn-finish:hover { background: #56d364; border-color: #56d364; }
+  .btn-finish.show { display: inline-block; }
+
+  /* Results */
+  .results-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 2.5rem; text-align: center; display: none; }
+  .results-card.show { display: block; }
+  .score-circle { width: 110px; height: 110px; border-radius: 50%; background: #0d1f35; border: 4px solid #58a6ff; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 1.5rem; }
+  .score-big { font-size: 2rem; font-weight: 700; color: #58a6ff; line-height: 1; }
+  .score-total { font-size: 0.8rem; color: #8b949e; margin-top: 2px; }
+  .results-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .results-msg { color: #8b949e; font-size: 0.93rem; margin-bottom: 2rem; }
+  .stat-row { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+  .stat-box { background: #1c2128; border: 1px solid #30363d; border-radius: 8px; padding: 0.75rem 1.25rem; font-size: 0.85rem; color: #8b949e; }
+  .stat-box strong { display: block; font-size: 1.2rem; font-weight: 600; color: #e6edf3; }
+  .btn-restart { background: #1f6feb; color: #fff; border: none; border-radius: 8px; padding: 0.75rem 2rem; font-size: 1rem; font-weight: 600; cursor: pointer; }
+  .btn-restart:hover { background: #388bfd; }
+
+  @media (max-width: 580px) {
+    .quiz-layout { grid-template-columns: 1fr; }
+    .q-nav { position: static; }
+    .q-nav-grid { grid-template-columns: repeat(8, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="badge">📊 Matplotlib Basics</div>
+    <h1>Matplotlib <span>Quiz</span></h1>
+    <p class="subtitle">Test your knowledge of chart types, syntax, and Titanic visualizations</p>
+  </div>
+
+  <div id="quiz-section">
+    <div class="quiz-layout">
+      <div class="q-nav">
+        <div class="q-nav-title">Jump to question</div>
+        <div class="q-nav-grid" id="q-nav-grid"></div>
+        <hr class="divider">
+        <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill" style="width:0%"></div></div>
+        <div class="progress-txt" id="progress-txt">0 / 15 answered</div>
+        <div class="legend">
+          <div class="legend-row"><div class="legend-swatch sw-current"></div>Current</div>
+          <div class="legend-row"><div class="legend-swatch sw-correct"></div>Correct</div>
+          <div class="legend-row"><div class="legend-swatch sw-wrong"></div>Wrong</div>
+          <div class="legend-row"><div class="legend-swatch sw-open"></div>Unanswered</div>
+        </div>
+      </div>
+      <div>
+        <div class="quiz-card">
+          <div class="q-number" id="q-number">Question 1</div>
+          <div class="q-text" id="q-text"></div>
+          <div class="code-block" id="code-block" style="display:none"></div>
+          <div class="options" id="options"></div>
+          <div class="feedback" id="feedback"></div>
+          <div class="nav-row">
+            <div class="score-mini">Score: <span id="score-display">0</span> / 15</div>
+            <div class="btn-row">
+              <button class="btn-nav" id="btn-prev" onclick="go(current-1)">← Prev</button>
+              <button class="btn-nav btn-next-q" id="btn-next" onclick="onNext()">Next →</button>
+              <button class="btn-nav btn-finish" id="btn-finish" onclick="showResults()">Finish ✓</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="results-card" id="results-card">
+    <div class="score-circle"><div class="score-big" id="final-score">0</div><div class="score-total" id="final-total">/ 15</div></div>
+    <div class="results-title" id="results-title"></div>
+    <div class="results-msg" id="results-msg"></div>
+    <div class="stat-row">
+      <div class="stat-box"><strong id="stat-correct">0</strong>Correct</div>
+      <div class="stat-box"><strong id="stat-wrong">0</strong>Wrong</div>
+      <div class="stat-box"><strong id="stat-pct">0%</strong>Score</div>
+    </div>
+    <button class="btn-restart" onclick="restart()">Restart Quiz</button>
+  </div>
+</div>
+<script>
+const Q = [
+  { q:"What is the correct 4-step pattern to create any Matplotlib chart?", options:["import → plot → title → save","figure → draw → labels → show","plt.figure() → plt.bar()/plot() → plt.title()/labels → plt.show()","plt.create() → plt.data() → plt.style() → plt.display()"], answer:2, feedback:"Every Matplotlib chart follows: 1) plt.figure() to set size, 2) draw the chart, 3) add labels/title, 4) plt.show() to display." },
+  { q:"Which chart type should you use to compare the number of passengers across Titanic classes (1st, 2nd, 3rd)?", options:["Line chart","Pie chart","Bar chart","Scatter plot"], answer:2, feedback:"Bar charts compare values across categories. Titanic class counts are categories — bar chart is the right choice." },
+  { q:"What does <code>plt.figure(figsize=(10, 4))</code> do?", options:["Creates a figure 10 pixels wide and 4 pixels tall","Creates a blank canvas 10 inches wide and 4 inches tall","Sets the font size to 10 and line width to 4","Adds 10 rows and 4 columns to the chart"], answer:1, feedback:"figsize takes (width, height) in inches. plt.figure(figsize=(10, 4)) creates a wide, short canvas." },
+  { q:"What is the difference between <code>plt.bar()</code> and <code>plt.barh()</code>?", options:["plt.bar() is for numbers, plt.barh() is for text","plt.bar() draws vertical bars, plt.barh() draws horizontal bars","plt.bar() is faster than plt.barh()","plt.barh() adds a horizontal reference line"], answer:1, feedback:"plt.bar() = vertical bars (standard). plt.barh() = horizontal bars — useful when category names are long." },
+  { q:"When should you use a pie chart?", options:["To show trends over time","To show the relationship between two variables","To show parts of a whole (percentages that add to 100%)","To show the distribution of a single number"], answer:2, feedback:"Pie charts show proportions of a whole. Male vs female split, or survived vs died are perfect pie chart use cases." },
+  { q:"What does the <code>autopct='%1.1f%%'</code> parameter do in <code>plt.pie()</code>?", options:["Sets the font to 1.1 point size","Displays percentage labels on each slice with 1 decimal place","Rotates the pie chart by 1.1 degrees","Adds a border 1.1px wide around each slice"], answer:1, feedback:"autopct automatically adds percentage text inside each slice. '%1.1f%%' means: display with 1 decimal place, followed by a % symbol." },
+  { q:"Which chart type is best for showing age distribution (how many passengers fall in each age range)?", options:["Bar chart","Line chart","Histogram","Scatter plot"], answer:2, feedback:"Histograms show the distribution of a single numeric variable. Age ranges (bins) on x-axis, count on y-axis." },
+  { q:"What does the <code>bins</code> parameter control in <code>plt.hist()</code>?", options:["The number of colors used","The number of intervals/groups the data is divided into","The height of each bar","The width of the chart"], answer:1, feedback:"bins controls how many equal-width intervals the data is split into. More bins = more detail; fewer bins = smoother picture." },
+  { q:"What does a scatter plot reveal that a bar chart cannot?", options:["The total sum of values","The relationship or correlation between two numeric variables","The proportion of each category","The trend over time"], answer:1, feedback:"Scatter plots show the relationship between two variables (e.g., Age vs Fare). Patterns in dots reveal correlation." },
+  { q:"What does <code>plt.subplot(2, 3, 1)</code> mean?", options:["Create a chart with 2 x-axis points and 3 y-axis points","Plot in the 1st cell of a 2-row, 3-column grid of charts","Create 2 subplots with 3 bars each","Set chart size to 2 wide and 3 tall"], answer:1, feedback:"plt.subplot(rows, cols, position) — subplot(2,3,1) means: 2 rows, 3 columns grid, position 1 (top-left)." },
+  { q:"Which command adds a title to your chart?", options:["plt.label('Title')","plt.heading('Title')","plt.title('Title')","plt.name('Title')"], answer:2, feedback:"plt.title() adds a title above the chart. plt.xlabel() and plt.ylabel() label the axes." },
+  { q:"What is the purpose of <code>plt.tight_layout()</code>?", options:["Makes the chart lines thinner","Automatically adjusts spacing between subplots to prevent overlap","Locks the chart size so it cannot be resized","Tightens the range of values on the axis"], answer:1, feedback:"plt.tight_layout() auto-adjusts subplot padding. Without it, titles and labels from adjacent subplots can overlap." },
+  { q:"How do you save a chart as an image file?", options:["plt.export('chart.png')","plt.save('chart.png')","plt.savefig('chart.png', dpi=150)","plt.download('chart.png')"], answer:2, feedback:"plt.savefig() saves the current figure. dpi controls resolution. Always call savefig() BEFORE plt.show() or the file will be blank." },
+  { q:"In a grouped bar chart comparing survival by class, what is the purpose of adjusting the <code>x</code> position with an offset?", options:["To color the bars differently","To place bars for each group side-by-side instead of on top of each other","To add space between all bars equally","To sort bars from tallest to shortest"], answer:1, feedback:"In grouped bar charts, you manually offset each group's x position so bars appear side-by-side, not overlapping." },
+  { q:"What does <code>plt.axvline(x=mean_age, color='red', linestyle='--')</code> add to a histogram?", options:["A horizontal line at the mean_age value on the Y axis","A vertical reference line at the mean_age value on the X axis","A red dashed border around the entire chart","A red data point at (mean_age, 0)"], answer:1, feedback:"plt.axvline() adds a vertical reference line at a specific X value. Adding it at the mean shows where the average falls in the distribution." }
+];
+
+const TOTAL = Q.length;
+let current = 0, score = 0;
+const state = Array(TOTAL).fill(null);
+const chosen = Array(TOTAL).fill(null);
+
+function buildNav() {
+  const grid = document.getElementById('q-nav-grid');
+  grid.innerHTML = '';
+  for (let i = 0; i < TOTAL; i++) {
+    const b = document.createElement('button');
+    b.className = 'q-dot'; b.textContent = i + 1; b.id = `d${i}`;
+    b.onclick = () => go(i);
+    grid.appendChild(b);
+  }
+}
+
+function refreshNav() {
+  for (let i = 0; i < TOTAL; i++) {
+    const d = document.getElementById(`d${i}`);
+    d.className = 'q-dot';
+    if (state[i] === 'correct') d.classList.add('s-correct');
+    else if (state[i] === 'wrong') d.classList.add('s-wrong');
+    if (i === current) d.classList.add('active');
+  }
+  const done = state.filter(s => s !== null).length;
+  document.getElementById('progress-fill').style.width = `${(done / TOTAL) * 100}%`;
+  document.getElementById('progress-txt').textContent = `${done} / ${TOTAL} answered`;
+}
+
+function go(idx) {
+  if (idx < 0 || idx >= TOTAL) return;
+  current = idx;
+  render();
+}
+
+function render() {
+  const q = Q[current];
+  document.getElementById('q-number').textContent = `Question ${current + 1}`;
+  document.getElementById('q-text').innerHTML = q.q;
+  const cb = document.getElementById('code-block');
+  if (q.code) { cb.textContent = q.code; cb.style.display = 'block'; }
+  else cb.style.display = 'none';
+
+  const opts = document.getElementById('options');
+  opts.innerHTML = '';
+  const L = ['A','B','C','D'];
+  q.options.forEach((o, i) => {
+    const b = document.createElement('button');
+    b.className = 'option-btn';
+    b.innerHTML = `<span class="opt-label">${L[i]}</span><span>${o}</span>`;
+    b.id = `o${i}`; b.onclick = () => pick(i);
+    opts.appendChild(b);
+  });
+
+  const fb = document.getElementById('feedback');
+  fb.className = 'feedback'; fb.textContent = '';
+
+  if (state[current] !== null) {
+    document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+    document.getElementById(`o${chosen[current]}`).classList.add(state[current]);
+    if (state[current] === 'wrong') document.getElementById(`o${Q[current].answer}`).classList.add('correct');
+    fb.textContent = (state[current] === 'correct' ? '✓ Correct! ' : '✗ Not quite. ') + q.feedback;
+    fb.className = `feedback ${state[current]} show`;
+  }
+
+  document.getElementById('btn-prev').disabled = current === 0;
+  document.getElementById('score-display').textContent = score;
+
+  const allDone = state.every(s => s !== null);
+  const nextBtn = document.getElementById('btn-next');
+  const finBtn = document.getElementById('btn-finish');
+
+  if (state[current] !== null) {
+    if (current === TOTAL - 1 || allDone) {
+      nextBtn.classList.remove('show');
+      if (allDone) finBtn.classList.add('show'); else finBtn.classList.remove('show');
+    } else {
+      nextBtn.classList.add('show'); finBtn.classList.remove('show');
+    }
+  } else {
+    nextBtn.classList.remove('show'); finBtn.classList.remove('show');
+  }
+  refreshNav();
+}
+
+function pick(idx) {
+  if (state[current] !== null) return;
+  const q = Q[current];
+  document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+  chosen[current] = idx;
+  const correct = idx === q.answer;
+  if (correct) score++;
+  state[current] = correct ? 'correct' : 'wrong';
+  document.getElementById(`o${idx}`).classList.add(state[current]);
+  if (!correct) document.getElementById(`o${q.answer}`).classList.add('correct');
+  const fb = document.getElementById('feedback');
+  fb.textContent = (correct ? '✓ Correct! ' : '✗ Not quite. ') + q.feedback;
+  fb.className = `feedback ${state[current]} show`;
+  document.getElementById('score-display').textContent = score;
+
+  const allDone = state.every(s => s !== null);
+  const nextBtn = document.getElementById('btn-next');
+  const finBtn = document.getElementById('btn-finish');
+  if (current === TOTAL - 1 || allDone) {
+    nextBtn.classList.remove('show');
+    if (allDone) finBtn.classList.add('show');
+  } else {
+    nextBtn.classList.add('show');
+  }
+  refreshNav();
+}
+
+function onNext() {
+  const next = current + 1 < TOTAL ? current + 1 : state.findIndex(s => s === null);
+  if (next !== -1) go(next);
+}
+
+function showResults() {
+  document.getElementById('quiz-section').style.display = 'none';
+  document.getElementById('results-card').classList.add('show');
+  const pct = Math.round((score / TOTAL) * 100);
+  document.getElementById('final-score').textContent = score;
+  document.getElementById('final-total').textContent = `/ ${TOTAL}`;
+  document.getElementById('stat-correct').textContent = score;
+  document.getElementById('stat-wrong').textContent = TOTAL - score;
+  document.getElementById('stat-pct').textContent = pct + '%';
+  const msgs = pct >= 90 ? ['🎉 Excellent!','Outstanding Matplotlib skills! You can confidently build charts and dashboards.']
+    : pct >= 70 ? ['👍 Good Job!','Good grasp of chart types. Review subplots and grouped bars to round out your skills.']
+    : pct >= 50 ? ['📚 Keep Practicing','You know the basics. Study when to use each chart type and the plt.subplot() syntax.']
+    : ['🔄 Try Again','Review the Matplotlib notebook — focus on chart selection, axes labels, and subplot layouts.'];
+  document.getElementById('results-title').textContent = msgs[0];
+  document.getElementById('results-msg').textContent = msgs[1];
+}
+
+function restart() {
+  current = 0; score = 0;
+  state.fill(null); chosen.fill(null);
+  document.getElementById('quiz-section').style.display = 'block';
+  document.getElementById('results-card').classList.remove('show');
+  buildNav(); render();
+}
+
+buildNav(); render();
+</script>
+</body>
+</html>

@@ -1,0 +1,752 @@
+================================================================================
+    SNOWFLAKE — FUNCTIONS & STORED PROCEDURES
+    All Queries for cleaned_titanic_dataset
+    SkillShikshya | Business Data Analytics with AI
+================================================================================
+
+
+================================================================================
+SECTION 1 — FUNCTIONS
+================================================================================
+-- Functions return ONE value per row
+-- Used directly inside SELECT queries
+-- Syntax:  function_name(column)  called like a column
+--------------------------------------------------------------------------------
+
+---DROP FUNCTION classify_fare(FLOAT);
+
+------------------------------------------------------------------------
+FUNCTION 1 — classify_fare(fare)
+Returns: Budget / Standard / Premium / Luxury
+------------------------------------------------------------------------
+
+-- STEP 1: Create the function
+CREATE OR REPLACE FUNCTION classify_fare(fare FLOAT)
+RETURNS VARCHAR
+LANGUAGE SQL
+AS
+$$
+    CASE
+        WHEN fare = 0                  THEN 'Free'
+        WHEN fare < 10                 THEN 'Budget'
+        WHEN fare BETWEEN 10 AND 50    THEN 'Standard'
+        WHEN fare BETWEEN 50 AND 100   THEN 'Premium'
+        ELSE                                'Luxury'
+    END
+$$;
+
+-- STEP 2: Use it in SELECT
+SELECT
+    Name,
+    Fare,
+    classify_fare(Fare)   AS FareLabel
+FROM cleaned_titanic_dataset
+LIMIT 20;
+
+-- STEP 3: Count passengers in each fare category
+SELECT
+    classify_fare(Fare)   AS FareLabel,
+    COUNT(*)              AS TotalPassengers,
+    SUM(Survived)         AS Survived,
+    ROUND(SUM(Survived) * 100.0 / COUNT(*), 2)  AS SurvivalRate
+FROM cleaned_titanic_dataset
+GROUP BY classify_fare(Fare)
+ORDER BY TotalPassengers DESC;
+
+-- STEP 4: Find all luxury passengers
+SELECT Name, Sex, Age, Pclass, Fare
+FROM cleaned_titanic_dataset
+WHERE classify_fare(Fare) = 'Luxury'
+ORDER BY Fare DESC;
+
+
+------------------------------------------------------------------------
+FUNCTION 2 — survival_risk(age, pclass)
+Returns: Very Low Risk / Low Risk / Medium Risk / High Risk
+------------------------------------------------------------------------
+
+-- STEP 1: Create the function
+CREATE OR REPLACE FUNCTION survival_risk(age FLOAT, pclass INT)
+RETURNS VARCHAR
+LANGUAGE SQL
+AS
+$$
+    CASE
+        WHEN pclass = 1 AND age < 18  THEN 'Very Low Risk'
+        WHEN pclass = 1               THEN 'Low Risk'
+        WHEN pclass = 2 AND age < 18  THEN 'Low Risk'
+        WHEN pclass = 2               THEN 'Medium Risk'
+        WHEN pclass = 3 AND age < 18  THEN 'Medium Risk'
+        ELSE                               'High Risk'
+    END
+$$;
+
+-- STEP 2: Use it in SELECT
+SELECT
+    Name,
+    Age,
+    Pclass,
+    Survived,
+    survival_risk(Age, Pclass)   AS RiskLevel
+FROM cleaned_titanic_dataset
+LIMIT 20;
+
+-- STEP 3: Count by risk level
+SELECT
+    survival_risk(Age, Pclass)  AS RiskLevel,
+    COUNT(*)                    AS Total,
+    SUM(Survived)               AS Survived,
+    ROUND(SUM(Survived) * 100.0 / COUNT(*), 2) AS SurvivalRate
+FROM cleaned_titanic_dataset
+GROUP BY survival_risk(Age, Pclass)
+ORDER BY SurvivalRate DESC;
+
+-- STEP 4: Show only High Risk passengers who survived
+SELECT Name, Age, Pclass, Fare, Survived
+FROM cleaned_titanic_dataset
+WHERE survival_risk(Age, Pclass) = 'High Risk'
+  AND Survived = 1;
+
+
+------------------------------------------------------------------------
+FUNCTION 3 — extract_title(name)
+Returns: Mr / Mrs / Miss / Master / Dr / Rev / Other
+------------------------------------------------------------------------
+
+-- STEP 1: Create the function
+CREATE OR REPLACE FUNCTION extract_title(name VARCHAR)
+RETURNS VARCHAR
+LANGUAGE SQL
+AS
+$$
+    CASE
+        WHEN name LIKE '%Mr.%'      THEN 'Mr'
+        WHEN name LIKE '%Mrs.%'     THEN 'Mrs'
+        WHEN name LIKE '%Miss.%'    THEN 'Miss'
+        WHEN name LIKE '%Master.%'  THEN 'Master'
+        WHEN name LIKE '%Dr.%'      THEN 'Dr'
+        WHEN name LIKE '%Rev.%'     THEN 'Rev'
+        ELSE                             'Other'
+    END
+$$;
+
+-- STEP 2: Use it in SELECT
+SELECT
+    Name,
+    extract_title(Name)   AS Title,
+    Sex,
+    Age,
+    Survived
+FROM cleaned_titanic_dataset
+LIMIT 20;
+
+-- STEP 3: Survival rate by title
+SELECT
+    extract_title(Name)   AS Title,
+    COUNT(*)              AS Total,
+    SUM(Survived)         AS Survived,
+    ROUND(SUM(Survived) * 100.0 / COUNT(*), 2)  AS SurvivalRate
+FROM cleaned_titanic_dataset
+GROUP BY extract_title(Name)
+ORDER BY SurvivalRate DESC;
+
+-- STEP 4: Find all Doctors on the Titanic
+SELECT Name, Age, Sex, Pclass, Survived
+FROM cleaned_titanic_dataset
+WHERE extract_title(Name) = 'Dr';
+
+
+------------------------------------------------------------------------
+FUNCTION 4 — age_group(age)
+Returns: Child / Teenager / Adult / Senior
+------------------------------------------------------------------------
+
+-- STEP 1: Create the function
+CREATE OR REPLACE FUNCTION age_group(age FLOAT)
+RETURNS VARCHAR
+LANGUAGE SQL
+AS
+$$
+    CASE
+        WHEN age < 13   THEN 'Child'
+        WHEN age < 18   THEN 'Teenager'
+        WHEN age < 60   THEN 'Adult'
+        ELSE                 'Senior'
+    END
+$$;
+
+-- STEP 2: Use it in SELECT (compare with original AgeGroup column)
+SELECT
+    Name,
+    Age,
+    AgeGroup               AS Original_AgeGroup,
+    age_group(Age)         AS Computed_AgeGroup
+FROM cleaned_titanic_dataset
+LIMIT 20;
+
+-- STEP 3: Survival rate by age group
+SELECT
+    age_group(Age)        AS AgeGroup,
+    COUNT(*)              AS Total,
+    SUM(Survived)         AS Survived,
+    ROUND(SUM(Survived) * 100.0 / COUNT(*), 2)  AS SurvivalRate,
+    ROUND(AVG(Fare), 2)   AS AvgFare
+FROM cleaned_titanic_dataset
+GROUP BY age_group(Age)
+ORDER BY SurvivalRate DESC;
+
+-- STEP 4: How many children were on board?
+SELECT COUNT(*) AS TotalChildren
+FROM cleaned_titanic_dataset
+WHERE age_group(Age) = 'Child';
+
+
+------------------------------------------------------------------------
+FUNCTION 5 — family_label(familysize)
+Returns: Solo Traveller / Small Family / Large Family / Very Large Family
+------------------------------------------------------------------------
+
+-- STEP 1: Create the function
+CREATE OR REPLACE FUNCTION family_label(familysize INT)
+RETURNS VARCHAR
+LANGUAGE SQL
+AS
+$$
+    CASE
+        WHEN familysize = 1               THEN 'Solo Traveller'
+        WHEN familysize BETWEEN 2 AND 4   THEN 'Small Family'
+        WHEN familysize BETWEEN 5 AND 7   THEN 'Large Family'
+        ELSE                                   'Very Large Family'
+    END
+$$;
+
+-- STEP 2: Use it in SELECT
+SELECT
+    Name,
+    FamilySize,
+    FamilyType                 AS Original_FamilyType,
+    family_label(FamilySize)   AS Computed_FamilyLabel,
+    Survived
+FROM cleaned_titanic_dataset
+LIMIT 20;
+
+-- STEP 3: Survival rate by family label
+SELECT
+    family_label(FamilySize)   AS FamilyLabel,
+    COUNT(*)                   AS Total,
+    SUM(Survived)              AS Survived,
+    ROUND(SUM(Survived) * 100.0 / COUNT(*), 2)  AS SurvivalRate
+FROM cleaned_titanic_dataset
+GROUP BY family_label(FamilySize)
+ORDER BY SurvivalRate DESC;
+
+-- STEP 4: Average fare paid by family type
+SELECT
+    family_label(FamilySize)   AS FamilyLabel,
+    ROUND(AVG(Fare), 2)        AS AvgFare,
+    COUNT(*)                   AS TotalPassengers
+FROM cleaned_titanic_dataset
+GROUP BY family_label(FamilySize)
+ORDER BY AvgFare DESC;
+
+
+------------------------------------------------------------------------
+USING MULTIPLE FUNCTIONS TOGETHER
+------------------------------------------------------------------------
+
+-- Combine all 5 functions in one query
+SELECT
+    Name,
+    Age,
+    Pclass,
+    Fare,
+    FamilySize,
+    Survived,
+    classify_fare(Fare)            AS FareLabel,
+    survival_risk(Age, Pclass)     AS RiskLevel,
+    extract_title(Name)            AS Title,
+    age_group(Age)                 AS AgeGroup,
+    family_label(FamilySize)       AS FamilyLabel
+FROM cleaned_titanic_dataset
+ORDER BY Fare DESC
+LIMIT 30;
+
+-- High risk passengers who were travelling alone and paid budget fare
+SELECT
+    Name, Age, Pclass, Fare, Survived,
+    survival_risk(Age, Pclass)   AS RiskLevel,
+    classify_fare(Fare)          AS FareLabel,
+    family_label(FamilySize)     AS FamilyLabel
+FROM cleaned_titanic_dataset
+WHERE survival_risk(Age, Pclass)  = 'High Risk'
+  AND classify_fare(Fare)         = 'Budget'
+  AND family_label(FamilySize)    = 'Solo Traveller';
+
+-- Survival rate when all factors combined
+SELECT
+    age_group(Age)            AS AgeGroup,
+    classify_fare(Fare)       AS FareLabel,
+    COUNT(*)                  AS Total,
+    SUM(Survived)             AS Survived,
+    ROUND(SUM(Survived)*100.0/COUNT(*),2) AS SurvivalRate
+FROM cleaned_titanic_dataset
+GROUP BY age_group(Age), classify_fare(Fare)
+ORDER BY SurvivalRate DESC;
+
+
+================================================================================
+SECTION 2 — STORED PROCEDURES
+================================================================================
+-- Stored Procedures run a full task and return a complete result
+-- Always called using:  CALL procedure_name();
+-- Written in LANGUAGE JAVASCRIPT to avoid Snowflake type mismatch errors
+--------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------
+PROCEDURE 1 — survival_by_class()
+Returns: Survival count and rate grouped by Pclass (1, 2, 3)
+------------------------------------------------------------------------
+ 
+CREATE OR REPLACE PROCEDURE survival_by_class()
+RETURNS VARIANT  ----- output is flexible JSON-like data, instead of variant we can use varchar, array
+LANGUAGE SQL
+AS
+---RETURN is how a Snowflake procedure sends results back.
+$$
+BEGIN
+    RETURN (
+        SELECT ARRAY_AGG(OBJECT_CONSTRUCT(
+            'Pclass',       Pclass,
+            'Total',        Total,
+            'Survived',     Survived,
+            'Died',         Died,
+            'SurvivalRate', SurvivalRate
+        ))
+        FROM (
+            SELECT
+                Pclass,
+                COUNT(*)                                              AS Total,
+                SUM(COALESCE(Survived, 0))                            AS Survived,
+                COUNT(*) - SUM(COALESCE(Survived, 0))                 AS Died,
+                ROUND(SUM(COALESCE(Survived, 0)) * 100.0 / COUNT(*), 2) AS SurvivalRate
+            FROM cleaned_titanic_dataset
+            GROUP BY Pclass
+            ORDER BY Pclass
+        )
+    );
+END;
+$$;
+ 
+CALL survival_by_class();
+ 
+ 
+------------------------------------------------------------------------
+PROCEDURE 2 — survival_by_gender()
+Returns: Survival count and rate by Sex (male / female)
+------------------------------------------------------------------------
+ 
+CREATE OR REPLACE PROCEDURE survival_by_gender()
+RETURNS VARIANT
+LANGUAGE SQL
+AS
+$$
+BEGIN
+    RETURN (
+        SELECT ARRAY_AGG(OBJECT_CONSTRUCT(
+            'Sex',          Sex,
+            'Total',        Total,
+            'Survived',     Survived,
+            'Died',         Died,
+            'SurvivalRate', SurvivalRate
+        ))
+        FROM (
+            SELECT
+                Sex,
+                COUNT(*)                                              AS Total,
+                SUM(COALESCE(Survived, 0))                            AS Survived,
+                COUNT(*) - SUM(COALESCE(Survived, 0))                 AS Died,
+                ROUND(SUM(COALESCE(Survived, 0)) * 100.0 / COUNT(*), 2) AS SurvivalRate
+            FROM cleaned_titanic_dataset
+            GROUP BY Sex
+            ORDER BY SurvivalRate DESC
+        )
+    );
+END;
+$$;
+ ---Replaces NULL with 0
+--OBJECT_CONSTRUCT Converts each row into a JSON object
+--ARRAY_AGG Combines all JSON objects into a single array
+CALL survival_by_gender();
+ 
+ 
+------------------------------------------------------------------------
+PROCEDURE 3 — fare_category_summary()
+Returns: Avg age, avg fare, survival rate per FareCategory
+------------------------------------------------------------------------
+ 
+CREATE OR REPLACE PROCEDURE fare_category_summary()
+RETURNS VARIANT
+LANGUAGE SQL
+AS
+$$
+BEGIN
+    RETURN (
+        SELECT ARRAY_AGG(OBJECT_CONSTRUCT(
+            'FareCategory',    FareCategory,
+            'TotalPassengers', TotalPassengers,
+            'AvgAge',          AvgAge,
+            'AvgFare',         AvgFare,
+            'SurvivalRate',    SurvivalRate
+        ))
+        FROM (
+            SELECT
+                FareCategory,
+                COUNT(*)                                              AS TotalPassengers,
+                ROUND(AVG(Age), 1)                                    AS AvgAge,
+                ROUND(AVG(Fare), 2)                                   AS AvgFare,
+                ROUND(SUM(COALESCE(Survived, 0)) * 100.0 / COUNT(*), 2) AS SurvivalRate
+            FROM cleaned_titanic_dataset
+            GROUP BY FareCategory
+            ORDER BY AvgFare
+        )
+    );
+END;
+$$;
+ 
+CALL fare_category_summary();
+ 
+ 
+------------------------------------------------------------------------
+PROCEDURE 4 — high_value_passengers(min_fare)
+Returns: All passengers who paid above the given fare amount
+------------------------------------------------------------------------
+ 
+CREATE OR REPLACE PROCEDURE high_value_passengers(min_fare FLOAT)
+RETURNS VARIANT
+LANGUAGE SQL
+AS
+$$
+BEGIN
+    RETURN (
+        SELECT ARRAY_AGG(OBJECT_CONSTRUCT(
+            'PassengerId',  PassengerId,
+            'Name',         Name,
+            'Pclass',       Pclass,
+            'Fare',         Fare,
+            'Survived',     Survived,
+            'FareCategory', FareCategory,
+            'Deck',         Deck
+        ))
+        FROM (
+            SELECT
+                PassengerId,
+                Name,
+                Pclass,
+                Fare,
+                Survived,
+                FareCategory,
+                Deck
+            FROM cleaned_titanic_dataset
+            WHERE Fare >= :min_fare
+            ORDER BY Fare DESC
+        )
+    );
+END;
+$$;
+ 
+CALL high_value_passengers(50);
+CALL high_value_passengers(100);
+CALL high_value_passengers(200);
+CALL high_value_passengers(300);
+ 
+ 
+------------------------------------------------------------------------
+PROCEDURE 5 — agegroup_survival_report()
+Returns: Survival rate by AgeGroup (Child / Adult / Senior)
+------------------------------------------------------------------------
+ 
+CREATE OR REPLACE PROCEDURE agegroup_survival_report()
+RETURNS VARIANT
+LANGUAGE SQL
+AS
+$$
+BEGIN
+    RETURN (
+        SELECT ARRAY_AGG(OBJECT_CONSTRUCT(
+            'AgeGroup',     AgeGroup,
+            'Total',        Total,
+            'Survived',     Survived,
+            'Died',         Died,
+            'SurvivalRate', SurvivalRate,
+            'AvgFare',      AvgFare
+        ))
+        FROM (
+            SELECT
+                AgeGroup,
+                COUNT(*)                                              AS Total,
+                SUM(COALESCE(Survived, 0))                            AS Survived,
+                COUNT(*) - SUM(COALESCE(Survived, 0))                 AS Died,
+                ROUND(SUM(COALESCE(Survived, 0)) * 100.0 / COUNT(*), 2) AS SurvivalRate,
+                ROUND(AVG(Fare), 2)                                   AS AvgFare
+            FROM cleaned_titanic_dataset
+            GROUP BY AgeGroup
+            ORDER BY SurvivalRate DESC
+        )
+    );
+END;
+$$;
+ 
+CALL agegroup_survival_report();
+ 
+ 
+------------------------------------------------------------------------
+PROCEDURE 6 — familytype_survival_report()
+Returns: Survival rate by FamilyType (Solo / Small / Large)
+------------------------------------------------------------------------
+ 
+CREATE OR REPLACE PROCEDURE familytype_survival_report()
+RETURNS VARIANT
+LANGUAGE SQL
+AS
+$$
+BEGIN
+    RETURN (
+        SELECT ARRAY_AGG(OBJECT_CONSTRUCT(
+            'FamilyType',    FamilyType,
+            'Total',         Total,
+            'Survived',      Survived,
+            'Died',          Died,
+            'SurvivalRate',  SurvivalRate,
+            'AvgFamilySize', AvgFamilySize
+        ))
+        FROM (
+            SELECT
+                FamilyType,
+                COUNT(*)                                              AS Total,
+                SUM(COALESCE(Survived, 0))                            AS Survived,
+                COUNT(*) - SUM(COALESCE(Survived, 0))                 AS Died,
+                ROUND(SUM(COALESCE(Survived, 0)) * 100.0 / COUNT(*), 2) AS SurvivalRate,
+                ROUND(AVG(FamilySize), 1)                             AS AvgFamilySize
+            FROM cleaned_titanic_dataset
+            GROUP BY FamilyType
+            ORDER BY SurvivalRate DESC
+        )
+    );
+END;
+$$;
+ 
+CALL familytype_survival_report();
+ 
+ 
+------------------------------------------------------------------------
+PROCEDURE 7 — deck_survival_report()
+Returns: Survival rate and avg fare grouped by Deck
+------------------------------------------------------------------------
+ 
+CREATE OR REPLACE PROCEDURE deck_survival_report()
+RETURNS VARIANT
+LANGUAGE SQL
+AS
+$$
+BEGIN
+    RETURN (
+        SELECT ARRAY_AGG(OBJECT_CONSTRUCT(
+            'Deck',         Deck,
+            'Total',        Total,
+            'Survived',     Survived,
+            'Died',         Died,
+            'SurvivalRate', SurvivalRate,
+            'AvgFare',      AvgFare
+        ))
+        FROM (
+            SELECT
+                Deck,
+                COUNT(*)                                              AS Total,
+                SUM(COALESCE(Survived, 0))                            AS Survived,
+                COUNT(*) - SUM(COALESCE(Survived, 0))                 AS Died,
+                ROUND(SUM(COALESCE(Survived, 0)) * 100.0 / COUNT(*), 2) AS SurvivalRate,
+                ROUND(AVG(Fare), 2)                                   AS AvgFare
+            FROM cleaned_titanic_dataset
+            GROUP BY Deck
+            ORDER BY SurvivalRate DESC
+        )
+    );
+END;
+$$;
+ 
+CALL deck_survival_report();
+ 
+ 
+------------------------------------------------------------------------
+PROCEDURE 8 — embarked_survival_report()
+Returns: Survival rate by port of embarkation (S / C / Q)
+------------------------------------------------------------------------
+ 
+CREATE OR REPLACE PROCEDURE embarked_survival_report()
+RETURNS VARIANT
+LANGUAGE SQL
+AS
+$$
+BEGIN
+    RETURN (
+        SELECT ARRAY_AGG(OBJECT_CONSTRUCT(
+            'Embarked',     Embarked,
+            'Total',        Total,
+            'Survived',     Survived,
+            'Died',         Died,
+            'SurvivalRate', SurvivalRate,
+            'AvgFare',      AvgFare
+        ))
+        FROM (
+            SELECT
+                Embarked,
+                COUNT(*)                                              AS Total,
+                SUM(COALESCE(Survived, 0))                            AS Survived,
+                COUNT(*) - SUM(COALESCE(Survived, 0))                 AS Died,
+                ROUND(SUM(COALESCE(Survived, 0)) * 100.0 / COUNT(*), 2) AS SurvivalRate,
+                ROUND(AVG(Fare), 2)                                   AS AvgFare
+            FROM cleaned_titanic_dataset
+            WHERE Embarked IS NOT NULL
+            GROUP BY Embarked
+            ORDER BY SurvivalRate DESC
+        )
+    );
+END;
+$$;
+ 
+CALL embarked_survival_report();
+ 
+ 
+------------------------------------------------------------------------
+PROCEDURE 9 — pclass_gender_report()
+Returns: Survival cross-analysis by Pclass AND Gender combined
+------------------------------------------------------------------------
+ 
+CREATE OR REPLACE PROCEDURE pclass_gender_report()
+RETURNS VARIANT
+LANGUAGE SQL
+AS
+$$
+BEGIN
+    RETURN (
+        SELECT ARRAY_AGG(OBJECT_CONSTRUCT(
+            'Pclass',       Pclass,
+            'Sex',          Sex,
+            'Total',        Total,
+            'Survived',     Survived,
+            'SurvivalRate', SurvivalRate,
+            'AvgFare',      AvgFare
+        ))
+        FROM (
+            SELECT
+                Pclass,
+                Sex,
+                COUNT(*)                                              AS Total,
+                SUM(COALESCE(Survived, 0))                            AS Survived,
+                ROUND(SUM(COALESCE(Survived, 0)) * 100.0 / COUNT(*), 2) AS SurvivalRate,
+                ROUND(AVG(Fare), 2)                                   AS AvgFare
+            FROM cleaned_titanic_dataset
+            GROUP BY Pclass, Sex
+            ORDER BY Pclass, SurvivalRate DESC
+        )
+    );
+END;
+$$;
+ 
+CALL pclass_gender_report();
+ 
+ 
+------------------------------------------------------------------------
+PROCEDURE 10 — top_survivors(limit_count)
+Returns: Top N survivors sorted by Fare paid (highest first)
+------------------------------------------------------------------------
+ 
+CREATE OR REPLACE PROCEDURE top_survivors(limit_count FLOAT)
+RETURNS VARIANT
+LANGUAGE SQL
+AS
+$$
+BEGIN
+    RETURN (
+        SELECT ARRAY_AGG(OBJECT_CONSTRUCT(
+            'PassengerId', PassengerId,
+            'Name',        Name,
+            'Sex',         Sex,
+            'Age',         Age,
+            'Pclass',      Pclass,
+            'Fare',        Fare,
+            'Embarked',    Embarked
+        ))
+        FROM (
+            SELECT
+                PassengerId,
+                Name,
+                Sex,
+                Age,
+                Pclass,
+                Fare,
+                Embarked
+            FROM cleaned_titanic_dataset
+            WHERE Survived = 1
+            ORDER BY Fare DESC
+            LIMIT :limit_count
+        )
+    );
+END;
+$$;
+ 
+CALL top_survivors(10);
+CALL top_survivors(20);
+ 
+ 
+------------------------------------------------------------------------
+PROCEDURE 11 — overall_summary()
+Returns: Complete dataset summary — one row with all key stats
+------------------------------------------------------------------------
+ 
+CREATE OR REPLACE PROCEDURE overall_summary()
+RETURNS VARIANT
+LANGUAGE SQL
+AS
+$$
+BEGIN
+    RETURN (
+        SELECT OBJECT_CONSTRUCT(
+            'TotalPassengers',     COUNT(*),
+            'TotalSurvived',       SUM(COALESCE(Survived, 0)),
+            'TotalDied',           COUNT(*) - SUM(COALESCE(Survived, 0)),
+            'OverallSurvivalRate', ROUND(SUM(COALESCE(Survived, 0)) * 100.0 / COUNT(*), 2),
+            'AvgAge',              ROUND(AVG(Age), 1),
+            'AvgFare',             ROUND(AVG(Fare), 2),
+            'MinFare',             MIN(Fare),
+            'MaxFare',             MAX(Fare)
+        )
+        FROM cleaned_titanic_dataset
+    );
+END;
+$$;
+ 
+CALL overall_summary();
+
+
+================================================================================
+QUICK REFERENCE — FUNCTION vs STORED PROCEDURE
+================================================================================
+
+FUNCTION                              STORED PROCEDURE
+-----------                           ------------------
+Returns ONE value per row             Returns FULL table / report
+Used inside SELECT query              Called with CALL keyword
+Called like: classify_fare(Fare)      Called like: CALL survival_by_class()
+Cannot modify data (read only)        Can INSERT, UPDATE, DELETE
+LANGUAGE SQL                          LANGUAGE JAVASCRIPT (in Snowflake)
+
+COMMON MISTAKE:
+  SELECT survival_by_class() ...   <- WRONG, procedures cannot go in SELECT
+  CALL survival_by_class();        <- CORRECT
+
+
+================================================================================
+    SkillShikshya | Business Data Analytics with AI | Kathmandu, Nepal
+================================================================================
