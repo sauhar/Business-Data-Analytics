@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Power BI — Function Reference Quiz</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0d1117;--surface:#161b22;--surf2:#21262d;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.13);
+  --text:#e6edf3;--muted:#8b949e;
+  --accent:#1B6FE8;--acc-lt:rgba(27,111,232,0.12);
+  --green:#059669;--red:#dc2626;
+  --mono:'DM Mono',monospace;--display:'Syne',sans-serif;--body:'DM Sans',sans-serif;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--body);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:2rem 1rem 5rem;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(27,111,232,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(27,111,232,0.04) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;z-index:0;}
+.wrap{width:100%;max-width:760px;position:relative;z-index:1;}
+
+/* TOP BAR */
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;}
+.logo{font-family:var(--display);font-size:15px;font-weight:700;display:flex;align-items:center;gap:8px;}
+.logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(27,111,232,0.5);}50%{box-shadow:0 0 0 6px rgba(27,111,232,0);}}
+.score-badge{font-family:var(--mono);font-size:12px;color:var(--muted);background:var(--surf2);border:1px solid var(--border2);border-radius:8px;padding:5px 14px;}
+
+/* FUNCTION TABS */
+.fn-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.2rem;}
+.fn-tab{font-family:var(--mono);font-size:11px;font-weight:600;padding:5px 13px;border-radius:20px;border:1px solid var(--border2);background:var(--surf2);color:var(--muted);cursor:pointer;transition:all 0.18s;white-space:nowrap;}
+.fn-tab:hover{border-color:var(--accent);color:var(--accent);}
+.fn-tab.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.fn-tab.done-ok{border-color:var(--green);color:var(--green);background:rgba(5,150,105,0.08);}
+.fn-tab.done-mixed{border-color:#f59e0b;color:#f59e0b;background:rgba(245,158,11,0.08);}
+
+/* FUNCTION HEADER */
+.fn-header{background:var(--surface);border:1px solid var(--border2);border-radius:14px 14px 0 0;padding:1.2rem 1.6rem 0.8rem;margin-bottom:1px;}
+.fn-name{font-family:var(--mono);font-size:28px;font-weight:700;color:var(--accent);margin-bottom:4px;}
+.fn-syntax{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-bottom:8px;}
+.fn-desc{font-size:13px;color:#94A3B8;line-height:1.6;}
+
+/* PROGRESS */
+.prog-bar-wrap{background:var(--surface);border-left:1px solid var(--border2);border-right:1px solid var(--border2);padding:0.6rem 1.6rem;}
+.prog-row{display:flex;justify-content:space-between;margin-bottom:6px;}
+.prog-label{font-family:var(--mono);font-size:11px;color:var(--muted);}
+.prog-track{height:4px;background:var(--surf2);border-radius:2px;overflow:hidden;}
+.prog-fill{height:4px;background:linear-gradient(90deg,var(--accent),#34d399);border-radius:2px;transition:width 0.4s;}
+
+/* QUESTION CARD */
+.q-card{background:var(--surface);border:1px solid var(--border2);border-radius:0 0 14px 14px;padding:1.5rem 1.6rem 1.6rem;margin-bottom:1.2rem;}
+.q-num{font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:8px;letter-spacing:0.05em;}
+.q-text{font-family:var(--display);font-size:17px;font-weight:600;line-height:1.5;margin-bottom:0.5rem;}
+.q-code{font-family:var(--mono);font-size:12px;color:#e9c46a;background:#0a0f1a;border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:12px 16px;margin:0.8rem 0 1rem;display:block;white-space:pre;line-height:1.8;overflow-x:auto;}
+.options{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
+.option{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;border:1px solid var(--border2);border-radius:9px;background:var(--surf2);cursor:pointer;transition:all 0.15s;user-select:none;}
+.option:hover:not(.locked){border-color:var(--accent);background:var(--acc-lt);transform:translateX(3px);}
+.opt-key{font-family:var(--mono);font-size:11px;font-weight:600;min-width:26px;height:26px;border-radius:5px;background:var(--surface);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;color:var(--muted);flex-shrink:0;transition:all 0.15s;margin-top:1px;}
+.opt-text{font-size:14px;line-height:1.5;color:var(--text);}
+.opt-code{font-family:var(--mono);font-size:11.5px;color:#e9c46a;line-height:1.6;}
+.option.correct{border-color:var(--green);background:rgba(5,150,105,0.1);}
+.option.correct .opt-key{background:var(--green);border-color:var(--green);color:#fff;}
+.option.wrong{border-color:var(--red);background:rgba(220,38,38,0.08);}
+.option.wrong .opt-key{background:var(--red);border-color:var(--red);color:#fff;}
+.option.reveal{border-color:var(--green);background:rgba(5,150,105,0.05);}
+.option.reveal .opt-key{background:var(--green);border-color:var(--green);color:#fff;}
+.option.locked{cursor:default;pointer-events:none;}
+.feedback{display:none;margin-top:1rem;padding:14px 16px;border-radius:9px;font-size:13px;line-height:1.6;animation:su 0.2s ease;}
+@keyframes su{from{opacity:0;transform:translateY(5px);}to{opacity:1;transform:translateY(0);}}
+.feedback.show{display:block;}
+.feedback.ok{background:rgba(5,150,105,0.1);border:1px solid rgba(5,150,105,0.3);color:#6ee7b7;}
+.feedback.bad{background:rgba(220,38,38,0.08);border:1px solid rgba(220,38,38,0.25);color:#fca5a5;}
+.feedback strong{display:block;margin-bottom:4px;font-family:var(--display);font-size:14px;}
+.feedback .why{color:var(--muted);font-size:12.5px;margin-top:5px;padding-top:5px;border-top:1px solid rgba(255,255,255,0.06);}
+.btn-row{display:flex;justify-content:flex-end;margin-top:1.2rem;}
+.btn-next{display:none;font-family:var(--display);font-size:13px;font-weight:700;background:var(--accent);color:#fff;border:none;border-radius:9px;padding:10px 26px;cursor:pointer;transition:all 0.2s;}
+.btn-next:hover{background:#1558c0;}
+.btn-next.show{display:block;}
+
+/* FUNCTION COMPLETE PANEL */
+.fn-complete{display:none;background:var(--surface);border:1px solid var(--border2);border-radius:14px;padding:2rem;text-align:center;margin-bottom:1.2rem;}
+.fn-complete.show{display:block;}
+.fn-complete h3{font-family:var(--display);font-size:20px;font-weight:700;margin-bottom:6px;}
+.fn-complete p{font-size:13px;color:var(--muted);margin-bottom:1.4rem;}
+.mini-stats{display:flex;gap:1rem;justify-content:center;margin-bottom:1.4rem;}
+.mini-stat{background:var(--surf2);border:1px solid var(--border2);border-radius:9px;padding:10px 22px;text-align:center;}
+.mini-stat .n{font-family:var(--display);font-size:20px;font-weight:800;}
+.mini-stat .l{font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;margin-top:2px;}
+.btn-group{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{font-family:var(--display);font-size:13px;font-weight:700;background:var(--accent);color:#fff;border:none;border-radius:9px;padding:10px 26px;cursor:pointer;transition:background 0.2s;}
+.btn-primary:hover{background:#1558c0;}
+.btn-ghost{font-family:var(--display);font-size:13px;font-weight:600;background:transparent;color:var(--muted);border:1px solid var(--border2);border-radius:9px;padding:10px 20px;cursor:pointer;transition:all 0.2s;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+/* OVERALL SCORE */
+.overall{background:var(--surface);border:1px solid var(--border2);border-radius:14px;padding:1.2rem 1.6rem;margin-bottom:1.2rem;}
+.overall-title{font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.8rem;}
+.fn-score-grid{display:flex;flex-direction:column;gap:6px;}
+.fn-score-row{display:flex;align-items:center;gap:10px;}
+.fn-score-name{font-family:var(--mono);font-size:12px;color:var(--text);min-width:160px;}
+.fn-score-bar-wrap{flex:1;height:8px;background:var(--surf2);border-radius:4px;overflow:hidden;}
+.fn-score-bar{height:8px;border-radius:4px;transition:width 0.6s;}
+.fn-score-pct{font-family:var(--mono);font-size:11px;color:var(--muted);min-width:36px;text-align:right;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="logo"><div class="logo-dot"></div>Power BI Functions</div>
+    <div class="score-badge" id="score-badge">Score: 0 &nbsp;|&nbsp; 0 correct</div>
+  </div>
+
+  <!-- Function tabs -->
+  <div class="fn-tabs" id="fn-tabs"></div>
+
+  <!-- Overall progress -->
+  <div class="overall" id="overall-panel">
+    <div class="overall-title">Progress by Function</div>
+    <div class="fn-score-grid" id="fn-score-grid"></div>
+  </div>
+
+  <!-- Function header -->
+  <div class="fn-header" id="fn-header" style="display:none">
+    <div class="fn-name" id="fn-name"></div>
+    <div class="fn-syntax" id="fn-syntax"></div>
+    <div class="fn-desc" id="fn-desc"></div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="prog-bar-wrap" id="prog-wrap" style="display:none">
+    <div class="prog-row">
+      <span class="prog-label" id="prog-label">Q 1 of 4</span>
+      <span class="prog-label" id="prog-score">0 / 0 correct</span>
+    </div>
+    <div class="prog-track"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
+  </div>
+
+  <!-- Question -->
+  <div class="q-card" id="q-card" style="display:none">
+    <div class="q-num" id="q-num"></div>
+    <div class="q-text" id="q-text"></div>
+    <code class="q-code" id="q-code" style="display:none"></code>
+    <div class="options" id="options"></div>
+    <div class="feedback" id="feedback"></div>
+    <div class="btn-row">
+      <button class="btn-next" id="btn-next" onclick="nextQ()">Next →</button>
+    </div>
+  </div>
+
+  <!-- Function complete -->
+  <div class="fn-complete" id="fn-complete">
+    <h3 id="fc-title"></h3>
+    <p id="fc-msg"></p>
+    <div class="mini-stats">
+      <div class="mini-stat"><div class="n" id="fc-correct" style="color:var(--green)">0</div><div class="l">Correct</div></div>
+      <div class="mini-stat"><div class="n" id="fc-wrong"   style="color:var(--red)">0</div><div class="l">Wrong</div></div>
+      <div class="mini-stat"><div class="n" id="fc-pct"     style="color:var(--accent)">0%</div><div class="l">Score</div></div>
+    </div>
+    <div class="btn-group">
+      <button class="btn-primary" id="fc-next-btn" onclick="nextFunction()">Next Function →</button>
+      <button class="btn-ghost" onclick="retryFunction()">Retry This Function</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════
+// FUNCTION BANK
+// ═══════════════════════════════════════════════════
+const FUNCTIONS = [
+  {
+    name:"SUM()",
+    syntax:"SUM( Table[Column] )",
+    desc:"Adds all values in a column together. Returns the grand total. Most common aggregation for Revenue, Quantity, and Cost.",
+    color:"#1D4ED8",
+    qs:[
+      {
+        q:"What does SUM( CafeSales[Total Spent] ) return?",
+        opts:["The highest value in Total Spent","The number of rows in Total Spent","The total of all Total Spent values added together","The average of Total Spent"],
+        ans:2,
+        ok:"SUM adds every value in the column. It gives you the grand total — the most basic revenue measure.",
+        why:"SUM = add all. AVERAGE = divide total by count. MAX = highest. MIN = lowest."
+      },
+      {
+        q:"Which of these correctly creates a Total Revenue measure?",
+        opts:["Total Revenue = COUNT( Sales[Revenue_NPR] )","Total Revenue = SUM( Sales[Revenue_NPR] )","Total Revenue = MAX( Sales[Revenue_NPR] )","Total Revenue = ROWS( Sales[Revenue_NPR] )"],
+        ans:1,
+        ok:"SUM(Sales[Revenue_NPR]) adds all revenue values together. COUNT would count how many rows have a value — not the total revenue.",
+        why:"For any 'total money' measure: always SUM. For 'how many rows': COUNTROWS. For unique items: DISTINCTCOUNT."
+      },
+      {
+        q:"What does SUMX( Sales_Reference, Sales_Reference[Quantity] * Sales_Reference[Unit_Price_NPR] ) do?",
+        opts:["Same as SUM — adds all values in one column","Multiplies Quantity by Unit Price for each row then sums all the results","Counts rows where Quantity > Unit Price","Returns the maximum product of Quantity and Unit Price"],
+        ans:1,
+        ok:"SUMX is the iterator version of SUM. It runs the expression row by row and then adds all results together. SUM works on one column; SUMX works on any expression per row.",
+        why:"SUMX(Table, Expression) = calculate expression per row, then SUM all results. Use when you need to multiply or combine columns."
+      },
+      {
+        q:"SUM( Sales[Revenue_NPR] ) vs CALCULATE( SUM(Sales[Revenue_NPR]) ) — what is the difference?",
+        opts:["They are identical — same result always","CALCULATE adds filter context control. Without CALCULATE, SUM uses whatever filters are already active. With CALCULATE you can add or change filters.","CALCULATE always returns more than SUM","SUM is faster than CALCULATE"],
+        ans:1,
+        ok:"Both SUM the same column, but CALCULATE gives you control over the filter context. CALCULATE(SUM(...)) alone has no extra filter — but you can add conditions: CALCULATE(SUM(...), filter).",
+        why:"SUM alone = context-aware aggregation. CALCULATE(SUM(...)) = same but now you can modify the filter context by adding conditions."
+      },
+    ]
+  },
+  {
+    name:"CALCULATE()",
+    syntax:"CALCULATE( Expression, Filter1, Filter2, ... )",
+    desc:"The most powerful DAX function. Evaluates an expression after applying one or more filters. Multiple filters = AND logic.",
+    color:"#B91C1C",
+    qs:[
+      {
+        q:"What does CALCULATE do to the filter context?",
+        opts:["It removes all existing filters","It adds or replaces filters — then evaluates the expression inside that new filter context","It sorts the result","It groups rows like GROUP BY"],
+        ans:1,
+        ok:"CALCULATE modifies the filter context. It can add new filters, replace existing ones, or remove them (with ALL). Then it evaluates the expression inside that modified context.",
+        why:"CALCULATE = change the filter context, then calculate. This is why it is the most powerful DAX function."
+      },
+      {
+        q:"What does this measure return?",
+        code:"Delivered Revenue =\n    CALCULATE(\n        SUM( Sales_Reference[Revenue_NPR] ),\n        Sales_Reference[Order_Status] = \"Delivered\"\n    )",
+        opts:["Revenue for all orders","Revenue only for Delivered orders — the filter restricts SUM to Delivered rows only","Count of Delivered orders","Average revenue per Delivered order"],
+        ans:1,
+        ok:"CALCULATE(SUM(Revenue), Order_Status='Delivered') restricts the SUM to rows where Order_Status = Delivered. The filter narrows what SUM sees.",
+        why:"CALCULATE(what, condition) = calculate 'what' but only for rows matching 'condition'."
+      },
+      {
+        q:"When you pass multiple conditions to CALCULATE separated by commas, they act as:",
+        code:"CALCULATE(\n    SUM( Sales_Reference[Revenue_NPR] ),\n    Sales_Reference[Payment_Method] = \"eSewa\",\n    Sales_Reference[Order_Status]   = \"Delivered\"\n)",
+        opts:["OR — at least one must be true","AND — ALL conditions must be true","Only the first filter applies","Power BI throws a syntax error"],
+        ans:1,
+        ok:"Multiple filters in CALCULATE separated by commas = AND. Both Payment_Method = eSewa AND Order_Status = Delivered must be true. For OR, use FILTER with || inside.",
+        why:"CALCULATE commas = AND. To use OR: CALCULATE(SUM(...), FILTER(Table, cond1 || cond2))."
+      },
+      {
+        q:"CALCULATE( COUNTROWS(Sales_Reference), Sales_Reference[Order_Status] = \"Delivered\" ) — what does this count?",
+        opts:["All 510 rows","Only the Delivered order rows","The number of distinct order statuses","Nothing — COUNTROWS cannot be inside CALCULATE"],
+        ans:1,
+        ok:"CALCULATE changes the filter to Delivered rows only — then COUNTROWS counts how many rows remain after that filter. Result: number of Delivered orders.",
+        why:"CALCULATE works with ANY DAX expression inside — SUM, COUNTROWS, AVERAGE, DIVIDE etc."
+      },
+      {
+        q:"What is CALCULATETABLE?",
+        opts:["Same as CALCULATE but returns a table instead of a single value","A faster version of CALCULATE","A version of CALCULATE that works in Power Query","CALCULATETABLE does not exist in DAX"],
+        ans:0,
+        ok:"CALCULATETABLE(Table, Filter) applies filters and returns a filtered TABLE — not a single number. Use it when you need a filtered table as input to another function.",
+        why:"CALCULATE = returns a value. CALCULATETABLE = returns a table. Used with SUMX, COUNTROWS, FILTER etc."
+      },
+    ]
+  },
+  {
+    name:"FILTER()",
+    syntax:"FILTER( Table, Condition )",
+    desc:"Returns a table containing only rows where the condition is true. Like SQL WHERE. Returns a TABLE not a single value.",
+    color:"#0F766E",
+    qs:[
+      {
+        q:"What does FILTER() return?",
+        opts:["A single aggregated value","A filtered TABLE — rows where the condition is true","The count of matching rows","A sorted version of the table"],
+        ans:1,
+        ok:"FILTER always returns a TABLE. It checks each row against the condition and keeps only rows where the condition is true. Use it inside CALCULATE when you need complex filter logic.",
+        why:"FILTER = SQL WHERE. Returns TABLE. Never returns a number directly — wrap with SUM/COUNT etc."
+      },
+      {
+        q:"What does && mean in a FILTER condition?",
+        code:"FILTER(\n    Sales_Reference,\n    Sales_Reference[Order_Status] = \"Delivered\"\n        && Sales_Reference[Payment_Method] = \"eSewa\"\n)",
+        opts:["OR — at least one must be true","NOT — exclude matching rows","AND — both conditions must be true","Concatenate two text values"],
+        ans:2,
+        ok:"&& means AND — both conditions must be true for a row to be included. Use || for OR (at least one must be true).",
+        why:"&& = AND. || = OR. Wrap OR groups in ( ) when mixing: cond1 && ( cond2 || cond3 )."
+      },
+      {
+        q:"Which is the correct way to filter Delivered AND eSewa orders?",
+        opts:[
+          "FILTER( Sales_Reference, Sales_Reference[Order_Status] = \"Delivered\" && Sales_Reference[Payment_Method] = \"eSewa\" )",
+          "FILTER( Sales_Reference[Order_Status] = \"Delivered\" )",
+          "FILTER( \"Delivered\", \"eSewa\" )",
+          "FILTER( Sales_Reference ) WHERE Order_Status = \"Delivered\""
+        ],
+        ans:0,
+        ok:"FILTER(Table, Condition) — the table comes first, then the condition. && combines two conditions with AND logic. Both must be true.",
+        why:"Syntax: FILTER( TableName, Condition ). The condition always references the same table with TableName[ColumnName]."
+      },
+      {
+        q:"What does || mean in a DAX condition?",
+        code:"FILTER(\n    Sales_Reference,\n    Sales_Reference[Payment_Method] = \"eSewa\"\n        || Sales_Reference[Payment_Method] = \"Khalti\"\n)",
+        opts:["AND — both must be true","OR — at least one must be true","NOT — exclude these rows","Divides two values"],
+        ans:1,
+        ok:"|| means OR — the row is included if Payment_Method = eSewa OR Payment_Method = Khalti. At least one condition must be true.",
+        why:"|| = OR. Cleaner alternative: use IN { } operator: Sales_Reference[Payment_Method] IN { \"eSewa\", \"Khalti\" }."
+      },
+    ]
+  },
+  {
+    name:"DIVIDE()",
+    syntax:"DIVIDE( Numerator, Denominator, AlternateResult )",
+    desc:"Safe division. Returns AlternateResult (usually 0) when denominator is zero instead of throwing an error.",
+    color:"#0F766E",
+    qs:[
+      {
+        q:"Why use DIVIDE() instead of the / operator?",
+        opts:["DIVIDE() is faster","/ does not work in DAX","DIVIDE() safely handles divide-by-zero by returning the 3rd argument instead of an error","DIVIDE() automatically formats the result as a percentage"],
+        ans:2,
+        ok:"DIVIDE(A, B, 0) returns 0 (the 3rd argument) when B = 0, preventing errors. Using A/B would throw a divide-by-zero error and break your visual.",
+        why:"Always use DIVIDE for any division. The third argument is the safe fallback value when denominator = 0."
+      },
+      {
+        q:"What does DIVIDE( [Total Profit], [Total Revenue], 0 ) return when Total Revenue = 0?",
+        opts:["Error","Infinity","Blank","0 — the third argument (alternate result)"],
+        ans:3,
+        ok:"When the denominator (Total Revenue) = 0, DIVIDE returns the third argument — which is 0. This keeps your visual working instead of showing an error.",
+        why:"Third argument = what to return when denominator is 0. Usually set to 0 for ratios or BLANK() to hide the visual."
+      },
+      {
+        q:"Which measure correctly calculates Profit Margin %?",
+        opts:[
+          "Profit Margin = [Total Profit] / [Total Revenue]",
+          "Profit Margin = DIVIDE( [Total Profit], [Total Revenue], 0 )",
+          "Profit Margin = SUM( Profit ) / SUM( Revenue )",
+          "Profit Margin = CALCULATE( [Total Profit] / [Total Revenue] )"
+        ],
+        ans:1,
+        ok:"DIVIDE([Total Profit], [Total Revenue], 0) is the correct pattern — using measure references and a safe fallback of 0.",
+        why:"Use DIVIDE with measure references [MeasureName] — not raw column SUM() inside DIVIDE. Cleaner and reusable."
+      },
+    ]
+  },
+  {
+    name:"COUNTROWS()",
+    syntax:"COUNTROWS( Table )",
+    desc:"Counts the number of rows in a table. The standard way to count transactions, orders, or records.",
+    color:"#6D28D9",
+    qs:[
+      {
+        q:"What is the difference between COUNTROWS() and COUNT()?",
+        opts:[
+          "They are identical",
+          "COUNTROWS(Table) counts all rows including blanks. COUNT(Column) counts only rows where the column is not blank",
+          "COUNT works on numbers only. COUNTROWS works on all types",
+          "COUNTROWS is faster"
+        ],
+        ans:1,
+        ok:"COUNTROWS(Table) = total rows including blanks. COUNT(Column) = rows where that specific column has a value. For transaction counts, COUNTROWS is more reliable.",
+        why:"Use COUNTROWS(TableName) for total transaction counts. Use COUNT(Column) only when you specifically want to exclude blank rows in that column."
+      },
+      {
+        q:"How do you count only Delivered orders using COUNTROWS?",
+        code:"Delivered Orders =\n    CALCULATE(\n        COUNTROWS( Sales_Reference ),\n        Sales_Reference[Order_Status] = \"Delivered\"\n    )",
+        opts:["This is wrong — COUNTROWS cannot be inside CALCULATE","This is correct — CALCULATE restricts the rows COUNTROWS sees to Delivered only","This counts all rows regardless of the filter","This counts only rows where Order_Status is blank"],
+        ans:1,
+        ok:"CALCULATE changes the filter context to Delivered rows only. Then COUNTROWS counts how many rows remain. This is the standard pattern for conditional row counts.",
+        why:"Always use CALCULATE with COUNTROWS when you need a conditional count."
+      },
+      {
+        q:"COUNTROWS( Sales_Reference ) vs DISTINCTCOUNT( Sales_Reference[Customer_ID] ) — what is the difference?",
+        opts:[
+          "They return the same number",
+          "COUNTROWS counts total transactions (510). DISTINCTCOUNT counts unique customers only (e.g. 100 unique IDs even if they placed multiple orders)",
+          "DISTINCTCOUNT counts total rows. COUNTROWS counts unique values",
+          "COUNTROWS only works in Power Query"
+        ],
+        ans:1,
+        ok:"COUNTROWS = total rows (510 transactions). DISTINCTCOUNT = unique values in a column (e.g. 100 unique customers, each counted once no matter how many orders they placed).",
+        why:"COUNTROWS = total. DISTINCTCOUNT = unique. Know which one to use based on the business question."
+      },
+    ]
+  },
+  {
+    name:"DISTINCTCOUNT()",
+    syntax:"DISTINCTCOUNT( Table[Column] )",
+    desc:"Counts only unique values in a column. Ignores duplicates. Use for 'how many unique customers/products/dates'.",
+    color:"#6D28D9",
+    qs:[
+      {
+        q:"What does DISTINCTCOUNT( Sales_Reference[Customer_ID] ) return?",
+        opts:["The total of all Customer_ID values added together","The count of all Customer_ID rows including duplicates","The number of unique Customer IDs — each customer counted once only","The maximum Customer_ID number"],
+        ans:2,
+        ok:"DISTINCTCOUNT counts each unique value once. If Customer ID 1001 placed 10 orders, it is still counted as 1 unique customer.",
+        why:"DISTINCTCOUNT = unique values. COUNT = all rows. Use DISTINCTCOUNT for 'how many unique customers/items'."
+      },
+      {
+        q:"A customer placed 5 orders. COUNT(Customer_ID) = 5. DISTINCTCOUNT(Customer_ID) for that customer = ?",
+        opts:["5","1","0","Depends on the order status"],
+        ans:1,
+        ok:"DISTINCTCOUNT counts each unique value once regardless of how many times it appears. 5 orders from Customer 1001 = DISTINCTCOUNT of 1 for that customer.",
+        why:"This is the key difference. Use DISTINCTCOUNT when you need 'how many unique people/products' not 'how many total transactions'."
+      },
+    ]
+  },
+  {
+    name:"AVERAGE()",
+    syntax:"AVERAGE( Table[Column] )",
+    desc:"Returns the arithmetic mean — sum divided by count. For weighted averages use AVERAGEX.",
+    color:"#B45309",
+    qs:[
+      {
+        q:"What does AVERAGE( CafeSales[Total Spent] ) calculate?",
+        opts:["The most frequently occurring value","The middle value when sorted","The sum of Total Spent divided by the number of rows — the mean","The highest minus the lowest value"],
+        ans:2,
+        ok:"AVERAGE computes the arithmetic mean. Sum of all Total Spent values divided by how many rows. Useful for Average Order Value KPI.",
+        why:"AVERAGE = mean. MEDIAN = middle value. MODE = most common. Power BI's AVERAGE is the arithmetic mean."
+      },
+      {
+        q:"What is the difference between AVERAGE and AVERAGEX?",
+        opts:[
+          "They are the same",
+          "AVERAGE works on a single column. AVERAGEX evaluates an expression per row then averages the results",
+          "AVERAGEX is faster",
+          "AVERAGE works across tables. AVERAGEX works within one table only"
+        ],
+        ans:1,
+        ok:"AVERAGE(Column) = mean of one column. AVERAGEX(Table, Expression) = evaluate expression per row then take the mean. Like SUMX but for averaging.",
+        why:"AVERAGEX(Table, [Quantity]*[Unit_Price]) = multiply per row, then average. AVERAGE(Column) = average of existing column values."
+      },
+    ]
+  },
+  {
+    name:"ALL()",
+    syntax:"ALL( Table ) or ALL( Table[Column] )",
+    desc:"Removes ALL filters from a table or column. Used inside CALCULATE to return grand totals and calculate % of total.",
+    color:"#1D4ED8",
+    qs:[
+      {
+        q:"What does ALL( Sales_Reference ) do inside CALCULATE?",
+        opts:["Keeps all current filters active","Removes ALL filters from Sales_Reference — every row is visible regardless of slicers or page filters","Removes only the date filter","Sorts the result"],
+        ans:1,
+        ok:"ALL() removes every filter. CALCULATE(SUM(Revenue), ALL(Sales_Reference)) always returns the grand total — ignoring all slicers, page filters, and visual filters.",
+        why:"ALL = ignore all filters = grand total. Used as the denominator in % of Total calculations."
+      },
+      {
+        q:"What is ALL( Sales_Reference[Payment_Method] ) used for?",
+        opts:["Removes all rows where Payment_Method is null","Removes the filter on Payment_Method column only — other filters (like date or location) remain active","Selects all payment methods in a list","Counts all unique payment methods"],
+        ans:1,
+        ok:"ALL(Table[Column]) removes the filter on that specific column only. Other filters (date, location etc.) remain active. More surgical than ALL(Table).",
+        why:"ALL(Table) = remove ALL filters. ALL(Table[Column]) = remove filter on one column only. Choose the right scope."
+      },
+      {
+        q:"Which measure correctly calculates each item's % share of total revenue?",
+        opts:[
+          "Item % = SUM(Revenue) / SUM(Revenue)",
+          "Item % = DIVIDE( SUM(Sales[Revenue_NPR]), CALCULATE(SUM(Sales[Revenue_NPR]), ALL(Sales)), 0 )",
+          "Item % = DIVIDE( SUM(Revenue), COUNTROWS(Sales), 0 )",
+          "Item % = ALL( Sales[Revenue_NPR] )"
+        ],
+        ans:1,
+        ok:"The numerator = this item's revenue (filtered by visual). The denominator uses ALL to remove the item filter = grand total. Dividing gives the % share.",
+        why:"% of Total pattern: DIVIDE( My Value, CALCULATE( SUM(...), ALL(Table) ), 0 ). This is one of the most common DAX patterns."
+      },
+    ]
+  },
+  {
+    name:"ALLEXCEPT()",
+    syntax:"ALLEXCEPT( Table, Table[Col1], Table[Col2], ... )",
+    desc:"Removes ALL filters EXCEPT the columns you specify. Those named columns keep their filter active.",
+    color:"#1D4ED8",
+    qs:[
+      {
+        q:"What is the difference between ALL and ALLEXCEPT?",
+        opts:[
+          "They are the same",
+          "ALL removes every filter. ALLEXCEPT removes all filters EXCEPT the columns you name — those keep their filter",
+          "ALLEXCEPT is just a faster version of ALL",
+          "ALL works on tables. ALLEXCEPT works on columns only"
+        ],
+        ans:1,
+        ok:"ALL = remove everything. ALLEXCEPT(Table, Col) = remove all EXCEPT Col. The named column's filter stays active — useful for group-level totals.",
+        why:"Use ALL for grand total comparisons. Use ALLEXCEPT to compare within a specific group."
+      },
+      {
+        q:"For the Cash row, what does ALLEXCEPT( Sales_Reference, Sales_Reference[Payment_Method] ) return in Total Orders?",
+        opts:["Total orders across ALL payment methods (grand total)","Total Cash orders only — all statuses combined — because Payment_Method filter is KEPT","Only Delivered Cash orders","Zero — ALLEXCEPT removes all data"],
+        ans:1,
+        ok:"ALLEXCEPT keeps the Payment_Method filter active. For the Cash row it sees ALL Cash rows regardless of Order_Status — giving total Cash orders (all statuses combined).",
+        why:"ALLEXCEPT keeps named filter = you see all rows for THIS group only. Grand Total uses ALL (removes everything)."
+      },
+      {
+        q:"Which pattern gives % of revenue within each Payment Method group?",
+        opts:[
+          "DIVIDE( SUM(Revenue), CALCULATE(SUM(Revenue), ALL(Sales)), 0 )",
+          "DIVIDE( SUM(Revenue), CALCULATE(SUM(Revenue), ALLEXCEPT(Sales, Sales[Payment_Method])), 0 )",
+          "DIVIDE( SUM(Revenue), COUNTROWS(Sales), 0 )",
+          "DIVIDE( ALL(Revenue), SUM(Revenue), 0 )"
+        ],
+        ans:1,
+        ok:"ALLEXCEPT keeps Payment_Method filter. Denominator = total for THIS payment method. Result = what % of Cash revenue does each item make — not % of ALL revenue.",
+        why:"ALL = % of grand total. ALLEXCEPT = % within the group. Choose based on what comparison you need."
+      },
+    ]
+  },
+  {
+    name:"RELATED()",
+    syntax:"RELATED( DimensionTable[Column] )",
+    desc:"Fetches a column value from a related table. Works from Many side (FACT) to One side (DIM). Like SQL JOIN or VLOOKUP.",
+    color:"#0F766E",
+    qs:[
+      {
+        q:"What does RELATED( DIM_Products[Category] ) do inside a Sales_Reference query?",
+        opts:["Creates a new relationship in Model View","Returns the Category from DIM_Products for each row in Sales_Reference — like a VLOOKUP","Filters Sales_Reference to show only rows with a matching product","Counts the products in each category"],
+        ans:1,
+        ok:"RELATED follows the relationship from Sales_Reference to DIM_Products and fetches the Category value for that row. Requires the relationship to exist in Model View.",
+        why:"RELATED = SQL JOIN. The relationship must exist in Model View first. It can only go from Many (FACT) to One (DIM)."
+      },
+      {
+        q:"RELATED can only be used from:",
+        opts:["One (DIM) to Many (FACT)","Many (FACT) to One (DIM)","Both directions equally","Only within the same table"],
+        ans:1,
+        ok:"RELATED goes from the Many side (FACT table with repeated keys) to the One side (DIM table with unique keys). The reverse direction requires RELATEDTABLE.",
+        why:"FACT row → RELATED → DIM row: always ONE match. DIM row → RELATED → FACT: MANY matches — impossible to return one value."
+      },
+      {
+        q:"Why did CALCULATE(SUM(Revenue), RELATED(DIM_Date[Month_Name])) throw 'DIM_Date is not defined'?",
+        opts:["Wrong syntax for RELATED","DIM_Date table does not exist in the data model — no relationship has been created","RELATED cannot be used inside CALCULATE","Month_Name column name is wrong"],
+        ans:1,
+        ok:"RELATED requires: 1) the referenced table exists in Power Query, AND 2) a relationship is connected in Model View. If DIM_Date is missing either, RELATED cannot find it.",
+        why:"Fix: Create DIM_Date in Power Query (Reference from fact table), change date column types, then connect in Model View."
+      },
+    ]
+  },
+  {
+    name:"SUMMARIZE()",
+    syntax:"SUMMARIZE( Table, GroupBy_Col, \"MeasureName\", Expression )",
+    desc:"Groups rows and aggregates — like SQL GROUP BY. Group-by columns come first, then name-expression pairs.",
+    color:"#6D28D9",
+    qs:[
+      {
+        q:"What does SUMMARIZE do?",
+        opts:["Adds new columns to a table","Groups rows by one or more columns and calculates aggregations — like SQL GROUP BY","Filters rows based on a condition","Sorts rows by a column"],
+        ans:1,
+        ok:"SUMMARIZE groups rows. SUMMARIZE(Sales, Sales[Item], 'Revenue', SUM(Revenue)) returns one row per Item with the total revenue for each.",
+        why:"SUMMARIZE = SQL GROUP BY. Essential for: revenue by item, orders by month, count by location."
+      },
+      {
+        q:"Why can RELATED() NOT be used directly inside SUMMARIZE as a group-by column?",
+        opts:["RELATED works fine inside SUMMARIZE","SUMMARIZE expects a column name as the group-by argument — RELATED() is a function call. Use ADDCOLUMNS first to add the column, then SUMMARIZE can group by it","RELATED is not valid in Query View","You must use FILTER instead of RELATED"],
+        ans:1,
+        ok:"SUMMARIZE expects a direct column reference like Sales[Item]. RELATED() is a function. Fix: ADDCOLUMNS adds the RELATED column first, then SUMMARIZE groups by that new column name.",
+        why:"Pattern: SUMMARIZE( ADDCOLUMNS(Table, 'Cat', RELATED(DIM[Col])), [Cat], 'Measure', SUM(...))"
+      },
+      {
+        q:"What does this query return?",
+        code:"EVALUATE\n    SUMMARIZE(\n        Sales_Reference,\n        Sales_Reference[Payment_Method],\n        \"Total Revenue\",  SUM( Sales_Reference[Revenue_NPR] ),\n        \"Order Count\",    COUNTROWS( Sales_Reference )\n    )\nORDER BY [Total Revenue] DESC",
+        opts:["One row with the grand total","One row per transaction","One row per Payment Method with total revenue and order count, sorted highest revenue first","One row per month"],
+        ans:2,
+        ok:"SUMMARIZE groups by Payment_Method — so 6 rows (one per method). Each row has Total Revenue (SUM) and Order Count (COUNTROWS) for that payment method. ORDER BY sorts highest first.",
+        why:"SUMMARIZE result always has one row per unique combination of group-by columns."
+      },
+    ]
+  },
+  {
+    name:"ADDCOLUMNS()",
+    syntax:"ADDCOLUMNS( Table, \"ColName\", Expression, ... )",
+    desc:"Adds one or more new calculated columns to a table result. Does NOT change the stored data model — read-only exploration.",
+    color:"#B45309",
+    qs:[
+      {
+        q:"What does ADDCOLUMNS do?",
+        opts:["Removes unwanted columns from a table","Adds new calculated columns to a table result without modifying the stored data","Filters rows based on a condition","Counts rows in a table"],
+        ans:1,
+        ok:"ADDCOLUMNS(Table, 'NewCol', Expression) extends a table with new columns. Perfect for adding Revenue Band labels, vs-average comparisons, or ratio columns.",
+        why:"ADDCOLUMNS is read-only — it creates a virtual table for query results. It does NOT change your actual data model."
+      },
+      {
+        q:"What does this query add to each row?",
+        code:"EVALUATE\nDEFINE\n    VAR _Avg = AVERAGE( Sales_Reference[Revenue_NPR] )\n\nADDCOLUMNS(\n    Sales_Reference,\n    \"vs Average\",     [Revenue_NPR] - _Avg,\n    \"Above Average?\", IF( [Revenue_NPR] > _Avg, \"Yes\", \"No\" )\n)",
+        opts:["Removes rows below average","Adds two new columns: how far above/below average each row is, and a Yes/No flag","Groups rows by average","Returns only the average row"],
+        ans:1,
+        ok:"ADDCOLUMNS adds 'vs Average' (difference from mean) and 'Above Average?' (Yes/No) to every row of Sales_Reference. The VAR calculates the average once and reuses it.",
+        why:"VAR inside DEFINE calculates _Avg once. ADDCOLUMNS uses it for every row — efficient and clean."
+      },
+      {
+        q:"What is the correct way to use ADDCOLUMNS to group by a RELATED column?",
+        opts:[
+          "SUMMARIZE( Sales_Reference, RELATED(DIM_Products[Category]), 'Revenue', SUM(Revenue) )",
+          "SUMMARIZE( ADDCOLUMNS( Sales_Reference, 'Category', RELATED(DIM_Products[Category]) ), [Category], 'Revenue', SUM(Revenue) )",
+          "ADDCOLUMNS( RELATED(DIM_Products[Category]), 'Revenue', SUM(Revenue) )",
+          "RELATED( ADDCOLUMNS( Sales_Reference, 'Category' ) )"
+        ],
+        ans:1,
+        ok:"Step 1: ADDCOLUMNS adds the RELATED column to Sales_Reference. Step 2: SUMMARIZE can then group by [Category] as a normal column reference.",
+        why:"ADDCOLUMNS first, then SUMMARIZE. This is the fix for the RELATED-inside-SUMMARIZE error."
+      },
+    ]
+  },
+  {
+    name:"VAR / DEFINE",
+    syntax:"DEFINE  VAR _name = expression  EVALUATE ...",
+    desc:"VAR stores an intermediate result in a named variable. DEFINE declares variables before EVALUATE. Write once, reuse anywhere.",
+    color:"#6D28D9",
+    qs:[
+      {
+        q:"What is the purpose of VAR in DAX?",
+        opts:["Creates a new table permanently in the model","Stores an intermediate result in a named variable so it can be reused without recalculating","Filters rows from a table","Defines a new relationship between tables"],
+        ans:1,
+        ok:"VAR _name = expression stores the result once. You then use _name anywhere in the query or measure — cleaner code and faster calculation (calculated only once).",
+        why:"VAR = write once, reuse many times. Convention: prefix with _ to distinguish from column names."
+      },
+      {
+        q:"What is the correct order?",
+        opts:["EVALUATE first, then DEFINE","DEFINE first, then EVALUATE","They can be in any order","DEFINE is optional — it always goes last"],
+        ans:1,
+        ok:"DEFINE always comes BEFORE EVALUATE. DEFINE declares your variables. EVALUATE uses them to produce the result.",
+        why:"Think: DEFINE = prepare ingredients. EVALUATE = cook and serve. Wrong order = syntax error."
+      },
+      {
+        q:"A VAR in DAX can store:",
+        opts:["Only numbers","Only text values","A number, a text value, or an entire table — any DAX expression result","Only column references"],
+        ans:2,
+        ok:"VAR can store anything — a single number, a text string, or even an entire table (like a SUMMARIZE result). This makes them extremely flexible.",
+        why:"VAR _Total = SUM(...) stores a number. VAR _Summary = SUMMARIZE(...) stores a whole table — then use _Summary in TOPN, RANKX etc."
+      },
+      {
+        q:"What does DEFINE MEASURE create?",
+        code:"DEFINE\n    MEASURE Sales_Reference[My Revenue] =\n        SUM( Sales_Reference[Revenue_NPR] )\n\nEVALUATE\n    ADDCOLUMNS(\n        VALUES( Sales_Reference[Payment_Method] ),\n        \"Revenue\", [My Revenue]\n    )",
+        opts:["A permanent measure saved to the data model","A temporary measure that only exists for this Query View query — not saved permanently","A calculated column","A relationship between tables"],
+        ans:1,
+        ok:"DEFINE MEASURE creates a temporary measure for use within that specific DAX query only. It is NOT saved to the model. To save permanently, use Modeling tab → New Measure.",
+        why:"DEFINE MEASURE = query-scoped (temporary). Modeling → New Measure = model-scoped (permanent)."
+      },
+    ]
+  },
+  {
+    name:"TOPN() & RANKX()",
+    syntax:"TOPN( N, Table, Column, 0 )  ·  RANKX( Table, Expression, , DESC )",
+    desc:"TOPN returns the top N rows. RANKX assigns a rank number to each row. 0 in TOPN = DESC (highest first).",
+    color:"#15803D",
+    qs:[
+      {
+        q:"What does TOPN( 5, Sales_Reference, Sales_Reference[Revenue_NPR], 0 ) return?",
+        opts:["The 5 cheapest transactions","The 5 highest revenue transactions — 0 means DESC (highest first)","The first 5 rows in the table","5 random rows"],
+        ans:1,
+        ok:"TOPN(5, Table, Column, 0) returns the 5 rows with the highest Revenue_NPR. The 4th argument: 0 = DESC (highest first), 1 = ASC (lowest first).",
+        why:"Remember: 0 = biggest first. 1 = smallest first. Opposite of what you might expect."
+      },
+      {
+        q:"RANKX with DESC gives rank 1 to:",
+        opts:["The smallest value","The largest value","The first row alphabetically","A random row"],
+        ans:1,
+        ok:"RANKX(_Table, [Measure], , DESC) gives rank 1 to the highest value. The payment method with the most revenue gets rank 1.",
+        why:"RANKX DESC = 1 is best/highest. RANKX ASC = 1 is lowest. Ties get the same rank number."
+      },
+      {
+        q:"What does this query return?",
+        code:"EVALUATE\nDEFINE\n    VAR _Summary =\n        SUMMARIZE(\n            Sales_Reference,\n            Sales_Reference[Payment_Method],\n            \"Revenue\", SUM( Sales_Reference[Revenue_NPR] )\n        )\n\nADDCOLUMNS(\n    _Summary,\n    \"Rank\",  RANKX( _Summary, [Revenue], , DESC )\n)\nORDER BY [Rank] ASC",
+        opts:["The top 1 payment method only","6 payment methods each with Revenue and Rank (1 = highest revenue), sorted rank 1 first","All 510 rows with a rank column","An error — RANKX cannot use a VAR table"],
+        ans:1,
+        ok:"_Summary = 6 payment methods with revenue. ADDCOLUMNS adds the Rank column using RANKX. ORDER BY [Rank] ASC sorts rank 1 first. Result: clean leaderboard of payment methods.",
+        why:"Pattern: VAR _Summary = SUMMARIZE → ADDCOLUMNS(_Summary, 'Rank', RANKX(_Summary, [Measure], , DESC))."
+      },
+    ]
+  },
+  {
+    name:"EVALUATE & ORDER BY",
+    syntax:"EVALUATE  <table expression>  ORDER BY  <column>  DESC / ASC",
+    desc:"EVALUATE runs a query in DAX Query View. ORDER BY sorts the result. Both are required knowledge for Query View.",
+    color:"#1D4ED8",
+    qs:[
+      {
+        q:"Every DAX query in Query View must start with:",
+        opts:["SELECT","FROM","EVALUATE","DEFINE"],
+        ans:2,
+        ok:"EVALUATE is mandatory — it tells Power BI to execute the expression and return a table result. No EVALUATE = no result.",
+        why:"EVALUATE = DAX equivalent of SQL SELECT. Think of it as 'execute this and show me the result'."
+      },
+      {
+        q:"Where does ORDER BY go in a DAX query?",
+        opts:["Before EVALUATE","Inside the EVALUATE expression","After the EVALUATE block — outside all other functions","It can go anywhere"],
+        ans:2,
+        ok:"ORDER BY goes OUTSIDE and AFTER the complete EVALUATE expression. It sorts the final result table.",
+        why:"ORDER BY always goes last — after EVALUATE and after all your functions. ASC = lowest first. DESC = highest first."
+      },
+      {
+        q:"What does ROW( 'Total Revenue', SUM(Sales[Revenue_NPR]) ) return?",
+        opts:["All rows of Sales","A single row with one column called 'Total Revenue' showing the grand total","A filtered table","The column names only"],
+        ans:1,
+        ok:"ROW('Label', Expression...) returns a single-row table with named columns. Perfect for seeing multiple KPIs in one query without building a visual.",
+        why:"ROW = 1 result row with named columns. Use it in Query View to see multiple KPIs at once."
+      },
+      {
+        q:"What does VALUES( Sales_Reference[Payment_Method] ) return?",
+        opts:["All 510 rows of Sales_Reference","The sum of all Payment_Method values","A unique list of Payment Method values — one row per method","The count of payment methods"],
+        ans:2,
+        ok:"VALUES returns a single-column table with only unique values. If there are 6 payment methods, VALUES returns 6 rows — one per method.",
+        why:"VALUES = unique list. Simpler than SUMMARIZE when you only need to group by one column."
+      },
+    ]
+  },
+  {
+    name:"Table Functions (M)",
+    syntax:"Table.SelectColumns · Table.Distinct · Table.Sort · Table.AddColumn · Table.TransformColumnTypes",
+    desc:"Power Query M functions that manipulate tables. Used to build DIM_Date and clean data in the let...in block.",
+    color:"#B45309",
+    qs:[
+      {
+        q:"What does Table.SelectColumns( Source, {\"Date\"} ) do?",
+        opts:["Removes the Date column","Keeps ONLY the Date column — removes all others","Filters rows by Date","Sorts by Date ascending"],
+        ans:1,
+        ok:"Table.SelectColumns(table, {columns to keep}) keeps only the named columns. All other columns are removed. The opposite of Table.RemoveColumns.",
+        why:"SelectColumns = KEEP listed columns. RemoveColumns = REMOVE listed columns. Choose based on which is shorter to list."
+      },
+      {
+        q:"What does Table.Distinct( KeepDate ) do in the DIM_Date query?",
+        opts:["Sorts dates alphabetically","Removes rows where Date is null","Removes duplicate rows — each unique date appears only once","Changes the Date column data type"],
+        ans:2,
+        ok:"Table.Distinct removes duplicate rows. If the same date appears 50 times in CafeSales (many orders per day), after Table.Distinct it appears only once.",
+        why:"Always use Table.Distinct when building DIM tables — ensures no duplicate keys which would break relationships."
+      },
+      {
+        q:"What does Table.AddColumn( PreviousStep, \"Month_Name\", each Date.ToText([Date], \"MMMM\") ) do?",
+        opts:["Removes Month_Name column","Renames the Date column","Adds a new column called Month_Name with full month name (e.g. January) for each row","Filters rows to a specific month"],
+        ans:2,
+        ok:"Table.AddColumn(table, 'NewColName', each formula) adds a new column. 'each' runs the formula once per row. Date.ToText([Date], 'MMMM') returns the full month name.",
+        why:"'each' keyword = run this formula for every row one by one. [Date] inside 'each' = the value of the Date column in that row."
+      },
+      {
+        q:"Why do we use Table.TransformColumnTypes after Table.FromList in DIM_Date?",
+        opts:["To sort the dates","To remove duplicates","To change the Date column from the Any type to the Date type — so Power BI treats it as a date not text","To add the Month_Name column"],
+        ans:2,
+        ok:"After Table.FromList, the Date column type is 'Any'. Table.TransformColumnTypes changes it to proper 'type date' so all date functions work correctly and the relationship to the fact table can be created.",
+        why:"Data type must be Date (calendar icon) — not Text or Any. Wrong type = broken date functions and broken relationships."
+      },
+    ]
+  },
+  {
+    name:"Date Functions (M)",
+    syntax:"Date.Month · Date.Year · Date.ToText · Date.StartOfYear · Date.DayOfWeek",
+    desc:"Power Query M functions that extract parts of a date. Used to build DIM_Date calendar columns.",
+    color:"#0F766E",
+    qs:[
+      {
+        q:"What does Date.Month( [Date] ) return for 2023-07-19?",
+        opts:["July","19","2023","7"],
+        ans:3,
+        ok:"Date.Month returns the month as a NUMBER (7 for July). To get the name 'July', use Date.ToText([Date], 'MMMM') instead.",
+        why:"Date.Month = number (1-12). Date.ToText([Date], 'MMMM') = full name. Date.ToText([Date], 'MMM') = short name (Jul)."
+      },
+      {
+        q:"What does Date.StartOfYear( List.Min( SortIt[Date] ) ) return if the earliest date is 2023-09-01?",
+        opts:["2023-09-01","2023-09-30","2023-01-01","2022-12-31"],
+        ans:2,
+        ok:"List.Min finds 2023-09-01. Date.StartOfYear jumps back to January 1 of that year: 2023-01-01. This ensures DIM_Date starts from the beginning of the year.",
+        why:"Date.StartOfYear = Jan 1 of the year. Date.EndOfYear = Dec 31. Always use both to get full year coverage for time intelligence."
+      },
+      {
+        q:"Date.DayOfWeek( [Date], Day.Monday ) >= 5 — what does this condition detect?",
+        opts:["Weekdays (Monday to Friday)","Weekend days (Saturday and Sunday) — they get values 5 and 6 when Monday is 0","Holidays","Days with more than 5 orders"],
+        ans:1,
+        ok:"When Day.Monday is the reference: Monday=0, Tuesday=1, ..., Friday=4, Saturday=5, Sunday=6. Days with value >= 5 (Saturday and Sunday) are weekends.",
+        why:"This condition powers the Is_Weekend column: if Date.DayOfWeek([Date], Day.Monday) >= 5 then 1 else 0."
+      },
+      {
+        q:"What does Date.ToText( [Date], \"dddd\" ) return for a Monday?",
+        opts:["01","Mon","Monday","1"],
+        ans:2,
+        ok:"'dddd' = full day name (Monday). 'ddd' = short day name (Mon). 'MMMM' = full month name. 'MMM' = short month name. 'yyyy' = 4-digit year.",
+        why:"Format strings: 'dddd'=full day, 'ddd'=short day, 'MMMM'=full month, 'MMM'=short month. Memorise these 4."
+      },
+    ]
+  },
+  {
+    name:"List Functions (M)",
+    syntax:"List.Min · List.Max · List.Dates · #duration()",
+    desc:"Power Query M functions that work on lists. List.Dates generates a continuous date range for DIM_Date creation.",
+    color:"#B45309",
+    qs:[
+      {
+        q:"What does List.Min( SortIt[Date] ) return?",
+        opts:["The average of all dates","The last date in the list","The earliest (smallest) date in the Date column","The number of dates in the list"],
+        ans:2,
+        ok:"List.Min returns the smallest value. For dates, smallest = earliest. List.Min(table[DateCol]) finds the first transaction date in your dataset.",
+        why:"List.Min = earliest/smallest. List.Max = latest/largest. Used to find the date range before generating DIM_Date."
+      },
+      {
+        q:"What does List.Dates( StartDate, 365, #duration(1,0,0,0) ) generate?",
+        opts:["A list of only the 1st day of each month","A list of 365 dates starting from StartDate, one per day","A list of only weekday dates","A list of dates from the fact table"],
+        ans:1,
+        ok:"List.Dates generates every date from StartDate for 365 days, stepping 1 day at a time. #duration(1,0,0,0) = 1 day, 0 hours, 0 minutes, 0 seconds.",
+        why:"#duration(days, hours, minutes, seconds). Always use #duration(1,0,0,0) for daily date tables. Generates a gapless continuous calendar."
+      },
+      {
+        q:"What does Duration.Days( EndDate - StartDate ) + 1 calculate?",
+        opts:["The number of months between two dates","The total number of days between StartDate and EndDate inclusive — used to know how many dates to generate","The average number of days","The number of weekdays between the dates"],
+        ans:1,
+        ok:"EndDate - StartDate gives a duration value. Duration.Days converts it to a plain number. + 1 includes the EndDate itself (e.g. Jan 1 to Dec 31 = 365 days but we need 366 including both endpoints).",
+        why:"Always add + 1 to include the last day. Otherwise Dec 31 would be excluded from your DIM_Date table."
+      },
+    ]
+  },
+];
+
+// ═══════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════
+let currentFnIdx  = -1;   // which function is open
+let currentQIdx   = 0;    // which question within the function
+let locked        = false;
+let fnResults     = {};   // { fnIdx: { correct, wrong, total } }
+let totalCorrect  = 0;
+let totalAnswered = 0;
+
+// ═══════════════════════════════════════════════════
+// INIT — build tabs and overview
+// ═══════════════════════════════════════════════════
+function init() {
+  buildTabs();
+  buildOverview();
+  showOverview();
+}
+
+function buildTabs() {
+  const wrap = document.getElementById('fn-tabs');
+  wrap.innerHTML = '';
+  FUNCTIONS.forEach((fn, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'fn-tab';
+    btn.textContent = fn.name;
+    btn.dataset.idx = i;
+    btn.onclick = () => openFunction(i);
+    wrap.appendChild(btn);
+  });
+}
+
+function buildOverview() {
+  const grid = document.getElementById('fn-score-grid');
+  grid.innerHTML = '';
+  FUNCTIONS.forEach((fn, i) => {
+    const r = fnResults[i];
+    const pct = r ? Math.round((r.correct / r.total) * 100) : 0;
+    const col = !r ? '#334155' : pct >= 75 ? '#059669' : pct >= 50 ? '#f59e0b' : '#dc2626';
+    const row = document.createElement('div');
+    row.className = 'fn-score-row';
+    row.innerHTML = `
+      <div class="fn-score-name">${fn.name}</div>
+      <div class="fn-score-bar-wrap">
+        <div class="fn-score-bar" style="width:${pct}%;background:${col}"></div>
+      </div>
+      <div class="fn-score-pct">${r ? pct+'%' : '—'}</div>`;
+    row.style.cursor = 'pointer';
+    row.onclick = () => openFunction(i);
+    grid.appendChild(row);
+  });
+}
+
+function showOverview() {
+  document.getElementById('overall-panel').style.display  = 'block';
+  document.getElementById('fn-header').style.display      = 'none';
+  document.getElementById('prog-wrap').style.display      = 'none';
+  document.getElementById('q-card').style.display         = 'none';
+  document.getElementById('fn-complete').classList.remove('show');
+  // reset active tab
+  document.querySelectorAll('.fn-tab').forEach(t => t.classList.remove('active'));
+}
+
+// ═══════════════════════════════════════════════════
+// OPEN A FUNCTION
+// ═══════════════════════════════════════════════════
+function openFunction(idx) {
+  currentFnIdx = idx;
+  currentQIdx  = 0;
+  locked       = false;
+
+  const fn = FUNCTIONS[idx];
+
+  // Update tabs
+  document.querySelectorAll('.fn-tab').forEach((t, i) => {
+    t.classList.remove('active');
+    if (i === idx) t.classList.add('active');
+  });
+
+  // Hide overview, show function panels
+  document.getElementById('overall-panel').style.display = 'none';
+  document.getElementById('fn-complete').classList.remove('show');
+
+  // Function header
+  document.getElementById('fn-header').style.display  = 'block';
+  document.getElementById('fn-name').textContent      = fn.name;
+  document.getElementById('fn-name').style.color      = fn.color;
+  document.getElementById('fn-syntax').textContent    = fn.syntax;
+  document.getElementById('fn-desc').textContent      = fn.desc;
+
+  document.getElementById('prog-wrap').style.display  = 'block';
+  document.getElementById('q-card').style.display     = 'block';
+
+  // Init results tracking
+  if (!fnResults[idx]) fnResults[idx] = { correct:0, wrong:0, total:fn.qs.length };
+
+  renderQ();
+}
+
+// ═══════════════════════════════════════════════════
+// RENDER QUESTION
+// ═══════════════════════════════════════════════════
+function renderQ() {
+  const fn = FUNCTIONS[currentFnIdx];
+  const q  = fn.qs[currentQIdx];
+  const total = fn.qs.length;
+
+  document.getElementById('prog-label').textContent = `Q ${currentQIdx+1} of ${total}`;
+  document.getElementById('prog-score').textContent = `${fnResults[currentFnIdx]?.correct||0} / ${total} correct`;
+  document.getElementById('prog-fill').style.width  = `${(currentQIdx/total)*100}%`;
+
+  document.getElementById('q-num').textContent = `QUESTION ${currentQIdx+1}`;
+  document.getElementById('q-text').textContent = q.q;
+
+  const ce = document.getElementById('q-code');
+  if (q.code) { ce.textContent = q.code; ce.style.display='block'; }
+  else         { ce.style.display='none'; }
+
+  const ow = document.getElementById('options');
+  ow.innerHTML = '';
+  ['A','B','C','D'].forEach((k,i) => {
+    if (i >= q.opts.length) return;
+    const isCode = q.opts[i] && (q.opts[i].startsWith('Table.') || q.opts[i].startsWith('List.') || q.opts[i].startsWith('Date.') || q.opts[i].includes('SUM(') || q.opts[i].includes('CALCULATE') || q.opts[i].includes('EVALUATE') || q.opts[i].includes('= SUM') || q.opts[i].includes('= DIVIDE'));
+    const d = document.createElement('div');
+    d.className = 'option';
+    d.dataset.idx = i;
+    d.innerHTML = `<div class="opt-key">${k}</div><div class="${isCode?'opt-code':'opt-text'}">${q.opts[i]}</div>`;
+    d.addEventListener('click', () => choose(i));
+    ow.appendChild(d);
+  });
+
+  document.getElementById('feedback').className = 'feedback';
+  document.getElementById('feedback').innerHTML = '';
+  document.getElementById('btn-next').classList.remove('show');
+  locked = false;
+}
+
+// ═══════════════════════════════════════════════════
+// CHOOSE ANSWER
+// ═══════════════════════════════════════════════════
+function choose(idx) {
+  if (locked) return;
+  locked = true;
+
+  const fn = FUNCTIONS[currentFnIdx];
+  const q  = fn.qs[currentQIdx];
+  const isOk = idx === q.ans;
+
+  document.querySelectorAll('.option').forEach((o,i) => {
+    o.classList.add('locked');
+    if (i === idx && isOk)  o.classList.add('correct');
+    if (i === idx && !isOk) o.classList.add('wrong');
+    if (i === q.ans && !isOk) o.classList.add('reveal');
+  });
+
+  if (isOk) { fnResults[currentFnIdx].correct++; totalCorrect++; }
+  else       { fnResults[currentFnIdx].wrong++;                   }
+  totalAnswered++;
+
+  // Update score badge
+  document.getElementById('score-badge').textContent = `Score: ${totalCorrect*10}  |  ${totalCorrect} correct`;
+
+  const fb = document.getElementById('feedback');
+  fb.className = 'feedback '+(isOk?'ok':'bad')+' show';
+  fb.innerHTML = `<strong>${isOk?'Correct! +10':'Incorrect'}</strong>${q.ok}<div class="why">💡 ${q.why}</div>`;
+
+  const btn = document.getElementById('btn-next');
+  btn.classList.add('show');
+  const isLast = currentQIdx === fn.qs.length - 1;
+  btn.textContent = isLast ? 'Finish Function →' : 'Next Question →';
+}
+
+// ═══════════════════════════════════════════════════
+// NEXT QUESTION / FINISH FUNCTION
+// ═══════════════════════════════════════════════════
+function nextQ() {
+  const fn = FUNCTIONS[currentFnIdx];
+  currentQIdx++;
+
+  if (currentQIdx >= fn.qs.length) {
+    showFunctionComplete();
+  } else {
+    renderQ();
+  }
+}
+
+function showFunctionComplete() {
+  document.getElementById('q-card').style.display    = 'none';
+  document.getElementById('prog-wrap').style.display = 'none';
+
+  const r   = fnResults[currentFnIdx];
+  const pct = Math.round((r.correct / r.total) * 100);
+  const fn  = FUNCTIONS[currentFnIdx];
+
+  let title, msg;
+  if (pct === 100) { title = 'Perfect on ' + fn.name; msg = 'You fully understand this function!'; }
+  else if (pct >= 75) { title = 'Good work!'; msg = 'Strong understanding of ' + fn.name + '.'; }
+  else if (pct >= 50) { title = 'Getting there'; msg = 'Review the ' + fn.name + ' examples and try again.'; }
+  else { title = 'Needs practice'; msg = 'Go back through the ' + fn.name + ' course material.'; }
+
+  document.getElementById('fc-title').textContent   = title;
+  document.getElementById('fc-msg').textContent     = msg;
+  document.getElementById('fc-correct').textContent = r.correct;
+  document.getElementById('fc-wrong').textContent   = r.wrong;
+  document.getElementById('fc-pct').textContent     = pct + '%';
+
+  // Update tab style
+  const tabs = document.querySelectorAll('.fn-tab');
+  tabs[currentFnIdx].classList.remove('active');
+  tabs[currentFnIdx].classList.add(pct >= 75 ? 'done-ok' : 'done-mixed');
+
+  // Next button text
+  const nextIdx = currentFnIdx + 1;
+  const nextBtn = document.getElementById('fc-next-btn');
+  if (nextIdx < FUNCTIONS.length) {
+    nextBtn.textContent = 'Next: ' + FUNCTIONS[nextIdx].name + ' →';
+    nextBtn.style.display = 'block';
+  } else {
+    nextBtn.textContent = 'See Overall Results';
+    nextBtn.style.display = 'block';
+  }
+
+  document.getElementById('fn-complete').classList.add('show');
+
+  // Update overview bars
+  buildOverview();
+}
+
+function nextFunction() {
+  const nextIdx = currentFnIdx + 1;
+  if (nextIdx < FUNCTIONS.length) {
+    openFunction(nextIdx);
+  } else {
+    // All done — show overview
+    document.getElementById('fn-header').style.display = 'none';
+    document.getElementById('fn-complete').classList.remove('show');
+    document.getElementById('overall-panel').style.display = 'block';
+    document.querySelectorAll('.fn-tab').forEach(t => t.classList.remove('active'));
+  }
+}
+
+function retryFunction() {
+  fnResults[currentFnIdx] = { correct:0, wrong:0, total:FUNCTIONS[currentFnIdx].qs.length };
+  document.getElementById('fn-complete').classList.remove('show');
+  document.getElementById('fn-header').style.display  = 'block';
+  document.getElementById('prog-wrap').style.display  = 'block';
+  document.getElementById('q-card').style.display     = 'block';
+  currentQIdx = 0;
+  renderQ();
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,1026 @@
+TransactionID,CustomerID,CustomerName,City,Age,TransactionDate,Category,Amount_NPR,PaymentStatus,Channel
+TXN-1001,CUST-218,Rekha Yadav,Birgunj,19,8/2/2024,Utility Bill,2521.44,Success,Mobile App
+TXN-1002,CUST-206,Priya Shrestha,Bhaktapur,26,12/23/2024,Remittance,18332.02,Success,Mobile App
+TXN-1003,CUST-211,Nabin Joshi,Dharan,45,2/22/2024,Mobile Recharge,441.93,Success,Web
+TXN-1004,CUST-220,Binita Lama,Pokhara,30,5/15/2024,Ticket Booking,825.88,Success,Agent
+TXN-1005,CUST-204,Anita Gurung,Kathmandu,33,7/12/2024,Mobile Recharge,596.84,Pending,Agent
+TXN-1006,CUST-212,Sabina Maharjan,Kathmandu,20,10/22/2024,Utility Bill,3670.57,Success,Agent
+TXN-1007,CUST-208,Mina Karki,Chitwan,52,5/28/2024,Mobile Recharge,869.79,Success,Web
+TXN-1008,CUST-209,Dipak Poudel,Kathmandu,23,8/20/2024,Fund Transfer,83493.99,Success,Web
+TXN-1009,CUST-212,Sabina Maharjan,Kathmandu,20,4/17/2024,Fund Transfer,27064.29,Pending,Agent
+TXN-1010,CUST-203,Bikash Thapa,Biratnagar,35,11/7/2024,Fund Transfer,17528.3,Pending,Mobile App
+TXN-1011,CUST-206,Priya Shrestha,Bhaktapur,26,8/24/2024,Remittance,14957.5,Pending,Agent
+TXN-1012,CUST-218,Rekha Yadav,Birgunj,19,4/22/2024,Fund Transfer,32766.13,Success,Mobile App
+TXN-1013,CUST-202,Sita Rai,Pokhara,19,6/10/2024,Remittance,14851.56,Success,Agent
+TXN-1014,CUST-211,Nabin Joshi,Dharan,45,4/18/2024,Fund Transfer,50173.51,Pending,Web
+TXN-1015,CUST-205,Rohan Adhikari,Lalitpur,32,5/15/2024,Utility Bill,1609.82,Failed,Agent
+TXN-1016,CUST-209,Dipak Poudel,Kathmandu,23,10/26/2024,Remittance,45095.5,Success,Web
+TXN-1017,CUST-208,Mina Karki,Chitwan,52,3/11/2024,Insurance,10376.8,Success,Mobile App
+TXN-1018,CUST-205,Rohan Adhikari,Lalitpur,32,11/17/2024,Utility Bill,4064.36,Success,Agent
+TXN-1019,CUST-203,Bikash Thapa,Biratnagar,35,7/16/2024,Remittance,30602.64,Success,Agent
+TXN-1020,CUST-209,Dipak Poudel,Kathmandu,23,10/10/2024,Ticket Booking,7568.23,Pending,Agent
+TXN-1021,CUST-204,Anita Gurung,Kathmandu,33,12/15/2024,Insurance,15266.68,Pending,Web
+TXN-1022,CUST-204,Anita Gurung,Kathmandu,33,5/30/2024,Remittance,9591.57,Success,Agent
+TXN-1023,CUST-209,Dipak Poudel,Kathmandu,23,9/13/2024,Ticket Booking,1839.89,Success,Agent
+TXN-1024,CUST-210,Kamala Basnet,Butwal,55,11/23/2024,Insurance,12570.43,Success,Web
+TXN-1025,CUST-206,Priya Shrestha,Bhaktapur,26,10/3/2024,Ticket Booking,7418.26,Success,Agent
+TXN-1026,CUST-211,Nabin Joshi,Dharan,45,9/7/2024,Mobile Recharge,200.68,Success,Web
+TXN-1027,CUST-208,Mina Karki,Chitwan,52,1/30/2024,Utility Bill,4451.04,Success,Mobile App
+TXN-1028,CUST-216,Sunita Dangol,Bhaktapur,32,2/5/2024,Ticket Booking,4495.3,Success,Mobile App
+TXN-1029,CUST-216,Sunita Dangol,Bhaktapur,32,10/8/2024,Utility Bill,1692.75,Failed,Web
+TXN-1030,CUST-207,Sunil Tamang,Pokhara,24,10/3/2024,Ticket Booking,5974.48,Success,Agent
+TXN-1031,CUST-210,Kamala Basnet,Butwal,55,7/23/2024,Fund Transfer,65162.87,Success,Agent
+TXN-1032,CUST-215,Pramod Pandey,Lalitpur,31,3/2/2024,Utility Bill,1511.14,Success,Mobile App
+TXN-1033,CUST-219,Santosh KC,Kathmandu,53,10/10/2024,Utility Bill,3147.98,Success,Mobile App
+TXN-1034,CUST-202,Sita Rai,Pokhara,19,4/27/2024,Mobile Recharge,914.88,Success,Mobile App
+TXN-1035,CUST-217,Anil Magar,Chitwan,50,5/1/2024,Online Shopping,10133.97,Success,Agent
+TXN-1036,CUST-205,Rohan Adhikari,Lalitpur,32,10/19/2024,Insurance,9980.75,Success,Web
+TXN-1037,CUST-207,Sunil Tamang,Pokhara,24,2/18/2024,Mobile Recharge,693.08,Success,Web
+TXN-1038,CUST-214,Nisha Limbu,Pokhara,23,8/27/2024,Ticket Booking,5968.07,Pending,Agent
+TXN-1039,CUST-204,Anita Gurung,Kathmandu,33,2/1/2024,Remittance,36954.25,Success,Mobile App
+TXN-1040,CUST-207,Sunil Tamang,Pokhara,24,4/7/2024,Insurance,9523.66,Success,Mobile App
+TXN-1041,CUST-209,Dipak Poudel,Kathmandu,23,8/24/2024,Utility Bill,4435.19,Success,Web
+TXN-1042,CUST-218,Rekha Yadav,Birgunj,19,2/20/2024,Mobile Recharge,686.93,Failed,Mobile App
+TXN-1043,CUST-203,Bikash Thapa,Biratnagar,35,5/1/2024,Utility Bill,2328.86,Success,Mobile App
+TXN-1044,CUST-213,Rajan Bista,Nepalgunj,19,1/31/2024,Utility Bill,2205.38,Success,Web
+TXN-1045,CUST-215,Pramod Pandey,Lalitpur,31,5/26/2024,Remittance,35436.39,Pending,Agent
+TXN-1046,CUST-216,Sunita Dangol,Bhaktapur,32,3/20/2024,Utility Bill,1835.19,Success,Agent
+TXN-1047,CUST-218,Rekha Yadav,Birgunj,19,2/1/2024,Fund Transfer,31703.68,Success,Agent
+TXN-1048,CUST-216,Sunita Dangol,Bhaktapur,32,9/14/2024,Ticket Booking,4483.45,Success,Agent
+TXN-1049,CUST-203,Bikash Thapa,Biratnagar,35,4/5/2024,Mobile Recharge,635.53,Pending,Mobile App
+TXN-1050,CUST-213,Rajan Bista,Nepalgunj,19,3/2/2024,Insurance,5678.09,Failed,Mobile App
+TXN-1051,CUST-220,Binita Lama,Pokhara,30,2/11/2024,Remittance,33553.91,Failed,Agent
+TXN-1052,CUST-211,Nabin Joshi,Dharan,45,5/13/2024,Utility Bill,3513.77,Success,Mobile App
+TXN-1053,CUST-209,Dipak Poudel,Kathmandu,23,7/21/2024,Utility Bill,3522.61,Success,Web
+TXN-1054,CUST-211,Nabin Joshi,Dharan,45,2/7/2024,Mobile Recharge,512.46,Failed,Mobile App
+TXN-1055,CUST-203,Bikash Thapa,Biratnagar,35,10/2/2024,Utility Bill,2776.48,Success,Web
+TXN-1056,CUST-203,Bikash Thapa,Biratnagar,35,5/5/2024,Online Shopping,4489.31,Success,Agent
+TXN-1057,CUST-210,Kamala Basnet,Butwal,55,11/9/2024,Ticket Booking,5404.82,Success,Agent
+TXN-1058,CUST-218,Rekha Yadav,Birgunj,19,6/2/2024,Fund Transfer,10806.86,Success,Web
+TXN-1059,CUST-204,Anita Gurung,Kathmandu,33,2/24/2024,Fund Transfer,55545.75,Success,Web
+TXN-1060,CUST-220,Binita Lama,Pokhara,30,4/17/2024,Fund Transfer,34616.59,Pending,Agent
+TXN-1061,CUST-209,Dipak Poudel,Kathmandu,23,9/15/2024,Remittance,14053.82,Success,Mobile App
+TXN-1062,CUST-214,Nisha Limbu,Pokhara,23,5/21/2024,Mobile Recharge,103.19,Success,Agent
+TXN-1063,CUST-209,Dipak Poudel,Kathmandu,23,3/23/2024,Fund Transfer,44462.63,Pending,Web
+TXN-1064,CUST-218,Rekha Yadav,Birgunj,19,1/5/2024,Mobile Recharge,167.72,Pending,Mobile App
+TXN-1065,CUST-218,Rekha Yadav,Birgunj,19,1/19/2024,Ticket Booking,3269.12,Failed,Mobile App
+TXN-1066,CUST-214,Nisha Limbu,Pokhara,23,3/6/2024,Mobile Recharge,377.43,Success,Web
+TXN-1067,CUST-207,Sunil Tamang,Pokhara,24,12/15/2024,Utility Bill,3501.2,Success,Agent
+TXN-1068,CUST-214,Nisha Limbu,Pokhara,23,11/13/2024,Fund Transfer,15878.06,Success,Mobile App
+TXN-1069,CUST-206,Priya Shrestha,Bhaktapur,26,7/30/2024,Mobile Recharge,261.42,Success,Web
+TXN-1070,CUST-208,Mina Karki,Chitwan,52,5/16/2024,Utility Bill,4043.19,Success,Web
+TXN-1071,CUST-202,Sita Rai,Pokhara,19,8/28/2024,Utility Bill,1398.08,Success,Web
+TXN-1072,CUST-210,Kamala Basnet,Butwal,55,4/26/2024,Utility Bill,606.49,Success,Web
+TXN-1073,CUST-211,Nabin Joshi,Dharan,45,5/22/2024,Ticket Booking,1020.66,Success,Web
+TXN-1074,CUST-217,Anil Magar,Chitwan,50,7/23/2024,Fund Transfer,98124.39,Failed,Web
+TXN-1075,CUST-201,Aarav Sharma,Kathmandu,25,2/29/2024,Online Shopping,2924.95,Success,Mobile App
+TXN-1076,CUST-204,Anita Gurung,Kathmandu,33,11/1/2024,Remittance,18592.98,Success,Web
+TXN-1077,CUST-220,Binita Lama,Pokhara,30,9/18/2024,Mobile Recharge,446.68,Failed,Mobile App
+TXN-1078,CUST-209,Dipak Poudel,Kathmandu,23,1/23/2024,Fund Transfer,43887.72,Failed,Agent
+TXN-1079,CUST-207,Sunil Tamang,Pokhara,24,7/5/2024,Remittance,5358.74,Pending,Web
+TXN-1080,CUST-220,Binita Lama,Pokhara,30,6/9/2024,Fund Transfer,84877.52,Pending,Web
+TXN-1081,CUST-217,Anil Magar,Chitwan,50,6/7/2024,Fund Transfer,41135.09,Success,Agent
+TXN-1082,CUST-210,Kamala Basnet,Butwal,55,10/10/2024,Utility Bill,1363.28,Pending,Web
+TXN-1083,CUST-206,Priya Shrestha,Bhaktapur,26,11/11/2024,Insurance,6718.05,Failed,Mobile App
+TXN-1084,CUST-210,Kamala Basnet,Butwal,55,5/26/2024,Utility Bill,2434.5,Failed,Agent
+TXN-1085,CUST-211,Nabin Joshi,Dharan,45,8/26/2024,Remittance,23223.67,Success,Agent
+TXN-1086,CUST-216,Sunita Dangol,Bhaktapur,32,3/27/2024,Fund Transfer,8937.16,Failed,Agent
+TXN-1087,CUST-220,Binita Lama,Pokhara,30,6/20/2024,Mobile Recharge,836.58,Success,Agent
+TXN-1088,CUST-210,Kamala Basnet,Butwal,55,4/25/2024,Ticket Booking,1993.47,Success,Mobile App
+TXN-1089,CUST-208,Mina Karki,Chitwan,52,8/31/2024,Insurance,17145.02,Success,Web
+TXN-1090,CUST-214,Nisha Limbu,Pokhara,23,11/18/2024,Insurance,4694.27,Pending,Web
+TXN-1091,CUST-216,Sunita Dangol,Bhaktapur,32,7/23/2024,Utility Bill,1164.07,Pending,Mobile App
+TXN-1092,CUST-204,Anita Gurung,Kathmandu,33,8/5/2024,Utility Bill,1291.49,Pending,Agent
+TXN-1093,CUST-215,Pramod Pandey,Lalitpur,31,1/26/2024,Insurance,5734.77,Success,Web
+TXN-1094,CUST-205,Rohan Adhikari,Lalitpur,32,8/25/2024,Fund Transfer,53347.62,Failed,Agent
+TXN-1095,CUST-211,Nabin Joshi,Dharan,45,8/14/2024,Insurance,16485.12,Failed,Web
+TXN-1096,CUST-218,Rekha Yadav,Birgunj,19,8/16/2024,Utility Bill,3846.45,Success,Web
+TXN-1097,CUST-209,Dipak Poudel,Kathmandu,23,5/6/2024,Ticket Booking,5282.46,Failed,Web
+TXN-1098,CUST-208,Mina Karki,Chitwan,52,5/20/2024,Remittance,5719.2,Success,Mobile App
+TXN-1099,CUST-209,Dipak Poudel,Kathmandu,23,6/20/2024,Online Shopping,13427.49,Success,Mobile App
+TXN-1100,CUST-205,Rohan Adhikari,Lalitpur,32,4/28/2024,Remittance,35309.59,Pending,Mobile App
+TXN-1101,CUST-203,Bikash Thapa,Biratnagar,35,7/31/2024,Remittance,17882.31,Success,Web
+TXN-1102,CUST-202,Sita Rai,Pokhara,19,4/15/2024,Ticket Booking,3651.08,Failed,Agent
+TXN-1103,CUST-201,Aarav Sharma,Kathmandu,25,10/21/2024,Remittance,24895.03,Success,Web
+TXN-1104,CUST-213,Rajan Bista,Nepalgunj,19,8/2/2024,Insurance,15202.8,Failed,Agent
+TXN-1105,CUST-208,Mina Karki,Chitwan,52,9/6/2024,Utility Bill,1728.21,Success,Mobile App
+TXN-1106,CUST-213,Rajan Bista,Nepalgunj,19,6/21/2024,Fund Transfer,68074.62,Success,Agent
+TXN-1107,CUST-206,Priya Shrestha,Bhaktapur,26,8/27/2024,Utility Bill,4913.25,Failed,Mobile App
+TXN-1108,CUST-213,Rajan Bista,Nepalgunj,19,10/30/2024,Insurance,13597,Success,Agent
+TXN-1109,CUST-214,Nisha Limbu,Pokhara,23,3/10/2024,Ticket Booking,3962.74,Success,Web
+TXN-1110,CUST-213,Rajan Bista,Nepalgunj,19,6/16/2024,Utility Bill,2546.15,Success,Web
+TXN-1111,CUST-209,Dipak Poudel,Kathmandu,23,8/3/2024,Online Shopping,12573.19,Success,Mobile App
+TXN-1112,CUST-218,Rekha Yadav,Birgunj,19,1/27/2024,Online Shopping,3596.07,Success,Agent
+TXN-1113,CUST-202,Sita Rai,Pokhara,19,1/16/2024,Utility Bill,1397.12,Success,Agent
+TXN-1114,CUST-205,Rohan Adhikari,Lalitpur,32,5/2/2024,Utility Bill,2631.02,Success,Agent
+TXN-1115,CUST-207,Sunil Tamang,Pokhara,24,8/26/2024,Fund Transfer,25996.25,Success,Mobile App
+TXN-1116,CUST-220,Binita Lama,Pokhara,30,11/6/2024,Fund Transfer,71976.54,Success,Web
+TXN-1117,CUST-204,Anita Gurung,Kathmandu,33,10/23/2024,Mobile Recharge,936,Failed,Agent
+TXN-1118,CUST-213,Rajan Bista,Nepalgunj,19,7/22/2024,Fund Transfer,20233.81,Failed,Agent
+TXN-1119,CUST-208,Mina Karki,Chitwan,52,2/22/2024,Fund Transfer,77361.85,Pending,Agent
+TXN-1120,CUST-204,Anita Gurung,Kathmandu,33,10/16/2024,Ticket Booking,808.02,Failed,Web
+TXN-1121,CUST-212,Sabina Maharjan,Kathmandu,20,2/5/2024,Insurance,13303.32,Success,Web
+TXN-1122,CUST-216,Sunita Dangol,Bhaktapur,32,2/24/2024,Remittance,48117.8,Pending,Web
+TXN-1123,CUST-205,Rohan Adhikari,Lalitpur,32,8/10/2024,Utility Bill,3802.08,Pending,Web
+TXN-1124,CUST-220,Binita Lama,Pokhara,30,10/2/2024,Ticket Booking,4126.23,Success,Agent
+TXN-1125,CUST-219,Santosh KC,Kathmandu,53,5/17/2024,Online Shopping,12820.18,Success,Web
+TXN-1126,CUST-215,Pramod Pandey,Lalitpur,31,5/4/2024,Ticket Booking,3985.31,Failed,Agent
+TXN-1127,CUST-213,Rajan Bista,Nepalgunj,19,6/21/2024,Mobile Recharge,544.88,Success,Mobile App
+TXN-1128,CUST-216,Sunita Dangol,Bhaktapur,32,4/18/2024,Online Shopping,12028.14,Success,Web
+TXN-1129,CUST-220,Binita Lama,Pokhara,30,12/25/2024,Online Shopping,8470.13,Failed,Mobile App
+TXN-1130,CUST-203,Bikash Thapa,Biratnagar,35,5/3/2024,Fund Transfer,40939.6,Failed,Mobile App
+TXN-1131,CUST-216,Sunita Dangol,Bhaktapur,32,11/26/2024,Fund Transfer,49336.72,Success,Mobile App
+TXN-1132,CUST-210,Kamala Basnet,Butwal,55,4/23/2024,Remittance,35205.78,Success,Agent
+TXN-1133,CUST-219,Santosh KC,Kathmandu,53,7/7/2024,Remittance,28566.7,Success,Web
+TXN-1134,CUST-218,Rekha Yadav,Birgunj,19,6/18/2024,Online Shopping,10631.97,Success,Web
+TXN-1135,CUST-209,Dipak Poudel,Kathmandu,23,4/28/2024,Mobile Recharge,749.16,Success,Mobile App
+TXN-1136,CUST-218,Rekha Yadav,Birgunj,19,12/19/2024,Utility Bill,1361.93,Pending,Web
+TXN-1137,CUST-209,Dipak Poudel,Kathmandu,23,10/28/2024,Ticket Booking,4434.78,Success,Mobile App
+TXN-1138,CUST-207,Sunil Tamang,Pokhara,24,5/31/2024,Utility Bill,2123.96,Success,Mobile App
+TXN-1139,CUST-218,Rekha Yadav,Birgunj,19,3/5/2024,Online Shopping,969.08,Success,Agent
+TXN-1140,CUST-210,Kamala Basnet,Butwal,55,12/23/2024,Utility Bill,3370.41,Success,Mobile App
+TXN-1141,CUST-201,Aarav Sharma,Kathmandu,25,10/20/2024,Online Shopping,7200.14,Success,Web
+TXN-1142,CUST-206,Priya Shrestha,Bhaktapur,26,1/27/2024,Online Shopping,14133.63,Success,Mobile App
+TXN-1143,CUST-203,Bikash Thapa,Biratnagar,35,7/24/2024,Remittance,5555.94,Pending,Agent
+TXN-1144,CUST-202,Sita Rai,Pokhara,19,3/18/2024,Utility Bill,4150.14,Success,Mobile App
+TXN-1145,CUST-208,Mina Karki,Chitwan,52,3/1/2024,Insurance,15524.43,Failed,Agent
+TXN-1146,CUST-220,Binita Lama,Pokhara,30,4/25/2024,Ticket Booking,4419.29,Success,Web
+TXN-1147,CUST-210,Kamala Basnet,Butwal,55,10/28/2024,Remittance,16658.25,Failed,Mobile App
+TXN-1148,CUST-220,Binita Lama,Pokhara,30,2/20/2024,Ticket Booking,2058.41,Success,Web
+TXN-1149,CUST-203,Bikash Thapa,Biratnagar,35,3/21/2024,Utility Bill,1282.16,Success,Mobile App
+TXN-1150,CUST-201,Aarav Sharma,Kathmandu,25,7/28/2024,Remittance,35089.81,Success,Web
+TXN-1151,CUST-202,Sita Rai,Pokhara,19,4/28/2024,Online Shopping,10692.25,Pending,Web
+TXN-1152,CUST-203,Bikash Thapa,Biratnagar,35,12/17/2024,Utility Bill,4657.6,Pending,Agent
+TXN-1153,CUST-207,Sunil Tamang,Pokhara,24,8/5/2024,Mobile Recharge,590.11,Pending,Mobile App
+TXN-1154,CUST-209,Dipak Poudel,Kathmandu,23,3/13/2024,Mobile Recharge,153.67,Success,Agent
+TXN-1155,CUST-219,Santosh KC,Kathmandu,53,5/27/2024,Remittance,7968.98,Pending,Web
+TXN-1156,CUST-213,Rajan Bista,Nepalgunj,19,5/19/2024,Insurance,11259.65,Success,Mobile App
+TXN-1157,CUST-220,Binita Lama,Pokhara,30,1/21/2024,Remittance,37257.63,Failed,Web
+TXN-1158,CUST-201,Aarav Sharma,Kathmandu,25,2/16/2024,Utility Bill,4828.6,Failed,Agent
+TXN-1159,CUST-201,Aarav Sharma,Kathmandu,25,12/10/2024,Ticket Booking,2521.33,Success,Mobile App
+TXN-1160,CUST-216,Sunita Dangol,Bhaktapur,32,9/22/2024,Fund Transfer,44501.83,Success,Mobile App
+TXN-1161,CUST-219,Santosh KC,Kathmandu,53,8/11/2024,Fund Transfer,81517.37,Success,Web
+TXN-1162,CUST-212,Sabina Maharjan,Kathmandu,20,7/28/2024,Online Shopping,5019.56,Success,Mobile App
+TXN-1163,CUST-211,Nabin Joshi,Dharan,45,7/29/2024,Fund Transfer,49799.17,Pending,Web
+TXN-1164,CUST-218,Rekha Yadav,Birgunj,19,1/19/2024,Remittance,6226.87,Success,Web
+TXN-1165,CUST-204,Anita Gurung,Kathmandu,33,7/25/2024,Ticket Booking,4359.47,Success,Agent
+TXN-1166,CUST-218,Rekha Yadav,Birgunj,19,8/24/2024,Remittance,4601.8,Failed,Web
+TXN-1167,CUST-220,Binita Lama,Pokhara,30,9/12/2024,Fund Transfer,44483.08,Success,Mobile App
+TXN-1168,CUST-209,Dipak Poudel,Kathmandu,23,10/8/2024,Utility Bill,4674.53,Success,Agent
+TXN-1169,CUST-216,Sunita Dangol,Bhaktapur,32,3/3/2024,Mobile Recharge,975.83,Failed,Mobile App
+TXN-1170,CUST-206,Priya Shrestha,Bhaktapur,26,6/8/2024,Insurance,1259.81,Success,Mobile App
+TXN-1171,CUST-208,Mina Karki,Chitwan,52,2/28/2024,Remittance,47458.92,Pending,Mobile App
+TXN-1172,CUST-216,Sunita Dangol,Bhaktapur,32,5/29/2024,Insurance,14402.82,Success,Web
+TXN-1173,CUST-216,Sunita Dangol,Bhaktapur,32,5/4/2024,Remittance,28460.72,Success,Mobile App
+TXN-1174,CUST-220,Binita Lama,Pokhara,30,9/17/2024,Fund Transfer,87992.96,Success,Web
+TXN-1175,CUST-214,Nisha Limbu,Pokhara,23,6/23/2024,Ticket Booking,4308.03,Success,Web
+TXN-1176,CUST-210,Kamala Basnet,Butwal,55,10/27/2024,Insurance,19979.14,Success,Mobile App
+TXN-1177,CUST-215,Pramod Pandey,Lalitpur,31,10/2/2024,Remittance,18565.95,Failed,Agent
+TXN-1178,CUST-213,Rajan Bista,Nepalgunj,19,8/21/2024,Online Shopping,13083.14,Pending,Mobile App
+TXN-1179,CUST-219,Santosh KC,Kathmandu,53,7/15/2024,Utility Bill,4352.06,Success,Mobile App
+TXN-1180,CUST-211,Nabin Joshi,Dharan,45,8/30/2024,Fund Transfer,91386.3,Success,Web
+TXN-1181,CUST-205,Rohan Adhikari,Lalitpur,32,9/10/2024,Mobile Recharge,213.62,Failed,Web
+TXN-1182,CUST-204,Anita Gurung,Kathmandu,33,8/13/2024,Mobile Recharge,573.36,Success,Mobile App
+TXN-1183,CUST-205,Rohan Adhikari,Lalitpur,32,7/28/2024,Ticket Booking,5410.86,Success,Mobile App
+TXN-1184,CUST-216,Sunita Dangol,Bhaktapur,32,5/15/2024,Online Shopping,9461.91,Success,Agent
+TXN-1185,CUST-203,Bikash Thapa,Biratnagar,35,6/17/2024,Ticket Booking,5557.68,Failed,Web
+TXN-1186,CUST-211,Nabin Joshi,Dharan,45,11/16/2024,Fund Transfer,88800.15,Success,Agent
+TXN-1187,CUST-202,Sita Rai,Pokhara,19,11/12/2024,Mobile Recharge,311.29,Pending,Web
+TXN-1188,CUST-208,Mina Karki,Chitwan,52,2/16/2024,Remittance,48960.21,Pending,Agent
+TXN-1189,CUST-204,Anita Gurung,Kathmandu,33,8/15/2024,Utility Bill,3623.01,Success,Mobile App
+TXN-1190,CUST-211,Nabin Joshi,Dharan,45,1/29/2024,Online Shopping,5569.41,Success,Mobile App
+TXN-1191,CUST-208,Mina Karki,Chitwan,52,9/28/2024,Remittance,29164.55,Success,Mobile App
+TXN-1192,CUST-206,Priya Shrestha,Bhaktapur,26,2/10/2024,Insurance,17545.95,Failed,Agent
+TXN-1193,CUST-208,Mina Karki,Chitwan,52,9/11/2024,Insurance,3719.24,Success,Agent
+TXN-1194,CUST-209,Dipak Poudel,Kathmandu,23,8/23/2024,Online Shopping,10102.56,Success,Web
+TXN-1195,CUST-218,Rekha Yadav,Birgunj,19,3/21/2024,Mobile Recharge,497.56,Success,Agent
+TXN-1196,CUST-210,Kamala Basnet,Butwal,55,11/23/2024,Remittance,35135.05,Success,Web
+TXN-1197,CUST-207,Sunil Tamang,Pokhara,24,7/15/2024,Ticket Booking,4124.06,Success,Web
+TXN-1198,CUST-219,Santosh KC,Kathmandu,53,7/2/2024,Insurance,6621.58,Pending,Web
+TXN-1199,CUST-201,Aarav Sharma,Kathmandu,25,12/3/2024,Remittance,15175.06,Failed,Agent
+TXN-1200,CUST-202,Sita Rai,Pokhara,19,11/6/2024,Fund Transfer,49924.37,Success,Mobile App
+TXN-1201,CUST-220,Binita Lama,Pokhara,30,6/29/2024,Utility Bill,3364.78,Failed,Web
+TXN-1202,CUST-205,Rohan Adhikari,Lalitpur,32,11/17/2024,Mobile Recharge,913.06,Pending,Mobile App
+TXN-1203,CUST-210,Kamala Basnet,Butwal,55,8/13/2024,Mobile Recharge,621.62,Pending,Mobile App
+TXN-1204,CUST-203,Bikash Thapa,Biratnagar,35,5/31/2024,Online Shopping,11287.97,Success,Mobile App
+TXN-1205,CUST-205,Rohan Adhikari,Lalitpur,32,10/3/2024,Online Shopping,8103.53,Success,Mobile App
+TXN-1206,CUST-209,Dipak Poudel,Kathmandu,23,9/3/2024,Ticket Booking,2713.56,Success,Mobile App
+TXN-1207,CUST-215,Pramod Pandey,Lalitpur,31,2/8/2024,Utility Bill,3893.68,Success,Agent
+TXN-1208,CUST-213,Rajan Bista,Nepalgunj,19,10/12/2024,Online Shopping,1627.45,Success,Mobile App
+TXN-1209,CUST-209,Dipak Poudel,Kathmandu,23,10/1/2024,Mobile Recharge,509.31,Pending,Agent
+TXN-1210,CUST-209,Dipak Poudel,Kathmandu,23,10/26/2024,Remittance,41476.03,Success,Mobile App
+TXN-1211,CUST-208,Mina Karki,Chitwan,52,8/29/2024,Mobile Recharge,657.59,Failed,Web
+TXN-1212,CUST-220,Binita Lama,Pokhara,30,4/23/2024,Fund Transfer,6790.1,Success,Agent
+TXN-1213,CUST-210,Kamala Basnet,Butwal,55,11/28/2024,Remittance,7600.44,Success,Mobile App
+TXN-1214,CUST-210,Kamala Basnet,Butwal,55,9/9/2024,Mobile Recharge,187.47,Failed,Mobile App
+TXN-1215,CUST-213,Rajan Bista,Nepalgunj,19,8/20/2024,Online Shopping,10156.15,Pending,Agent
+TXN-1216,CUST-218,Rekha Yadav,Birgunj,19,8/2/2024,Insurance,15103.11,Success,Web
+TXN-1217,CUST-204,Anita Gurung,Kathmandu,33,9/7/2024,Insurance,8754.2,Success,Mobile App
+TXN-1218,CUST-212,Sabina Maharjan,Kathmandu,20,4/21/2024,Remittance,23345.4,Success,Web
+TXN-1219,CUST-204,Anita Gurung,Kathmandu,33,12/17/2024,Online Shopping,8303.65,Pending,Web
+TXN-1220,CUST-202,Sita Rai,Pokhara,19,7/22/2024,Online Shopping,3090.19,Success,Web
+TXN-1221,CUST-203,Bikash Thapa,Biratnagar,35,12/5/2024,Utility Bill,3387.67,Failed,Mobile App
+TXN-1222,CUST-202,Sita Rai,Pokhara,19,6/19/2024,Utility Bill,4949.69,Failed,Mobile App
+TXN-1223,CUST-203,Bikash Thapa,Biratnagar,35,10/10/2024,Utility Bill,3138.72,Success,Web
+TXN-1224,CUST-205,Rohan Adhikari,Lalitpur,32,11/1/2024,Mobile Recharge,349.55,Success,Mobile App
+TXN-1225,CUST-218,Rekha Yadav,Birgunj,19,5/8/2024,Ticket Booking,1808.73,Pending,Mobile App
+TXN-1226,CUST-205,Rohan Adhikari,Lalitpur,32,1/8/2024,Online Shopping,11912.77,Success,Agent
+TXN-1227,CUST-211,Nabin Joshi,Dharan,45,1/9/2024,Utility Bill,1694.15,Success,Agent
+TXN-1228,CUST-214,Nisha Limbu,Pokhara,23,9/26/2024,Mobile Recharge,771.1,Success,Web
+TXN-1229,CUST-212,Sabina Maharjan,Kathmandu,20,9/19/2024,Insurance,3072.03,Failed,Mobile App
+TXN-1230,CUST-220,Binita Lama,Pokhara,30,1/23/2024,Fund Transfer,78431.09,Pending,Agent
+TXN-1231,CUST-210,Kamala Basnet,Butwal,55,8/22/2024,Fund Transfer,96420.61,Success,Web
+TXN-1232,CUST-213,Rajan Bista,Nepalgunj,19,8/6/2024,Fund Transfer,11242.2,Pending,Web
+TXN-1233,CUST-203,Bikash Thapa,Biratnagar,35,2/11/2024,Online Shopping,9241.97,Success,Mobile App
+TXN-1234,CUST-209,Dipak Poudel,Kathmandu,23,11/15/2024,Fund Transfer,58743.79,Pending,Web
+TXN-1235,CUST-213,Rajan Bista,Nepalgunj,19,11/1/2024,Insurance,6603.06,Failed,Agent
+TXN-1236,CUST-214,Nisha Limbu,Pokhara,23,2/20/2024,Ticket Booking,5763.35,Pending,Agent
+TXN-1237,CUST-218,Rekha Yadav,Birgunj,19,4/20/2024,Remittance,23674.64,Success,Web
+TXN-1238,CUST-211,Nabin Joshi,Dharan,45,8/20/2024,Remittance,21967.5,Success,Web
+TXN-1239,CUST-214,Nisha Limbu,Pokhara,23,6/9/2024,Fund Transfer,25861.53,Success,Agent
+TXN-1240,CUST-216,Sunita Dangol,Bhaktapur,32,2/4/2024,Mobile Recharge,848.59,Success,Web
+TXN-1241,CUST-204,Anita Gurung,Kathmandu,33,7/9/2024,Ticket Booking,1475.87,Success,Agent
+TXN-1242,CUST-218,Rekha Yadav,Birgunj,19,10/14/2024,Online Shopping,10149.19,Success,Web
+TXN-1243,CUST-214,Nisha Limbu,Pokhara,23,1/27/2024,Online Shopping,9126.03,Success,Mobile App
+TXN-1244,CUST-219,Santosh KC,Kathmandu,53,9/16/2024,Utility Bill,1196.29,Success,Mobile App
+TXN-1245,CUST-204,Anita Gurung,Kathmandu,33,6/28/2024,Ticket Booking,4671.99,Success,Web
+TXN-1246,CUST-219,Santosh KC,Kathmandu,53,4/25/2024,Ticket Booking,3718.34,Failed,Agent
+TXN-1247,CUST-220,Binita Lama,Pokhara,30,12/11/2024,Fund Transfer,55895.61,Failed,Agent
+TXN-1248,CUST-209,Dipak Poudel,Kathmandu,23,1/15/2024,Utility Bill,1729.72,Success,Web
+TXN-1249,CUST-212,Sabina Maharjan,Kathmandu,20,1/4/2024,Utility Bill,4414.38,Failed,Agent
+TXN-1250,CUST-213,Rajan Bista,Nepalgunj,19,2/5/2024,Utility Bill,3834.36,Success,Mobile App
+TXN-1251,CUST-217,Anil Magar,Chitwan,50,4/20/2024,Remittance,22151.96,Success,Mobile App
+TXN-1252,CUST-212,Sabina Maharjan,Kathmandu,20,6/8/2024,Fund Transfer,32776.1,Failed,Agent
+TXN-1253,CUST-203,Bikash Thapa,Biratnagar,35,1/27/2024,Utility Bill,1208.34,Failed,Mobile App
+TXN-1254,CUST-203,Bikash Thapa,Biratnagar,35,5/19/2024,Remittance,33773.06,Success,Agent
+TXN-1255,CUST-215,Pramod Pandey,Lalitpur,31,7/31/2024,Online Shopping,3468.86,Failed,Mobile App
+TXN-1256,CUST-212,Sabina Maharjan,Kathmandu,20,8/8/2024,Mobile Recharge,354.92,Pending,Agent
+TXN-1257,CUST-216,Sunita Dangol,Bhaktapur,32,9/26/2024,Fund Transfer,31187.73,Success,Web
+TXN-1258,CUST-220,Binita Lama,Pokhara,30,1/29/2024,Mobile Recharge,283.98,Success,Mobile App
+TXN-1259,CUST-209,Dipak Poudel,Kathmandu,23,5/28/2024,Online Shopping,2063.77,Success,Agent
+TXN-1260,CUST-214,Nisha Limbu,Pokhara,23,3/30/2024,Utility Bill,2210.93,Pending,Mobile App
+TXN-1261,CUST-217,Anil Magar,Chitwan,50,10/13/2024,Ticket Booking,5510.36,Success,Mobile App
+TXN-1262,CUST-213,Rajan Bista,Nepalgunj,19,1/22/2024,Remittance,2899.59,Success,Web
+TXN-1263,CUST-219,Santosh KC,Kathmandu,53,8/7/2024,Insurance,8684.03,Pending,Web
+TXN-1264,CUST-210,Kamala Basnet,Butwal,55,2/28/2024,Remittance,3001.11,Success,Mobile App
+TXN-1265,CUST-220,Binita Lama,Pokhara,30,8/23/2024,Ticket Booking,5672.08,Success,Mobile App
+TXN-1266,CUST-214,Nisha Limbu,Pokhara,23,2/24/2024,Utility Bill,2460.54,Success,Agent
+TXN-1267,CUST-203,Bikash Thapa,Biratnagar,35,7/21/2024,Ticket Booking,2827.06,Success,Mobile App
+TXN-1268,CUST-211,Nabin Joshi,Dharan,45,3/27/2024,Mobile Recharge,559.43,Success,Agent
+TXN-1269,CUST-217,Anil Magar,Chitwan,50,4/9/2024,Ticket Booking,3120.31,Pending,Agent
+TXN-1270,CUST-205,Rohan Adhikari,Lalitpur,32,4/30/2024,Mobile Recharge,231.8,Success,Mobile App
+TXN-1271,CUST-220,Binita Lama,Pokhara,30,3/19/2024,Ticket Booking,6193.64,Success,Mobile App
+TXN-1272,CUST-216,Sunita Dangol,Bhaktapur,32,8/25/2024,Ticket Booking,4728.02,Failed,Web
+TXN-1273,CUST-219,Santosh KC,Kathmandu,53,11/25/2024,Fund Transfer,98659.93,Success,Agent
+TXN-1274,CUST-211,Nabin Joshi,Dharan,45,3/18/2024,Remittance,5277.74,Success,Agent
+TXN-1275,CUST-210,Kamala Basnet,Butwal,55,5/20/2024,Insurance,2067.27,Failed,Mobile App
+TXN-1276,CUST-210,Kamala Basnet,Butwal,55,8/24/2024,Remittance,3805.15,Success,Web
+TXN-1277,CUST-203,Bikash Thapa,Biratnagar,35,11/26/2024,Ticket Booking,7830.26,Success,Agent
+TXN-1278,CUST-220,Binita Lama,Pokhara,30,9/16/2024,Remittance,24210.16,Failed,Agent
+TXN-1279,CUST-202,Sita Rai,Pokhara,19,8/18/2024,Ticket Booking,4787.43,Success,Web
+TXN-1280,CUST-220,Binita Lama,Pokhara,30,8/31/2024,Insurance,3866.36,Success,Web
+TXN-1281,CUST-204,Anita Gurung,Kathmandu,33,6/24/2024,Fund Transfer,8890.75,Pending,Mobile App
+TXN-1282,CUST-202,Sita Rai,Pokhara,19,5/6/2024,Fund Transfer,44056.95,Success,Agent
+TXN-1283,CUST-217,Anil Magar,Chitwan,50,11/8/2024,Utility Bill,2137.54,Success,Web
+TXN-1284,CUST-214,Nisha Limbu,Pokhara,23,6/22/2024,Fund Transfer,59989.64,Pending,Agent
+TXN-1285,CUST-211,Nabin Joshi,Dharan,45,2/3/2024,Online Shopping,1689.24,Pending,Web
+TXN-1286,CUST-210,Kamala Basnet,Butwal,55,5/9/2024,Fund Transfer,85230.84,Failed,Mobile App
+TXN-1287,CUST-211,Nabin Joshi,Dharan,45,2/11/2024,Insurance,13608.63,Success,Web
+TXN-1288,CUST-213,Rajan Bista,Nepalgunj,19,3/7/2024,Insurance,14467.85,Success,Web
+TXN-1289,CUST-218,Rekha Yadav,Birgunj,19,7/11/2024,Fund Transfer,79270.36,Success,Agent
+TXN-1290,CUST-217,Anil Magar,Chitwan,50,2/17/2024,Fund Transfer,67210.38,Failed,Web
+TXN-1291,CUST-201,Aarav Sharma,Kathmandu,25,7/4/2024,Online Shopping,2949.86,Success,Web
+TXN-1292,CUST-216,Sunita Dangol,Bhaktapur,32,4/8/2024,Utility Bill,4999.89,Success,Mobile App
+TXN-1293,CUST-210,Kamala Basnet,Butwal,55,2/21/2024,Insurance,15646.62,Pending,Agent
+TXN-1294,CUST-202,Sita Rai,Pokhara,19,12/4/2024,Online Shopping,13182.97,Failed,Mobile App
+TXN-1295,CUST-220,Binita Lama,Pokhara,30,7/11/2024,Utility Bill,1230.11,Pending,Agent
+TXN-1296,CUST-206,Priya Shrestha,Bhaktapur,26,8/12/2024,Mobile Recharge,469.77,Pending,Agent
+TXN-1297,CUST-208,Mina Karki,Chitwan,52,8/15/2024,Insurance,6413.63,Pending,Web
+TXN-1298,CUST-208,Mina Karki,Chitwan,52,9/30/2024,Utility Bill,1892.61,Success,Mobile App
+TXN-1299,CUST-212,Sabina Maharjan,Kathmandu,20,12/13/2024,Insurance,19704.36,Success,Web
+TXN-1300,CUST-213,Rajan Bista,Nepalgunj,19,9/14/2024,Insurance,8954.56,Success,Mobile App
+TXN-1301,CUST-220,Binita Lama,Pokhara,30,3/11/2024,Ticket Booking,2375.02,Pending,Web
+TXN-1302,CUST-212,Sabina Maharjan,Kathmandu,20,10/10/2024,Mobile Recharge,740.26,Failed,Mobile App
+TXN-1303,CUST-210,Kamala Basnet,Butwal,55,2/12/2024,Ticket Booking,1702.34,Success,Agent
+TXN-1304,CUST-205,Rohan Adhikari,Lalitpur,32,8/11/2024,Mobile Recharge,951.77,Success,Web
+TXN-1305,CUST-212,Sabina Maharjan,Kathmandu,20,1/14/2024,Remittance,4556.33,Failed,Web
+TXN-1306,CUST-208,Mina Karki,Chitwan,52,7/16/2024,Mobile Recharge,437.42,Success,Web
+TXN-1307,CUST-204,Anita Gurung,Kathmandu,33,12/31/2024,Fund Transfer,33861.39,Success,Mobile App
+TXN-1308,CUST-202,Sita Rai,Pokhara,19,5/26/2024,Ticket Booking,4043.41,Success,Agent
+TXN-1309,CUST-216,Sunita Dangol,Bhaktapur,32,8/17/2024,Insurance,1099.77,Success,Mobile App
+TXN-1310,CUST-209,Dipak Poudel,Kathmandu,23,4/20/2024,Ticket Booking,1621.4,Pending,Agent
+TXN-1311,CUST-217,Anil Magar,Chitwan,50,8/4/2024,Mobile Recharge,798.56,Success,Web
+TXN-1312,CUST-204,Anita Gurung,Kathmandu,33,1/25/2024,Utility Bill,2389.21,Failed,Web
+TXN-1313,CUST-203,Bikash Thapa,Biratnagar,35,2/26/2024,Ticket Booking,7288.6,Failed,Agent
+TXN-1314,CUST-201,Aarav Sharma,Kathmandu,25,11/19/2024,Insurance,11925.9,Pending,Mobile App
+TXN-1315,CUST-210,Kamala Basnet,Butwal,55,8/7/2024,Mobile Recharge,653.33,Success,Agent
+TXN-1316,CUST-214,Nisha Limbu,Pokhara,23,4/5/2024,Fund Transfer,66987.38,Failed,Web
+TXN-1317,CUST-203,Bikash Thapa,Biratnagar,35,9/26/2024,Insurance,10639.23,Failed,Agent
+TXN-1318,CUST-201,Aarav Sharma,Kathmandu,25,7/18/2024,Ticket Booking,4026.01,Pending,Web
+TXN-1319,CUST-212,Sabina Maharjan,Kathmandu,20,5/9/2024,Fund Transfer,2116.1,Success,Web
+TXN-1320,CUST-208,Mina Karki,Chitwan,52,12/2/2024,Fund Transfer,10814.55,Failed,Agent
+TXN-1321,CUST-211,Nabin Joshi,Dharan,45,3/9/2024,Mobile Recharge,417.07,Success,Agent
+TXN-1322,CUST-206,Priya Shrestha,Bhaktapur,26,12/16/2024,Remittance,49079.32,Success,Agent
+TXN-1323,CUST-206,Priya Shrestha,Bhaktapur,26,3/10/2024,Mobile Recharge,744.44,Success,Mobile App
+TXN-1324,CUST-210,Kamala Basnet,Butwal,55,4/13/2024,Mobile Recharge,812,Success,Web
+TXN-1325,CUST-210,Kamala Basnet,Butwal,55,9/20/2024,Remittance,49477.89,Failed,Web
+TXN-1326,CUST-209,Dipak Poudel,Kathmandu,23,1/19/2024,Ticket Booking,5351.75,Success,Web
+TXN-1327,CUST-202,Sita Rai,Pokhara,19,12/1/2024,Online Shopping,4316.28,Success,Web
+TXN-1328,CUST-213,Rajan Bista,Nepalgunj,19,8/13/2024,Remittance,18273.76,Success,Web
+TXN-1329,CUST-216,Sunita Dangol,Bhaktapur,32,7/7/2024,Ticket Booking,4394.57,Success,Agent
+TXN-1330,CUST-214,Nisha Limbu,Pokhara,23,2/10/2024,Remittance,30917.76,Success,Agent
+TXN-1331,CUST-210,Kamala Basnet,Butwal,55,6/13/2024,Mobile Recharge,172.06,Pending,Web
+TXN-1332,CUST-210,Kamala Basnet,Butwal,55,8/16/2024,Insurance,14635.6,Success,Agent
+TXN-1333,CUST-215,Pramod Pandey,Lalitpur,31,6/28/2024,Remittance,4033.05,Success,Agent
+TXN-1334,CUST-214,Nisha Limbu,Pokhara,23,5/20/2024,Fund Transfer,98012.71,Success,Mobile App
+TXN-1335,CUST-213,Rajan Bista,Nepalgunj,19,7/5/2024,Insurance,16220.82,Pending,Mobile App
+TXN-1336,CUST-201,Aarav Sharma,Kathmandu,25,3/14/2024,Ticket Booking,5056.8,Success,Mobile App
+TXN-1337,CUST-205,Rohan Adhikari,Lalitpur,32,2/4/2024,Utility Bill,4003.32,Success,Web
+TXN-1338,CUST-213,Rajan Bista,Nepalgunj,19,10/17/2024,Mobile Recharge,644.59,Pending,Web
+TXN-1339,CUST-212,Sabina Maharjan,Kathmandu,20,7/9/2024,Remittance,38628.05,Failed,Mobile App
+TXN-1340,CUST-217,Anil Magar,Chitwan,50,7/6/2024,Remittance,17090.5,Success,Mobile App
+TXN-1341,CUST-204,Anita Gurung,Kathmandu,33,1/14/2024,Fund Transfer,19011.78,Failed,Web
+TXN-1342,CUST-218,Rekha Yadav,Birgunj,19,3/1/2024,Online Shopping,11691.98,Pending,Web
+TXN-1343,CUST-207,Sunil Tamang,Pokhara,24,11/9/2024,Online Shopping,10501.52,Success,Mobile App
+TXN-1344,CUST-204,Anita Gurung,Kathmandu,33,3/10/2024,Ticket Booking,1055.39,Success,Agent
+TXN-1345,CUST-215,Pramod Pandey,Lalitpur,31,2/14/2024,Ticket Booking,5614.47,Success,Agent
+TXN-1346,CUST-212,Sabina Maharjan,Kathmandu,20,12/29/2024,Mobile Recharge,595,Success,Web
+TXN-1347,CUST-206,Priya Shrestha,Bhaktapur,26,12/30/2024,Fund Transfer,92768.78,Pending,Mobile App
+TXN-1348,CUST-212,Sabina Maharjan,Kathmandu,20,9/17/2024,Utility Bill,1046.13,Success,Mobile App
+TXN-1349,CUST-208,Mina Karki,Chitwan,52,9/9/2024,Mobile Recharge,424.81,Failed,Web
+TXN-1350,CUST-215,Pramod Pandey,Lalitpur,31,10/9/2024,Utility Bill,3253.77,Success,Mobile App
+TXN-1351,CUST-210,Kamala Basnet,Butwal,55,7/22/2024,Fund Transfer,72027.53,Failed,Web
+TXN-1352,CUST-214,Nisha Limbu,Pokhara,23,10/21/2024,Mobile Recharge,212.79,Success,Agent
+TXN-1353,CUST-203,Bikash Thapa,Biratnagar,35,8/18/2024,Remittance,34645.23,Success,Mobile App
+TXN-1354,CUST-218,Rekha Yadav,Birgunj,19,11/23/2024,Insurance,4457.3,Success,Web
+TXN-1355,CUST-217,Anil Magar,Chitwan,50,1/29/2024,Ticket Booking,1431.21,Success,Web
+TXN-1356,CUST-206,Priya Shrestha,Bhaktapur,26,3/23/2024,Online Shopping,14040.65,Success,Web
+TXN-1357,CUST-217,Anil Magar,Chitwan,50,5/25/2024,Ticket Booking,1091.45,Success,Agent
+TXN-1358,CUST-218,Rekha Yadav,Birgunj,19,5/20/2024,Utility Bill,3312.6,Failed,Agent
+TXN-1359,CUST-203,Bikash Thapa,Biratnagar,35,9/14/2024,Fund Transfer,17279.27,Failed,Mobile App
+TXN-1360,CUST-206,Priya Shrestha,Bhaktapur,26,12/3/2024,Insurance,14692.02,Failed,Web
+TXN-1361,CUST-219,Santosh KC,Kathmandu,53,1/22/2024,Ticket Booking,6978.36,Success,Mobile App
+TXN-1362,CUST-219,Santosh KC,Kathmandu,53,5/15/2024,Fund Transfer,21475.43,Failed,Web
+TXN-1363,CUST-220,Binita Lama,Pokhara,30,11/23/2024,Mobile Recharge,548.23,Pending,Agent
+TXN-1364,CUST-210,Kamala Basnet,Butwal,55,11/24/2024,Online Shopping,7399.29,Pending,Web
+TXN-1365,CUST-210,Kamala Basnet,Butwal,55,8/20/2024,Mobile Recharge,719.75,Success,Web
+TXN-1366,CUST-214,Nisha Limbu,Pokhara,23,9/4/2024,Remittance,11793.1,Failed,Mobile App
+TXN-1367,CUST-211,Nabin Joshi,Dharan,45,6/12/2024,Fund Transfer,98808.33,Success,Web
+TXN-1368,CUST-205,Rohan Adhikari,Lalitpur,32,7/8/2024,Insurance,11671.37,Success,Mobile App
+TXN-1369,CUST-215,Pramod Pandey,Lalitpur,31,3/3/2024,Online Shopping,6909.06,Success,Mobile App
+TXN-1370,CUST-202,Sita Rai,Pokhara,19,5/28/2024,Remittance,43479.86,Success,Mobile App
+TXN-1371,CUST-206,Priya Shrestha,Bhaktapur,26,6/16/2024,Insurance,14701.44,Success,Mobile App
+TXN-1372,CUST-216,Sunita Dangol,Bhaktapur,32,9/20/2024,Remittance,25940.47,Success,Web
+TXN-1373,CUST-201,Aarav Sharma,Kathmandu,25,2/16/2024,Remittance,26261.33,Success,Mobile App
+TXN-1374,CUST-219,Santosh KC,Kathmandu,53,6/29/2024,Mobile Recharge,145.49,Success,Agent
+TXN-1375,CUST-216,Sunita Dangol,Bhaktapur,32,5/26/2024,Insurance,1155.37,Success,Web
+TXN-1376,CUST-205,Rohan Adhikari,Lalitpur,32,5/15/2024,Fund Transfer,36894.88,Success,Web
+TXN-1377,CUST-202,Sita Rai,Pokhara,19,7/24/2024,Mobile Recharge,613.25,Success,Web
+TXN-1378,CUST-218,Rekha Yadav,Birgunj,19,5/27/2024,Mobile Recharge,447.71,Success,Agent
+TXN-1379,CUST-209,Dipak Poudel,Kathmandu,23,11/15/2024,Fund Transfer,61298.79,Success,Mobile App
+TXN-1380,CUST-213,Rajan Bista,Nepalgunj,19,7/10/2024,Ticket Booking,7900.91,Failed,Web
+TXN-1381,CUST-205,Rohan Adhikari,Lalitpur,32,4/11/2024,Insurance,10673.33,Failed,Mobile App
+TXN-1382,CUST-202,Sita Rai,Pokhara,19,1/20/2024,Utility Bill,3711.16,Success,Agent
+TXN-1383,CUST-215,Pramod Pandey,Lalitpur,31,3/17/2024,Insurance,17969.5,Success,Web
+TXN-1384,CUST-220,Binita Lama,Pokhara,30,6/12/2024,Utility Bill,2268.3,Failed,Agent
+TXN-1385,CUST-210,Kamala Basnet,Butwal,55,10/30/2024,Online Shopping,7757.53,Failed,Agent
+TXN-1386,CUST-216,Sunita Dangol,Bhaktapur,32,12/28/2024,Insurance,6696.02,Success,Web
+TXN-1387,CUST-211,Nabin Joshi,Dharan,45,12/10/2024,Mobile Recharge,981.91,Failed,Web
+TXN-1388,CUST-201,Aarav Sharma,Kathmandu,25,11/1/2024,Remittance,14745.46,Pending,Agent
+TXN-1389,CUST-219,Santosh KC,Kathmandu,53,4/26/2024,Fund Transfer,5609.84,Success,Mobile App
+TXN-1390,CUST-217,Anil Magar,Chitwan,50,11/18/2024,Fund Transfer,62163.71,Success,Mobile App
+TXN-1391,CUST-208,Mina Karki,Chitwan,52,1/17/2024,Insurance,19015.9,Success,Mobile App
+TXN-1392,CUST-201,Aarav Sharma,Kathmandu,25,8/13/2024,Online Shopping,6456.07,Success,Agent
+TXN-1393,CUST-207,Sunil Tamang,Pokhara,24,7/29/2024,Insurance,15724.47,Success,Agent
+TXN-1394,CUST-202,Sita Rai,Pokhara,19,12/27/2024,Utility Bill,2834.07,Failed,Web
+TXN-1395,CUST-216,Sunita Dangol,Bhaktapur,32,9/26/2024,Remittance,17060.12,Success,Web
+TXN-1396,CUST-218,Rekha Yadav,Birgunj,19,6/24/2024,Insurance,7731.45,Pending,Agent
+TXN-1397,CUST-209,Dipak Poudel,Kathmandu,23,11/8/2024,Remittance,11228.68,Success,Web
+TXN-1398,CUST-218,Rekha Yadav,Birgunj,19,6/1/2024,Utility Bill,4736.68,Success,Web
+TXN-1399,CUST-207,Sunil Tamang,Pokhara,24,12/19/2024,Fund Transfer,49155.81,Success,Web
+TXN-1400,CUST-218,Rekha Yadav,Birgunj,19,5/20/2024,Online Shopping,2091.55,Pending,Agent
+TXN-1401,CUST-213,Rajan Bista,Nepalgunj,19,7/21/2024,Ticket Booking,3088.51,Success,Web
+TXN-1402,CUST-202,Sita Rai,Pokhara,19,5/27/2024,Fund Transfer,8363.43,Success,Agent
+TXN-1403,CUST-209,Dipak Poudel,Kathmandu,23,9/2/2024,Utility Bill,1409.31,Failed,Web
+TXN-1404,CUST-218,Rekha Yadav,Birgunj,19,12/22/2024,Online Shopping,2317.91,Failed,Agent
+TXN-1405,CUST-219,Santosh KC,Kathmandu,53,5/2/2024,Utility Bill,728.44,Failed,Mobile App
+TXN-1406,CUST-208,Mina Karki,Chitwan,52,1/27/2024,Mobile Recharge,471.97,Pending,Web
+TXN-1407,CUST-204,Anita Gurung,Kathmandu,33,12/14/2024,Ticket Booking,1531,Failed,Mobile App
+TXN-1408,CUST-214,Nisha Limbu,Pokhara,23,11/30/2024,Remittance,24917.53,Success,Web
+TXN-1409,CUST-211,Nabin Joshi,Dharan,45,5/26/2024,Fund Transfer,6386.68,Success,Agent
+TXN-1410,CUST-219,Santosh KC,Kathmandu,53,4/28/2024,Insurance,15035.04,Success,Mobile App
+TXN-1411,CUST-214,Nisha Limbu,Pokhara,23,3/31/2024,Mobile Recharge,997.45,Success,Web
+TXN-1412,CUST-206,Priya Shrestha,Bhaktapur,26,5/28/2024,Mobile Recharge,108.34,Failed,Agent
+TXN-1413,CUST-204,Anita Gurung,Kathmandu,33,6/20/2024,Online Shopping,6978.93,Pending,Agent
+TXN-1414,CUST-217,Anil Magar,Chitwan,50,9/9/2024,Utility Bill,4329.77,Success,Web
+TXN-1415,CUST-207,Sunil Tamang,Pokhara,24,2/27/2024,Online Shopping,2688.67,Success,Agent
+TXN-1416,CUST-209,Dipak Poudel,Kathmandu,23,4/5/2024,Mobile Recharge,762.96,Success,Agent
+TXN-1417,CUST-207,Sunil Tamang,Pokhara,24,3/30/2024,Insurance,17266.78,Success,Web
+TXN-1418,CUST-217,Anil Magar,Chitwan,50,6/16/2024,Mobile Recharge,460.75,Success,Mobile App
+TXN-1419,CUST-205,Rohan Adhikari,Lalitpur,32,9/1/2024,Online Shopping,14056.63,Success,Web
+TXN-1420,CUST-213,Rajan Bista,Nepalgunj,19,4/30/2024,Remittance,38180.32,Success,Web
+TXN-1421,CUST-219,Santosh KC,Kathmandu,53,10/20/2024,Mobile Recharge,335.4,Success,Agent
+TXN-1422,CUST-208,Mina Karki,Chitwan,52,2/1/2024,Fund Transfer,12263.37,Success,Mobile App
+TXN-1423,CUST-213,Rajan Bista,Nepalgunj,19,12/17/2024,Insurance,18539.01,Pending,Web
+TXN-1424,CUST-204,Anita Gurung,Kathmandu,33,11/23/2024,Online Shopping,5702.9,Success,Mobile App
+TXN-1425,CUST-205,Rohan Adhikari,Lalitpur,32,9/1/2024,Utility Bill,2547.4,Failed,Web
+TXN-1426,CUST-214,Nisha Limbu,Pokhara,23,12/25/2024,Insurance,18343.14,Failed,Agent
+TXN-1427,CUST-207,Sunil Tamang,Pokhara,24,5/6/2024,Fund Transfer,75596.59,Success,Agent
+TXN-1428,CUST-215,Pramod Pandey,Lalitpur,31,9/27/2024,Fund Transfer,36497.59,Failed,Mobile App
+TXN-1429,CUST-202,Sita Rai,Pokhara,19,10/7/2024,Insurance,4840.98,Failed,Mobile App
+TXN-1430,CUST-206,Priya Shrestha,Bhaktapur,26,6/16/2024,Ticket Booking,4402.56,Success,Agent
+TXN-1431,CUST-207,Sunil Tamang,Pokhara,24,10/25/2024,Remittance,6365.2,Failed,Web
+TXN-1432,CUST-202,Sita Rai,Pokhara,19,8/20/2024,Utility Bill,2809.62,Success,Agent
+TXN-1433,CUST-202,Sita Rai,Pokhara,19,10/13/2024,Remittance,34292.85,Success,Agent
+TXN-1434,CUST-201,Aarav Sharma,Kathmandu,25,7/21/2024,Online Shopping,12301.86,Pending,Mobile App
+TXN-1435,CUST-219,Santosh KC,Kathmandu,53,2/7/2024,Mobile Recharge,481.33,Pending,Mobile App
+TXN-1436,CUST-218,Rekha Yadav,Birgunj,19,1/31/2024,Mobile Recharge,987.52,Success,Mobile App
+TXN-1437,CUST-210,Kamala Basnet,Butwal,55,7/28/2024,Utility Bill,3960.37,Pending,Agent
+TXN-1438,CUST-214,Nisha Limbu,Pokhara,23,7/10/2024,Remittance,23529.78,Success,Web
+TXN-1439,CUST-203,Bikash Thapa,Biratnagar,35,12/15/2024,Fund Transfer,87518.1,Success,Agent
+TXN-1440,CUST-212,Sabina Maharjan,Kathmandu,20,3/1/2024,Utility Bill,4967.81,Success,Agent
+TXN-1441,CUST-205,Rohan Adhikari,Lalitpur,32,4/24/2024,Ticket Booking,526.05,Success,Web
+TXN-1442,CUST-215,Pramod Pandey,Lalitpur,31,12/10/2024,Fund Transfer,54672.31,Failed,Web
+TXN-1443,CUST-208,Mina Karki,Chitwan,52,5/6/2024,Remittance,18615.67,Success,Mobile App
+TXN-1444,CUST-204,Anita Gurung,Kathmandu,33,1/17/2024,Ticket Booking,5451.48,Failed,Mobile App
+TXN-1445,CUST-208,Mina Karki,Chitwan,52,4/15/2024,Mobile Recharge,190.81,Success,Web
+TXN-1446,CUST-220,Binita Lama,Pokhara,30,12/10/2024,Fund Transfer,87285.14,Success,Agent
+TXN-1447,CUST-202,Sita Rai,Pokhara,19,7/24/2024,Remittance,13248.29,Success,Mobile App
+TXN-1448,CUST-205,Rohan Adhikari,Lalitpur,32,9/14/2024,Online Shopping,3742.17,Pending,Agent
+TXN-1449,CUST-211,Nabin Joshi,Dharan,45,10/22/2024,Insurance,15678.23,Success,Mobile App
+TXN-1450,CUST-210,Kamala Basnet,Butwal,55,3/14/2024,Fund Transfer,52364.48,Success,Web
+TXN-1451,CUST-209,Dipak Poudel,Kathmandu,23,2/1/2024,Insurance,19021.88,Pending,Mobile App
+TXN-1452,CUST-214,Nisha Limbu,Pokhara,23,10/11/2024,Remittance,4250.44,Success,Agent
+TXN-1453,CUST-213,Rajan Bista,Nepalgunj,19,9/25/2024,Online Shopping,10535.73,Success,Mobile App
+TXN-1454,CUST-210,Kamala Basnet,Butwal,55,7/11/2024,Utility Bill,3894.87,Success,Mobile App
+TXN-1455,CUST-208,Mina Karki,Chitwan,52,6/2/2024,Ticket Booking,5806.83,Success,Mobile App
+TXN-1456,CUST-218,Rekha Yadav,Birgunj,19,7/30/2024,Remittance,28749.76,Success,Web
+TXN-1457,CUST-208,Mina Karki,Chitwan,52,5/10/2024,Utility Bill,1986.18,Success,Web
+TXN-1458,CUST-212,Sabina Maharjan,Kathmandu,20,2/17/2024,Insurance,14767.11,Success,Mobile App
+TXN-1459,CUST-209,Dipak Poudel,Kathmandu,23,7/12/2024,Fund Transfer,60694.46,Success,Mobile App
+TXN-1460,CUST-207,Sunil Tamang,Pokhara,24,10/27/2024,Fund Transfer,67309.33,Success,Web
+TXN-1461,CUST-207,Sunil Tamang,Pokhara,24,6/19/2024,Online Shopping,14368.19,Success,Mobile App
+TXN-1462,CUST-207,Sunil Tamang,Pokhara,24,3/1/2024,Fund Transfer,99957.41,Success,Mobile App
+TXN-1463,CUST-220,Binita Lama,Pokhara,30,12/26/2024,Utility Bill,2284.84,Success,Agent
+TXN-1464,CUST-211,Nabin Joshi,Dharan,45,5/24/2024,Remittance,24380.02,Pending,Web
+TXN-1465,CUST-210,Kamala Basnet,Butwal,55,5/13/2024,Online Shopping,7838.4,Success,Web
+TXN-1466,CUST-204,Anita Gurung,Kathmandu,33,8/28/2024,Ticket Booking,6797.98,Success,Web
+TXN-1467,CUST-211,Nabin Joshi,Dharan,45,7/30/2024,Mobile Recharge,606.27,Success,Agent
+TXN-1468,CUST-205,Rohan Adhikari,Lalitpur,32,1/9/2024,Online Shopping,8433.68,Failed,Agent
+TXN-1469,CUST-214,Nisha Limbu,Pokhara,23,5/31/2024,Utility Bill,1382.86,Success,Web
+TXN-1470,CUST-219,Santosh KC,Kathmandu,53,5/5/2024,Remittance,28430.84,Pending,Web
+TXN-1471,CUST-209,Dipak Poudel,Kathmandu,23,9/7/2024,Fund Transfer,64348.6,Success,Web
+TXN-1472,CUST-206,Priya Shrestha,Bhaktapur,26,6/29/2024,Utility Bill,1129.81,Failed,Web
+TXN-1473,CUST-206,Priya Shrestha,Bhaktapur,26,10/4/2024,Fund Transfer,95745.07,Failed,Mobile App
+TXN-1474,CUST-203,Bikash Thapa,Biratnagar,35,12/8/2024,Mobile Recharge,787.9,Success,Mobile App
+TXN-1475,CUST-208,Mina Karki,Chitwan,52,2/4/2024,Fund Transfer,15527.45,Success,Agent
+TXN-1476,CUST-215,Pramod Pandey,Lalitpur,31,7/10/2024,Mobile Recharge,656.05,Pending,Agent
+TXN-1477,CUST-216,Sunita Dangol,Bhaktapur,32,12/3/2024,Remittance,2755.12,Failed,Agent
+TXN-1478,CUST-214,Nisha Limbu,Pokhara,23,1/7/2024,Mobile Recharge,576.48,Success,Agent
+TXN-1479,CUST-210,Kamala Basnet,Butwal,55,1/9/2024,Insurance,16449.99,Pending,Web
+TXN-1480,CUST-206,Priya Shrestha,Bhaktapur,26,2/24/2024,Mobile Recharge,571.95,Success,Mobile App
+TXN-1481,CUST-220,Binita Lama,Pokhara,30,9/26/2024,Online Shopping,12283.65,Success,Web
+TXN-1482,CUST-203,Bikash Thapa,Biratnagar,35,7/10/2024,Remittance,24031.89,Success,Agent
+TXN-1483,CUST-208,Mina Karki,Chitwan,52,6/2/2024,Fund Transfer,82892.18,Success,Agent
+TXN-1484,CUST-202,Sita Rai,Pokhara,19,2/17/2024,Remittance,20204.67,Failed,Web
+TXN-1485,CUST-202,Sita Rai,Pokhara,19,11/22/2024,Mobile Recharge,732.56,Success,Web
+TXN-1486,CUST-214,Nisha Limbu,Pokhara,23,11/26/2024,Ticket Booking,2984.53,Success,Agent
+TXN-1487,CUST-202,Sita Rai,Pokhara,19,4/27/2024,Utility Bill,4555.73,Pending,Agent
+TXN-1488,CUST-216,Sunita Dangol,Bhaktapur,32,5/18/2024,Mobile Recharge,931.74,Pending,Web
+TXN-1489,CUST-218,Rekha Yadav,Birgunj,19,10/15/2024,Fund Transfer,3773.73,Success,Mobile App
+TXN-1490,CUST-207,Sunil Tamang,Pokhara,24,10/27/2024,Utility Bill,3885.15,Pending,Web
+TXN-1491,CUST-203,Bikash Thapa,Biratnagar,35,6/2/2024,Utility Bill,3037.81,Failed,Web
+TXN-1492,CUST-218,Rekha Yadav,Birgunj,19,6/18/2024,Remittance,38269.24,Success,Agent
+TXN-1493,CUST-203,Bikash Thapa,Biratnagar,35,9/13/2024,Fund Transfer,97445.17,Success,Mobile App
+TXN-1494,CUST-214,Nisha Limbu,Pokhara,23,4/28/2024,Ticket Booking,1070.14,Failed,Agent
+TXN-1495,CUST-220,Binita Lama,Pokhara,30,7/22/2024,Ticket Booking,2947.82,Pending,Web
+TXN-1496,CUST-215,Pramod Pandey,Lalitpur,31,9/8/2024,Utility Bill,2101.15,Success,Web
+TXN-1497,CUST-206,Priya Shrestha,Bhaktapur,26,12/14/2024,Insurance,13552.77,Success,Agent
+TXN-1498,CUST-210,Kamala Basnet,Butwal,55,5/6/2024,Fund Transfer,7813.92,Success,Mobile App
+TXN-1499,CUST-213,Rajan Bista,Nepalgunj,19,12/30/2024,Ticket Booking,5254.26,Pending,Web
+TXN-1500,CUST-211,Nabin Joshi,Dharan,45,7/3/2024,Mobile Recharge,182.37,Success,Web
+TXN-1501,CUST-212,Sabina Maharjan,Kathmandu,20,5/18/2024,Mobile Recharge,219.26,Success,Web
+TXN-1502,CUST-215,Pramod Pandey,Lalitpur,31,10/12/2024,Insurance,10736.38,Success,Mobile App
+TXN-1503,CUST-203,Bikash Thapa,Biratnagar,35,6/30/2024,Insurance,2768.22,Failed,Web
+TXN-1504,CUST-213,Rajan Bista,Nepalgunj,19,1/7/2024,Online Shopping,6383.01,Success,Agent
+TXN-1505,CUST-218,Rekha Yadav,Birgunj,19,5/4/2024,Insurance,10900.99,Pending,Web
+TXN-1506,CUST-206,Priya Shrestha,Bhaktapur,26,3/12/2024,Online Shopping,4726.63,Success,Mobile App
+TXN-1507,CUST-203,Bikash Thapa,Biratnagar,35,3/26/2024,Remittance,15246.17,Success,Web
+TXN-1508,CUST-203,Bikash Thapa,Biratnagar,35,7/3/2024,Online Shopping,14180.07,Pending,Agent
+TXN-1509,CUST-216,Sunita Dangol,Bhaktapur,32,10/31/2024,Insurance,4715.42,Success,Mobile App
+TXN-1510,CUST-210,Kamala Basnet,Butwal,55,1/4/2024,Remittance,17946.43,Failed,Web
+TXN-1511,CUST-211,Nabin Joshi,Dharan,45,8/13/2024,Online Shopping,6630.06,Pending,Agent
+TXN-1512,CUST-205,Rohan Adhikari,Lalitpur,32,6/2/2024,Online Shopping,9167.21,Pending,Mobile App
+TXN-1513,CUST-216,Sunita Dangol,Bhaktapur,32,6/9/2024,Utility Bill,4840.59,Success,Web
+TXN-1514,CUST-216,Sunita Dangol,Bhaktapur,32,10/21/2024,Ticket Booking,2318.18,Success,Web
+TXN-1515,CUST-213,Rajan Bista,Nepalgunj,19,7/5/2024,Mobile Recharge,938.86,Success,Agent
+TXN-1516,CUST-218,Rekha Yadav,Birgunj,19,4/2/2024,Fund Transfer,76877.98,Success,Agent
+TXN-1517,CUST-215,Pramod Pandey,Lalitpur,31,12/28/2024,Utility Bill,2473.05,Success,Agent
+TXN-1518,CUST-203,Bikash Thapa,Biratnagar,35,7/28/2024,Fund Transfer,50180.67,Pending,Web
+TXN-1519,CUST-208,Mina Karki,Chitwan,52,5/9/2024,Fund Transfer,15837.25,Success,Web
+TXN-1520,CUST-203,Bikash Thapa,Biratnagar,35,8/17/2024,Insurance,10105.46,Success,Agent
+TXN-1521,CUST-217,Anil Magar,Chitwan,50,12/20/2024,Remittance,28094.97,Success,Agent
+TXN-1522,CUST-218,Rekha Yadav,Birgunj,19,10/31/2024,Fund Transfer,91482.92,Success,Mobile App
+TXN-1523,CUST-212,Sabina Maharjan,Kathmandu,20,3/26/2024,Fund Transfer,61461.45,Failed,Agent
+TXN-1524,CUST-213,Rajan Bista,Nepalgunj,19,6/18/2024,Ticket Booking,3728.42,Success,Mobile App
+TXN-1525,CUST-209,Dipak Poudel,Kathmandu,23,4/23/2024,Insurance,15190.21,Failed,Agent
+TXN-1526,CUST-219,Santosh KC,Kathmandu,53,4/23/2024,Remittance,19957.74,Success,Agent
+TXN-1527,CUST-219,Santosh KC,Kathmandu,53,12/19/2024,Insurance,3864.15,Success,Web
+TXN-1528,CUST-204,Anita Gurung,Kathmandu,33,5/31/2024,Remittance,46186.28,Success,Mobile App
+TXN-1529,CUST-205,Rohan Adhikari,Lalitpur,32,6/27/2024,Online Shopping,5343.08,Success,Agent
+TXN-1530,CUST-216,Sunita Dangol,Bhaktapur,32,6/27/2024,Remittance,6685.91,Pending,Agent
+TXN-1531,CUST-215,Pramod Pandey,Lalitpur,31,6/12/2024,Mobile Recharge,370.24,Pending,Mobile App
+TXN-1532,CUST-201,Aarav Sharma,Kathmandu,25,6/24/2024,Fund Transfer,11381.59,Success,Agent
+TXN-1533,CUST-208,Mina Karki,Chitwan,52,9/21/2024,Utility Bill,2983.6,Success,Agent
+TXN-1534,CUST-214,Nisha Limbu,Pokhara,23,8/24/2024,Utility Bill,4089.9,Pending,Mobile App
+TXN-1535,CUST-206,Priya Shrestha,Bhaktapur,26,11/23/2024,Fund Transfer,43497.38,Success,Agent
+TXN-1536,CUST-220,Binita Lama,Pokhara,30,4/11/2024,Remittance,30425.75,Success,Mobile App
+TXN-1537,CUST-207,Sunil Tamang,Pokhara,24,4/15/2024,Online Shopping,11359.18,Success,Agent
+TXN-1538,CUST-204,Anita Gurung,Kathmandu,33,10/1/2024,Utility Bill,2146.07,Success,Web
+TXN-1539,CUST-204,Anita Gurung,Kathmandu,33,5/14/2024,Fund Transfer,86332.34,Failed,Agent
+TXN-1540,CUST-211,Nabin Joshi,Dharan,45,11/1/2024,Remittance,31342.8,Failed,Mobile App
+TXN-1541,CUST-212,Sabina Maharjan,Kathmandu,20,6/29/2024,Ticket Booking,3933.95,Success,Agent
+TXN-1542,CUST-210,Kamala Basnet,Butwal,55,11/10/2024,Insurance,2610.29,Success,Web
+TXN-1543,CUST-204,Anita Gurung,Kathmandu,33,5/2/2024,Online Shopping,2019.15,Success,Agent
+TXN-1544,CUST-205,Rohan Adhikari,Lalitpur,32,9/18/2024,Remittance,22075.48,Success,Agent
+TXN-1545,CUST-213,Rajan Bista,Nepalgunj,19,8/4/2024,Utility Bill,2690.02,Failed,Agent
+TXN-1546,CUST-206,Priya Shrestha,Bhaktapur,26,10/11/2024,Utility Bill,2703.39,Success,Mobile App
+TXN-1547,CUST-211,Nabin Joshi,Dharan,45,8/18/2024,Insurance,2018.61,Success,Mobile App
+TXN-1548,CUST-216,Sunita Dangol,Bhaktapur,32,3/10/2024,Utility Bill,4168.47,Failed,Agent
+TXN-1549,CUST-216,Sunita Dangol,Bhaktapur,32,7/28/2024,Fund Transfer,49426.73,Pending,Web
+TXN-1550,CUST-216,Sunita Dangol,Bhaktapur,32,3/26/2024,Mobile Recharge,608.86,Success,Web
+TXN-1551,CUST-202,Sita Rai,Pokhara,19,5/20/2024,Utility Bill,2919.24,Success,Web
+TXN-1552,CUST-219,Santosh KC,Kathmandu,53,9/10/2024,Insurance,10705.31,Failed,Mobile App
+TXN-1553,CUST-209,Dipak Poudel,Kathmandu,23,10/5/2024,Ticket Booking,7931.7,Failed,Mobile App
+TXN-1554,CUST-215,Pramod Pandey,Lalitpur,31,10/6/2024,Utility Bill,4953.99,Success,Agent
+TXN-1555,CUST-208,Mina Karki,Chitwan,52,6/1/2024,Ticket Booking,7994.85,Success,Web
+TXN-1556,CUST-212,Sabina Maharjan,Kathmandu,20,2/14/2024,Remittance,43533.94,Success,Mobile App
+TXN-1557,CUST-207,Sunil Tamang,Pokhara,24,10/28/2024,Fund Transfer,35387.77,Pending,Agent
+TXN-1558,CUST-214,Nisha Limbu,Pokhara,23,3/25/2024,Insurance,3645.46,Success,Mobile App
+TXN-1559,CUST-202,Sita Rai,Pokhara,19,10/18/2024,Online Shopping,8124.53,Failed,Agent
+TXN-1560,CUST-206,Priya Shrestha,Bhaktapur,26,6/14/2024,Fund Transfer,29617.15,Failed,Web
+TXN-1561,CUST-217,Anil Magar,Chitwan,50,12/13/2024,Ticket Booking,1214.19,Success,Mobile App
+TXN-1562,CUST-209,Dipak Poudel,Kathmandu,23,12/1/2024,Utility Bill,3656.42,Success,Mobile App
+TXN-1563,CUST-205,Rohan Adhikari,Lalitpur,32,12/30/2024,Online Shopping,12478.68,Pending,Web
+TXN-1564,CUST-216,Sunita Dangol,Bhaktapur,32,3/13/2024,Insurance,13015.64,Pending,Web
+TXN-1565,CUST-213,Rajan Bista,Nepalgunj,19,8/19/2024,Mobile Recharge,670.26,Success,Web
+TXN-1566,CUST-217,Anil Magar,Chitwan,50,5/22/2024,Fund Transfer,93665.44,Success,Web
+TXN-1567,CUST-216,Sunita Dangol,Bhaktapur,32,6/16/2024,Insurance,1046.99,Pending,Mobile App
+TXN-1568,CUST-215,Pramod Pandey,Lalitpur,31,11/21/2024,Fund Transfer,69880.25,Success,Agent
+TXN-1569,CUST-213,Rajan Bista,Nepalgunj,19,4/21/2024,Remittance,41592.69,Success,Web
+TXN-1570,CUST-211,Nabin Joshi,Dharan,45,5/25/2024,Online Shopping,8345.46,Success,Agent
+TXN-1571,CUST-216,Sunita Dangol,Bhaktapur,32,6/24/2024,Fund Transfer,76344.28,Success,Mobile App
+TXN-1572,CUST-215,Pramod Pandey,Lalitpur,31,1/9/2024,Mobile Recharge,936.49,Success,Web
+TXN-1573,CUST-215,Pramod Pandey,Lalitpur,31,1/1/2024,Remittance,11711.27,Pending,Mobile App
+TXN-1574,CUST-210,Kamala Basnet,Butwal,55,3/22/2024,Ticket Booking,7495.44,Success,Mobile App
+TXN-1575,CUST-212,Sabina Maharjan,Kathmandu,20,5/8/2024,Mobile Recharge,434.66,Pending,Mobile App
+TXN-1576,CUST-202,Sita Rai,Pokhara,19,7/21/2024,Fund Transfer,30898.17,Pending,Mobile App
+TXN-1577,CUST-214,Nisha Limbu,Pokhara,23,12/1/2024,Mobile Recharge,733.33,Success,Mobile App
+TXN-1578,CUST-216,Sunita Dangol,Bhaktapur,32,2/9/2024,Utility Bill,3171.56,Failed,Agent
+TXN-1579,CUST-215,Pramod Pandey,Lalitpur,31,1/5/2024,Mobile Recharge,726.04,Success,Web
+TXN-1580,CUST-205,Rohan Adhikari,Lalitpur,32,9/1/2024,Mobile Recharge,306.05,Success,Agent
+TXN-1581,CUST-204,Anita Gurung,Kathmandu,33,2/22/2024,Online Shopping,5703.16,Success,Mobile App
+TXN-1582,CUST-213,Rajan Bista,Nepalgunj,19,3/9/2024,Fund Transfer,99297.55,Success,Mobile App
+TXN-1583,CUST-217,Anil Magar,Chitwan,50,10/15/2024,Mobile Recharge,649.29,Success,Web
+TXN-1584,CUST-212,Sabina Maharjan,Kathmandu,20,4/19/2024,Fund Transfer,74952.75,Success,Agent
+TXN-1585,CUST-215,Pramod Pandey,Lalitpur,31,4/21/2024,Mobile Recharge,906.93,Success,Mobile App
+TXN-1586,CUST-219,Santosh KC,Kathmandu,53,7/15/2024,Online Shopping,14459.76,Success,Mobile App
+TXN-1587,CUST-208,Mina Karki,Chitwan,52,5/21/2024,Fund Transfer,8882.75,Failed,Agent
+TXN-1588,CUST-220,Binita Lama,Pokhara,30,11/7/2024,Online Shopping,11750.85,Pending,Mobile App
+TXN-1589,CUST-210,Kamala Basnet,Butwal,55,4/15/2024,Insurance,12531.61,Success,Agent
+TXN-1590,CUST-213,Rajan Bista,Nepalgunj,19,5/31/2024,Fund Transfer,5929.63,Success,Web
+TXN-1591,CUST-213,Rajan Bista,Nepalgunj,19,2/27/2024,Utility Bill,2748.12,Failed,Mobile App
+TXN-1592,CUST-217,Anil Magar,Chitwan,50,1/7/2024,Online Shopping,14028.69,Success,Web
+TXN-1593,CUST-219,Santosh KC,Kathmandu,53,8/3/2024,Online Shopping,8331.44,Success,Web
+TXN-1594,CUST-203,Bikash Thapa,Biratnagar,35,1/9/2024,Insurance,2283.12,Success,Mobile App
+TXN-1595,CUST-202,Sita Rai,Pokhara,19,1/31/2024,Ticket Booking,3484.81,Success,Agent
+TXN-1596,CUST-217,Anil Magar,Chitwan,50,7/31/2024,Remittance,35686.91,Success,Agent
+TXN-1597,CUST-218,Rekha Yadav,Birgunj,19,10/2/2024,Insurance,3900.93,Success,Web
+TXN-1598,CUST-203,Bikash Thapa,Biratnagar,35,9/18/2024,Utility Bill,4884.41,Success,Agent
+TXN-1599,CUST-211,Nabin Joshi,Dharan,45,7/19/2024,Insurance,13051.59,Pending,Agent
+TXN-1600,CUST-203,Bikash Thapa,Biratnagar,35,6/7/2024,Fund Transfer,44029.86,Success,Mobile App
+TXN-1601,CUST-208,Mina Karki,Chitwan,52,2/14/2024,Remittance,7567.36,Failed,Agent
+TXN-1602,CUST-202,Sita Rai,Pokhara,19,6/7/2024,Fund Transfer,74298.5,Pending,Mobile App
+TXN-1603,CUST-204,Anita Gurung,Kathmandu,33,1/7/2024,Fund Transfer,14152.57,Success,Mobile App
+TXN-1604,CUST-216,Sunita Dangol,Bhaktapur,32,6/26/2024,Insurance,10827.23,Pending,Web
+TXN-1605,CUST-206,Priya Shrestha,Bhaktapur,26,7/9/2024,Utility Bill,3873.99,Success,Agent
+TXN-1606,CUST-204,Anita Gurung,Kathmandu,33,1/16/2024,Online Shopping,12164.49,Success,Agent
+TXN-1607,CUST-203,Bikash Thapa,Biratnagar,35,5/14/2024,Fund Transfer,97517.53,Pending,Mobile App
+TXN-1608,CUST-216,Sunita Dangol,Bhaktapur,32,8/21/2024,Insurance,7842.35,Success,Agent
+TXN-1609,CUST-206,Priya Shrestha,Bhaktapur,26,7/7/2024,Utility Bill,1648.02,Success,Agent
+TXN-1610,CUST-204,Anita Gurung,Kathmandu,33,4/26/2024,Fund Transfer,51128.08,Success,Mobile App
+TXN-1611,CUST-208,Mina Karki,Chitwan,52,1/24/2024,Remittance,19470.87,Success,Mobile App
+TXN-1612,CUST-202,Sita Rai,Pokhara,19,10/10/2024,Ticket Booking,7354.61,Pending,Agent
+TXN-1613,CUST-214,Nisha Limbu,Pokhara,23,4/24/2024,Online Shopping,3949.47,Pending,Web
+TXN-1614,CUST-209,Dipak Poudel,Kathmandu,23,2/9/2024,Insurance,8083.36,Failed,Agent
+TXN-1615,CUST-202,Sita Rai,Pokhara,19,4/1/2024,Utility Bill,4119.52,Success,Web
+TXN-1616,CUST-203,Bikash Thapa,Biratnagar,35,8/26/2024,Ticket Booking,2617.3,Success,Web
+TXN-1617,CUST-203,Bikash Thapa,Biratnagar,35,10/10/2024,Remittance,2382.52,Success,Web
+TXN-1618,CUST-219,Santosh KC,Kathmandu,53,6/4/2024,Fund Transfer,62460.39,Success,Web
+TXN-1619,CUST-219,Santosh KC,Kathmandu,53,9/9/2024,Ticket Booking,6319.14,Pending,Agent
+TXN-1620,CUST-208,Mina Karki,Chitwan,52,3/18/2024,Mobile Recharge,939.16,Success,Mobile App
+TXN-1621,CUST-218,Rekha Yadav,Birgunj,19,6/26/2024,Fund Transfer,84037.61,Success,Web
+TXN-1622,CUST-201,Aarav Sharma,Kathmandu,25,12/2/2024,Remittance,42752.29,Pending,Web
+TXN-1623,CUST-204,Anita Gurung,Kathmandu,33,4/15/2024,Insurance,19679.2,Success,Web
+TXN-1624,CUST-202,Sita Rai,Pokhara,19,3/13/2024,Fund Transfer,28342.61,Success,Mobile App
+TXN-1625,CUST-217,Anil Magar,Chitwan,50,7/30/2024,Fund Transfer,89610.01,Success,Agent
+TXN-1626,CUST-203,Bikash Thapa,Biratnagar,35,10/24/2024,Mobile Recharge,554.88,Pending,Web
+TXN-1627,CUST-203,Bikash Thapa,Biratnagar,35,10/30/2024,Insurance,2183.37,Pending,Mobile App
+TXN-1628,CUST-208,Mina Karki,Chitwan,52,5/29/2024,Online Shopping,12808.43,Success,Agent
+TXN-1629,CUST-211,Nabin Joshi,Dharan,45,6/11/2024,Remittance,15053.88,Success,Mobile App
+TXN-1630,CUST-205,Rohan Adhikari,Lalitpur,32,10/26/2024,Mobile Recharge,239.87,Success,Web
+TXN-1631,CUST-215,Pramod Pandey,Lalitpur,31,6/9/2024,Remittance,7795.36,Success,Mobile App
+TXN-1632,CUST-215,Pramod Pandey,Lalitpur,31,6/6/2024,Remittance,14720.38,Success,Mobile App
+TXN-1633,CUST-206,Priya Shrestha,Bhaktapur,26,12/17/2024,Online Shopping,12447.88,Pending,Agent
+TXN-1634,CUST-202,Sita Rai,Pokhara,19,4/20/2024,Ticket Booking,6924.3,Success,Mobile App
+TXN-1635,CUST-208,Mina Karki,Chitwan,52,7/1/2024,Remittance,26646.06,Pending,Web
+TXN-1636,CUST-209,Dipak Poudel,Kathmandu,23,3/30/2024,Mobile Recharge,956.89,Success,Agent
+TXN-1637,CUST-218,Rekha Yadav,Birgunj,19,5/7/2024,Mobile Recharge,515.84,Success,Mobile App
+TXN-1638,CUST-201,Aarav Sharma,Kathmandu,25,2/1/2024,Ticket Booking,6357.2,Success,Mobile App
+TXN-1639,CUST-207,Sunil Tamang,Pokhara,24,7/24/2024,Online Shopping,10388.39,Pending,Mobile App
+TXN-1640,CUST-219,Santosh KC,Kathmandu,53,10/27/2024,Online Shopping,13786.2,Success,Mobile App
+TXN-1641,CUST-203,Bikash Thapa,Biratnagar,35,4/11/2024,Fund Transfer,44621.42,Success,Mobile App
+TXN-1642,CUST-211,Nabin Joshi,Dharan,45,3/3/2024,Mobile Recharge,948.05,Success,Mobile App
+TXN-1643,CUST-219,Santosh KC,Kathmandu,53,8/9/2024,Ticket Booking,5933.23,Success,Mobile App
+TXN-1644,CUST-213,Rajan Bista,Nepalgunj,19,12/15/2024,Remittance,10294.75,Success,Mobile App
+TXN-1645,CUST-209,Dipak Poudel,Kathmandu,23,5/23/2024,Remittance,44404.34,Success,Agent
+TXN-1646,CUST-220,Binita Lama,Pokhara,30,11/11/2024,Utility Bill,3412.75,Success,Web
+TXN-1647,CUST-218,Rekha Yadav,Birgunj,19,9/2/2024,Mobile Recharge,178.95,Success,Mobile App
+TXN-1648,CUST-214,Nisha Limbu,Pokhara,23,4/12/2024,Fund Transfer,88522.93,Failed,Mobile App
+TXN-1649,CUST-218,Rekha Yadav,Birgunj,19,1/10/2024,Remittance,39531.96,Success,Web
+TXN-1650,CUST-218,Rekha Yadav,Birgunj,19,9/5/2024,Online Shopping,13716.35,Failed,Web
+TXN-1651,CUST-213,Rajan Bista,Nepalgunj,19,5/18/2024,Utility Bill,617.28,Failed,Mobile App
+TXN-1652,CUST-201,Aarav Sharma,Kathmandu,25,5/23/2024,Mobile Recharge,827.79,Success,Agent
+TXN-1653,CUST-212,Sabina Maharjan,Kathmandu,20,10/26/2024,Utility Bill,4882.91,Success,Mobile App
+TXN-1654,CUST-208,Mina Karki,Chitwan,52,5/16/2024,Insurance,16509.42,Pending,Mobile App
+TXN-1655,CUST-208,Mina Karki,Chitwan,52,10/21/2024,Ticket Booking,7869.98,Success,Web
+TXN-1656,CUST-206,Priya Shrestha,Bhaktapur,26,3/31/2024,Utility Bill,3166.34,Pending,Agent
+TXN-1657,CUST-212,Sabina Maharjan,Kathmandu,20,10/29/2024,Mobile Recharge,733.11,Success,Agent
+TXN-1658,CUST-219,Santosh KC,Kathmandu,53,3/13/2024,Insurance,19019,Success,Agent
+TXN-1659,CUST-210,Kamala Basnet,Butwal,55,3/30/2024,Remittance,3822.26,Success,Mobile App
+TXN-1660,CUST-220,Binita Lama,Pokhara,30,4/22/2024,Mobile Recharge,573.8,Success,Web
+TXN-1661,CUST-220,Binita Lama,Pokhara,30,4/13/2024,Ticket Booking,1478.67,Pending,Mobile App
+TXN-1662,CUST-211,Nabin Joshi,Dharan,45,1/31/2024,Mobile Recharge,232.94,Pending,Mobile App
+TXN-1663,CUST-204,Anita Gurung,Kathmandu,33,9/26/2024,Ticket Booking,3236.67,Success,Web
+TXN-1664,CUST-213,Rajan Bista,Nepalgunj,19,10/27/2024,Mobile Recharge,402.9,Success,Mobile App
+TXN-1665,CUST-206,Priya Shrestha,Bhaktapur,26,8/11/2024,Ticket Booking,5294.49,Success,Agent
+TXN-1666,CUST-211,Nabin Joshi,Dharan,45,3/30/2024,Fund Transfer,96889.92,Pending,Agent
+TXN-1667,CUST-212,Sabina Maharjan,Kathmandu,20,4/24/2024,Fund Transfer,59100.54,Success,Web
+TXN-1668,CUST-210,Kamala Basnet,Butwal,55,12/18/2024,Online Shopping,2172.02,Pending,Mobile App
+TXN-1669,CUST-219,Santosh KC,Kathmandu,53,7/19/2024,Ticket Booking,7957.12,Failed,Mobile App
+TXN-1670,CUST-206,Priya Shrestha,Bhaktapur,26,11/4/2024,Online Shopping,13839.26,Failed,Mobile App
+TXN-1671,CUST-219,Santosh KC,Kathmandu,53,2/23/2024,Remittance,8750.88,Pending,Mobile App
+TXN-1672,CUST-208,Mina Karki,Chitwan,52,6/26/2024,Online Shopping,2767.95,Success,Agent
+TXN-1673,CUST-211,Nabin Joshi,Dharan,45,8/16/2024,Mobile Recharge,338.69,Success,Agent
+TXN-1674,CUST-203,Bikash Thapa,Biratnagar,35,6/28/2024,Online Shopping,11869.19,Pending,Mobile App
+TXN-1675,CUST-202,Sita Rai,Pokhara,19,7/16/2024,Remittance,37164.06,Success,Web
+TXN-1676,CUST-216,Sunita Dangol,Bhaktapur,32,7/12/2024,Online Shopping,8326.55,Success,Web
+TXN-1677,CUST-219,Santosh KC,Kathmandu,53,11/29/2024,Ticket Booking,5653.7,Success,Web
+TXN-1678,CUST-203,Bikash Thapa,Biratnagar,35,1/18/2024,Online Shopping,595.15,Success,Mobile App
+TXN-1679,CUST-203,Bikash Thapa,Biratnagar,35,6/24/2024,Utility Bill,4495.69,Success,Agent
+TXN-1680,CUST-203,Bikash Thapa,Biratnagar,35,10/7/2024,Mobile Recharge,404.16,Failed,Web
+TXN-1681,CUST-201,Aarav Sharma,Kathmandu,25,8/8/2024,Fund Transfer,16917.22,Success,Mobile App
+TXN-1682,CUST-202,Sita Rai,Pokhara,19,2/21/2024,Online Shopping,3321.59,Success,Web
+TXN-1683,CUST-218,Rekha Yadav,Birgunj,19,10/3/2024,Online Shopping,10010.79,Success,Mobile App
+TXN-1684,CUST-204,Anita Gurung,Kathmandu,33,1/26/2024,Remittance,29444.95,Success,Mobile App
+TXN-1685,CUST-202,Sita Rai,Pokhara,19,7/3/2024,Mobile Recharge,484.85,Success,Agent
+TXN-1686,CUST-220,Binita Lama,Pokhara,30,9/2/2024,Utility Bill,936.44,Success,Mobile App
+TXN-1687,CUST-210,Kamala Basnet,Butwal,55,2/11/2024,Remittance,42500.92,Success,Web
+TXN-1688,CUST-216,Sunita Dangol,Bhaktapur,32,9/7/2024,Fund Transfer,26867.94,Pending,Agent
+TXN-1689,CUST-213,Rajan Bista,Nepalgunj,19,4/4/2024,Online Shopping,13316.74,Success,Mobile App
+TXN-1690,CUST-215,Pramod Pandey,Lalitpur,31,1/23/2024,Online Shopping,6764.18,Success,Mobile App
+TXN-1691,CUST-209,Dipak Poudel,Kathmandu,23,10/15/2024,Mobile Recharge,236.02,Pending,Agent
+TXN-1692,CUST-204,Anita Gurung,Kathmandu,33,2/13/2024,Fund Transfer,34707.24,Failed,Web
+TXN-1693,CUST-219,Santosh KC,Kathmandu,53,4/26/2024,Insurance,2158.69,Success,Agent
+TXN-1694,CUST-214,Nisha Limbu,Pokhara,23,10/1/2024,Fund Transfer,86755.95,Success,Agent
+TXN-1695,CUST-208,Mina Karki,Chitwan,52,8/31/2024,Online Shopping,1460.64,Pending,Mobile App
+TXN-1696,CUST-217,Anil Magar,Chitwan,50,10/19/2024,Insurance,16208.56,Pending,Agent
+TXN-1697,CUST-205,Rohan Adhikari,Lalitpur,32,3/2/2024,Ticket Booking,3867.8,Success,Mobile App
+TXN-1698,CUST-207,Sunil Tamang,Pokhara,24,3/5/2024,Mobile Recharge,481.04,Pending,Web
+TXN-1699,CUST-207,Sunil Tamang,Pokhara,24,11/17/2024,Utility Bill,4253.49,Success,Web
+TXN-1700,CUST-203,Bikash Thapa,Biratnagar,35,2/14/2024,Remittance,28705.48,Failed,Web
+TXN-1701,CUST-209,Dipak Poudel,Kathmandu,23,9/23/2024,Remittance,46023.77,Success,Agent
+TXN-1702,CUST-220,Binita Lama,Pokhara,30,10/27/2024,Insurance,15852.03,Success,Web
+TXN-1703,CUST-205,Rohan Adhikari,Lalitpur,32,3/16/2024,Insurance,12170.75,Success,Mobile App
+TXN-1704,CUST-219,Santosh KC,Kathmandu,53,2/21/2024,Ticket Booking,2645.7,Failed,Web
+TXN-1705,CUST-214,Nisha Limbu,Pokhara,23,5/15/2024,Remittance,33429.81,Failed,Agent
+TXN-1706,CUST-216,Sunita Dangol,Bhaktapur,32,1/20/2024,Utility Bill,1739.36,Success,Agent
+TXN-1707,CUST-220,Binita Lama,Pokhara,30,12/14/2024,Fund Transfer,40471.13,Success,Web
+TXN-1708,CUST-208,Mina Karki,Chitwan,52,1/26/2024,Fund Transfer,47784.21,Success,Web
+TXN-1709,CUST-201,Aarav Sharma,Kathmandu,25,6/21/2024,Ticket Booking,6452.39,Success,Web
+TXN-1710,CUST-216,Sunita Dangol,Bhaktapur,32,12/22/2024,Fund Transfer,10272.63,Success,Mobile App
+TXN-1711,CUST-210,Kamala Basnet,Butwal,55,8/14/2024,Ticket Booking,6693.67,Success,Agent
+TXN-1712,CUST-214,Nisha Limbu,Pokhara,23,11/5/2024,Fund Transfer,9384.04,Success,Mobile App
+TXN-1713,CUST-214,Nisha Limbu,Pokhara,23,9/5/2024,Ticket Booking,4373.76,Success,Mobile App
+TXN-1714,CUST-217,Anil Magar,Chitwan,50,3/22/2024,Mobile Recharge,380.01,Failed,Web
+TXN-1715,CUST-205,Rohan Adhikari,Lalitpur,32,9/25/2024,Insurance,1550.02,Success,Mobile App
+TXN-1716,CUST-202,Sita Rai,Pokhara,19,5/7/2024,Mobile Recharge,510.8,Success,Agent
+TXN-1717,CUST-207,Sunil Tamang,Pokhara,24,5/20/2024,Online Shopping,12405.54,Failed,Web
+TXN-1718,CUST-204,Anita Gurung,Kathmandu,33,12/14/2024,Mobile Recharge,317.74,Success,Agent
+TXN-1719,CUST-215,Pramod Pandey,Lalitpur,31,3/31/2024,Ticket Booking,4059.37,Failed,Web
+TXN-1720,CUST-212,Sabina Maharjan,Kathmandu,20,3/24/2024,Ticket Booking,7208.69,Pending,Agent
+TXN-1721,CUST-203,Bikash Thapa,Biratnagar,35,5/25/2024,Mobile Recharge,447.91,Success,Agent
+TXN-1722,CUST-207,Sunil Tamang,Pokhara,24,4/23/2024,Fund Transfer,22898.65,Success,Web
+TXN-1723,CUST-214,Nisha Limbu,Pokhara,23,9/19/2024,Mobile Recharge,878.17,Pending,Mobile App
+TXN-1724,CUST-216,Sunita Dangol,Bhaktapur,32,3/8/2024,Fund Transfer,17733.47,Success,Mobile App
+TXN-1725,CUST-209,Dipak Poudel,Kathmandu,23,11/7/2024,Ticket Booking,7572.54,Pending,Agent
+TXN-1726,CUST-209,Dipak Poudel,Kathmandu,23,8/4/2024,Remittance,42876.14,Success,Web
+TXN-1727,CUST-207,Sunil Tamang,Pokhara,24,8/26/2024,Online Shopping,10254.78,Failed,Web
+TXN-1728,CUST-219,Santosh KC,Kathmandu,53,2/22/2024,Mobile Recharge,560.36,Pending,Web
+TXN-1729,CUST-218,Rekha Yadav,Birgunj,19,11/27/2024,Insurance,12571.95,Success,Agent
+TXN-1730,CUST-204,Anita Gurung,Kathmandu,33,9/3/2024,Mobile Recharge,402.66,Success,Agent
+TXN-1731,CUST-211,Nabin Joshi,Dharan,45,5/21/2024,Online Shopping,9944.96,Pending,Web
+TXN-1732,CUST-207,Sunil Tamang,Pokhara,24,3/17/2024,Insurance,15544.01,Success,Agent
+TXN-1733,CUST-213,Rajan Bista,Nepalgunj,19,12/4/2024,Online Shopping,10307.11,Pending,Mobile App
+TXN-1734,CUST-216,Sunita Dangol,Bhaktapur,32,5/31/2024,Online Shopping,13631.6,Success,Web
+TXN-1735,CUST-202,Sita Rai,Pokhara,19,10/25/2024,Fund Transfer,99478,Success,Web
+TXN-1736,CUST-208,Mina Karki,Chitwan,52,12/17/2024,Insurance,13127.96,Success,Agent
+TXN-1737,CUST-212,Sabina Maharjan,Kathmandu,20,9/16/2024,Online Shopping,12727.66,Pending,Agent
+TXN-1738,CUST-206,Priya Shrestha,Bhaktapur,26,5/30/2024,Mobile Recharge,523.7,Pending,Web
+TXN-1739,CUST-218,Rekha Yadav,Birgunj,19,4/3/2024,Fund Transfer,90009.32,Pending,Mobile App
+TXN-1740,CUST-208,Mina Karki,Chitwan,52,6/30/2024,Utility Bill,3848.94,Success,Web
+TXN-1741,CUST-211,Nabin Joshi,Dharan,45,7/9/2024,Online Shopping,8907.89,Success,Mobile App
+TXN-1742,CUST-216,Sunita Dangol,Bhaktapur,32,1/28/2024,Ticket Booking,5257.98,Failed,Agent
+TXN-1743,CUST-203,Bikash Thapa,Biratnagar,35,8/29/2024,Utility Bill,2752.15,Pending,Web
+TXN-1744,CUST-217,Anil Magar,Chitwan,50,6/1/2024,Remittance,4594.97,Success,Mobile App
+TXN-1745,CUST-207,Sunil Tamang,Pokhara,24,6/24/2024,Remittance,49385.2,Success,Mobile App
+TXN-1746,CUST-211,Nabin Joshi,Dharan,45,4/2/2024,Ticket Booking,1106.09,Success,Agent
+TXN-1747,CUST-206,Priya Shrestha,Bhaktapur,26,6/9/2024,Fund Transfer,6272.35,Success,Web
+TXN-1748,CUST-207,Sunil Tamang,Pokhara,24,3/27/2024,Insurance,15525.19,Success,Mobile App
+TXN-1749,CUST-205,Rohan Adhikari,Lalitpur,32,11/10/2024,Remittance,32407.4,Success,Web
+TXN-1750,CUST-216,Sunita Dangol,Bhaktapur,32,7/15/2024,Mobile Recharge,133.95,Success,Agent
+TXN-1751,CUST-212,Sabina Maharjan,Kathmandu,20,1/8/2024,Online Shopping,11425.66,Failed,Mobile App
+TXN-1752,CUST-201,Aarav Sharma,Kathmandu,25,12/12/2024,Mobile Recharge,664.02,Success,Mobile App
+TXN-1753,CUST-212,Sabina Maharjan,Kathmandu,20,6/8/2024,Utility Bill,962.19,Failed,Agent
+TXN-1754,CUST-210,Kamala Basnet,Butwal,55,3/26/2024,Mobile Recharge,841.46,Success,Web
+TXN-1755,CUST-215,Pramod Pandey,Lalitpur,31,9/23/2024,Insurance,10958.24,Success,Agent
+TXN-1756,CUST-205,Rohan Adhikari,Lalitpur,32,6/24/2024,Remittance,19244.04,Success,Mobile App
+TXN-1757,CUST-213,Rajan Bista,Nepalgunj,19,1/10/2024,Utility Bill,1509.45,Success,Mobile App
+TXN-1758,CUST-201,Aarav Sharma,Kathmandu,25,10/28/2024,Insurance,4210.71,Success,Agent
+TXN-1759,CUST-202,Sita Rai,Pokhara,19,7/11/2024,Fund Transfer,25951.02,Failed,Agent
+TXN-1760,CUST-202,Sita Rai,Pokhara,19,10/31/2024,Mobile Recharge,695.77,Pending,Mobile App
+TXN-1761,CUST-202,Sita Rai,Pokhara,19,12/19/2024,Mobile Recharge,475.1,Success,Mobile App
+TXN-1762,CUST-218,Rekha Yadav,Birgunj,19,5/9/2024,Remittance,35689.67,Success,Agent
+TXN-1763,CUST-201,Aarav Sharma,Kathmandu,25,6/3/2024,Remittance,33759.9,Pending,Agent
+TXN-1764,CUST-209,Dipak Poudel,Kathmandu,23,11/14/2024,Insurance,14313.8,Success,Mobile App
+TXN-1765,CUST-217,Anil Magar,Chitwan,50,11/12/2024,Mobile Recharge,354.44,Success,Web
+TXN-1766,CUST-207,Sunil Tamang,Pokhara,24,11/7/2024,Utility Bill,4000.82,Failed,Mobile App
+TXN-1767,CUST-212,Sabina Maharjan,Kathmandu,20,12/26/2024,Remittance,16176.86,Success,Agent
+TXN-1768,CUST-216,Sunita Dangol,Bhaktapur,32,4/16/2024,Fund Transfer,93345.87,Success,Mobile App
+TXN-1769,CUST-201,Aarav Sharma,Kathmandu,25,1/7/2024,Fund Transfer,9355.78,Success,Agent
+TXN-1770,CUST-216,Sunita Dangol,Bhaktapur,32,3/17/2024,Mobile Recharge,801.57,Success,Agent
+TXN-1771,CUST-204,Anita Gurung,Kathmandu,33,5/11/2024,Fund Transfer,23500.45,Success,Web
+TXN-1772,CUST-215,Pramod Pandey,Lalitpur,31,1/26/2024,Mobile Recharge,831.86,Success,Web
+TXN-1773,CUST-212,Sabina Maharjan,Kathmandu,20,12/12/2024,Online Shopping,6562.13,Success,Mobile App
+TXN-1774,CUST-202,Sita Rai,Pokhara,19,1/5/2024,Ticket Booking,1537.96,Pending,Mobile App
+TXN-1775,CUST-211,Nabin Joshi,Dharan,45,7/2/2024,Remittance,47844.28,Success,Agent
+TXN-1776,CUST-203,Bikash Thapa,Biratnagar,35,7/9/2024,Ticket Booking,3070.42,Success,Web
+TXN-1777,CUST-213,Rajan Bista,Nepalgunj,19,8/21/2024,Online Shopping,12584.91,Pending,Web
+TXN-1778,CUST-214,Nisha Limbu,Pokhara,23,11/28/2024,Ticket Booking,1750.84,Success,Agent
+TXN-1779,CUST-202,Sita Rai,Pokhara,19,3/22/2024,Mobile Recharge,474.42,Failed,Web
+TXN-1780,CUST-219,Santosh KC,Kathmandu,53,12/13/2024,Remittance,10700.51,Success,Web
+TXN-1781,CUST-220,Binita Lama,Pokhara,30,1/15/2024,Ticket Booking,5633.48,Pending,Mobile App
+TXN-1782,CUST-216,Sunita Dangol,Bhaktapur,32,9/6/2024,Mobile Recharge,898.83,Success,Mobile App
+TXN-1783,CUST-203,Bikash Thapa,Biratnagar,35,5/13/2024,Fund Transfer,31766.68,Pending,Agent
+TXN-1784,CUST-217,Anil Magar,Chitwan,50,10/22/2024,Fund Transfer,56718.72,Pending,Web
+TXN-1785,CUST-217,Anil Magar,Chitwan,50,9/24/2024,Fund Transfer,70207.73,Success,Web
+TXN-1786,CUST-208,Mina Karki,Chitwan,52,9/3/2024,Online Shopping,10056.55,Pending,Web
+TXN-1787,CUST-205,Rohan Adhikari,Lalitpur,32,10/12/2024,Insurance,2036.76,Pending,Mobile App
+TXN-1788,CUST-217,Anil Magar,Chitwan,50,8/28/2024,Ticket Booking,4218.76,Success,Mobile App
+TXN-1789,CUST-216,Sunita Dangol,Bhaktapur,32,6/13/2024,Utility Bill,1989.03,Success,Mobile App
+TXN-1790,CUST-217,Anil Magar,Chitwan,50,4/24/2024,Insurance,13223.03,Success,Mobile App
+TXN-1791,CUST-203,Bikash Thapa,Biratnagar,35,8/23/2024,Remittance,40460.54,Success,Mobile App
+TXN-1792,CUST-216,Sunita Dangol,Bhaktapur,32,8/16/2024,Online Shopping,2044.99,Success,Agent
+TXN-1793,CUST-201,Aarav Sharma,Kathmandu,25,2/22/2024,Remittance,21792.25,Failed,Agent
+TXN-1794,CUST-201,Aarav Sharma,Kathmandu,25,2/16/2024,Ticket Booking,5031.52,Failed,Agent
+TXN-1795,CUST-210,Kamala Basnet,Butwal,55,9/17/2024,Insurance,4930.17,Pending,Web
+TXN-1796,CUST-211,Nabin Joshi,Dharan,45,7/5/2024,Ticket Booking,907.06,Success,Web
+TXN-1797,CUST-211,Nabin Joshi,Dharan,45,10/13/2024,Ticket Booking,5148.18,Success,Agent
+TXN-1798,CUST-212,Sabina Maharjan,Kathmandu,20,8/19/2024,Mobile Recharge,187.69,Pending,Mobile App
+TXN-1799,CUST-201,Aarav Sharma,Kathmandu,25,6/23/2024,Online Shopping,12499.29,Success,Agent
+TXN-1800,CUST-217,Anil Magar,Chitwan,50,7/10/2024,Fund Transfer,11079.06,Success,Web
+TXN-1801,CUST-205,Rohan Adhikari,Lalitpur,32,7/28/2024,Mobile Recharge,328.86,Success,Mobile App
+TXN-1802,CUST-204,Anita Gurung,Kathmandu,33,7/20/2024,Utility Bill,2556.71,Success,Agent
+TXN-1803,CUST-211,Nabin Joshi,Dharan,45,2/25/2024,Ticket Booking,3608.53,Pending,Agent
+TXN-1804,CUST-219,Santosh KC,Kathmandu,53,3/4/2024,Ticket Booking,7188.16,Success,Agent
+TXN-1805,CUST-219,Santosh KC,Kathmandu,53,9/15/2024,Utility Bill,4837.35,Success,Agent
+TXN-1806,CUST-202,Sita Rai,Pokhara,19,10/10/2024,Remittance,42263.17,Success,Agent
+TXN-1807,CUST-206,Priya Shrestha,Bhaktapur,26,12/20/2024,Insurance,4299.36,Success,Mobile App
+TXN-1808,CUST-213,Rajan Bista,Nepalgunj,19,12/2/2024,Insurance,12517.05,Success,Agent
+TXN-1809,CUST-213,Rajan Bista,Nepalgunj,19,8/2/2024,Insurance,18402.29,Success,Web
+TXN-1810,CUST-213,Rajan Bista,Nepalgunj,19,6/24/2024,Online Shopping,6956.83,Success,Mobile App
+TXN-1811,CUST-214,Nisha Limbu,Pokhara,23,11/4/2024,Fund Transfer,88700.47,Failed,Web
+TXN-1812,CUST-218,Rekha Yadav,Birgunj,19,6/9/2024,Fund Transfer,73813.46,Failed,Agent
+TXN-1813,CUST-207,Sunil Tamang,Pokhara,24,4/12/2024,Utility Bill,3308.75,Success,Agent
+TXN-1814,CUST-212,Sabina Maharjan,Kathmandu,20,12/10/2024,Utility Bill,4916.01,Pending,Mobile App
+TXN-1815,CUST-217,Anil Magar,Chitwan,50,10/4/2024,Fund Transfer,63869.3,Pending,Mobile App
+TXN-1816,CUST-212,Sabina Maharjan,Kathmandu,20,10/14/2024,Remittance,29974.7,Pending,Agent
+TXN-1817,CUST-214,Nisha Limbu,Pokhara,23,12/11/2024,Fund Transfer,89439.67,Failed,Web
+TXN-1818,CUST-214,Nisha Limbu,Pokhara,23,1/7/2024,Insurance,3022.94,Success,Mobile App
+TXN-1819,CUST-202,Sita Rai,Pokhara,19,12/9/2024,Mobile Recharge,279.91,Success,Web
+TXN-1820,CUST-209,Dipak Poudel,Kathmandu,23,3/15/2024,Ticket Booking,965.25,Success,Mobile App
+TXN-1821,CUST-218,Rekha Yadav,Birgunj,19,1/17/2024,Online Shopping,12266.19,Success,Agent
+TXN-1822,CUST-218,Rekha Yadav,Birgunj,19,4/24/2024,Fund Transfer,64888.38,Success,Mobile App
+TXN-1823,CUST-217,Anil Magar,Chitwan,50,12/22/2024,Online Shopping,10486.16,Success,Web
+TXN-1824,CUST-213,Rajan Bista,Nepalgunj,19,8/1/2024,Ticket Booking,7818.67,Success,Agent
+TXN-1825,CUST-202,Sita Rai,Pokhara,19,1/7/2024,Fund Transfer,25508.44,Failed,Web
+TXN-1826,CUST-208,Mina Karki,Chitwan,52,11/20/2024,Fund Transfer,71099.77,Success,Agent
+TXN-1827,CUST-218,Rekha Yadav,Birgunj,19,11/4/2024,Utility Bill,3992.66,Success,Web
+TXN-1828,CUST-215,Pramod Pandey,Lalitpur,31,3/31/2024,Fund Transfer,7909.66,Success,Agent
+TXN-1829,CUST-217,Anil Magar,Chitwan,50,3/2/2024,Remittance,3950.44,Success,Agent
+TXN-1830,CUST-209,Dipak Poudel,Kathmandu,23,3/7/2024,Utility Bill,3127.94,Success,Mobile App
+TXN-1831,CUST-211,Nabin Joshi,Dharan,45,8/26/2024,Fund Transfer,93780.7,Success,Mobile App
+TXN-1832,CUST-211,Nabin Joshi,Dharan,45,11/1/2024,Mobile Recharge,796.29,Pending,Agent
+TXN-1833,CUST-210,Kamala Basnet,Butwal,55,9/8/2024,Ticket Booking,4795.08,Success,Mobile App
+TXN-1834,CUST-211,Nabin Joshi,Dharan,45,9/26/2024,Utility Bill,4806.44,Failed,Mobile App
+TXN-1835,CUST-217,Anil Magar,Chitwan,50,3/22/2024,Remittance,28067.85,Success,Mobile App
+TXN-1836,CUST-212,Sabina Maharjan,Kathmandu,20,4/23/2024,Utility Bill,3485.01,Success,Web
+TXN-1837,CUST-210,Kamala Basnet,Butwal,55,4/21/2024,Ticket Booking,5137.1,Success,Agent
+TXN-1838,CUST-201,Aarav Sharma,Kathmandu,25,2/28/2024,Fund Transfer,34927.73,Success,Agent
+TXN-1839,CUST-220,Binita Lama,Pokhara,30,11/14/2024,Utility Bill,4815.04,Pending,Web
+TXN-1840,CUST-213,Rajan Bista,Nepalgunj,19,2/28/2024,Remittance,14316.35,Pending,Web
+TXN-1841,CUST-201,Aarav Sharma,Kathmandu,25,9/21/2024,Ticket Booking,6278.71,Failed,Agent
+TXN-1842,CUST-215,Pramod Pandey,Lalitpur,31,9/6/2024,Mobile Recharge,366.79,Pending,Mobile App
+TXN-1843,CUST-211,Nabin Joshi,Dharan,45,9/20/2024,Mobile Recharge,953.39,Success,Agent
+TXN-1844,CUST-218,Rekha Yadav,Birgunj,19,1/4/2024,Fund Transfer,7014.45,Pending,Agent
+TXN-1845,CUST-207,Sunil Tamang,Pokhara,24,12/16/2024,Remittance,42111.92,Success,Agent
+TXN-1846,CUST-214,Nisha Limbu,Pokhara,23,11/27/2024,Ticket Booking,7548.13,Pending,Agent
+TXN-1847,CUST-205,Rohan Adhikari,Lalitpur,32,1/13/2024,Remittance,36409.68,Success,Mobile App
+TXN-1848,CUST-203,Bikash Thapa,Biratnagar,35,1/28/2024,Utility Bill,4073.97,Failed,Mobile App
+TXN-1849,CUST-219,Santosh KC,Kathmandu,53,4/26/2024,Online Shopping,6292.2,Success,Agent
+TXN-1850,CUST-213,Rajan Bista,Nepalgunj,19,8/9/2024,Online Shopping,548.3,Pending,Mobile App
+TXN-1851,CUST-218,Rekha Yadav,Birgunj,19,1/4/2024,Fund Transfer,72168.43,Success,Agent
+TXN-1852,CUST-219,Santosh KC,Kathmandu,53,1/24/2024,Fund Transfer,84901,Success,Agent
+TXN-1853,CUST-204,Anita Gurung,Kathmandu,33,5/28/2024,Ticket Booking,5644.09,Failed,Mobile App
+TXN-1854,CUST-210,Kamala Basnet,Butwal,55,8/12/2024,Remittance,20965.44,Pending,Mobile App
+TXN-1855,CUST-216,Sunita Dangol,Bhaktapur,32,3/21/2024,Insurance,5177.45,Pending,Web
+TXN-1856,CUST-218,Rekha Yadav,Birgunj,19,5/31/2024,Fund Transfer,14835.52,Pending,Agent
+TXN-1857,CUST-212,Sabina Maharjan,Kathmandu,20,1/6/2024,Insurance,17620.57,Success,Mobile App
+TXN-1858,CUST-202,Sita Rai,Pokhara,19,1/3/2024,Insurance,12336.44,Failed,Agent
+TXN-1859,CUST-203,Bikash Thapa,Biratnagar,35,6/5/2024,Utility Bill,3867.33,Pending,Web
+TXN-1860,CUST-207,Sunil Tamang,Pokhara,24,7/30/2024,Fund Transfer,85220.16,Success,Mobile App
+TXN-1861,CUST-206,Priya Shrestha,Bhaktapur,26,4/23/2024,Insurance,16860.22,Success,Mobile App
+TXN-1862,CUST-206,Priya Shrestha,Bhaktapur,26,12/9/2024,Ticket Booking,4754.69,Success,Agent
+TXN-1863,CUST-215,Pramod Pandey,Lalitpur,31,11/26/2024,Insurance,2389.75,Pending,Mobile App
+TXN-1864,CUST-209,Dipak Poudel,Kathmandu,23,2/20/2024,Utility Bill,3765.15,Success,Web
+TXN-1865,CUST-212,Sabina Maharjan,Kathmandu,20,3/6/2024,Fund Transfer,65719.56,Success,Web
+TXN-1866,CUST-220,Binita Lama,Pokhara,30,2/5/2024,Utility Bill,1930.04,Success,Web
+TXN-1867,CUST-220,Binita Lama,Pokhara,30,12/3/2024,Online Shopping,10493.83,Success,Agent
+TXN-1868,CUST-219,Santosh KC,Kathmandu,53,7/5/2024,Ticket Booking,2872.5,Success,Mobile App
+TXN-1869,CUST-201,Aarav Sharma,Kathmandu,25,6/9/2024,Utility Bill,4035.47,Pending,Agent
+TXN-1870,CUST-214,Nisha Limbu,Pokhara,23,5/21/2024,Ticket Booking,3196.14,Pending,Agent
+TXN-1871,CUST-211,Nabin Joshi,Dharan,45,9/2/2024,Remittance,23377.18,Success,Web
+TXN-1872,CUST-218,Rekha Yadav,Birgunj,19,2/25/2024,Utility Bill,3404.98,Success,Web
+TXN-1873,CUST-205,Rohan Adhikari,Lalitpur,32,10/2/2024,Utility Bill,1684.56,Pending,Mobile App
+TXN-1874,CUST-203,Bikash Thapa,Biratnagar,35,1/10/2024,Ticket Booking,4303.84,Success,Agent
+TXN-1875,CUST-219,Santosh KC,Kathmandu,53,7/26/2024,Ticket Booking,4925.27,Success,Agent
+TXN-1876,CUST-209,Dipak Poudel,Kathmandu,23,10/5/2024,Insurance,9969.98,Success,Web
+TXN-1877,CUST-213,Rajan Bista,Nepalgunj,19,4/24/2024,Ticket Booking,4922.01,Success,Mobile App
+TXN-1878,CUST-215,Pramod Pandey,Lalitpur,31,9/13/2024,Insurance,2720.53,Success,Agent
+TXN-1879,CUST-201,Aarav Sharma,Kathmandu,25,12/5/2024,Utility Bill,4315.92,Failed,Agent
+TXN-1880,CUST-206,Priya Shrestha,Bhaktapur,26,9/20/2024,Utility Bill,2507.99,Success,Agent
+TXN-1881,CUST-219,Santosh KC,Kathmandu,53,12/3/2024,Ticket Booking,7758.02,Pending,Agent
+TXN-1882,CUST-216,Sunita Dangol,Bhaktapur,32,7/2/2024,Mobile Recharge,296.94,Success,Mobile App
+TXN-1883,CUST-203,Bikash Thapa,Biratnagar,35,5/15/2024,Online Shopping,3740.07,Pending,Mobile App
+TXN-1884,CUST-217,Anil Magar,Chitwan,50,7/3/2024,Remittance,24544.36,Success,Mobile App
+TXN-1885,CUST-202,Sita Rai,Pokhara,19,11/28/2024,Online Shopping,1817.41,Failed,Agent
+TXN-1886,CUST-209,Dipak Poudel,Kathmandu,23,5/14/2024,Insurance,11342.65,Success,Web
+TXN-1887,CUST-213,Rajan Bista,Nepalgunj,19,7/6/2024,Insurance,13413.39,Success,Agent
+TXN-1888,CUST-209,Dipak Poudel,Kathmandu,23,7/11/2024,Utility Bill,2823.67,Success,Web
+TXN-1889,CUST-216,Sunita Dangol,Bhaktapur,32,9/3/2024,Insurance,1125.36,Success,Web
+TXN-1890,CUST-206,Priya Shrestha,Bhaktapur,26,4/27/2024,Mobile Recharge,563.09,Success,Mobile App
+TXN-1891,CUST-205,Rohan Adhikari,Lalitpur,32,4/5/2024,Utility Bill,2130,Pending,Mobile App
+TXN-1892,CUST-208,Mina Karki,Chitwan,52,7/31/2024,Ticket Booking,2976.69,Success,Web
+TXN-1893,CUST-216,Sunita Dangol,Bhaktapur,32,9/2/2024,Utility Bill,3158.56,Pending,Web
+TXN-1894,CUST-201,Aarav Sharma,Kathmandu,25,5/4/2024,Mobile Recharge,215.1,Failed,Mobile App
+TXN-1895,CUST-205,Rohan Adhikari,Lalitpur,32,11/18/2024,Insurance,1744.63,Failed,Mobile App
+TXN-1896,CUST-202,Sita Rai,Pokhara,19,3/26/2024,Online Shopping,13859.97,Failed,Web
+TXN-1897,CUST-220,Binita Lama,Pokhara,30,10/15/2024,Fund Transfer,2352.69,Pending,Agent
+TXN-1898,CUST-210,Kamala Basnet,Butwal,55,2/13/2024,Utility Bill,2521.42,Success,Web
+TXN-1899,CUST-206,Priya Shrestha,Bhaktapur,26,4/22/2024,Ticket Booking,3580.75,Success,Agent
+TXN-1900,CUST-206,Priya Shrestha,Bhaktapur,26,11/15/2024,Fund Transfer,51325.09,Success,Agent
+TXN-1901,CUST-211,Nabin Joshi,Dharan,45,8/20/2024,Insurance,12221.32,Success,Web
+TXN-1902,CUST-213,Rajan Bista,Nepalgunj,19,3/8/2024,Mobile Recharge,114.91,Failed,Agent
+TXN-1903,CUST-214,Nisha Limbu,Pokhara,23,3/17/2024,Insurance,2829.67,Success,Agent
+TXN-1904,CUST-220,Binita Lama,Pokhara,30,1/20/2024,Ticket Booking,4485.72,Success,Mobile App
+TXN-1905,CUST-216,Sunita Dangol,Bhaktapur,32,12/3/2024,Utility Bill,4558.93,Failed,Mobile App
+TXN-1906,CUST-214,Nisha Limbu,Pokhara,23,9/24/2024,Remittance,19778.12,Success,Agent
+TXN-1907,CUST-217,Anil Magar,Chitwan,50,8/7/2024,Utility Bill,4722.9,Success,Web
+TXN-1908,CUST-212,Sabina Maharjan,Kathmandu,20,10/28/2024,Ticket Booking,6060.46,Pending,Agent
+TXN-1909,CUST-204,Anita Gurung,Kathmandu,33,8/5/2024,Utility Bill,1645.33,Success,Mobile App
+TXN-1910,CUST-210,Kamala Basnet,Butwal,55,11/2/2024,Insurance,8764.29,Success,Mobile App
+TXN-1911,CUST-201,Aarav Sharma,Kathmandu,25,10/22/2024,Insurance,3238.74,Success,Web
+TXN-1912,CUST-207,Sunil Tamang,Pokhara,24,12/18/2024,Ticket Booking,2869.26,Success,Mobile App
+TXN-1913,CUST-205,Rohan Adhikari,Lalitpur,32,8/6/2024,Fund Transfer,58744.33,Success,Agent
+TXN-1914,CUST-214,Nisha Limbu,Pokhara,23,10/16/2024,Online Shopping,9294.65,Pending,Web
+TXN-1915,CUST-207,Sunil Tamang,Pokhara,24,7/30/2024,Insurance,15891.98,Success,Mobile App
+TXN-1916,CUST-212,Sabina Maharjan,Kathmandu,20,10/13/2024,Insurance,10191.44,Success,Agent
+TXN-1917,CUST-212,Sabina Maharjan,Kathmandu,20,12/27/2024,Remittance,37317.56,Pending,Mobile App
+TXN-1918,CUST-208,Mina Karki,Chitwan,52,8/16/2024,Ticket Booking,5744.84,Success,Mobile App
+TXN-1919,CUST-207,Sunil Tamang,Pokhara,24,9/17/2024,Remittance,39731.89,Failed,Agent
+TXN-1920,CUST-202,Sita Rai,Pokhara,19,3/23/2024,Remittance,48299.37,Success,Mobile App
+TXN-1921,CUST-205,Rohan Adhikari,Lalitpur,32,8/29/2024,Insurance,9272.17,Success,Web
+TXN-1922,CUST-208,Mina Karki,Chitwan,52,7/8/2024,Mobile Recharge,648.13,Pending,Web
+TXN-1923,CUST-213,Rajan Bista,Nepalgunj,19,11/10/2024,Fund Transfer,52340.05,Pending,Agent
+TXN-1924,CUST-202,Sita Rai,Pokhara,19,3/30/2024,Fund Transfer,49689.65,Success,Mobile App
+TXN-1925,CUST-217,Anil Magar,Chitwan,50,5/26/2024,Utility Bill,651.24,Failed,Agent
+TXN-1926,CUST-217,Anil Magar,Chitwan,50,12/23/2024,Utility Bill,3268.35,Pending,Mobile App
+TXN-1927,CUST-212,Sabina Maharjan,Kathmandu,20,5/2/2024,Fund Transfer,528.58,Success,Mobile App
+TXN-1928,CUST-209,Dipak Poudel,Kathmandu,23,7/23/2024,Online Shopping,10144.03,Success,Agent
+TXN-1929,CUST-207,Sunil Tamang,Pokhara,24,9/22/2024,Mobile Recharge,763.23,Success,Mobile App
+TXN-1930,CUST-218,Rekha Yadav,Birgunj,19,5/25/2024,Fund Transfer,83061.6,Failed,Web
+TXN-1931,CUST-212,Sabina Maharjan,Kathmandu,20,5/21/2024,Utility Bill,3228.64,Success,Web
+TXN-1932,CUST-213,Rajan Bista,Nepalgunj,19,10/21/2024,Mobile Recharge,335,Success,Agent
+TXN-1933,CUST-204,Anita Gurung,Kathmandu,33,10/13/2024,Mobile Recharge,552.85,Success,Mobile App
+TXN-1934,CUST-217,Anil Magar,Chitwan,50,5/11/2024,Insurance,16449.8,Failed,Web
+TXN-1935,CUST-215,Pramod Pandey,Lalitpur,31,7/12/2024,Insurance,10188.97,Success,Web
+TXN-1936,CUST-215,Pramod Pandey,Lalitpur,31,12/14/2024,Remittance,45033.14,Success,Web
+TXN-1937,CUST-204,Anita Gurung,Kathmandu,33,5/12/2024,Mobile Recharge,444.41,Success,Agent
+TXN-1938,CUST-208,Mina Karki,Chitwan,52,6/10/2024,Remittance,47861.39,Failed,Agent
+TXN-1939,CUST-201,Aarav Sharma,Kathmandu,25,12/24/2024,Ticket Booking,2475.12,Success,Mobile App
+TXN-1940,CUST-213,Rajan Bista,Nepalgunj,19,12/10/2024,Fund Transfer,82196.93,Success,Agent
+TXN-1941,CUST-206,Priya Shrestha,Bhaktapur,26,8/31/2024,Online Shopping,5497.01,Failed,Web
+TXN-1942,CUST-206,Priya Shrestha,Bhaktapur,26,12/15/2024,Utility Bill,2745.5,Success,Mobile App
+TXN-1943,CUST-208,Mina Karki,Chitwan,52,5/15/2024,Utility Bill,1531.43,Success,Agent
+TXN-1944,CUST-212,Sabina Maharjan,Kathmandu,20,3/20/2024,Ticket Booking,1300.17,Success,Agent
+TXN-1945,CUST-216,Sunita Dangol,Bhaktapur,32,11/10/2024,Mobile Recharge,787.82,Failed,Mobile App
+TXN-1946,CUST-216,Sunita Dangol,Bhaktapur,32,7/9/2024,Insurance,6992.92,Failed,Web
+TXN-1947,CUST-216,Sunita Dangol,Bhaktapur,32,4/3/2024,Ticket Booking,7370.05,Success,Web
+TXN-1948,CUST-208,Mina Karki,Chitwan,52,10/22/2024,Utility Bill,743.67,Success,Web
+TXN-1949,CUST-218,Rekha Yadav,Birgunj,19,1/17/2024,Insurance,7598.49,Pending,Mobile App
+TXN-1950,CUST-215,Pramod Pandey,Lalitpur,31,3/2/2024,Fund Transfer,52061.41,Success,Agent
+TXN-1951,CUST-201,Aarav Sharma,Kathmandu,25,1/7/2024,Fund Transfer,21469.86,Failed,Mobile App
+TXN-1952,CUST-211,Nabin Joshi,Dharan,45,7/4/2024,Insurance,17375,Success,Agent
+TXN-1953,CUST-209,Dipak Poudel,Kathmandu,23,5/1/2024,Online Shopping,7228.78,Failed,Web
+TXN-1954,CUST-212,Sabina Maharjan,Kathmandu,20,4/4/2024,Remittance,22349.26,Success,Agent
+TXN-1955,CUST-212,Sabina Maharjan,Kathmandu,20,7/5/2024,Ticket Booking,3504.44,Success,Mobile App
+TXN-1956,CUST-219,Santosh KC,Kathmandu,53,3/8/2024,Insurance,14034.23,Success,Agent
+TXN-1957,CUST-209,Dipak Poudel,Kathmandu,23,4/30/2024,Insurance,9212.16,Success,Mobile App
+TXN-1958,CUST-205,Rohan Adhikari,Lalitpur,32,3/17/2024,Remittance,40672.08,Success,Web
+TXN-1959,CUST-216,Sunita Dangol,Bhaktapur,32,3/9/2024,Ticket Booking,5229.89,Failed,Agent
+TXN-1960,CUST-211,Nabin Joshi,Dharan,45,9/6/2024,Online Shopping,3989.32,Failed,Mobile App
+TXN-1961,CUST-213,Rajan Bista,Nepalgunj,19,2/20/2024,Fund Transfer,16752.52,Success,Web
+TXN-1962,CUST-216,Sunita Dangol,Bhaktapur,32,11/18/2024,Mobile Recharge,504.87,Success,Web
+TXN-1963,CUST-212,Sabina Maharjan,Kathmandu,20,7/3/2024,Insurance,11592.34,Success,Web
+TXN-1964,CUST-201,Aarav Sharma,Kathmandu,25,7/29/2024,Mobile Recharge,415.98,Pending,Agent
+TXN-1965,CUST-207,Sunil Tamang,Pokhara,24,10/22/2024,Insurance,13347.44,Failed,Mobile App
+TXN-1966,CUST-210,Kamala Basnet,Butwal,55,6/30/2024,Online Shopping,10195.93,Success,Agent
+TXN-1967,CUST-215,Pramod Pandey,Lalitpur,31,2/10/2024,Remittance,31455.86,Success,Agent
+TXN-1968,CUST-205,Rohan Adhikari,Lalitpur,32,3/26/2024,Fund Transfer,80867.86,Success,Web
+TXN-1969,CUST-220,Binita Lama,Pokhara,30,10/19/2024,Remittance,42747.24,Success,Mobile App
+TXN-1970,CUST-206,Priya Shrestha,Bhaktapur,26,6/24/2024,Utility Bill,1910.67,Pending,Web
+TXN-1971,CUST-209,Dipak Poudel,Kathmandu,23,11/5/2024,Fund Transfer,39847.8,Success,Web
+TXN-1972,CUST-219,Santosh KC,Kathmandu,53,9/23/2024,Remittance,21871.47,Success,Mobile App
+TXN-1973,CUST-205,Rohan Adhikari,Lalitpur,32,4/30/2024,Fund Transfer,25538.88,Pending,Agent
+TXN-1974,CUST-203,Bikash Thapa,Biratnagar,35,4/17/2024,Utility Bill,2286.71,Success,Mobile App
+TXN-1975,CUST-216,Sunita Dangol,Bhaktapur,32,10/7/2024,Mobile Recharge,123.73,Success,Agent
+TXN-1976,CUST-203,Bikash Thapa,Biratnagar,35,2/23/2024,Online Shopping,9386.1,Success,Agent
+TXN-1977,CUST-213,Rajan Bista,Nepalgunj,19,6/7/2024,Utility Bill,1613.28,Success,Web
+TXN-1978,CUST-205,Rohan Adhikari,Lalitpur,32,3/8/2024,Insurance,16931.84,Success,Mobile App
+TXN-1979,CUST-212,Sabina Maharjan,Kathmandu,20,6/15/2024,Ticket Booking,4071.16,Failed,Web
+TXN-1980,CUST-218,Rekha Yadav,Birgunj,19,8/15/2024,Utility Bill,4862.94,Pending,Agent
+TXN-1981,CUST-206,Priya Shrestha,Bhaktapur,26,10/29/2024,Insurance,9674.32,Pending,Agent
+TXN-1982,CUST-219,Santosh KC,Kathmandu,53,8/10/2024,Insurance,13155.94,Failed,Web
+TXN-1983,CUST-212,Sabina Maharjan,Kathmandu,20,9/3/2024,Insurance,5315.44,Success,Web
+TXN-1984,CUST-210,Kamala Basnet,Butwal,55,7/6/2024,Remittance,14470.74,Success,Mobile App
+TXN-1985,CUST-201,Aarav Sharma,Kathmandu,25,9/24/2024,Ticket Booking,6187.2,Success,Web
+TXN-1986,CUST-210,Kamala Basnet,Butwal,55,8/28/2024,Insurance,1158.03,Success,Web
+TXN-1987,CUST-210,Kamala Basnet,Butwal,55,1/5/2024,Ticket Booking,3728.26,Success,Agent
+TXN-1988,CUST-208,Mina Karki,Chitwan,52,1/4/2024,Insurance,8099.23,Success,Agent
+TXN-1989,CUST-214,Nisha Limbu,Pokhara,23,7/21/2024,Utility Bill,1234.71,Pending,Agent
+TXN-1990,CUST-213,Rajan Bista,Nepalgunj,19,7/12/2024,Utility Bill,1683.41,Success,Agent
+TXN-1991,CUST-208,Mina Karki,Chitwan,52,9/21/2024,Ticket Booking,6499.69,Failed,Agent
+TXN-1992,CUST-209,Dipak Poudel,Kathmandu,23,5/25/2024,Fund Transfer,74421.23,Success,Web
+TXN-1993,CUST-207,Sunil Tamang,Pokhara,24,2/5/2024,Utility Bill,1114.81,Success,Agent
+TXN-1994,CUST-215,Pramod Pandey,Lalitpur,31,11/12/2024,Remittance,15062.44,Failed,Web
+TXN-1995,CUST-207,Sunil Tamang,Pokhara,24,6/13/2024,Mobile Recharge,236.93,Failed,Mobile App
+TXN-1996,CUST-206,Priya Shrestha,Bhaktapur,26,2/22/2024,Online Shopping,4257.17,Pending,Web
+TXN-1997,CUST-201,Aarav Sharma,Kathmandu,25,4/29/2024,Mobile Recharge,235.62,Success,Mobile App
+TXN-1998,CUST-211,Nabin Joshi,Dharan,45,8/3/2024,Online Shopping,11850.16,Success,Web
+TXN-1999,CUST-215,Pramod Pandey,Lalitpur,31,12/22/2024,Ticket Booking,738.03,Success,Mobile App
+TXN-2000,CUST-202,Sita Rai,Pokhara,19,5/16/2024,Ticket Booking,3443.16,Failed,Web
+TXN-2001,CUST-206,Priya Shrestha,Bhaktapur,26,4/8/2024,Ticket Booking,2375.6,Success,Mobile App
+TXN-2002,CUST-204,Anita Gurung,Kathmandu,33,12/31/2024,Utility Bill,2231.59,Success,Mobile App
+TXN-2003,CUST-202,Sita Rai,Pokhara,19,4/11/2024,Remittance,37295.49,Success,Agent
+TXN-2004,CUST-207,Sunil Tamang,Pokhara,24,8/30/2024,Remittance,34709.23,Success,Web
+TXN-2005,CUST-206,Priya Shrestha,Bhaktapur,26,11/18/2024,Fund Transfer,4697.5,Failed,Agent
+TXN-2006,CUST-204,Anita Gurung,Kathmandu,33,5/9/2024,Remittance,32648.96,Success,Web
+TXN-2007,CUST-202,Sita Rai,Pokhara,19,12/7/2024,Utility Bill,4879.73,Success,Agent
+TXN-2008,CUST-214,Nisha Limbu,Pokhara,23,6/15/2024,Mobile Recharge,250.62,Success,Agent
+TXN-2009,CUST-204,Anita Gurung,Kathmandu,33,7/21/2024,Ticket Booking,2323.17,Success,Agent
+TXN-2010,CUST-216,Sunita Dangol,Bhaktapur,32,12/18/2024,Insurance,3944.85,Success,Mobile App
+TXN-2011,CUST-206,Priya Shrestha,Bhaktapur,26,9/12/2024,Mobile Recharge,717.35,Success,Agent
+TXN-2012,CUST-202,Sita Rai,Pokhara,19,1/31/2024,Online Shopping,9775.25,Pending,Agent
+TXN-2013,CUST-204,Anita Gurung,Kathmandu,33,3/5/2024,Remittance,13168.38,Failed,Agent
+TXN-2014,CUST-212,Sabina Maharjan,Kathmandu,20,8/12/2024,Fund Transfer,19700.05,Pending,Web
+TXN-2015,CUST-212,Sabina Maharjan,Kathmandu,20,3/9/2024,Online Shopping,13510.35,Success,Agent
+TXN-2016,CUST-215,Pramod Pandey,Lalitpur,31,10/13/2024,Online Shopping,8278.19,Success,Mobile App
+TXN-2017,CUST-219,Santosh KC,Kathmandu,53,4/5/2024,Insurance,7605.63,Pending,Web
+TXN-2018,CUST-209,Dipak Poudel,Kathmandu,23,11/2/2024,Ticket Booking,4658.9,Success,Agent
+TXN-2019,CUST-205,Rohan Adhikari,Lalitpur,32,8/18/2024,Online Shopping,12345.45,Failed,Web
+TXN-2020,CUST-215,Pramod Pandey,Lalitpur,31,1/1/2024,Ticket Booking,5285.2,Success,Agent
+TXN-2021,CUST-206,Priya Shrestha,Bhaktapur,26,1/10/2024,Insurance,17279.76,Failed,Mobile App
+TXN-2022,CUST-211,Nabin Joshi,Dharan,45,2/2/2024,Fund Transfer,96732.73,Success,Mobile App
+TXN-2023,CUST-217,Anil Magar,Chitwan,50,12/15/2024,Remittance,38755.24,Success,Agent
+TXN-2024,CUST-210,Kamala Basnet,Butwal,55,6/14/2024,Remittance,32763.39,Success,Mobile App
+TXN-2025,CUST-217,Anil Magar,Chitwan,50,12/3/2024,Mobile Recharge,139.4,Success,Mobile App
